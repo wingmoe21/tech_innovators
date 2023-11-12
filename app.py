@@ -1,7 +1,7 @@
 # app.py
 
-from flask import Flask, render_template, request, jsonify
 import openai
+from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 
