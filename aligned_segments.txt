@@ -75,7 +75,7 @@
 314.468 - 317.39: So you've got to find ways of maintaining the visual quality
 318.228 - 319.229:  and also the frame rate.
 319.289 - 327.434: Because I'm sure you all know, you play some of these big open world games, you go somewhere, it drops down to 20 frames per second, and you're going like that.
-328.314 - 337.9: And if you're in virtual reality, really, you've got to be 120 frames per second, because you want this eye to be going at 60, and this eye to be going at 60, and you're in the same scene twice.
+328.314 - 337.9: And if you're in virtual reality, really, you've got to be 120 frames per second, because you want this eye to be going at 60, and this eye to be going at 60, rendering the same scene twice.
 338.681 - 343.023: So you've got to be even faster on virtual reality applications.
 345.945 - 347.106: Right, I've forgotten what's next.
 348.174 - 354.681:  Yeah, so as I say, the main thing we'll be talking about through the lecture series is how do we do that in real time?
