@@ -2,8 +2,11 @@ import io
 
 import cv2
 import fitz
+import PyPDF2
 import whisperx
+from google.cloud import vision
 from moviepy.editor import VideoFileClip
+from pdf2image import convert_from_path
 from PIL import Image
 from skimage.metrics import structural_similarity as ssim
 
@@ -101,6 +104,59 @@ def save_slides_to_pdf(unique_slides):
 
     pdf_doc.save(pdf_path)
     pdf_doc.close()
+
+
+
+# Function to extract text from a PDF
+def extract_text_from_pdf(pdf_path):
+    with open(pdf_path, 'rb') as file:
+        reader = PyPDF2.PdfReader(file)
+        text = [page.extract_text() for page in reader.pages]
+    return text
+
+# Function to convert PDF pages to images
+def convert_pdf_to_images(pdf_path):
+    return convert_from_path(pdf_path)
+
+pdf_path = 'path_to_your_pdf_file.pdf'
+text_content = extract_text_from_pdf(pdf_path)
+images = convert_pdf_to_images(pdf_path)
+
+
+# Initialize the Google Vision API client
+client = vision.ImageAnnotatorClient()
+
+# Function to interpret an image
+def interpret_image(image_content):
+    content = io.BytesIO()
+    image_content.save(content, format='JPEG')
+    content = content.getvalue()
+
+    image = vision.Image(content=content)
+    response = client.text_detection(image=image)
+
+    return response.text_annotations[0].description
+
+# Interpreting each image
+for image in images:
+    description = interpret_image(image)
+    print(description)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 whisberX(video_path)
 unique_slides = OCR(video_path)
