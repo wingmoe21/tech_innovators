@@ -1,31 +1,28 @@
 import io
-import multiprocessing
-import os
 
 import cv2
 import fitz
-import numpy as np
 import whisperx
 from moviepy.editor import VideoFileClip
 from PIL import Image
 from skimage.metrics import structural_similarity as ssim
 
 device = "cuda"
-video_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\VID\\How to declare a pointer to a function.mp4"
-batch_size = 2  # reduce if low on GPU mem
+video_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\VID\\How does free() know the size of memory to be deallocated.mp4"
+batch_size = 1  # reduce if low on GPU mem
 compute_type = "float16"  # change to "int8" if low on GPU mem (may reduce accuracy)
 # Tolerance to decide whether two images are similar
 similarity_threshold = 0.95
 
 
-""" def convert_mp4_to_mp3(input_file, output_file):
+def convert_mp4_to_mp3(input_file, output_file):
     video_clip = VideoFileClip(input_file)
     audio_clip = video_clip.audio
     audio_clip.write_audiofile(output_file)
     audio_clip.close()
- """
 
-""" def whisberX(vid):
+
+def whisberX(vid):
     convert_mp4_to_mp3(vid, 'output.mp3')
 
     # 1. Transcribe with original whisper (batched)
@@ -43,7 +40,7 @@ similarity_threshold = 0.95
     with open(output_file_path, 'w') as f:
         for segment in result["segments"]:
             f.write(f"{segment['start']} - {segment['end']}: {segment['text']}\n")
- """
+
 
 def are_frames_similar(frame_pair):
     frame1, frame2 = frame_pair
@@ -57,10 +54,9 @@ def are_frames_similar(frame_pair):
 
 def OCR(vid):
 
-
     # Previous frame for comparison
     prev_frame = None
-    
+
     cap = cv2.VideoCapture(video_path)
     frames = []
 
@@ -74,9 +70,10 @@ def OCR(vid):
 
     cap.release()
 
-    with multiprocessing.Pool() as pool:
-        frame_pairs = zip(frames[:-1], frames[1:])
-        similar_frames = pool.map(are_frames_similar, frame_pairs)
+    similar_frames = []
+    frame_pairs = zip(frames[:-1], frames[1:])
+    for frame_pair in frame_pairs:
+        similar_frames.append(are_frames_similar(frame_pair))
 
     unique_slides = []
 
@@ -86,9 +83,8 @@ def OCR(vid):
             unique_slides.append(slide_image)
 
     return unique_slides
-
-    
 def save_slides_to_pdf(unique_slides):
+    pdf_path = 'sds.pdf'
     pdf_doc = fitz.open()
 
     for slide in unique_slides:
@@ -106,4 +102,6 @@ def save_slides_to_pdf(unique_slides):
     pdf_doc.save(pdf_path)
     pdf_doc.close()
 
+whisberX(video_path)
 unique_slides = OCR(video_path)
+save_slides_to_pdf(unique_slides)
