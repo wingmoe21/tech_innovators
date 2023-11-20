@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="globalsPage1.css" />
-    <link rel="stylesheet" href="stylePage1.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='globalsPage1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylePage1.css') }}">
   </head>
   <body>
     <div class="chat">
@@ -17,13 +17,13 @@
           <div class="rectangle-3"></div>
           <div class="message-rectangle"></div>
           <div class="text-wrapper">Message...</div>
-          <img class="boot" src="img/boot.png" />
+          <img class="boot" src="{{ url_for('static', filename='img/boot.png') }}" />
           <div class="lectures-rectangle"></div>
           <div class="text-wrapper-2">LECTURES</div>
-          <img class="polygon" src="img/polygon-1.svg" />
+          <img class="polygon" src="{{ url_for('static', filename='img/polygon-1.svg') }}" />
           <div class="hello">
             <div class="overlap-group">
-              <img class="XMLID" src="img/xmlid-354-1.svg" />
+              <img class="XMLID" src="{{ url_for('static', filename='img/xmlid-354-1.svg') }}" />
               <div class="overlap-group-2">
                 <div class="rectangle-4"></div>
                 <p class="p">Hello! How can I assist you?</p>
@@ -33,26 +33,26 @@
           </div>
           <div class="hi">
             <div class="overlap-2">
-              <img class="img" src="img/xmlid-354.svg" />
+              <img class="img" src="{{ url_for('static', filename='img/xmlid-354.svg') }}" />
               <div class="rectangle-5"></div>
               <div class="text-wrapper-3">Hi</div>
             </div>
           </div>
-          <img class="iconly-bulk-send" src="img/iconly-bulk-send.png" />
-          <img class="fill" src="img/fill-4.svg" />
-          <img class="video" src="img/video.svg" />
-          <img class="group" src="img/group-1.png" />
+          <img class="iconly-bulk-send" src="{{ url_for('static', filename='img/iconly-bulk-send.png') }}" />
+          <img class="fill" src="{{ url_for('static', filename='img/fill-4.svg') }}" />
+          <img class="video" src="{{ url_for('static', filename='img/video.svg') }}" />
+          <img class="group" src="{{ url_for('static', filename='img/group-1.png') }}" />
           <div class="rectangle-6"></div>
           <div class="rectangle-7"></div>
           <div class="rectangle-8"></div>
           <div class="text-wrapper-4">CHATBOT</div>
           <div class="text-wrapper-5">SUMMARY</div>
           <div class="text-wrapper-6">QUIZ</div>
-          <img class="group-2" src="img/group.png" />
+          <img class="group-2" src="{{ url_for('static', filename='img/group.png') }}" />
           <div class="overlap-group-wrapper">
             <div class="ellipse-wrapper"><div class="ellipse-5"></div></div>
           </div>
-          <img class="group-3" src="img/group-14.png" />
+          <img class="group-3" src="{{ url_for('static', filename='img/group-14.png') }}" />
         </div>
       </div>
     </div>

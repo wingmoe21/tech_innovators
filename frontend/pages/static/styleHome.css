@@ -4,19 +4,21 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  height: 100%;
+
 }
 
 .home .overlap-wrapper {
   background-color: #f0f0f0;
   overflow: hidden;
   width: 1440px;
-  height: 1024px;
+  height: 100vh;
 }
 
 .home .overlap {
   position: relative;
-  width: 1673px;
-  height: 1271px;
+  width: 100%;
+  height: 100%;
   top: -196px;
   left: -58px;
 }
