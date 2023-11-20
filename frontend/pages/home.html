@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="globalsHome.css" />
-    <link rel="stylesheet" href="styleHome.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='globalsHome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleHome.css') }}">
+
   </head>
   <body>
     <div class="home">
       <div class="overlap-wrapper">
         <div class="overlap">
+          <img src="{{ url_for('static', filename='img/image1.png') }}" alt="Top Right Image" class="top-right-image">
           <div class="ellipse"></div>
           <div class="div"></div>
           <div class="ellipse-2"></div>
@@ -15,8 +17,8 @@
           <div class="blur-rectangle"></div>
           <div class="text-wrapper">CHATBOT</div>
           <p class="ONLINE"><span class="span">ONLINE</span> <span class="text-wrapper-2">&nbsp;</span></p>
-          <img class="boot" src="img/boot.png" />
-          <a href="Page1.html" class="start-link">
+          <img class="boot" src="{{ url_for('static', filename='img/boot.png') }}" alt="Boot Image">
+          <a href="{{ url_for('chatbot') }}" class="start-link">
             <div class="start">
               <div class="overlap-group">
                 <div class="text-wrapper-3">START</div>
