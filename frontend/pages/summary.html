@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='globalsSummary.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleSummary.css') }}" />
+  </head>
+  <body>
+    <div class="SUMMARY">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="ellipse"></div>
+          <div class="div"></div>
+          <div class="ellipse-2"></div>
+          <div class="ellipse-3"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle-2"></div>
+          <div class="rectangle-3"></div>
+          <div class="message-rectangle"></div>
+          <div class="text-wrapper">Message...</div>
+          <img class="boot" src="{{ url_for('static', filename='img/boot.png') }}" />
+          <div class="lectures-rectangle"></div>
+          <div class="text-wrapper-2">LECTURES</div>
+          <img class="polygon" src="{{ url_for('static', filename='img/polygon-1.png') }}" />
+          <img class="iconly-bulk-send" src="{{ url_for('static', filename='img/iconly-bulk-send.png') }}" />
+          <img class="fill" src="{{ url_for('static', filename='img/fill-4.svg') }}" />
+          <img class="video" src="{{ url_for('static', filename='img/video.svg') }}" />
+          <!-- Chatbot Button -->
+          <a href="{{ url_for('chatbot') }}" class="button-link">
+            <img class="img" src="{{ url_for('static', filename='img/rectangle-10.svg') }}" />
+            <div class="text-wrapper-3">CHATBOT</div>
+          </a>
+          <!-- Summary Button -->
+          <a href="{{ url_for('summary') }}" class="button-link">
+            <div class="rectangle-4"></div>
+            <div class="text-wrapper-4">SUMMARY</div>
+          </a>
+          <!-- Quiz Button -->
+          <a href="{{ url_for('quiz') }}" class="button-link">
+            <div class="rectangle-5"></div>
+            <div class="text-wrapper-5">QUIZ</div>
+          </a>
+          <img class="group" src="{{ url_for('static', filename='img/group-1.png') }}" />
+          <div class="overlap-group-wrapper">
+            <div class="overlap-group"><div class="ellipse-4"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

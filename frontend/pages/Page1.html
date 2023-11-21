@@ -48,12 +48,21 @@
           <img class="fill" src="{{ url_for('static', filename='img/fill-4.svg') }}" />
           <img class="video" src="{{ url_for('static', filename='img/video.svg') }}" />
           <img class="group" src="{{ url_for('static', filename='img/group-1.png') }}" />
-          <div class="rectangle-6"></div>
-          <div class="rectangle-7"></div>
-          <div class="rectangle-8"></div>
-          <div class="text-wrapper-4">CHATBOT</div>
-          <div class="text-wrapper-5">SUMMARY</div>
-          <div class="text-wrapper-6">QUIZ</div>
+          <!-- Chatbot Button -->
+          <a href="{{ url_for('chatbot') }}" class="button-link">
+            <div class="rectangle-6"></div>
+            <div class="text-wrapper-4">CHATBOT</div>
+          </a>
+          <!-- Summary Button -->
+          <a href="{{ url_for('summary') }}" class="button-link">
+            <div class="rectangle-7"></div>
+            <div class="text-wrapper-5">SUMMARY</div>
+          </a>
+          <!-- Quiz Button -->
+          <a href="{{ url_for('quiz') }}" class="button-link">
+            <div class="rectangle-8"></div>
+            <div class="text-wrapper-6">QUIZ</div>
+          </a>
           <img class="group-2" src="{{ url_for('static', filename='img/group.png') }}" />
           <div class="overlap-group-wrapper">
             <div class="ellipse-wrapper"><div class="ellipse-5"></div></div>
