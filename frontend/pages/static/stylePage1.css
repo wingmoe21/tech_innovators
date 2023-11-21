@@ -81,7 +81,7 @@
 .chat .rectangle-2 {
   position: absolute;
   width: 1040px;
-  height: 1024px;
+  height: 800px;
   top: 36px;
   left: 458px;
   background-color: #d9d9d980;
@@ -92,7 +92,7 @@
 .chat .rectangle-3 {
   position: absolute;
   width: 918px;
-  height: 836px;
+  height: 700px;
   top: 132px;
   left: 519px;
   background-color: #a5b0d633;
@@ -105,7 +105,7 @@
   position: absolute;
   width: 746px;
   height: 60px;
-  top: 873px;
+  top: 750px;
   left: 605px;
   background-color: #a0a0bf66;
   border-radius: 25px;
@@ -115,7 +115,7 @@
 
 .chat .text-wrapper {
   position: absolute;
-  top: 887px;
+  top: 768px;
   left: 668px;
   font-family: "Actor", Helvetica;
   font-weight: 400;
@@ -275,16 +275,16 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 893px;
-  left: 1217px;
+  top: 768px;
+  left: 1280px;
 }
 
 .chat .fill {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 893px;
-  left: 1306px;
+  top: 768px;
+  left: 1314px;
 }
 
 .chat .video {
