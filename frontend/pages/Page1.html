@@ -102,6 +102,8 @@
     
     if (userInput.trim() !== '') {
       displayMessage(userInput, 'user'); // Display user message on the front end
+      document.getElementById('chat-input').value = ''; // Clear the input right after sending the message
+      
       fetch('/chatbot', {
         method: 'POST',
         body: JSON.stringify({ message: userInput }),
@@ -112,7 +114,6 @@
       .then(response => response.json())
       .then(data => {
         displayMessage(data.reply, 'bot'); // Display bot message on the front end
-        document.getElementById('chat-input').value = ''; // Clear the input after sending
       })
       .catch(error => console.error('Error:', error));
     }

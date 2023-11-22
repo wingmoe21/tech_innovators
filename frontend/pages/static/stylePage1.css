@@ -209,7 +209,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 768px;
+  top: 787px;
   left: 1280px;
   z-index: 11;
 }
@@ -218,7 +218,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 768px;
+  top: 787px;
   left: 1314px;
   z-index: 11;
 }
@@ -357,7 +357,7 @@
 .chat .rectangle-3 {
   position: relative;
   width: 918px;
-  height: 700px;
+  height: 650px;
   top: 132px;
   left: 519px;
   background-color: #a5b0d633;
@@ -383,7 +383,7 @@
   position: absolute;
   width: 746px;
   height: 60px;
-  bottom: 0px;
+  bottom: -66px;
   left: 605px;
   background-color: #a0a0bf66;
   border-radius: 25px;
