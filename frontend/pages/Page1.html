@@ -19,13 +19,14 @@
           <div class="text-wrapper">Message...</div>
           <img class="boot" src="{{ url_for('static', filename='img/boot.png') }}" />
           <div class="lectures-rectangle">
-            <select class="lectures-dropdown">
+            <select class="lectures-dropdown" id="lecturesDropdown">
                 <option value="lecture1">Lecture 1</option>
                 <option value="lecture2">Lecture 2</option>
                 <option value="lecture3">Lecture 3</option>
                 <!-- Add more options as needed -->
             </select>
-            <div class="text-wrapper-2">LECTURES</div>
+            <div class="text-wrapper-2" id="lecturesLabel">LECTURES</div>
+            <img class="polygon" src="{{ url_for('static', filename='img/polygon-1.svg') }}" />
           </div>
             <div class="hello">
             <div class="overlap-group">
@@ -73,3 +74,4 @@
     </div>
   </body>
 </html>
+
