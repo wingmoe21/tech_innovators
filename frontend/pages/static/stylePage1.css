@@ -443,6 +443,6 @@
 
 /* Style for the options in the dropdown */
 .chat .lectures-dropdown option {
-  background-color: white; /* Background color for options */
-  color: black; /* Text color for options */
+  background-color: #a0a0bf; /* Background color for options */
+  color: white; /* Text color for options */
 }
