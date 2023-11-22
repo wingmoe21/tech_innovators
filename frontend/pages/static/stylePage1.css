@@ -154,34 +154,12 @@
   line-height: normal;
 }
 
-.chat .boot {
-  position: absolute;
-  width: 100px;
-  height: 111px;
-  top: 920px;
-  left: 1372px;
-}
-
 .chat .polygon {
   position: absolute;
   width: 28px;
   height: 31px;
   top: 13px;
   left: 885px;
-}
-
-.chat .hello {
-  position: absolute;
-  width: 605px;
-  height: 159px;
-  top: 564px;
-  left: 569px;
-}
-
-.chat .overlap-group {
-  position: relative;
-  width: 603px;
-  height: 159px;
 }
 
 .chat .XMLID {
@@ -200,16 +178,6 @@
   left: 0;
 }
 
-.chat .rectangle-4 {
-  position: absolute;
-  width: 486px;
-  height: 60px;
-  top: 0;
-  left: 117px;
-  background-color: #a0a0bf;
-  border-radius: 25px;
-}
-
 .chat .p {
   position: absolute;
   width: 433px;
@@ -221,24 +189,6 @@
   font-size: 24px;
   letter-spacing: 0;
   line-height: normal;
-}
-
-.chat .ellipse-4 {
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  top: 29px;
-  left: 0;
-  background-color: #eeeeee;
-  border-radius: 65px;
-}
-
-.chat .hi {
-  position: absolute;
-  width: 132px;
-  height: 78px;
-  top: 432px;
-  left: 1140px;
 }
 
 .chat .overlap-2 {
@@ -253,28 +203,6 @@
   position: absolute;
   width: 13px;
   height: 19px;
-}
-
-.chat .rectangle-5 {
-  position: absolute;
-  width: 130px;
-  height: 60px;
-  top: 0;
-  left: 0;
-  background-color: #a0a0bf;
-  border-radius: 25px;
-}
-
-.chat .text-wrapper-3 {
-  position: absolute;
-  top: 14px;
-  left: 52px;
-  font-family: "Actor", Helvetica;
-  font-weight: 400;
-  color: #d9d9d9;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
 .chat .iconly-bulk-send {
@@ -293,14 +221,6 @@
   top: 768px;
   left: 1314px;
   z-index: 11;
-}
-
-.chat .video {
-  position: absolute;
-  width: 29px;
-  height: 29px;
-  top: 889px;
-  left: 1257px;
 }
 
 .chat .group {
@@ -427,13 +347,6 @@
   border-radius: 19.04px;
 }
 
-.chat .group-3 {
-  position: absolute;
-  width: 89px;
-  height: 94px;
-  top: 611px;
-  left: 589px;
-}
 
 /* Style for the options in the dropdown */
 .chat .lectures-dropdown option {
@@ -462,6 +375,8 @@
   bottom: 60px;
   overflow-y: scroll; /* Enable vertical scrolling */
   padding: 10px; /* Optional: for spacing inside the container */
+    display: flex;
+  flex-direction: column;
 }
 
 .chat .message-rectangle {
@@ -502,4 +417,27 @@
 
 .chat #chat-input::placeholder {
   color: #7c7c7cb2; /* Placeholder text color */
+}
+
+/* Chat message styles */
+.chat-message {
+  max-width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+}
+
+/* Styles for messages from the user */
+.user-message {
+  background-color: #007bff; /* Blue color for user messages */
+  align-self: flex-end; /* Align to the right */
+  margin-right: 10px;
+}
+
+/* Styles for messages from the bot */
+.bot-message {
+  background-color: #333; /* Dark color for bot messages */
+  align-self: flex-start; /* Align to the left */
+  margin-left: 10px;
 }
