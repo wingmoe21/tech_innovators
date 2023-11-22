@@ -14,20 +14,32 @@
           <div class="ellipse-3"></div>
           <div class="rectangle"></div>
           <div class="rectangle-2"></div>
-          <div class="rectangle-3"></div>
-          <div class="message-rectangle"></div>
-          <div class="text-wrapper">Message...</div>
-          <img class="boot" src="{{ url_for('static', filename='img/boot.png') }}" />
           <div class="lectures-rectangle">
-            <select class="lectures-dropdown" id="lecturesDropdown">
-                <option value="lecture1">Lecture 1</option>
-                <option value="lecture2">Lecture 2</option>
-                <option value="lecture3">Lecture 3</option>
+            <select class="lectures-dropdown" id="lecturesDropdown" onchange="updateSelectedLecture()">
+              <option value="" disabled selected>Select your option</option>
+              <option value="lecture1">Lecture 1</option>
+              <option value="lecture2">Lecture 2</option>
+              <option value="lecture3">Lecture 3</option>
                 <!-- Add more options as needed -->
             </select>
-            <div class="text-wrapper-2" id="lecturesLabel">LECTURES</div>
+            <div class="text-wrapper-2">
+              <span id="lecturesLabel">Choose a Lecture...</span>
+              <span id="selectedLecture" style="display: none;"></span> <!-- Initially hidden -->
+            </div>
             <img class="polygon" src="{{ url_for('static', filename='img/polygon-1.svg') }}" />
           </div>
+          <div class="rectangle-3">
+            <div id="chat-messages-container">
+              <!-- Chat messages will be dynamically added here -->
+          </div>
+          </div>
+          <div class="message-rectangle">
+            <form id="chat-form">
+              <input type="text" id="chat-input" placeholder="Type your message here..." autocomplete="off">
+              <button type="submit" style="display: none;">Send</button>
+          </form>
+          </div>
+          <img class="boot" src="{{ url_for('static', filename='img/boot.png') }}" />
             <div class="hello">
             <div class="overlap-group">
               <img class="XMLID" src="{{ url_for('static', filename='img/xmlid-354-1.svg') }}" />
@@ -72,6 +84,33 @@
         </div>
       </div>
     </div>
+    <script>
+      function updateSelectedLecture() {
+        var dropdown = document.getElementById("lecturesDropdown");
+        var selectedText = dropdown.options[dropdown.selectedIndex].text;
+        var label = document.getElementById("lecturesLabel");
+        var selectedLectureSpan = document.getElementById("selectedLecture");
+        // If the selected option is not the placeholder
+        if(dropdown.selectedIndex > 0) {
+          label.style.display = "none"; // Hide the "LECTURES" text
+          selectedLectureSpan.textContent = selectedText; // Set the selected text
+          selectedLectureSpan.style.display = "block"; // Show the selected text
+        } else {
+          label.style.display = "block"; // Show the "LECTURES" text
+          selectedLectureSpan.style.display = "none"; // Hide the selected text
+        }
+      }
+      document.getElementById('chat-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log("Form submitted"); // Debugging line
+        var userInput = document.getElementById('chat-input').value;
+        console.log("User input:", userInput); // Debugging line
+        if (userInput.trim() !== '') {
+          // sendMessage(userInput);
+          document.getElementById('chat-input').value = ''; // Clear the input after sending
+        }
+      });
+  </script>
   </body>
 </html>
 

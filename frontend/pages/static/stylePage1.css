@@ -2,7 +2,7 @@
   position: relative; /* Changed to relative */
   width: 922px;
   height: 50px;
-  top: 85px;
+  top: 120px;
   left: 519px;
   background-color: #a0a0bf;
   border-radius: 25px;
@@ -19,20 +19,36 @@
   opacity: 0; /* Make it invisible */
   cursor: pointer; /* Change cursor to indicate it's clickable */
   z-index: 2; /* Ensure it's above the LECTURES text */
+  color: black;
 }
 
 .chat .text-wrapper-2 {
   position: absolute;
-  top: 10px;
+  top: 13px;
   left: 20px;
   z-index: 1; /* Place it behind the dropdown */
   font-family: "Actor", Helvetica;
   font-weight: 400;
-  color: #d9d9d9;
-  font-size: 24px;
+  color: #d9d9d9; /* Color for the text */
+  font-size: 24px; /* Font size for the text */
   letter-spacing: 0;
   line-height: normal;
-  pointer-events: none; /* This makes clicks pass through the text to the dropdown */  
+  pointer-events: none; /* This makes clicks pass through the text to the dropdown */
+}
+
+.chat .text-wrapper-2 #selectedLecture {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* Initially hidden */
+  z-index: 3; /* Above the lecturesLabel */
+  white-space: nowrap; /* Prevents the text from wrapping */
 }
 
 .chat {
@@ -124,30 +140,6 @@
   background-color: #d9d9d980;
   backdrop-filter: blur(100px) brightness(100%);
   -webkit-backdrop-filter: blur(100px) brightness(100%);
-}
-
-.chat .rectangle-3 {
-  position: absolute;
-  width: 918px;
-  height: 700px;
-  top: 132px;
-  left: 519px;
-  background-color: #a5b0d633;
-  border-radius: 25px;
-  backdrop-filter: blur(100px) brightness(100%);
-  -webkit-backdrop-filter: blur(100px) brightness(100%);
-}
-
-.chat .message-rectangle {
-  position: absolute;
-  width: 746px;
-  height: 60px;
-  top: 750px;
-  left: 605px;
-  background-color: #a0a0bf66;
-  border-radius: 25px;
-  backdrop-filter: blur(4px) brightness(100%);
-  -webkit-backdrop-filter: blur(4px) brightness(100%);
 }
 
 .chat .text-wrapper {
@@ -291,6 +283,7 @@
   height: 20px;
   top: 768px;
   left: 1280px;
+  z-index: 11;
 }
 
 .chat .fill {
@@ -299,6 +292,7 @@
   height: 20px;
   top: 768px;
   left: 1314px;
+  z-index: 11;
 }
 
 .chat .video {
@@ -445,4 +439,67 @@
 .chat .lectures-dropdown option {
   background-color: #a0a0bf; /* Background color for options */
   color: white; /* Text color for options */
+}
+
+.chat .rectangle-3 {
+  position: relative;
+  width: 918px;
+  height: 700px;
+  top: 132px;
+  left: 519px;
+  background-color: #a5b0d633;
+  border-radius: 25px;
+  backdrop-filter: blur(100px) brightness(100%);
+  -webkit-backdrop-filter: blur(100px) brightness(100%);
+  padding-bottom: 70px; /* Add padding to ensure space for message input */
+}
+
+.chat #chat-messages-container {
+  position: absolute; /* Position it inside rectangle-3 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  padding: 10px; /* Optional: for spacing inside the container */
+}
+
+.chat .message-rectangle {
+  position: absolute;
+  width: 746px;
+  height: 60px;
+  bottom: 0px;
+  left: 605px;
+  background-color: #a0a0bf66;
+  border-radius: 25px;
+  backdrop-filter: blur(4px) brightness(100%);
+  -webkit-backdrop-filter: blur(4px) brightness(100%);
+  position: relative; /* This will contain the absolute positioned input */
+  z-index: 10; /* Ensure it's above the chat messages */
+}
+
+.chat #chat-form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.chat #chat-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  border: none;
+  background: transparent;
+  padding: 10px; /* Adjust as needed */
+  color: transparent;
+  caret-color: black; /* To show the cursor */
+  color: rgb(102, 100, 100); /* Color for the text */
+  font-size: medium;
+  font-weight: 600;
+}
+
+.chat #chat-input::placeholder {
+  color: #7c7c7cb2; /* Placeholder text color */
 }
