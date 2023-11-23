@@ -20,7 +20,7 @@
               <option value="lecture1">Lecture 1</option>
               <option value="lecture2">Lecture 2</option>
               <option value="lecture3">Lecture 3</option>
-                <!-- Add more options as needed -->
+              <!-- Add more options as needed -->
             </select>
             <div class="text-wrapper-2">
               <span id="lecturesLabel">Choose a Lecture...</span>
@@ -31,7 +31,9 @@
           <div class="rectangle-3">
             <div id="chat-messages-container">
               <!-- Chat messages will be dynamically added here -->
-          </div>
+              <div class="loader" style="display: none;"></div> <!-- Loader initially hidden -->
+              
+            </div>
           </div>
           <div class="message-rectangle">
             <form id="chat-form">
@@ -39,7 +41,7 @@
             </form>
           </div>
           <img class="iconly-bulk-send" src="{{ url_for('static', filename='img/iconly-bulk-send.png') }}" onclick="submitChatForm()"/>
-          <img class="fill" src="{{ url_for('static', filename='img/fill-4.svg') }}" />
+          <img class="fill" src="{{ url_for('static', filename='img/fill-4.svg') }}" onclick="clearChatMessages()" />
           <!-- Chatbot Button -->
           <a href="{{ url_for('chat') }}" class="button-link">
             <div class="rectangle-6"></div>
@@ -89,36 +91,61 @@
         } else {
           messageElement.classList.add('bot-message');
         }
-        
         chatMessagesContainer.appendChild(messageElement);
         // Scroll to the bottom of the chat container to show the latest message
         chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
+      }
+      function clearChatMessages() {
+        var chatMessagesContainer = document.getElementById('chat-messages-container');
+        // Select all elements with class 'user-message' and 'bot-message'
+        var userMessages = chatMessagesContainer.getElementsByClassName('user-message');
+        var botMessages = chatMessagesContainer.getElementsByClassName('bot-message');
+        // Remove all found elements
+        while (userMessages.length > 0) {
+          userMessages[0].parentNode.removeChild(userMessages[0]);
+        }
+        while (botMessages.length > 0) {
+          botMessages[0].parentNode.removeChild(botMessages[0]);
+        }
       }
       function submitChatForm() {
         var event = new Event('submit');
         document.getElementById('chat-form').dispatchEvent(event);
       }
-        
+
+      function displayLoading(show) {
+        console.log('Displaying loader:', show);
+        var loader = document.querySelector('.loader');
+        if (loader) {
+          loader.style.display = show ? 'block' : 'none';
+        }
+      }
+
         document.getElementById('chat-form').addEventListener('submit', function(event) {
           event.preventDefault();
           var userInput = document.getElementById('chat-input').value;
           
           if (userInput.trim() !== '') {
-      displayMessage(userInput, 'user'); // Display user message on the front end
-      document.getElementById('chat-input').value = ''; // Clear the input right after sending the message
-      
-      fetch('/chatbot', {
-        method: 'POST',
-        body: JSON.stringify({ message: userInput }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
+            displayMessage(userInput, 'user'); // Display user message on the front end
+            document.getElementById('chat-input').value = ''; // Clear the input right after sending the message
+            displayLoading(true); // Show loader
+            
+            fetch('/chatbot', {
+              method: 'POST',
+              body: JSON.stringify({ message: userInput }),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            })
+            .then(response => response.json())
+            .then(data => {
+              displayLoading(false); // Hide loader
+              displayMessage(data.reply, 'bot'); // Display bot message on the front end
       })
-      .then(response => response.json())
-      .then(data => {
-        displayMessage(data.reply, 'bot'); // Display bot message on the front end
-      })
-      .catch(error => console.error('Error:', error));
+      .catch(error => {
+      console.error('Error:', error);
+      displayLoading(false); // Hide loader in case of error
+    });
     }
   });
   </script>
