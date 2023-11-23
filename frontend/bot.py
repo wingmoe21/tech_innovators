@@ -19,7 +19,7 @@ def bot(file_path, user_input):
     # Enable to save to disk & reuse the model (for repeated queries on the same data)
     PERSIST = False
 
-    query = None
+    query = user_input
     if len(sys.argv) > 1:
         query = sys.argv[1]
 
@@ -29,7 +29,6 @@ def bot(file_path, user_input):
         index = VectorStoreIndexWrapper(vectorstore=vectorstore)
     else:
         loader = TextLoader(file_path)  # Use this line if you only need data.txt
-        # loader = DirectoryLoader("data/")
         if PERSIST:
             index = VectorstoreIndexCreator(vectorstore_kwargs={"persist_directory": "persist"}).from_loaders([loader])
         else:
@@ -42,8 +41,6 @@ def bot(file_path, user_input):
 
     chat_history = []
     while True:
-        if not query:
-            query = user_input
 
         if query in ['quit', 'q', 'exit']:
             sys.exit()

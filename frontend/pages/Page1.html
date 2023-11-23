@@ -36,10 +36,9 @@
           <div class="message-rectangle">
             <form id="chat-form">
               <input type="text" id="chat-input" placeholder="Type your message here..." autocomplete="off">
-              <button type="submit" style="display: none;">Send</button>
-          </form>
+            </form>
           </div>
-          <img class="iconly-bulk-send" src="{{ url_for('static', filename='img/iconly-bulk-send.png') }}" />
+          <img class="iconly-bulk-send" src="{{ url_for('static', filename='img/iconly-bulk-send.png') }}" onclick="submitChatForm()"/>
           <img class="fill" src="{{ url_for('static', filename='img/fill-4.svg') }}" />
           <!-- Chatbot Button -->
           <a href="{{ url_for('chat') }}" class="button-link">
@@ -84,23 +83,27 @@
         var messageElement = document.createElement('div');
         messageElement.textContent = message;
         messageElement.classList.add('chat-message');
-
+        
         if (sender === 'user') {
           messageElement.classList.add('user-message');
         } else {
           messageElement.classList.add('bot-message');
         }
-
+        
         chatMessagesContainer.appendChild(messageElement);
         // Scroll to the bottom of the chat container to show the latest message
         chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
       }
-
-  document.getElementById('chat-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var userInput = document.getElementById('chat-input').value;
-    
-    if (userInput.trim() !== '') {
+      function submitChatForm() {
+        var event = new Event('submit');
+        document.getElementById('chat-form').dispatchEvent(event);
+      }
+        
+        document.getElementById('chat-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          var userInput = document.getElementById('chat-input').value;
+          
+          if (userInput.trim() !== '') {
       displayMessage(userInput, 'user'); // Display user message on the front end
       document.getElementById('chat-input').value = ''; // Clear the input right after sending the message
       
@@ -120,5 +123,6 @@
   });
   </script>
   </body>
-</html>
-
+  </html>
+  
+  
