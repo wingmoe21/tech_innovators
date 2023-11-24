@@ -1,7 +1,17 @@
+import os
+
 from bot import bot
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, session
+
+from flask_session import Session  # You may need to install this package
 
 app = Flask(__name__, template_folder='pages', static_folder='pages/static')
+secret_key = os.urandom(16)  # Generates a 16-byte (128-bit) random string
+app.secret_key = secret_key  # Replace with a real secret key
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
+
 
 @app.route('/')
 def home():
@@ -16,8 +26,18 @@ def chat():
         data = request.get_json()
         user_input = data['message']
         # The 'bot' function is called with the user input and expected to return a response
-        bot_response = bot("Recording3.txt", user_input)
+        file_path = session.get('file_path', '')  # Get file_path from session
+        bot_response = bot(file_path, user_input)
         return jsonify({'reply': bot_response})
+    
+@app.route('/lecture_name', methods=['POST'])
+def handle_dropdown():
+    data = request.json
+    selected_lecture = data['lecture']
+    session['file_path'] = f"content/{selected_lecture}.txt"
+
+    return session['file_path']
+
 
 @app.route('/summary')
 def summary():

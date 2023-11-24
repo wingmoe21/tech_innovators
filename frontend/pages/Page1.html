@@ -17,9 +17,9 @@
           <div class="lectures-rectangle">
             <select class="lectures-dropdown" id="lecturesDropdown" onchange="updateSelectedLecture()">
               <option value="" disabled selected>Select your option</option>
-              <option value="lecture1">Lecture 1</option>
-              <option value="lecture2">Lecture 2</option>
-              <option value="lecture3">Lecture 3</option>
+              <option value="Calloc vs malloc">Calloc vs malloc</option>
+              <option value="Decimal to Binary Conversion">Decimal to Binary Conversion</option>
+              <option value="Pointers in C Basic">Pointers in C Basic</option>
               <!-- Add more options as needed -->
             </select>
             <div class="text-wrapper-2">
@@ -37,7 +37,7 @@
           </div>
           <div class="message-rectangle">
             <form id="chat-form">
-              <input type="text" id="chat-input" placeholder="Type your message here..." autocomplete="off">
+              <input type="text" id="chat-input" placeholder="Type your message here..." autocomplete="off" disabled>
             </form>
           </div>
           <img class="iconly-bulk-send" src="{{ url_for('static', filename='img/iconly-bulk-send.png') }}" onclick="submitChatForm()"/>
@@ -67,18 +67,37 @@
     <script>
       function updateSelectedLecture() {
         var dropdown = document.getElementById("lecturesDropdown");
+        var selectedOption = dropdown.value;
+        document.getElementById("selectedLecture").innerText = selectedOption;
         var selectedText = dropdown.options[dropdown.selectedIndex].text;
         var label = document.getElementById("lecturesLabel");
         var selectedLectureSpan = document.getElementById("selectedLecture");
         // If the selected option is not the placeholder
+        var chatInput = document.getElementById("chat-input");
         if(dropdown.selectedIndex > 0) {
           label.style.display = "none"; // Hide the "LECTURES" text
           selectedLectureSpan.textContent = selectedText; // Set the selected text
           selectedLectureSpan.style.display = "block"; // Show the selected text
+          chatInput.disabled = false;
         } else {
           label.style.display = "block"; // Show the "LECTURES" text
           selectedLectureSpan.style.display = "none"; // Hide the selected text
+          chatInput.disabled = false;
         }
+        fetch('/lecture_name', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ lecture: selectedOption })
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
       }
       function displayMessage(message, sender) {
         var chatMessagesContainer = document.getElementById('chat-messages-container');
