@@ -32,7 +32,7 @@ def chat():
         return jsonify({'reply': bot_response})
     
 @app.route('/lecture_chatbot', methods=['POST'])
-def handle_dropdown():
+def dropdown_chatbot():
     data = request.json
     selected_lecture = data['lecture']
     session['file_path'] = f"content/{selected_lecture}.txt"
@@ -43,7 +43,7 @@ def quiz():
     return render_template('quiz.html')  # Replace with your home page file name
 
 @app.route('/lecture_summary', methods=['POST'])
-def handle_dropdown():
+def dropdown_summary():
     data = request.json
     selected_lecture = data['lecture']
     session['file_path'] = f"content/{selected_lecture}.txt"
