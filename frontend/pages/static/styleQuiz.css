@@ -1,3 +1,55 @@
+.QUIZ .lectures-rectangle {
+  position: relative; /* Changed to relative */
+  width: 922px;
+  height: 50px;
+  top: 120px;
+  left: 519px;
+  background-color: #a0a0bf;
+  border-radius: 25px;
+  box-shadow: 0px 8px 8px #00000040;
+  opacity: 1;
+}
+.QUIZ .lectures-dropdown {
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  opacity: 0; /* Make it invisible */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  z-index: 2; /* Ensure it's above the LECTURES text */
+  color: black;
+}
+
+.QUIZ .text-wrapper {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  z-index: 1; /* Place it behind the dropdown */
+  font-family: "Actor", Helvetica;
+  font-weight: 400;
+  color: #d9d9d9; /* Color for the text */
+  font-size: 24px; /* Font size for the text */
+  letter-spacing: 0;
+  line-height: normal;
+  pointer-events: none; /* This makes clicks pass through the text to the dropdown */
+}
+
+.QUIZ .text-wrapper-2 #selectedLecture {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* Initially hidden */
+  z-index: 3; /* Above the lecturesLabel */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
 .QUIZ {
   background-color: #f0f0f0;
   display: flex;
@@ -81,7 +133,7 @@
 .QUIZ .rectangle-2 {
   position: absolute;
   width: 1040px;
-  height: 1024px;
+  height: 800px;
   top: 36px;
   left: 458px;
   background-color: #d9d9d980;
@@ -92,52 +144,23 @@
 .QUIZ .rectangle-3 {
   position: absolute;
   width: 918px;
-  height: 836px;
+  height: 650px;
   top: 132px;
   left: 519px;
   background-color: #a5b0d633;
   border-radius: 25px;
   backdrop-filter: blur(100px) brightness(100%);
   -webkit-backdrop-filter: blur(100px) brightness(100%);
+  padding: 20px;
 }
 
-.QUIZ .boot {
-  position: absolute;
-  width: 100px;
-  height: 111px;
-  top: 920px;
-  left: 1372px;
-}
-
-.QUIZ .lectures-rectangle {
-  position: absolute;
-  width: 922px;
-  height: 50px;
-  top: 85px;
-  left: 519px;
-  background-color: #a0a0bf;
-  border-radius: 25px;
-  box-shadow: 0px 8px 8px #00000040;
-}
-
-.QUIZ .text-wrapper {
-  position: absolute;
-  top: 96px;
-  left: 580px;
-  font-family: "Actor", Helvetica;
-  font-weight: 400;
-  color: #d9d9d9;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
-}
 
 .QUIZ .polygon {
   position: absolute;
   width: 28px;
   height: 31px;
-  top: 98px;
-  left: 724px;
+  top: 13px;
+  left: 885px;
 }
 
 .QUIZ .rectangle-4 {
@@ -254,8 +277,8 @@
 
 .QUIZ .message-rectangle {
   position: absolute;
-  width: 819px;
-  height: 212px;
+  width: 600px;
+  height: 150px;
   top: 188px;
   left: 553px;
   background-color: #a0a0bf66;
@@ -264,29 +287,29 @@
 }
 
 .QUIZ .message-rectangle-2 {
-  top: 453px;
+  top: 373px;
   left: 553px;
   position: absolute;
-  width: 819px;
-  height: 212px;
+  width: 600px;
+  height: 150px;
   background-color: #a0a0bf66;
   backdrop-filter: blur(4px) brightness(100%);
   -webkit-backdrop-filter: blur(4px) brightness(100%);
 }
 
 .QUIZ .message-rectangle-3 {
-  top: 728px;
+  top: 558px;
   left: 558px;
   position: absolute;
-  width: 819px;
-  height: 212px;
+  width: 600px;
+  height: 150px;
   background-color: #a0a0bf66;
   backdrop-filter: blur(4px) brightness(100%);
   -webkit-backdrop-filter: blur(4px) brightness(100%);
 }
 
 .QUIZ .text-wrapper-5 {
-  top: 187px;
+  top: 190px;
   left: 576px;
   position: absolute;
   width: 377px;
@@ -299,7 +322,7 @@
 }
 
 .QUIZ .text-wrapper-6 {
-  top: 460px;
+  top: 380px;
   left: 576px;
   position: absolute;
   width: 377px;
@@ -312,7 +335,7 @@
 }
 
 .QUIZ .text-wrapper-7 {
-  top: 734px;
+  top: 578px;
   left: 580px;
   position: absolute;
   width: 377px;
@@ -336,8 +359,8 @@
 
 .QUIZ .ellipse-6 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 254px;
   left: 575px;
   background-color: #d9d9d9;
@@ -348,8 +371,8 @@
 
 .QUIZ .ellipse-7 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 518px;
   left: 575px;
   background-color: #d9d9d9;
@@ -360,8 +383,8 @@
 
 .QUIZ .ellipse-8 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 797px;
   left: 575px;
   background-color: #d9d9d9;
@@ -372,8 +395,8 @@
 
 .QUIZ .ellipse-9 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 839px;
   left: 575px;
   background-color: #d9d9d9;
@@ -384,8 +407,8 @@
 
 .QUIZ .ellipse-10 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 886px;
   left: 575px;
   background-color: #d9d9d9;
@@ -396,8 +419,8 @@
 
 .QUIZ .ellipse-11 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 560px;
   left: 575px;
   background-color: #d9d9d9;
@@ -408,8 +431,8 @@
 
 .QUIZ .ellipse-12 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 607px;
   left: 575px;
   background-color: #d9d9d9;
@@ -420,8 +443,8 @@
 
 .QUIZ .ellipse-13 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 293px;
   left: 575px;
   background-color: #d9d9d9;
@@ -432,8 +455,8 @@
 
 .QUIZ .ellipse-14 {
   position: absolute;
-  width: 31px;
-  height: 31px;
+  width: 20px;
+  height: 20px;
   top: 338px;
   left: 575px;
   background-color: #d9d9d9;

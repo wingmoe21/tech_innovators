@@ -1,6 +1,6 @@
-0.989 - 5.271:  Hello friends, today in this video we will discuss about Kellogg versus malloc.
+0.989 - 5.271:  Hello friends, today in this video we will discuss about Calloc versus malloc.
 6.691 - 7.492: So, let us start.
-8.372 - 14.734: So, both malloc and Kellogg functions are library functions that allocate memory dynamically.
+8.372 - 14.734: So, both malloc and Calloc functions are library functions that allocate memory dynamically.
 15.754 - 22.577: It means memory is allocated during runtime or we can say during execution of the program.
 23.457 - 28.339: This memory will be provided to us from heap segment.
 30.731 - 40.117:  So, now we will see what are the initialization, what are the number of arguments and what is the return value of these functions.
@@ -43,10 +43,10 @@
 317.41 - 320.511: And using memset, we will provide zero as the value.
 320.872 - 322.092: So, what this function will do?
 322.812 - 326.194: It will initialize zero as the value for each block.
-328.075 - 333.618:  So if we will combine these both steps, these are equivalent to Kellogg function.
+328.075 - 333.618:  So if we will combine these both steps, these are equivalent to Calloc function.
 335.499 - 335.759: Okay.
 337.1 - 338.4: So now let us read the note.
-339.601 - 349.086: It would be better to use malloc over Kellogg unless we want the zero initialization because malloc is faster than Kellogg.
+339.601 - 349.086: It would be better to use malloc over Calloc unless we want the zero initialization because malloc is faster than Kellogg.
 350.086 - 357.67: So if you just want to copy some stuff or do something that does not require filling of the blocks with zeros.
 358.206 - 359.827:  then malloc would be a better choice.
 361.148 - 366.393: So, what this note is saying that malloc is much much faster than calloc function.
