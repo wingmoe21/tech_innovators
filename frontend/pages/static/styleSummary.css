@@ -1,3 +1,55 @@
+.SUMMARY .lectures-rectangle {
+  position: relative; /* Changed to relative */
+  width: 922px;
+  height: 50px;
+  top: 120px;
+  left: 519px;
+  background-color: #a0a0bf;
+  border-radius: 25px;
+  box-shadow: 0px 8px 8px #00000040;
+  opacity: 1;
+}
+.SUMMARY .lectures-dropdown {
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  opacity: 0; /* Make it invisible */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  z-index: 2; /* Ensure it's above the LECTURES text */
+  color: black;
+}
+
+.SUMMARY .text-wrapper-2 {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  z-index: 1; /* Place it behind the dropdown */
+  font-family: "Actor", Helvetica;
+  font-weight: 400;
+  color: #d9d9d9; /* Color for the text */
+  font-size: 24px; /* Font size for the text */
+  letter-spacing: 0;
+  line-height: normal;
+  pointer-events: none; /* This makes clicks pass through the text to the dropdown */
+}
+
+.SUMMARY .text-wrapper-2 #selectedLecture {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* Initially hidden */
+  z-index: 3; /* Above the lecturesLabel */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
 .SUMMARY {
   background-color: #f0f0f0;
   display: flex;
@@ -81,7 +133,7 @@
 .SUMMARY .rectangle-2 {
   position: absolute;
   width: 1040px;
-  height: 1024px;
+  height: 800px;
   top: 36px;
   left: 458px;
   background-color: #d9d9d980;
@@ -89,33 +141,9 @@
   -webkit-backdrop-filter: blur(100px) brightness(100%);
 }
 
-.SUMMARY .rectangle-3 {
-  position: absolute;
-  width: 918px;
-  height: 836px;
-  top: 132px;
-  left: 519px;
-  background-color: #a5b0d633;
-  border-radius: 25px;
-  backdrop-filter: blur(100px) brightness(100%);
-  -webkit-backdrop-filter: blur(100px) brightness(100%);
-}
-
-.SUMMARY .message-rectangle {
-  position: absolute;
-  width: 746px;
-  height: 60px;
-  top: 873px;
-  left: 605px;
-  background-color: #a0a0bf66;
-  border-radius: 25px;
-  backdrop-filter: blur(4px) brightness(100%);
-  -webkit-backdrop-filter: blur(4px) brightness(100%);
-}
-
 .SUMMARY .text-wrapper {
   position: absolute;
-  top: 887px;
+  top: 768px;
   left: 668px;
   font-family: "Actor", Helvetica;
   font-weight: 400;
@@ -125,68 +153,14 @@
   line-height: normal;
 }
 
-.SUMMARY .boot {
-  position: absolute;
-  width: 100px;
-  height: 111px;
-  top: 920px;
-  left: 1372px;
-}
-
-.SUMMARY .lectures-rectangle {
-  position: absolute;
-  width: 922px;
-  height: 50px;
-  top: 85px;
-  left: 519px;
-  background-color: #a0a0bf;
-  border-radius: 25px;
-  box-shadow: 0px 8px 8px #00000040;
-}
-
-.SUMMARY .text-wrapper-2 {
-  position: absolute;
-  top: 96px;
-  left: 580px;
-  font-family: "Actor", Helvetica;
-  font-weight: 400;
-  color: #d9d9d9;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
 .SUMMARY .polygon {
   position: absolute;
   width: 28px;
   height: 31px;
-  top: 98px;
-  left: 724px;
+  top: 13px;
+  left: 885px;
 }
 
-.SUMMARY .iconly-bulk-send {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 893px;
-  left: 1217px;
-}
-
-.SUMMARY .fill {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 893px;
-  left: 1306px;
-}
-
-.SUMMARY .video {
-  position: absolute;
-  width: 29px;
-  height: 29px;
-  top: 889px;
-  left: 1257px;
-}
 
 .SUMMARY .img {
   position: absolute;
@@ -298,4 +272,22 @@
   left: 4px;
   background-color: #16b333;
   border-radius: 19.04px;
+}
+
+/* Style for the options in the dropdown */
+.SUMMARY .lectures-dropdown option {
+  background-color: #a0a0bf; /* Background color for options */
+  color: white; /* Text color for options */
+}
+
+.SUMMARY .rectangle-3 {
+  position: relative;
+  width: 918px;
+  height: 650px;
+  top: 132px;
+  left: 519px;
+  background-color: #a5b0d633;
+  border-radius: 25px;
+  backdrop-filter: blur(100px) brightness(100%);
+  -webkit-backdrop-filter: blur(100px) brightness(100%);
 }

@@ -14,16 +14,23 @@
           <div class="ellipse-3"></div>
           <div class="rectangle"></div>
           <div class="rectangle-2"></div>
-          <div class="rectangle-3"></div>
-          <div class="message-rectangle"></div>
-          <div class="text-wrapper">Message...</div>
-          <img class="boot" src="{{ url_for('static', filename='img/boot.png') }}" />
-          <div class="lectures-rectangle"></div>
-          <div class="text-wrapper-2">LECTURES</div>
-          <img class="polygon" src="{{ url_for('static', filename='img/polygon-1.png') }}" />
-          <img class="iconly-bulk-send" src="{{ url_for('static', filename='img/iconly-bulk-send.png') }}" />
-          <img class="fill" src="{{ url_for('static', filename='img/fill-4.svg') }}" />
-          <img class="video" src="{{ url_for('static', filename='img/video.svg') }}" />
+          <div class="lectures-rectangle">
+            <select class="lectures-dropdown" id="lecturesDropdown" onchange="updateSelectedLecture()">
+              <option value="" disabled selected>Select your option</option>
+              <option value="Calloc vs malloc">Calloc vs malloc</option>
+              <option value="Decimal to Binary Conversion">Decimal to Binary Conversion</option>
+              <option value="Pointers in C Basic">Pointers in C Basic</option>
+              <!-- Add more options as needed -->
+            </select>
+            <div class="text-wrapper-2">
+              <span id="lecturesLabel">Choose a Lecture...</span>
+              <span id="selectedLecture" style="display: none;"></span> <!-- Initially hidden -->
+            </div>
+            <img class="polygon" src="{{ url_for('static', filename='img/polygon-1.svg') }}" />
+          </div>
+          <div class="rectangle-3">
+            <span id="rectangle-3-content"></span> <!-- This element will display the output -->
+          </div>
           <!-- Chatbot Button -->
           <a href="{{ url_for('chat') }}" class="button-link">
             <img class="img" src="{{ url_for('static', filename='img/rectangle-10.svg') }}" />
@@ -46,5 +53,39 @@
         </div>
       </div>
     </div>
+    <script>
+      function updateSelectedLecture() {
+        var dropdown = document.getElementById("lecturesDropdown");
+        var selectedOption = dropdown.value;
+        document.getElementById("selectedLecture").innerText = selectedOption;
+        var selectedText = dropdown.options[dropdown.selectedIndex].text;
+        var label = document.getElementById("lecturesLabel");
+        var selectedLectureSpan = document.getElementById("selectedLecture");
+        // If the selected option is not the placeholder
+        if(dropdown.selectedIndex > 0) {
+          label.style.display = "none"; // Hide the "LECTURES" text
+          selectedLectureSpan.textContent = selectedText; // Set the selected text
+          selectedLectureSpan.style.display = "block"; // Show the selected text
+        } else {
+          label.style.display = "block"; // Show the "LECTURES" text
+          selectedLectureSpan.style.display = "none"; // Hide the selected text
+        }
+        fetch('/lecture_summary', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ lecture: selectedOption })
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log('Success:', data);
+        document.getElementById('rectangle-3-content').innerText = data; // Update the rectangle-3 content
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+      }
+  </script>
   </body>
 </html>
