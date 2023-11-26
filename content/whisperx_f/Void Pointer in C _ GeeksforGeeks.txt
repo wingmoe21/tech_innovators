@@ -1,0 +1,25 @@
+1.152 - 7.356:  Hello friends today in this video we will discuss about void pointer in C. So let us start.
+7.876 - 16.862: In this program as we can see we have an integer variable a whose value is 10 and stored at 1000 as the location.
+17.983 - 25.328: Then we have a character variable b whose value is x and stored at 2000 as location.
+26.568 - 30.411: Then we have defined a void pointer p.
+32.008 - 60.952:  who is storing address of a variable so what is the address of a variable 1000 so p value will be 1000 then in the next line p is storing address of b so address of b is 2000 so p value will be updated by 2000 okay so here p is an void pointer that's why it is able to store
+62.287 - 80.043:  address of a variable of any data type like a is of type int, b is of type character and our void pointer p is able to store address of integer also and character also.
+81.564 - 82.946: So let us go to the next slide.
+84.567 - 86.309: So in this slide we have three programs.
+86.709 - 88.791: These are very interesting facts about void
+92.247 - 121.247:  so in the first program as we can see we have a variable a whose value is 10 so this is a whose value is 10 and stored at 1000 as the location then we have defined a pointer which is of type void and storing address of a so this is pointer address of a will be 1000 so it will store 1000 as the value okay and ptr address let us assume it is 3000
+122.324 - 151.874:  instead of 1000 okay then we are printing star ptr so star ptr what it will give so as we can see ptr is a void pointer right so when we will dereference ptr then how compiler will get to know that how many bytes it has to fetch from this address because it is a void pointer so it doesn't know so it will throw an error
+153.191 - 182.448:  okay in the next example we have again a variable a whose value is 10 and stored at 1000 as the location then we are defining a pointer which is of white type and storing address of a and address of a is 1000 so it will store 1000 as its value and let us assume this ptr is stored at location 3000 now i'm printing
+183.243 - 212.735:  ptr but before printing ptr we are typecasting it right so what we are doing we are typecasting it to integer pointer and then we are dereferencing it now our compiler knows that we have to fetch 4 bytes or bytes equal to size of int that's why it will give us this 10 value in the next example
+213.473 - 219.656:  We have an array which is of size 2 and storing 1 and 2 as its elements.
+220.637 - 226.68: We have assumed that 1 is stored at 1000 location, 2 is stored at 1004 location.
+228.201 - 235.465: Then we have defined a pointer ptr which is storing address of a and this pointer is of type void.
+236.686 - 239.407: So address of a will be 1000 so it will store 1000 as its value.
+243.038 - 268.579:  then what we are doing we are adding size of int to ptr okay so ptr value is 1000 so if we will add 4 bytes in it then it will become 1004 after that what we are doing we are typecasting it to integer pointer and then dereferencing it so 1004
+272.964 - 298.776:  then we will typecast it into int star okay and then we are dereferencing the value at this location so at 1004 location value is 2 so it will give output 2 so in this slide we will deal with some advantages of word pointers
+299.915 - 303.958:  So as we all know that malloc and calloc always return wide star type.
+305.58 - 310.524: So this allows these functions to be used to allocate memory of any data type.
+313.346 - 313.626: OK.
+314.787 - 322.994: Second important advantage is world pointer in C are used to implement generic functions in C programming language.
+324.756 - 328.859: For example compare function used in quick short method.
+331.903 - 332.745:  Thank you for watching.

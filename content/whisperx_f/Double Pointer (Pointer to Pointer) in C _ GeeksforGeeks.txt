@@ -1,0 +1,65 @@
+0.367 - 5.628:  Hello friends, today in this video we will discuss about double pointer in C programming language.
+7.648 - 9.949: So this is the representation of double pointer.
+10.769 - 15.13: We have three line of code and we will discuss it what they are doing.
+15.85 - 18.41: So first line is int a is equal to 80.
+19.65 - 29.152: It means a is a variable of integer type which contained 80 value at some address location and we assumed that the location is 1000.
+30.814 - 56.373:  okay second line int star p is equal to address of a it means p is a pointer which is pointing to an integer variable okay it's storing the address of a variable it means p contains address of a which is 1000 so p value will be 1000 and p will also be stored
+56.914 - 83.984:  in the memory at some other location we assumed that 2000 now third line int star star q is equal to address of p means q is a double pointer which is pointing to an integer is containing address of p and what is the address of p address of p is 2000 okay so q will contain 2000 as its value
+84.693 - 89.497:  Now Q also stored at some other location in the memory which we assumed 3000.
+90.358 - 93.14: Now we will print some lines of code.
+93.92 - 94.141: Okay.
+94.521 - 96.943: So like this is the programmer.
+97.423 - 102.147: He's saying, Hey, is a variable stored at 1000 location, right?
+103.008 - 106.05: P is a pointer, which contains the address of a variable.
+106.511 - 110.274: So P is containing address of a variable, which is thousand.
+110.834 - 114.377: And Q is a double pointer, which contains the address of P pointer.
+114.81 - 141.218:  so address of people enter is 2000 that is stored in queue now what will be the value of star star queue okay so how we will get this value let us see so if we will do star queue then what it will give it will give us the value at location 2000 so value at location 2000 is 1000 okay so star queue will give us 1000
+144.122 - 171.77:  now star star q will give the value at location 1000 okay so at location 1000 what is the value 80 is the value so it will give 80 second line is star p star p means it will fetch the value which is present at the location which is stored in p so at p 1000 is stored at 1000 location 80 is stored so it will give us 80
+173.524 - 175.245:  What will be the value of A?
+175.845 - 177.225: A value is already 80.
+179.086 - 180.487: What will be the value of P?
+181.347 - 182.227: P value will be 1000.
+182.267 - 185.008: What will be the value of Q?
+185.108 - 186.749: Q value is 2000.
+188.53 - 190.53: And what will be the value of &A?
+191.071 - 194.932: Means address of A. What will be the address of A?
+195.492 - 194.932: 1000.
+195.652 - 196.433: So it will give us 1000.
+200.674 - 202.255: Now this is our example.
+203.297 - 204.719:  See what is happening in it.
+205.499 - 209.844: Where is a variable of integer type which has the value 789.
+209.904 - 216.09: See and it is stored at 1000 location which we have assumed.
+217.432 - 220.775: Now the second line is ptr star int.
+221.155 - 226.441: It means we have declared a pointer to variable which is pointing to an integer.
+227.623 - 234.687:  And in this line ptr1 is a pointer to a pointer or double pointer which is pointing to an integer type.
+237.069 - 240.671: Then the fourth line is ptr2 is equal to address of where.
+241.252 - 246.515: It means ptr2 pointer will store address of variable where.
+247.435 - 248.816: So see pointer2 is this.
+249.557 - 251.318: It is storing address of where.
+251.478 - 252.138: Where address is 1000.
+253.199 - 253.979: Hence its value is 1000.
+255.362 - 257.504:  And PTR2 is stored at the location 2000.
+259.385 - 263.049: Now the next line is PTR1 is equal to address of PTR2.
+264.009 - 264.73: What does it mean?
+265.27 - 269.554: It means PTR1 is a double pointer which is storing address of pointer 2.
+270.455 - 271.636: And what is the address of pointer 2?
+272.937 - 271.636: 2000.
+273.637 - 276.9: So pointer 1 will store 2000 as its value.
+277.761 - 279.222: And it is stored at the location 3000.
+280.283 - 281.224: We have assumed that.
+282.759 - 284.62:  Now we have three printf statements.
+284.7 - 285.96: Let us take the output.
+287.0 - 289.081: So first is we have to print where.
+289.541 - 291.382: Where value is 789.
+293.062 - 294.903: Second is starptr2.
+295.303 - 302.985: Starptr2 means it will fetch the value which is stored at the location which pointer 2 has.
+303.785 - 305.426: So pointer 2 has 1000 as the location.
+305.446 - 307.626: So at the 1000 location value is 789.
+310.626 - 337.583:  so it will give us the output 789 so next line is **ptr1 so what it will give ptr1 is a pointer to a pointer so ptr1 contains 2000 which is the address of ptr2 ptr2 contains 1000 which is the address of where so **ptr1 will give us the value which is stored at this location which is 789 ok
+340.111 - 347.977:  let us see the output of programming code so this is our code now we have to run it
+379.281 - 380.521:  So see these are the outputs.
+381.502 - 382.862: Value of var is 789.
+383.483 - 385.663: Value of var using single pointer is 789.
+386.324 - 388.724: And value of var using double pointer will be also 789.
+389.345 - 394.506: Okay, so these outputs are totally matching with our slides output.
+398.048 - 398.908: Thank you for watching.

@@ -1,0 +1,26 @@
+0.23 - 7.954:  Friends today in this video we will discuss about the functions that are executed before and after main function in C programming language.
+10.075 - 10.775: So let us start.
+11.155 - 16.838: So this is the program through which we will understand the constructor and destructor part in C programming language.
+18.959 - 25.302: So in this program as we can see that there is a constructor defined and there is a destructor defined.
+25.982 - 29.704: So whenever our main function will be executed first of all
+30.413 - 35.778:  Our constructor will be called and in the constructor this function is defined.
+36.418 - 37.94: So this function will be executed.
+38.76 - 43.384: So it will execute this printf statement and it will print start up code before main.
+44.005 - 47.448: So this line will be printed at first location.
+48.549 - 53.953: Then what will happen then main function will be executed and it will print hello.
+54.714 - 58.137: Okay so at the second printf statement hello will be printed.
+60.171 - 61.972:  So after that it will return 0.
+63.574 - 65.055: Then main function will be ended.
+65.435 - 72.04: After that our destructor will be called and in the destructor part this function is defined myCleanupFun.
+72.841 - 81.307: So it will call this function myCleanupFun and inside this function we will print this printf statement clean up code after main.
+81.728 - 83.909: So in the end this line will be executed.
+84.41 - 89.834: So output will be start up code before main then hello
+90.481 - 92.563:  and after that clean up code after me.
+93.284 - 99.27: We will see the program output in .cpp file also.
+99.85 - 100.391: Let us start.
+107.238 - 109.44: So this is the program which we are watching.
+109.901 - 112.343: So let us run this program and we will see the output.
+144.335 - 151.598:  So as you can see the output is start up code before main then hello then clean up code after main.
+151.918 - 159.181: So first of all our constructor function has been called then main function and after that destructor function will be called.
+160.441 - 165.544: So this is the sequence of constructor and destructor before main and after main.
+170.786 - 171.706: Thank you for watching.

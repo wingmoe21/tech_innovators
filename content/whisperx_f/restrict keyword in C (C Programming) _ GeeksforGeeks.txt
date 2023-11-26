@@ -1,0 +1,16 @@
+0.25 - 28.908:  friends today in this video we will discuss about a restrict keyword in C so in the C programming language after 99 standard a new keyword is introduced whose name is restrict so restrict keyword is mainly used in pointer declarations as a type qualifier for pointers only type qualifier it does not add any new functionality
+29.645 - 37.251:  It is only a way for programmer to inform about an optimization that compiler can make.
+40.473 - 56.686: When we use restrict with the pointer ptr, it tells the compiler that ptr is the only way to access the object pointed by it and the compiler does not need to add any additional checks.
+60.29 - 70.856:  If the programmer uses restrict keyword and violate the above conditions, then definitely result is undefined behavior.
+73.897 - 78.32: And the last point is a restrict keyword will not be supported by C++.
+79.18 - 82.722: It is a C only keyword.
+85.684 - 86.784: So this is the program.
+88.545 - 89.846: Let us analyze this program.
+92.523 - 119.289:  so we have a main method then we have three variables a value is 50 b value is 60 and c value is 70 then we are sending address of a address of b and address of c in use function then it will go here in the use function here address of a will be stored here address of b will be stored and here address of c will be stored
+120.336 - 148.93:  here we have defined restrict keyword right so this restrict keyword does not change anything in output because it is just a way for the programmer to tell the compiler about some optimizations in assembly language or in assembly code okay so what we are doing in this line we are doing star a is equal to star a plus star c
+150.103 - 177.73:  so star a is 50 and star c will be 70 and they are updating the value of star a so star a will be 70 plus 50 120 okay then in the next line what we are doing star b is equal to star b plus star c means they are updating the value of b with b plus c so b plus c will be
+179.4 - 207.514:  130 so it will be updated by 130 now what we are doing we are printing value of a b and c so it will print 120 130 and 70 so in this program using restrict keyword we are just telling the compiler that do not reload value at address c in its assembly code and if you will note
+208.135 - 217.3:  use this restrict keyword then definitely compiler will reload the value at address c in its assembly code language.
+218.881 - 226.345: Therefore, we can say using restrict keyword we have generated assembly code which is optimized in nature.
+228.346 - 235.89: So it will not change the output of the code it will just change the order of the optimizations in compiler.
+239.947 - 240.922:  Thank you for watching.

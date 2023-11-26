@@ -1,0 +1,67 @@
+Program
+// A variable declaration with structure declaration.
+struct Point
+{
+int x, y;
+} p1; // The variable p1 is declared with 'Point'
+// A variable declaration like basic data types
+struct Point
+{
+};
+int main()
+{
+struct Point p1; // The variable p1 is declared like a normal variable
+}
+int x, y;Program
+struct Point
+{
+int x =
+0; // COMPILER ERROR: cannot initialize members here
+int y = 0; // COMPILER ERROR: cannot initialize members here
+};
+struct Point
+{
+int x, y;
+};
+int main()
+{
+}
+// A valid initialization. member x gets value 0 and y
+// gets value 1. The order of declaration is followed.
+struct Point p1 = {0, 1};Program
+#include<stdio.h>
+struct Point
+{
+int x, y;
+};
+int main()
+{
+}
+struct Point p1
+=
+{0, 1};
+// Accesing members of point pl
+p1.x = 20;
+printf ("x = %d, y = %d", pl.x, pl.y);
+return 0;Program
+#include<stdio.h>
+struct Point
+{
+};
+int main()
+{
+}
+int x, y, z;
+// Examples of initializtion using
+struct Point p1 = {.y = 0, .Z = 1, .x = 2};
+struct Point p2
+=
+{.x
+=
+20};
+designated initialization
+printf ("x = %d, y = %d, z = %d\n", p1.x, pl.y, pl.z);
+printf ("x = %d", p2.x);
+return 0;DG
+Thank you for watching!
+Please leave us your comments.

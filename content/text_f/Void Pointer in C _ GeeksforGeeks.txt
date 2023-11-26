@@ -1,0 +1,69 @@
+Program ...
+int a = 10;
+char b = 'x';
+void *p = &a; // void pointer holds address of int 'a'
+p = &b; // void pointer holds address of char 'b'
+a = 10
+1000
+b = x
+2000
+p = 1000 ➜ 2000
+3000
+Note: void pointer can contain the address of a
+variable of any type.Program ...
+#include<stdio.h>
+int main()
+{
+}
+#include<stdio.h>
+int main()
+{
+}
+int a = 10;
+void *ptr = &a;
+printf("%d", *ptr);
+return 0;
+}
+int a = 10;
+void *ptr = &a;
+printf("%d", *(int *)ptr);
+return 0;
+#include<stdio.h>
+int main()
+{
+int a[2] = {1, 2};
+void *ptr = &a;
+ptr = ptr + sizeof(int);
+printf("%d", *(int *)ptr);
+return 0;
+a = 10
+1000
+a = 10
+1000
+1
+1000
+2
+1004
+ptr = 1000
+1000
+ptr = 1000
+1000
+ptr = 1000
+3000
+While dereferencing ptr, how compiler will get
+to know that how many bytes it has to fetch
+from this address, as it is void pointer? Hence
+throw an error.
+While dereferencing ptr, now compiler knows
+that it has to fetch bytes equal to sizeof(int),
+hence it will give 10 as value.
+Ptr = 1000 ➜ 1004 → typecasting to
+int pointer → 2Advantages of void pointers:
+1) malloc() and calloc() return void * type and this allows
+these functions to be used to allocate memory of any
+data type (just because of void *).
+2) void pointers in C are used to implement generic
+functions in C. For example compare function used in
+qsort.DG
+Thank you for watching!
+Please leave us your comments.

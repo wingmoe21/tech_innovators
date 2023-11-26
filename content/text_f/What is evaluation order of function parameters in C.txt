@@ -1,0 +1,11 @@
+void func (int, int);
+int i = 2;
+func (i++, i++);
+Lets discuss the different evaluation order outputs of this program.
+From left to right
+From right to left
+It is compiler dependent in C. It is never safe to depend on the order of evaluation of side
+effects. For example, a function call like above may very well behave differently from one
+compiler to another:DG
+Thank you for watching!
+Please leave us your comments.

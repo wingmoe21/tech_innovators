@@ -1,0 +1,24 @@
+Program
+/* Function with memory leak */
+#include <stdlib.h>
+void f()
+{
+}
+int *ptr = (int *) malloc(sizeof(int));
+/* Do some work */
+return; /* Return without freeing ptr*/Program
+/* Function without memory leak */
+#include <stdlib.h>;
+void f()
+{
+}
+int *ptr = (int *) malloc(sizeof(int));
+/* Do some work */
+free(ptr);
+return;
+When memory allocation is done, the actual heap
+space allocated is one word larger than the requested
+memory. The extra word is used to store the size of
+the allocation and is later used by free()DG
+Thank you for watching!
+Please leave us your comments.

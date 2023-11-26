@@ -1,0 +1,53 @@
+1.001 - 8.865:  Hello friends, today in this video we will discuss about understanding register keyword in C programming language.
+9.605 - 10.545: So, let us start.
+13.127 - 17.809: So, first of all we will see what is the meaning of registers.
+18.729 - 26.973: So, registers are some of the hardwares which are present in our system, which are very faster than memory to access.
+28.78 - 57.895:  that's why some of the variables which are most frequently used in a C program can be put in registers but how we will put them so we will use register keyword or register storage specifier so if in front of a variable if we will write register then compiler can put it in a register okay
+58.703 - 64.848:  So the keyword register hints to a compiler that the given variable can be put in a register.
+65.989 - 71.914: But it's compiler choice to put it in a register or not.
+72.934 - 79.239: Generally, compilers themselves do optimizations and put the variables in register.
+81.701 - 84.424: So what is the summary of these statements?
+85.785 - 87.346: Summary of these statements are
+88.644 - 98.793:  If we will write register in front of a variable then compiler will think that it should be put in a register or not.
+100.735 - 111.103: Okay, if it will be put into a register then it is very faster to access if we will compare it with memory.
+112.124 - 116.208: Right, now we will understand this concept
+117.089 - 121.012:  using some programs or using some short examples.
+122.133 - 124.014: So, let us start with the first example.
+125.496 - 132.381: Here, we will predict the output of the program and we will see either compiler will throw an error or not.
+133.222 - 133.442: Okay.
+133.782 - 134.442: So, let us start.
+136.104 - 138.265: See, this is our main method.
+139.066 - 141.328: Inside this main method, what we have done?
+142.068 - 146.752: We have declared a variable i which is of type integer.
+147.987 - 176.14:  what is the storage specifier for int i register so this register keyword will instruct the compiler that you can put this variable into a register okay and we are giving a value is equal to 10 now we are declaring a pointer a of type integer and it is storing address of i
+177.375 - 188.76:  Now see, this symbol we always use to fetch the addresses of the memory or we can say system memory.
+189.461 - 194.863: Right, but it is not used for fetching the addresses of hardware.
+196.784 - 199.025: Okay, because hardware doesn't have any address.
+200.746 - 203.007: It is a system hardware.
+203.047 - 205.608: Right, so we cannot fetch the address.
+207.082 - 234.996:  that's why this line will throw an error or we can say compiler will throw an error and what will be the error you cannot fetch the address of a register keyword or we can say register variable right let us go to the second program here what we are doing we have declared a variable i of type integer and has the value 10
+236.52 - 263.833:  now what we are doing we have declared a pointer of type integer and storage specifier used is register okay and this register is storing the address of i this is possible okay because this is a hardware okay this is our register let us assume so this is our hardware it can store any value it can store any address
+264.673 - 266.794:  So, this line statement is correct now.
+267.874 - 268.095: Okay.
+268.455 - 272.737: So, this program will run successfully or we can say compiled successfully.
+275.138 - 276.658: Let us go to the third program.
+278.339 - 279.92: In this program what we have done.
+281.26 - 289.324: We have declared a pointer a of type integer and we have used some storage specifier in front of it.
+290.624 - 294.106: First storage specifier which we have used is register.
+295.174 - 296.735:  second one is static.
+297.916 - 298.176: Okay.
+299.477 - 300.818: Will it work or not?
+302.439 - 313.947: So, according to compiler rules and regulation in C programming language we cannot use more than one storage specifier in front of a variable or a pointer.
+315.388 - 315.628: Okay.
+316.029 - 317.45: So, it is violating the rules.
+318.55 - 322.493: That's why compiler will throw an error in this statement.
+323.534 - 323.734: Okay.
+326.212 - 329.155:  See what these statements are saying.
+329.875 - 338.443: There is no limit on number of register variables in a C program but the point is compiler may put some variables in register and some not.
+339.604 - 353.936: These statements conclusion which we have discussed previously also and again I want to say that if you will write register in front of a variable it is not necessary that this variable will be stored into a register only.
+355.109 - 357.172:  it will be decided by our compiler.
+357.672 - 363.139: If compiler won't then it will be stored otherwise it will not be stored into a register.
+364.661 - 364.921: Okay.
+366.804 - 367.945: Thank you guys for watching.
+368.045 - 369.167: Please leave us your comments.
+369.687 - 371.089: It is very helpful for me.

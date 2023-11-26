@@ -1,0 +1,28 @@
+Basics:
+1. int *foo(int) → foo is a function which accepts integer as argument and will return a pointer to an
+integer.
+2. int (*foo)(int) → foo is a pointer to a function which accepts integer as argument and will return an
+integer.Program ...
+#include <stdio.h>
+// A normal function with an int parameter
+// and void return type
+void fun(int a)
+{
+}
+int main()
+{
+}
+printf("Value of a is %d\n", a);
+// fun_ptr is a pointer to function fun()
+void (*fun_ptr)(int) = &fun;
+/* The above line is equivalent of following two
+void (*fun_ptr)(int);
+fun_ptr = &fun;
+*/
+// Invoking fun() using fun_ptr
+(*fun_ptr) (10);
+return 0;
+♂o
+DG
+Thank you for watching!
+Please leave us your comments.

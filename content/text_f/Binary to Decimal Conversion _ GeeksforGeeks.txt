@@ -1,0 +1,93 @@
+=> 110₂ = (1×2²) + (1×2¹) + (0*2⁰)
+=> 110₂ = 4 + 2 + 0
+=> 110₂
+Slide 2
+=
+6
+Algorithm
+AL
+1.
+2.
+3.
+Multiply each digit separately from
+left to right by 2^0, 2^1, 2^2.…..
+respectively.
+Add all the results coming from step
+1.
+Equivalent decimal number would be
+the result obtained in step 2.
+Google Slides// Function to convert binary to decimal
+int binaryToDecimal(int n)
+}
+int num= n;
+int dec_value = 0;
+// Initializing base value to 1, i.e 2^0
+int base = 1;
+int temp = num;
+while (temp) {
+}
+int last_digit = temp % 10;
+temp = temp / 10;
+dec_value += last_digit * base;
+base = base * 2;
+return dec_value;
+Slide 3
+AL
+Code
+num = 110
+base = 1
+Dry Run
+Input: 110
+dec_value = 0
+temp = 110
+last_dig = 0_last_dig = 1
+temp = 11
+temp = 1
+dec_val=0
+dec_val= 2
+base = 2
+base = 4
+last_dig = 1
+temp = 0
+dec_val = 6
+base = 8
+Output: 6
+Google Slides// Function to convert binary to decimal
+int binaryToDecimal(int n)
+{
+}
+int num = n;
+int dec_value = 0;
+// Initializing base value to 1, i.e 2^0
+int base = 1;
+int temp = num;
+while (temp) {
+}
+int last_digit = temp % 10;
+temp = temp / 10;
+dec_value += last_digit * base;
+base = base * 2;
+return dec_value;
+Slide 3 Y
+Code
+num = 110
+base = 1
+Dry Run
+Input: 110
+dec_value = 0
+temp = 110
+last_dig = 0_last_dig = 1_last_dig = 1
+temp = 11
+temp = 1
+dec_val = 0
+temp = 0
+dec_val= 2 dec_val = 6
+base = 8
+base = 2
+base = 4
+Output: 6
+Google Slides.Waiting for docs.google.com...
+DG
+Thank you for watching!
+Please leave us your comments.
+Google Slides

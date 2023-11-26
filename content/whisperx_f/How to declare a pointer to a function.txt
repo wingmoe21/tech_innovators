@@ -1,0 +1,27 @@
+0.316 - 3.917:  Hello friends, today in this video we will discuss how to declare a pointer to a function.
+5.298 - 7.099: So first of all we will cover the basics.
+8.659 - 13.641: So what is the difference between int star foo int and int bracket star foo int.
+14.862 - 17.083: These are very two important concepts.
+17.783 - 18.963: Let us carefully watch them.
+20.564 - 27.667: So the definition of this representation means foo is a function.
+28.601 - 35.123:  which will accept integer as an argument and will return int star which is pointer to an integer.
+36.604 - 48.007: And second representation this one means foo is a pointer to a function which will accept integer as an argument and will return an integer.
+49.868 - 52.048: So these two representations are totally different.
+55.049 - 57.13: So now let us carefully watch this program
+58.174 - 59.535:  and we'll see what it is doing.
+60.976 - 63.799: So it has two functions one is fun and one is main.
+65.12 - 80.392: So in the main function we have declared a pointer to a function whose name is funptr and that function will accept integer as an argument and will return void as an value.
+82.954 - 87.158: Now in this pointer we are storing address of fun.
+87.777 - 88.517:  And what is fun?
+89.158 - 90.198: Fun is a function.
+92.179 - 95.6: So function, this function is returning void value.
+95.9 - 97.401: That's why we have written here void.
+98.621 - 100.562: And is accepting integer as a value.
+101.463 - 103.663: And that's why we are writing here int.
+104.844 - 107.605: And this is our pointer to this function.
+108.746 - 110.846: And we are storing address of this function here.
+113.147 - 117.189: So in the next line, if we want to invoke this
+117.774 - 145.007:  function using this function pointer what we will do we will write star fun ptr and we will pass the value which we want to send so it will accept one integer value that's why we have given 10 here so if we will give 10 then it will call this function fun and will print this printf statement so what we are printing value of a and a value we are sending 10
+146.01 - 148.716:  That's why value of a will become 10.
+149.938 - 151.923: So output will be 10 only.
+153.987 - 154.969: Thank you for watching.

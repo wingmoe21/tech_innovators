@@ -1,0 +1,60 @@
+0.469 - 6.272:  Hello friends, today in this video we will discuss about what is the use of realloc function.
+6.973 - 7.733: So let us start.
+10.054 - 14.017: So what is the use of realloc function.
+16.438 - 27.084: As its name is telling us that reallocating means realloc function is used for reallocating the memory.
+28.567 - 33.629:  which is already allocated using some another functions ok.
+34.87 - 55.219: So, the first point is this function is used for reallocating the memory which has been already allocated or we can say this function is not used for allocating the memory but it is used for reallocating the memory.
+59.915 - 87.198:  ok so just read this note then we will see what it is saying so realloc deallocates the old object pointed to by ptr and returns a pointer to a new object that has the size specified by the size the contents of the new object is identical to that of the old object prior to deallocation
+88.436 - 91.078:  up to the leisure of the new and old sizes.
+91.978 - 100.124: Any bytes in the new object beyond the size of the old object have indeterminate values.
+101.305 - 107.689: And the point is to note that realloc should only be used for dynamically allocated memory.
+108.569 - 114.253: If the memory is not dynamically allocated then behavior is undefined.
+118.703 - 119.804:  which you have to learn.
+120.944 - 121.184: Ok.
+122.485 - 125.346: So, we will learn this concept using some program.
+127.047 - 128.687: So, what we are doing in this program.
+129.808 - 137.991: Inside the main method, we have defined some variables like arr2.
+138.152 - 139.592: Ok.
+139.932 - 140.993: So, what is this arr2.
+142.573 - 146.675: We are specifying an array whose name is arr.
+147.996 - 148.096: Ok.
+148.92 - 177.537:  and it is containing two blocks 0 and 1 we are taking a variable i which is of type integer then what we are doing we are making a pointer ptr which is pointing to an integer value and inside this ptr so this is ptr okay this is ptr inside this ptr what we are doing we are specifying the base address
+178.587 - 184.309:  Or we can say we are inputting base address of the array into ptr.
+185.129 - 187.17: So let us assume base address is 100.
+188.85 - 192.051: This is 104 because it is of type integer.
+192.672 - 194.452: So this base address is stored here.
+195.673 - 195.913: Okay.
+199.274 - 205.456: Then array 0 is equal to 10 and array 1 is equal to 20 means at 0 index value is 10.
+206.787 - 208.609:  and index 1 value is 20.
+210.05 - 210.33: Ok.
+211.771 - 213.092: Now what we are doing.
+214.994 - 221.86: In ptr new so this is a pointer new which is pointing to an integer variable.
+223.301 - 223.561: Ok.
+224.181 - 227.204: What we are doing we are using realloc function here.
+228.645 - 229.125: For what?
+230.206 - 233.229: For allocating dynamically memory.
+235.11 - 235.731: Is this correct?
+236.781 - 266.53:  no it is not correct because we cannot use realloc function for allocating dynamically memory this is a function which is used for reallocating the memory which has been already allocated using some another function okay so this function this program will give us some undefined behavior okay
+266.96 - 269.521:  So, it will give us some undefined behavior.
+270.942 - 272.642: Let us go to the next program.
+275.403 - 283.166: So, as you can see in this program we have a malloc function and using this malloc function what we have done.
+284.947 - 296.071: We have allocated size of int into 2 bytes memory which means 2 blocks of 4 bytes each.
+298.911 - 327.16:  okay after that we have declared a pointer new then star ptr is equal to 10 so ptr is a pointer which is directing to this block of memories now we are doing star ptr is equal to 10 so 10 will be stored here then star ptr plus 1 so this is arithmetic processing of ptr so ptr plus 1
+328.393 - 357.008:  so how many bytes it will jump 4 bytes because ptr is pointing to integer pointer so it will jump to these 4 bytes and star will input some values here so 20 will be stored here ok after that in the pointer new which is pointing to an integer what we are doing we are reallocating using realloc function
+357.711 - 385.5:  so we will provide here ptr this is the previous ptr right now what we are doing size of int star 3 means we are now reallocating the memory where we are specifying 3 blocks of 4 byte each ok and this ptr is this one so what this function will do realloc function
+386.593 - 388.375:  It will copy the previous values.
+389.476 - 394.8: Okay and in this it will input garbage value in the extra block.
+395.761 - 397.883: Now what we are doing using pointer new.
+399.684 - 400.805: So pointer new.
+403.307 - 406.35: Is the pointer which is pointing to these blocks of memories.
+407.351 - 410.674: Now it is at the head of the first memory block.
+412.015 - 414.417: If we will increment it by two.
+415.578 - 418.12:  So it will jump 8 bytes, so it will come here.
+419.761 - 424.065: Then we are inputting 30 instead of garbage value.
+425.866 - 431.891: Now using this 4 block what we are doing, we are printing the values which are stored in these blocks.
+432.932 - 435.694: So it will print like this 10, 20 and 30.
+437.956 - 441.058: So this is the common use of realloc function.
+441.806 - 449.711:  So in the last I will again say you that malloc function is used for allocating the memory dynamically.
+450.492 - 457.596: But realloc function is used for reallocating the memory which has been already allocated.
+459.637 - 460.558: Thank you for watching.
+460.778 - 461.839: Please leave us your comments.

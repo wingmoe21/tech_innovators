@@ -1,0 +1,24 @@
+0.759 - 8.884:  Hello friends today in this video we will discuss about how does free method knows the size of memory to be deallocated.
+10.065 - 10.905: So let us start.
+12.266 - 26.255: As we have discussed in the previous videos that what malloc will do, how it will initialize the memory into the heap memory and if we will not free the allocated memory then what is the problem.
+27.896 - 30.298: So see
+31.328 - 32.628:  This is our malloc function.
+33.469 - 38.55: It is initializing the memory of 4 bytes because integer is of 4 bytes.
+39.671 - 49.794: Then it is typecasting into int star because we want to store this address into a pointer which is of type integer.
+50.994 - 54.715: Then we are using some logic and we are returning from the function.
+55.655 - 60.577: We are not freeing the memory which we have allocated using this malloc function.
+62.202 - 74.746:  So, what we have discussed that using free method we can uninitialize this memory or we can say we can free the memory which we have allocated.
+76.346 - 84.108: So, the question is how free get to know that how many bytes it has to free from the heap memory.
+85.469 - 85.669: Okay.
+87.441 - 116.933:  for that first of all we will see how malloc initialize the memory in the heap ok so see this is our heap memory so when we will use malloc function and we will give size of int what it will do it will give us 4 bytes memory ok so this is 4 bytes memory so this is the first
+117.452 - 146.871:  byte address and this address will be stored into a void pointer and we will typecast this void pointer into int star okay because we want to store into a ptr pointer which is of type integer okay so while initializing this four bytes memory what malloc will do it will take another one word in the memory
+148.143 - 176.271:  okay and it will store the size of the memory which we have allocated using malloc so like 4 so size is equal to 4 so when we will use free function to deallocate this memory we will provide the ptr pointer so this ptr pointer will contain the first byte address and using this word this free pointer
+176.983 - 183.688:  or we can say free function will get to know that we have to deallocate 4 bytes from the memory.
+184.869 - 192.855: So after this specified address it will go towards 4 bytes.
+193.996 - 196.498: Okay and it will free this memory.
+198.88 - 201.162: So there will not be any wastage of memory.
+202.983 - 205.225: This free function is very very important.
+206.434 - 217.86:  So the main logic is whenever memory allocation is done, the actual heap space allocated is one word larger than the requested memory.
+218.941 - 226.285: And the extra word is used to store the size of the allocation and will be later used by free function.
+229.607 - 230.507: Thank you for watching.
+230.807 - 231.908: Please leave us your comments.

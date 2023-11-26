@@ -1,0 +1,47 @@
+0.779 - 9.565:  Hello friends, today in this video we will discuss about how to deallocate memory without using free function in C. So let us start.
+11.266 - 13.568: So as you can see there is a question in this slide.
+14.849 - 19.452: How to deallocate dynamically allocated memory without using free function?
+20.953 - 27.357: Okay, so as we all know that free function is used to deallocate dynamically allocated memory.
+29.46 - 56.748:  if anybody will say you that you do not have to use this free function so how you will deallocate dynamically allocated memory this is the question so what is the solution we have a standard library function which is realloc okay so this function can be used to deallocate previously allocated memory so
+57.449 - 84.681:  this is the function declaration of realloc function which is accepting two arguments one is a pointer and one is size so this realloc function is present inside stdlib.h okay yeah so let us carefully watch the note so in the note he is saying that if size is zero
+85.905 - 113.873:  means if this size argument is zero then this realloc function will be equivalent to free ptr ok and if ptr is equal to null this ptr is equal to null and size is not zero then it is equivalent to malloc size ok so this realloc function
+115.518 - 116.518:  is bidirectional.
+117.299 - 117.499: How?
+118.299 - 129.582: If size is zero then it is directing to free and if ptr is equal to null then it is directing to malloc function.
+130.583 - 130.823: Ok.
+133.463 - 139.265: So, let us see a program in which some memory leak is present.
+140.185 - 140.426: Ok.
+141.246 - 145.227: So, see inside the main method what we have done
+145.996 - 148.578:  We have dynamically allocated 10 bytes.
+150.039 - 150.299: Okay.
+151.019 - 156.563: And whatever pointer it will give us, it will be stored into PTR variable.
+159.085 - 159.325: Okay.
+159.725 - 162.887: So as we all know that malloc will give us void pointer.
+164.048 - 166.89: And we are storing this into an integer pointer.
+168.091 - 170.172: So what we will do, we will typecast it.
+171.653 - 171.853: Right.
+172.674 - 172.854: Yeah.
+174.035 - 175.716: Now we are returning from the function.
+177.754 - 205.716:  so what we have done we have allocated 10 bytes at the run time or we can say dynamically but have you freed that memory when main function is existing no definitely not so we do not have used any free function here so in ubuntu we have wellgreen tool
+206.784 - 232.954:  using wellgreen what you can do you can see what the memory leak so see in the red color as you can see it is written that definitely lost 10 bytes in one block so this is memory leak we have 10 bytes memory leak present in this program because we
+233.795 - 241.757:  have not freed that memory which we have allocated at the run time when program exit ok.
+242.857 - 244.698: Now, go to the second program.
+245.658 - 260.022: So, in this program first of all we have allocated 10 bytes then we are using realloc function and in the realloc function what we are doing in the second argument we are specifying zero size.
+261.252 - 266.937:  It means this realloc function will be work as free PTR.
+268.498 - 268.718: Right.
+269.379 - 270.28: So, what it will do?
+270.46 - 272.302: It will freed this 10 bytes memory.
+273.623 - 279.087: Now, if we will use valgreen tool, then it is not showing any memory leak.
+280.268 - 281.349: So, what is the output?
+281.75 - 283.151: All heap blocks were freed.
+283.771 - 285.153: No leaks are possible.
+286.614 - 287.875: But in the previous program,
+288.8 - 293.841:  Definitely it is saying that we have lost 10 bytes in one block.
+294.181 - 298.142: So, this is memory leak and it is not present in this program.
+300.162 - 302.142: So, what is the solution now?
+302.542 - 309.484: Solution is if we do not want to use free then we can use realloc function also.
+310.644 - 312.724: This realloc function is bidirectional.
+313.424 - 318.145: If we will take size is equal to zero then it will work like free function.
+318.863 - 324.389:  And if we will take ptr is equal to null, then it will work like malloc function.
+326.511 - 327.412: Thank you for watching.
+327.593 - 328.654: Please leave us your comments.

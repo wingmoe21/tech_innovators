@@ -1,0 +1,870 @@
+After going through this video, you will be able to get the
+output of following snippet of codes:
+1. &*&*&**&&*ptr
+2.
+3. So on...
+**&&**&&**&&**ptr
+PTT
+BOUD
+3Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+getchar();
+return 0;
+}
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+g
+E
+102
+K
+103
+S
+F
+104 105
+*&*&*ptr
+Series of execution will be → *ptr → *(100)
+→g →&g → 100 ➜ *(100) →g →⇒ &g →
+100 ➜ *(100) →g
+ORG
+E
+E
+106 107 108 109 110
+K
+111
+S
+112
+\0
+113Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+geeksforgeeks
+E
+K
+102 103
+S
+F
+104 105
+*&*&ptr
+Series of execution will be →&ptr → 200 ➜
+*(200) → 100 ➜&100 ➜ 200 ➜ *(200)
+➜100
+ORG E
+106 107 108 109
+E
+110
+K
+111
+S
+112
+\0
+113Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+getchar();
+return 0;
+}
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+g
+E
+102
+K
+103
+S
+F
+104 105
+*&*&*ptr
+Series of execution will be → *ptr → *(100)
+➜g ⇒ &g ⇒ 100 ➜ *(100) ⇒g ⇒ &g →
+100 ➜ *(100) →g
+ORG
+106 107 108
+E
+E
+109 110
+K
+111
+S
+112
+\0
+113Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+geeksforgeeks
+E
+102
+K
+103
+S
+104
+F
+105
+*&*&ptr
+Series of execution will be →&ptr → 200 ➜
+*(200) → 100 ➜&100 ➜ 200 ➜ *(200)
+➜100
+ORG E
+106 107 108 109
+E
+110
+K
+111
+S
+112
+\0
+1131
+File
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+2
+3
+AutoSave Off HE
+4
+5
+Home Insert Design Transitions Animations Slide Show Review
+DG
+Slide 1 of 5
+Dereference,
+Reference
+OG Thank you for watching!
+DE
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+Rehearse Record Slide
+Timings Show -
+Set Up
+View Help
+енее
+Play Narrations
+Use Timings
+✔Show Media Controls
+DG
+A
+Array_parameters_as_pointers
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+Monitors
+Dereference,
+Reference
+Notes
+gl
+88
+Vishal Gulia
+Share
+Comments
+«»
++76% 53
+7:53 PM
+3/7/2019File
+1
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+2
+AutoSave Off HE
+4
+5
+Home Insert Design Transitions Animations Slide Show Review
+DG
+Dereference,
+Reference
+OG Thank you for watching!
+Slide 4 of 5 DE
+e
+Set Up
+Slide Show
+Hide Rehearse Record Slide
+Slide Timings Show-
+Set Up
+Click to add notes
+Example ...
+#include<stdio.h>
+int main()
+{
+getchar();
+return 0;
+char *ptr = "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+}
+G
+100
+Play Narrations
+Use Timings
+Show Media Controls
+E
+101
+Ptr = 100
+200
+View Help
+енее
+Output:
+geeksforgeeks
+E
+102
+K
+103
+A
+Array_parameters_as_pointers
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+S
+104
+Monitors
+*&*&ptr
+Series of execution will be →&ptr → 200 →
+*(200)→→ 100 →→&100 ➜ 200→*(200)
+→100
+FOR
+G
+105 106 107 108
+| | |κ |s
+109
+110 111
+\0
+112 113
+Notes
+gl
+88
+Vishal Gulia
+Share
+Comments
+«»
++76% 53
+7:53 PM
+3/7/2019From
+Beginning Current Sunbasic.cpp Show Timings Show-
+Set Up
+1
+AutoSave Off HE
+Review View Help
+File Home Insert Design Transitions Animations Slide Show
+C:\Users\vgulia\Documents personal documents\C_Pointers basic.cpp-Notepad++
+-File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window Pay Narrations
+P
+03-17
+2
+3
+5
+1 #include<stdio.h>
+int main()
+Slide 4 of
+3 8(
+DG
+char *ptr = "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+getchar();
+return 0;
+OG Thank you for watching
+C++ source file
+Click to add notes
+еге
+Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+Show Media Controls
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+geeksforgeeks
+E
+102
+K
+103
+A
+Array_parameters_as_pointers
+Storyboarding O Tell me what you want to do
+Monitor: Automatic
+ABC
+Use Presenter View
+S
+104
+F
+105
+0
+106
+*&*&ptr
+Series of execution will be → &ptr → 200 →
+*(200) 100 ➜&100 ➜200 ➜ (200)
+→ 100
+R
+107
+length: 127 lines: 10
+108
+E
+E
+109 110
+K
+111
+Ln: 10 Col:1 Sel: 010
+S
+112
+\0
+113
+Vishal Gulia
+Share
+Windows (CRLF) UTF-8
+Comments
+INS
+7:53 PM
+3/7/2019
+X
+>«»
+83C:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+|DC|
+gpu_info.py X gpu_info bxt X basic.cpp X basic1.cpp X
+1 #include<stdio.h>
+2 int main()
+3 (
+4 char *ptr "geeksforgeeks";
+5 printf("%c\n", *&*&*ptr);
+9
+10
+getchar();
+return 0;
+}
+C++ source file
+e
+e
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+UC
+E
+Windows (CRLF)
+UTF-8
+I
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DOC
+basic.cpp X basic1.cpp X
+gpu_info.py X gpu_info.bxt X
+1
+#include<stdio.h>
+int main()
+2345678
+3 (
+10
+char *ptr "geeksforgeeks";
+printf("3c\n", *&*&*ptr);
+getchar();
+return 0;
+9 }
+C:\WINDOWS\system32\cmd.exe
+C++ source file
+e
+e
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Tra
+Windows (CRLF)
+UTF-8
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DOC
+gpu_info.py Xgpu_info.txt X basic.cpp basic1.cpp X
+1
+#include<stdio.h>
+234567890
+int mai C:\WINDOWS\system32\cmd.exe
+3 (
+char Microsoft Windows [Version 10.0.16299.967]
+printf ((c) 2017 Microsoft Corporation. All rights reserved.
+getchar \Users\vgulia>
+return
+10
+}
+C++ source file
+e
+ене
+A
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+UC
+E
+X
+Windows (CRLF)
+UTF-8
+7:53 PM
+3/7/2019
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+*DOC
+gpu_info.py X gpu_info.txt basic.cpp basic1.cpp X
+1
+23456698
+#includecatdio ha
+int ma C\WINDOWS\system32\cmd.exe
+3 (
+Microsoft Windows [Version 10.0.16299.967]
+char (c) 2017 Microsoft Corporation. All rights reserved.
+getchas:\Users\vgulia>
+printf
+10
+return
+}
+C++ source file
+e
+ене
+A
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+T
+0 X
+Windows (CRLF)
+UTF-8
+7:53 PM
+3/7/2019
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DPC
+gpu_info.py gpu_info.txt X basic.cpp basic1.cpp X
+1 #include<stdio.h>
+2
+3
+34567890
+10
+C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.967]
+char *ptr="geeks (c) 2017 Microsoft Corporation. All rights reserved.
+printf("%c\n", *&* pal
+C:\Users\vgulia>
+int main()
+(
+getchar();
+return 0;
+}
+C++ source file
+e
+еге
+A
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Windows (CRLF)
+UTF-8
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DPC
+gpu_info.py gpu_info.txt X
+1 #include<stdio.h>
+2 int main()
+3 (
+67794456
+10
+getchar();
+return 0;
+}
+C++ source file
+basic.cpp basic1.cpp X
+char *ptr "geeksforge
+printf("%c\n", *&*&*ptzc:\Users\vgulia>
+e
+C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+енее
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+0
+Windows (CRLF)
+X
+UTF-8
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DPC
+basic.cpp X base
+gpu_info.py gpu_info.txt X
+1 #include<stdio.h>
+2 int main()
+3
+(
+char *ptr "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+34567890
+10
+getchar();
+return 0;
+}
+C++ source file
+e
+C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+C:\Users\vgulia>
+енее
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+I
+Windows (CRLF) UTF-8
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DPC
+basic.cpp X
+gpu_info.py gpu_info.txt X
+1 #include<stdio.h>
+2 int main()
+3 (
+67794456
+10
+char *ptr "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+getchar();
+return 0;
+}
+C++ source file
+e
+basicl
+C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+C:\Users\vgulia>
+енее
+A
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Windows (CRLF)
+T
+UTF-8
+0
+X
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DUC
+gpu_info.pygpu_info.txt basic cop X
+1 #include<stdio.h>
+2 int main()
+3 (
+4 char *ptr "geeksforgeeks";
+5 printf("%c\n", *&*&*ptr);
+9
+10
+getchar();
+return 0;
+}
+C++ source file
+e
+C:\Users\vgulia\Documents personal_documents\C_Pointers\basic1.cpp
+еге
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Windows (CRLF)
+UTF-8
+I
+0
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic1.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window?
+DSC
+gpu_info pygpu_info.txt Xbasic.cpp basic1.c C:\WINDOWS\system32\cmd.exe - basic.exe
+Microsoft Windows [Version 10.0.16299.967]
+1 #include<stdio.h>
+2
+3
+3456TBSO
+7
+8
+10
+0
+int main()
+(
+9 }
+O
+char *ptr "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+Thence Dais
+C++ source file
+e
+(c) 2017 Microsoft Corporation. All rights reserved.
+C:\Users\vgulia>cd Documents\personal_documents\C_Pointers
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+basic.cpp: In function 'int main()':
+basic.cpp:4:13: warning: ISO C++ forbids converting a string constant to 'char** [-Wwrite-strings]
+char *ptr = "geeksforgeeks";
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+E
+C:\WINDOWS\system32\cmd.___
+ABC
+e ег
+C:\WINDOWS\system32\- X
+N
+length: 126 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Windows (CRLF)
+UTF-8
+7:54 PM
+3/7/2019
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic1.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window?
+XDDPE
+gpu_info.py X
+1 #include<stdio.h>
+2 int main()
+3
+(
+34567890
+10
+gpu_info.txt basic.cpp
+char *ptr "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+C++ source file
+e
+C:\WINDOWS\system32\cmd.exe - basic.exe
+Microsoft Windows [Version 10.0.16299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+C:\Users\vgulia>cd Documents\personal_documents\C_Pointers
+basic1.co
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+basic.cpp: In function 'int main()':
+basic.cpp:4:13: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+char *ptr = "geeksforgeeks";
+ABC
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+C
+ене
+A
+length: 126 lines: 10
+Ln: 10 Col: 1 Sel: 010
+LUC
+LIER
+Windows (CRLF)
+T
+UTF-8
+X
+7:54 PM
+3/7/2019
+X
+INS
+XFile
+5
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show -
+Start Slide Show
+1
+N
+3
+AutoSave Off HE
+Home Insert Design Transitions Animations Slide Show Review View Help
+Play Narrations
+Use Timings
+Show Media Controls
+4
+5
+DG
+Slide 4 of 5
+H
+Mary
+Dereference
+OG Thank you for watching!
+C
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+Rehearse Record Slide
+Timings Show
+Set Up
+e ве
+Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeks forgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+100
+E
+101
+Ptr = 100
+200
+Output:
+geeksforgeeks
+EK
+102 103
+A
+Array_parameters_as_pointers
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+S
+104
+Monitors
+*&*&ptr
+Series of execution will be →&ptr → 200 →
+*(200)→→ 100 →&100 ➜ 200 ➜ *(200)
+→100
+FOR
+105 106 107
+G
+108
+| | | |s
+109
+110
+111
+\0
+112 113
+Notes
+88
+Vishal Gulia
+D
+Share
+Comments
+«»
++76% 5
+7:54 PM
+3/7/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show Review View Help
+Play Narrations
+Use Timings
+Show Media Controls
+From From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+1
+2
+4
+5
+DG
+Slide 5 of 5
+H
+Dereference,
+Reference
+OG Thank you for watching!
+E
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+Rehearse Record Slide
+Timings Show -
+Set Up
+енее
+Array_parameters_as_pointers
+A
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+DG
+P
+Monitors
+Thank you for watching!
+Please leave us your comments.
+Notes
+gl
+88
+Vishal Gulia
+0+
+Share
+Comments
++76% 5
+7:54 PM
+3/7/2019

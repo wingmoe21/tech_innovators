@@ -1,0 +1,137 @@
+Problem Statement
+Given a hexadecimal number as input, we need to write a program to convert the
+given hexadecimal number into the equivalent decimal number. i.e convert the
+number with base value 16 to base value 10.
+Waiting for docs.google.com
+Google SlidesProblem Statement
+Given a hexadecimal number as input, we need to write a program to convert the
+given hexadecimal number into the equivalent decimal number. i.e convert the
+number with base value 16 to base value 10.
+The base value of a number system determines the number of digits used to
+represent a numeric value.
+For example, the binary number system uses two digits 0 and 1, octal number
+system uses 8 digits from 0-7 and decimal number system uses 10 digits 0-9 to
+represent any numeric value.
+Waiting for docs.google.com.
+Google SlidesHexadecimal Number
+In hexadecimal number we use 16 symbols {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F} to
+represent all numbers.
+Waiting for docs.google.com
+Google SlidesHexadecimal Number
+In hexadecimal number uses 16 symbols {0, 1, 2, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F} to
+represent all the numbers.
+To remove confusion here we substitute,
+Waiting for docs.google.com
+10-> A
+11 -> B
+12 -> C
+13 -> D
+14 -> E
+15-> F
+Google SlidesSlide 7
+4
+#
+Algorithm
+1. Convert alphabets to numerals.
+2. Multiply each digit separately from left
+to right by 16^0, 16^1, 16^2...
+respectively.
+3.
+Add all the results coming from step 1.
+4. Equivalent decimal number would be
+the result obtained in step 2.
+Google SlidesHexadecimal Number: 1AB
+256
+Waiting for ssi.gstatic.com.
+1
+A B
+1 x (16^2)+10x (16^1) + 11x(16^0)
++
+10
+160 +
+11
+427
+11
+Decimal Number: 427
+Algorithm
+1.
+2.
+Convert alphabets to numerals.
+Multiply each digit separately from left
+to right by 16^0, 16^1, 16^2…..
+respectively.
+4.
+3. Add all the results coming from step 1.
+Equivalent decimal number would be
+the result obtained in step 2.
+Google SlidesWaiting for docs.google.com.
+int hexadecimalToDecimal(char hexVal[])
+(
+int len strlen(hexval);
+Initializing base value to 1, f. 18²0
+int base = 1;
+int dec_val= 0;
+// Extracting characters as digits from last character
+for (int i-len-1; i>-0; i--)
+{
+}
+Code
+If character lies in
+// it to Integral 0-9 by subtracting 48 from
+// ASCII value.
+(hexVal[i]>-'0' && hexVal[i]<-*9')
+dec_val+- (hexVal[i] - 48) base;
+Incrementing base by power
+1
+{
+}
+base base 16;
+If character lies in 'a'
+// it to integral 10-15 by subtracting 55
+// from ASCII value
+else if (hexval[i]>-'A' && hexVal[i]<-'F')
+dec_val+- (hexVal[i] - 55)*base;
+# incrementing base by power
+base - base*16;
+return dec_val;
+Google Slides// Function to convert hexadecimal to decimal
+int hexadecimalToDecimal(char hexVal[])
+{
+int len = strlen(hexval);
+// Initializing base value to 1, i.e 16'
+int base = 1;
+int dec_val = 0;
+// Extracting characters as digits from last character
+for (int i-len-1; i>=0; i--)
+{
+}
+// if character lies in
+'9", converting
+// it to integral 6-9 by subtracting 48 from
+// ASCII value.
+1# (hexVal[i]>='0' && hexVal[i]<='9')
+dec_val += (hexVal[i] - 48)*base;
+// incrementing base by power
+base = base 16;
+}
+// if character lies in 'A'-"F" converting
+// it to Integral 10-15 by subtracting 55
+// from ASCII value
+else if (hexVal[i]>='A' && hexVal[i]<='F')
+{
+dec_val += (hexVal[i] - 55)*base;
+// incrementing base by power
+base = base 16;
+return dec_val;
+Waiting for docs.google.com...
+Code
+Dry Run
+hexVal] = 1AB
+base = 1
+dec_val = 0
+i=2
+Google SlidesSlide 15
+DG
+Thank you for watching!
+Please leave us your comments.
+Google Slides

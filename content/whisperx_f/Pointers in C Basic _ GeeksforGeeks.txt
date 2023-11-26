@@ -1,0 +1,60 @@
+0.077 - 4.439:  Hello friends, today in this video we will discuss about pointer in C basics.
+6.239 - 8.54: So these are some basic information.
+9.801 - 13.722: In every computer system there is some fixed random access memory.
+14.522 - 18.384: So to store the addresses we need pointer in C programming language.
+19.604 - 22.865: So these are some basic rules how to declare a pointer variable.
+23.485 - 24.626: So first rule is
+25.865 - 28.547:  We will write the data type whose address it will store.
+28.988 - 29.749: It may be void.
+29.969 - 33.652: After that we will use an asterisk operator then the name of the variable.
+34.232 - 35.714: Example int star ptr.
+36.194 - 39.217: Ptr is a pointer which is pointing to an integer variable.
+40.238 - 41.239: Void star ptr.
+41.419 - 46.984: Ptr is a pointer variable which is storing the address of any data type.
+47.644 - 52.088: It may be structure, union, array, any data type.
+53.072 - 59.854:  Our second rule is for finding the address of any variable in the computer system, we will use AND operator.
+61.494 - 63.455: So int a is equal to 2.
+63.895 - 69.956: Now this a variable has been stored into our computer memory in some location.
+70.556 - 73.477: So now we want to fetch the address of that location.
+73.557 - 80.519: What we will do, we will use AND operator and we will write AND a. It will give us the memory location
+81.88 - 86.444:  Third rule is how to store the address of a variable into a pointer variable.
+86.984 - 89.086: So we will use assignment operator.
+90.967 - 97.132: Our fourth rule is to fetch the value which is stored at the memory location which a pointer has.
+97.772 - 99.754: We will use asterisk operator.
+100.375 - 103.697: We will see this condition in our next slides.
+106.719 - 111.103: So our first example is int x. Now we are printing
+111.761 - 139.229:  end of x so we have discussed that and will give us the address location of x variable okay so as as we can see this is our memory map okay variable is x and address is thousand let us assume okay so now if we will do print f end of x so what it will print it will print this thousand
+141.772 - 145.014:  Our next example is int x is equal to 10.
+146.496 - 153.581: So x is a variable which is of type integer and storing 10 as its value.
+154.902 - 161.687: So see x is equal to 10 and it is stored into our memory at 1000 address location.
+162.968 - 166.31: Now we are declaring a pointer variable int star ptr.
+167.231 - 171.154: So ptr is a pointer variable which is pointing to an integer.
+172.077 - 199.394:  okay now what we are doing in this pointer we are storing the address of x so what will be the address of x x address is thousand so we are storing this thousand into this pointer okay but this pointer will be stored at some other location which is two thousand okay this is two thousand okay now if we will print
+200.077 - 227.463:  ptr then what it will print it will print 1000 value and if we will print x then it will give us 10 so this is the memory map of this program so let us discuss the next example int var is equal to 10 so var is a variable of int type and storing 10 its value so see var is equal to 10 and it is stored at some memory location 1000
+229.108 - 258.793:  next line is ptr is a pointer variable of int type which is storing the address location of variable where so variable where location is 1000 so this 1000 will be stored in ptr okay so third line is printf value of where star ptr so what this star ptr will give star ptr will give the value which is stored at memory location present at pointer variable
+259.639 - 288.54:  so pointer variable location is 1000 so at 1000 what will be the value 10 will be the value so it will print 10 next line is printf ptr so what ptr contains ptr contains 1000 so it will print 1000 then star ptr is equal to 20 so what is the meaning of star ptr star ptr means this variable where
+289.42 - 319.078:  so what it is doing it is updating it by 20 so we have updated it by 20 now if we will print star ptr so ptr location is 1000 and at 1000 location value is updated to 20 hence it will print 20 so our next example is int v3 means v is an array
+320.031 - 342.407:  which contains three elements and each element of int type so first element will contain 10 then 100 then 200 so this is our first element second third element so array is a continuous memory okay so if let us assume first element is stored at 100
+344.008 - 369.425:  then int will take 4 bytes so next element will be stored at 104 and next element will be stored at 108 ok then we have declared a pointer variable which is pointing to an integer ok then ptr is equal to v it means we are assigning the address of this array into our pointer variable
+370.126 - 398.109:  okay so what does we contain we contain the address of first member which is 100 okay so ptr will contain 100 now we are doing three iterations so in the first iteration what will happen it will print star ptr so what will star ptr will give star ptr means at 100 location what will be the value value is 10 so it will print 10
+399.62 - 425.907:  after that we are doing ptr++ it means we are incrementing the address by size of the data type so ptr is pointing to integer variable so integer is of 4 bytes so if we will do ptr++ it will increment the value at ptr by 4 bytes so ptr is equal to 100 so if we will do ptr++ it will be 104
+428.251 - 455.007:  and at 104 location what will be the value 100 will be the value again if we will do ptr++ then 104 will become 108 and what will be the value at this location 200 will be the value so it will print 200 okay so this is how we can traverse an array data using pointers
+456.277 - 458.56:  Now we will see the output of these programs.
+459.862 - 461.284: So this is our first program.
+461.705 - 463.748: So let us see the output of this first program.
+491.209 - 499.601:  see this is our first program what it is doing it is printing the address of x variable ok let us run the second program
+520.538 - 525.684:  See it is printing the address which is contained in ptr pointer variable.
+526.525 - 526.765: Ok.
+528.207 - 529.749: Let us run our third program.
+551.124 - 580.068:  so see value of variable is equal to 10 ok so variable where address will be stored in ptr so address of where is equal to this one and after doing star ptr is equal to 20 ok so we have updated the value 10 with 20 and then star ptr is equal to 20 ok so this is correct according to our concepts let us run our fourth program
+581.201 - 582.361:  This is our fourth program.
+584.262 - 585.042: Let us run this.
+600.646 - 602.507: See what it is doing.
+602.767 - 606.488: It is traversing the array using pointers.
+606.848 - 608.488: So value star ptr is equal to 10.
+608.948 - 610.169: So this is the value of ptr.
+611.556 - 618.322:  So after adding 4 in it, it will become this and after adding 4 bytes in this address, it will become this.
+618.782 - 619.042: Okay.
+619.663 - 624.066: Our second member of our array is 100 and the third member is 200.
+625.147 - 625.427: Okay.
+628.73 - 629.831: Thank you for watching.

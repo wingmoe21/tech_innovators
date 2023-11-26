@@ -1,0 +1,56 @@
+0.086 - 6.65:  Hello friends, today in this video we will discuss about dangling, void, null and wild pointers.
+7.69 - 10.252: So, let us start with dangling pointers.
+11.412 - 17.856: A pointer pointing to a memory location that has been already deleted is called dangling pointer.
+18.776 - 20.697: So, let us see a C program.
+22.198 - 29.322: So, what we are doing in this C program, we are allocating some memory into our system
+30.481 - 31.261:  of 4 bytes.
+32.621 - 35.702: Now malloc will always return a void pointer.
+36.322 - 41.483: But we are storing it into a pointer which is pointing to an integer variable.
+42.403 - 44.624: So we will typecast into int star.
+45.344 - 48.584: So memory map of this line will be like this.
+49.825 - 51.465: So ptr is equal to 100.
+51.505 - 56.146: 100 is the base address of the memory which is allocated by malloc.
+57.086 - 57.186: Ok.
+57.924 - 61.865:  and ptr will be stored at 700 which we have assumed.
+63.146 - 81.572: Now in the second line free ptr so free will deallocate the memory which is pointing by this pointer so this ptr is pointing to this memory and this memory is of 4 bytes so it will be deleted from our system.
+82.793 - 86.154: Now our ptr is containing 100 as the value
+86.932 - 92.716:  and 100 is the base address of this deallocated memory or freed memory.
+93.576 - 97.018: That's why this pointer is known as dangling pointer.
+97.578 - 103.182: Because this pointer is pointing to a memory location that has been already deleted.
+104.222 - 104.463: Okay.
+105.083 - 107.605: Now in the third line, ptr is equal to null.
+108.585 - 113.948: Now ptr value will be null or will be initialized to null.
+114.229 - 116.57: It means now it is not a dangling pointer.
+116.966 - 120.267:  because its value has been null.
+123.809 - 125.929: So let us start with next example.
+126.07 - 132.632: This is also an example of dangling pointer but in another instant or in another conditions.
+134.633 - 136.073: So this is our main function.
+137.374 - 145.517: So in the main function what we are doing we are calling a fun function and this fun function will return an address.
+147.484 - 150.045:  So, let us start with the memory map of this program.
+151.606 - 153.646: So, see this is our stack memory.
+154.247 - 158.208: So, whenever main function will be called, a context will be formed.
+158.908 - 163.95: And in this context, p is equal to fun.
+164.31 - 169.512: So, fun function will be called in the second context of this stack memory.
+170.712 - 176.294: And in the fun function, a local object will be created.
+176.932 - 204.597:  or we can say a local variable x will be created and x value will be 5 and let us assume it has been stored at address 100 now when it will return 100 as the value okay so this context will be deleted from our system and p is equal to 100 now now when it will fetch the value at address 100
+206.423 - 236.035:  what it will give it will give us a garbage value why because this local memory has been already deleted and now this p pointer is pointing to a memory location which has been already deleted it means it will give a garbage value so let us start with the next example now the example is same but data type of x has been changed to static
+237.011 - 238.492:  So what is the meaning of static?
+238.712 - 244.674: Static means now this x variable will not be stored into our local memory or stack memory.
+245.475 - 250.137: Now it will be stored into our global memory, not in local memory.
+250.717 - 264.723: Okay, so whenever this function will be called, it will go into the second context of the second means stack memory and when it will return x means address of x.
+265.663 - 291.823:  so it will return 100 as the value and this 100 will go here now when it will fetch the value which is present at address 100 so what it will fetch it will fetch value 5 only because now this memory has not been deleted when this context will be deleted okay because it is stored into our global memory so value will be 5 now we will discuss void pointer
+292.591 - 296.374:  So void pointer is a type of pointer not the value of a pointer.
+297.055 - 298.656: So this is a very important point.
+299.296 - 299.537: OK.
+300.077 - 312.907: So how void pointer is important because void pointer can store address of any data type and to fetch the value of that data type we have to typecast it according to that data type.
+313.868 - 318.432: So let us see int x is equal to 4 float y is equal to 5.5.
+319.353 - 322.355: Now what we are doing we are creating a void pointer.
+323.464 - 353.239:  and in the void pointer first of all we are initializing it with the address of x and x is of int type now to fetch the value of int x what we will do we will typecast it into int star so it will give value 4 and to fetch the value of y using this pointer what we will do we will store the address of y here into the pointer after that we will typecast it into float star
+353.874 - 382.437:  now it will give 5.5 so now we will discuss null pointer and wild pointer so what is the meaning of a null pointer when pointer value is null okay then it is known as null pointer let us see int star ptr is equal to null so whenever we will print this ptr it will give us zero as the value because null is a macro defined in c language
+383.388 - 385.59:  and it is zero only.
+387.331 - 389.112: So, next pointer is wild pointer.
+389.212 - 390.793: What is the meaning of wild pointer?
+391.414 - 393.275: Uninitialized value of a pointer.
+394.135 - 412.608: So, let us see in the second program int x is equal to 10 and before this int star p but here p has not been initialized till now it means it is wild pointer but when p is equal to address of x now p is not a wild pointer because it is
+413.021 - 414.204:  initialized already.
+416.47 - 417.352: Thank you for watching.

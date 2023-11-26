@@ -1,0 +1,68 @@
+0.342 - 2.483:  Hello friends, welcome to GeeksforGeeks.
+3.044 - 8.767: In this tutorial, we are going to see how to convert a hexadecimal number to a decimal number.
+9.608 - 21.295: The problem statement is, given a hexadecimal number as input, we need to write a program to convert the given hexadecimal number into the equivalent decimal number, i.e.
+21.415 - 24.717: convert the number with base value 16 to base value 10.
+25.788 - 31.772:  The base value of a number system determines the number of digits used to represent a numeric value.
+32.032 - 36.754: For example, the binary number system uses 2 digits 0 and 1.
+37.295 - 46.96: Octal number system uses 8 digits from 0 to 7 and decimal number system uses 10 digits 0 to 9 to represent any numeric value.
+47.701 - 51.083: In hexadecimal number, we use 16 symbols that are 0, 1, 2, 3, 4,
+55.79 - 65.057:  5, 6, 7, 8, 9, A, B, C, D, E, F to represent all the numbers.
+65.538 - 81.83: In order to remove any confusion, we have substituted 10 as A, 11 as B, 12 as C, 13 as D, 14 as E and 15 as F. Now let us look at the algorithm to convert a hexadecimal number to a decimal number.
+82.111 - 82.991: Step 1.
+83.292 - 85.133: Convert Alphabets to Numerals
+85.674 - 86.555:  Step 2.
+86.855 - 97.103: Multiply each digit separately from left to right by 16 raised to the power 0, 16 raised to the power 1, 16 raised to the power 2, so on respectively.
+97.784 - 98.304: Step 3.
+99.105 - 101.567: Add all the results coming from step 1.
+102.047 - 102.608: Step 4.
+103.428 - 107.211: Equivalent decimal number would be the result obtained in step 2.
+107.912 - 110.534: Now let us understand this algorithm with an example.
+111.094 - 113.476: Suppose the hexadecimal number is 1AB.
+114.778 - 118.44:  Now step number 1 asks us to convert the alphabets to numerals.
+119.08 - 123.143: Therefore, A will be converted to 10 and B will be converted to 11.
+123.703 - 124.503: Step number 2.
+124.764 - 127.065: Multiply each digit separately from left.
+127.285 - 133.108: That is B, A, 1 by 16 raised to the power 0, 16 raised to the power 1 and so on.
+133.228 - 142.834: Therefore, 11 will be multiplied by 16 raised to the power 0, 10 will be multiplied by 16 raised to the power 1 and 1 will be multiplied by 16 raised to the power 2.
+143.749 - 146.131:  Add all the results coming from step number 1.
+146.571 - 152.956: So we add 11, 160 and 256 to obtain the decimal equivalent 427.
+153.457 - 154.898: Now let us look at the code.
+155.558 - 165.906: In the function hexadecimal to decimal, we have passed a character array hex value in which we have the hexadecimal number and the function returns its decimal equivalent.
+166.346 - 169.409: First of all, we find the length of the hex value array.
+169.989 - 173.152: We initialize base with 1 which is 16 raised to the power 0.
+174.068 - 176.23:  we initialize decimal value as 0.
+176.79 - 186.857: Now we run a for loop initializing i equal to length minus 1 until i is greater than equal to 0 and decrement i by 1 in each iteration.
+187.517 - 192.861: Inside the for loop, first of all we will check if the character lies in the range 0 to 9.
+193.341 - 200.366: If yes, we will convert that character value into integral value by subtracting 48 from its ASCII value.
+201.044 - 218.509:  Therefore, if hex value i is greater than equal to character 0 and hex value i is less than equal to character 9, we subtract 48 from hex value i to convert it into integral value and then we multiply it with base and add it to the decimal value.
+218.909 - 222.83: After that, we change the value of base by multiplying it by 16.
+223.511 - 227.832: But in case the character is an alphabet and lies in the range a to f,
+228.328 - 234.31:  We convert it into integral value 10 to 15 by subtracting 55 from the S chi value.
+234.81 - 249.013: So if hex value I is greater than equal to character A and hex value I is less than equal to character F, we subtract 55 from hex value I and multiply it with base and then add it into the decimal value.
+249.673 - 251.974: In the end, we multiply base by 16.
+252.394 - 255.835: The for loop will continue until I is greater than equal to zero.
+256.559 - 258.7:  In the end we will return the decimal value.
+259.14 - 261.221: Now let us understand this with an example.
+262.041 - 264.102: Let hex value contain 1ab.
+264.562 - 275.366: Initially, the decimal value will be 0, the base will be 1 and the value of i will be 2 as the length of hex value is 3 so i will be length-1 which is 2.
+276.226 - 283.789: In the first iteration, hex value 2 is an alphabet B. We find the equivalent numeric value for that alphabet which is 11.
+284.795 - 287.857:  Currently, i is equal to 2 and base is equal to 1.
+288.378 - 293.341: Therefore, decimal value will be hex value that is 11 into the base that is 1.
+293.881 - 298.545: Add it to the previous decimal value which is currently 0 which gives 11.
+299.065 - 302.187: We change the value of base by multiplying it by 16.
+302.287 - 304.749: Therefore, 1 into 16 will give 16.
+305.25 - 309.953: As the value of i is greater than equal to 0, we continue to the next iteration.
+310.553 - 312.635: Now, the value of i will be equal to 1.
+313.445 - 319.347:  As hex value 1 is an alphabet A, we convert it into its equivalent numeric value which is 10.
+319.948 - 331.292: The decimal value will be the hex value 10 into the base 16 which gives 160 and we add that to the previous decimal value 11 to obtain the current decimal value 171.
+331.852 - 334.994: We change the value of base by multiplying it by 16.
+335.594 - 339.896: As 1 is still greater than equal to 0, we continue to the next iteration.
+341.227 - 345.41:  As hex value 0 is already a numeric value, we need not convert it.
+345.95 - 356.558: The decimal value will be the hex value that is 1 into the base 256 added to the previous decimal value 171 which gives us 427.
+357.178 - 360.28: We change the value of base by multiplying it by 16.
+361.061 - 365.344: On decrementing the value of i, the value of i will now become minus 1.
+365.844 - 369.687: As i is not greater than equal to 0, we can exit the loop.
+370.149 - 372.292:  and return the decimal value which is 427.
+373.914 - 375.357: I hope you understood the code.
+375.957 - 376.919: Thank you for watching.
+377.179 - 378.281: Please leave us your comments.

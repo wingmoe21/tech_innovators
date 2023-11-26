@@ -1,0 +1,74 @@
+Basics:
+Function definition:
+return_type Function_name(arg1_type arg1_name, ..., ...)
+{
+}
+body;
+return result; //result should be of return_type only
+return_type_result = Function_name(arg1,...,...)Program ...
+#include <stdio.h>
+// An example function that takes two parameters 'x' and 'y'
+// as input and returns max of two input numbers
+int max(int x, int y)
+{
+if (x > y)
+return x;
+}
+else
+return y;
+}
+// main function that doesn't receive any parameter and
+// returns integer.
+int main(void)
+{
+int a = 10, b = 20;
+// Calling above function to find max of 'a' and 'b'
+int m = max(a, b);
+printf("m is %d", m);
+return 0;#include <stdio.h>
+void fun(int x)
+{
+}
+int main(void)
+{
+}
+x = 30;
+int x = 20;
+fun(x);
+printf("x = %d", x);
+return 0;
+# include <stdio.h>
+void fun(int *ptr)
+{
+*ptr = 30;
+}
+}
+int main()
+{
+int x = 20;
+fun (&x);
+printf("x = %d", x);
+return 0;
+Fun()
+Int x = 20
+x → 30
+Main()
+Int x =
+20
+1000
+Fun(20)
+Print x → 20
+Fun()
+Int ptr = 1000
+*1000 →30
+Main()
+Int x = 20 →30
+1000
+Fun (1000)
+Print x→ 30
+Output:
+X = 20
+Output:
+X = 30ƏG
+Thank you for watching!
+Please leave us your comments.

@@ -1,0 +1,229 @@
+AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse
+Slide Slides
+2
+3
+5
+6
+Slides
+ƏG
+1. Sy of
+1 double fa
+Table Pictures Online Screenshot Photo Shapes Icons
+Pictures
+Album -
+Slide 2 of 9
+Tables
+Structure member alignment and padding
+03
+Sequential memory structure
+Some Rules
+Huture Member
+Algement and
+Padding-Part
+Images
+A e
+Review View
+3D SmartArt Chart
+Models -
+Illustrations
+Pause
+Forms
+Forms
+00:00:10
+Select
+Area
+My Add-ins
+Add-ins
+Audio
+K
+Record
+Pointer
+Zoom Link Action
+Links
+X
+Comment
+Comments
+Assumptions
+1. System or machine: (32 bit machine)
+2. char (1 byte)
+3. short int (2 bytes)
+4. int (4 bytes)
+5. double (8 bytes)
+A
+Text Header WordArt
+Box & Footer
+GEEKSFORGEEKS
+Text
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+Notes
+▲ Vishal Gulia
+01
+88
+8²
+Media
+Share
+DH
+Comments
++86%
+6:04 PM
+5/23/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse
+Slide Slides
+1
+2
+3
+5
+6
+Slides
+DG
+Table Pictures Online Screenshot Photo Shapes Icons
+Pictures
+Album -
+1.S (37)
+Tables
+Slide 3 of 9
+Structure member alignment and padding
+0:3
+Sequential memory structure
+Some Rules
+Hrueture Member
+Alignment and
+Padding-Part
+Images
+e
+Review View
+3D SmartArt Chart
+Models -
+Illustrations
+Memory architecture:
+D7 data bus DO
+Byte
+Addressable
+Memory
+Pause
+Forms
+Forms
+D31
+00:00:31
+BANK 3
+Select
+Area
+My Add-ins
+Add-ins
+Audio
+BANK 2
+k
+Record
+Pointer
+Zoom Link Action
+Links
+Structure member alignment and padding
+X
+BANK 1
+data bus (one memory cycle)
+Banked
+Memory
+Comment
+Comments
+GEEKSFORGEEKS
+A
+Text Header WordArt
+Box & Footer
+Text
+BANK O
+DO
+Ox000C
+0x0008
+Ox0004
+0x0000
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+Notes
+▲ Vishal Gulia
+10
+8
+Media
+Share
+DH
+Comments
++ 86%
+6:05 PM
+5/23/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse
+Slide Slides
+1
+2
+3
+5
+6
+Slides
+DG
+Table Pictures Online Screenshot Photo Shapes Icons
+Pictures
+Album -
+Slide 4 of 9
+Tables
+03
+Assumptions
+Structure member alignment and padding
+Sequential memory structure
+Alignment and
+Padding-Part
+Images
+A e
+Review View
+3D SmartArt Chart
+Models -
+Illustrations
+Pause
+Forms
+Forms
+00:03:39
+Select
+Area
+My Add-ins
+Add-ins
+Audio
+k
+Record
+Pointer
+X
+Zoom Link Action
+Links
+Comment
+Comments
+A
+Text Header WordArt
+Box & Footer
+GEEKSFORGEEKS
+Text
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+Some Rules
+1. Any data type will always store its value at the address which is
+multiple of the size of that data type.
+Example: int will always start from 4,8,12,.......
+2. any structure will take the size equal to the multiple of maximum
+bytes taken by a variable in that structure.
+A Vishal Gulia
+Notes
+01
+8
+Media
+Share
+DH
+Comments
++86%
+6:08 PM
+5/23/2019

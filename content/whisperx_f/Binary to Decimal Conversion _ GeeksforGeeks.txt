@@ -1,0 +1,55 @@
+0.228 - 2.23:  Hello friends, welcome to GeeksforGeeks.
+2.71 - 7.675: In this tutorial, we are going to see how to convert a binary number to a decimal number.
+8.336 - 17.504: A binary number is a number expressed in the base 2 numeral system or binary numeral system, which uses only two symbols that are 0 and 1.
+18.265 - 25.491: Whereas a decimal number is a number expressed in the base 10 and requires 10 different numerals, the digits 0 to 9.
+26.511 - 30.493:  Now let us look at the algorithm to convert a binary number to a decimal number.
+31.293 - 31.833: Step 1.
+32.273 - 40.017: Multiply each digit separately from left to right by 2 raised to power 0, 2 raised to power 1, 2 raised to power 2 and so on.
+40.537 - 42.158: Suppose we have a binary number 110.
+43.458 - 48.04: So we take the leftmost number and multiply it by 2 raised to power 0.
+48.44 - 52.622: Then the next number and multiply it by 2 raised to power 1 and so on.
+53.297 - 61.039:  We obtained 0 into 2 raised to power 0 as 0, 1 into 2 raised to power 1 as 2, 1 into 2 raised to power 2 as 4.
+61.759 - 62.339: Step number 2.
+62.96 - 65.1: Add all the results coming from step number 1.
+65.8 - 68.941: So we add 4 plus 2 plus 0 which equals 6.
+69.561 - 72.702: The step 3 provides us with the equivalent decimal number.
+73.222 - 74.563: Now let us look at the code.
+75.603 - 82.485: Here is a function binary to decimal in which we have passed a binary number and it returns its decimal equivalent.
+83.248 - 87.289:  We initialized decimal value as 0 and base as 1.
+88.03 - 89.63: 1 which is 2 raised to power 0.
+90.35 - 92.311: We initialized temp as num.
+92.791 - 96.252: Now we run a while loop until temp is not equal to 0.
+97.192 - 101.414: We extract the last digit from temp and place it in last digit.
+101.934 - 105.815: Then we change the value of temp by dropping off its last digit.
+106.475 - 111.117: We multiply the last digit with base and add it to the decimal value.
+111.687 - 114.688:  Then we change the value of base by multiplying it by 2.
+115.628 - 118.688: We continue these steps until the while loop runs i.e.
+118.768 - 120.789: until temp is not equal to 0.
+121.069 - 124.849: In the end, we return decimal value which is its decimal equivalent.
+125.97 - 128.01: Let us see the dry run with an example.
+128.67 - 130.57: Suppose the input is 110.
+131.01 - 131.951: The output should be 6.
+132.851 - 134.151: The value of num will be 110.
+135.391 - 137.252: The value of decimal value will be 0.
+138.092 - 139.512: The value of base will be 1.
+140.177 - 141.678:  and the value of temp will be 110.
+142.899 - 146.423: We will enter the while loop as the value of temp is not equal to 0.
+147.363 - 152.128: The value of last digit will be the value of the last digit of temp that is 0.
+152.848 - 156.712: The value of temp will be changed and the last digit of temp will be dropped.
+157.252 - 158.834: Therefore, 110 will become 11.
+159.954 - 165.119: The decimal value will be 0 as last digit into base which is 1 into 0 is 0.
+166.673 - 169.874:  The value of base will be doubled so 1 will become 2.
+170.654 - 174.416: Now we will continue the while loop as temp is still not equal to 0.
+175.236 - 179.777: Now the value of last digit will be 1 as the value last digit of temp is 1.
+180.578 - 183.379: The value of temp will be changed from 11 to 1.
+184.179 - 189.781: Decimal value will now become 2 as last digit into base that is 2 into 1 equals 2.
+190.721 - 193.262: The value of base will be doubled from 2 to 4.
+194.403 - 198.647:  We will continue with the while loop as the value of temp is still not equal to 0.
+199.727 - 204.131: Now the last digit will be equal to 1 and the value of temp will become 0.
+205.012 - 211.117: The decimal value will become 6 as 4 into 1 is 4 plus 2 equals 6.
+211.697 - 215.801: We will double the value of base by 2 that is from 4 to 8.
+216.381 - 221.786: Now the value of temp is 0 therefore we will not continue with the while loop and exit the while loop.
+222.461 - 224.505:  Now we will return the decimal value that is 6.
+225.647 - 227.009: I hope you understood the code.
+228.412 - 229.313: Thank you for watching.
+229.474 - 230.596: Please leave us your comments.

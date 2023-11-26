@@ -1,0 +1,733 @@
+Int a[9] = a[0]=11 | a[1]=12|a[2]=13 |a[3]=14|a[4]=15 a[5]=16 a[6]=17|a[7]=18|a[8]=19
+a = 1000
+1000
+1004
+1008
+Array name(a) contains the base address of
+the array(1000).
+*1000 ➜ a[0] →[0]a ⇒11
+*(1000+1)→ *(1004) ⇒a[1] ⇒1[a] ⇒ 12
+*(1000+2) → *(1008) → a[2] ⇒2[a] ⇒13
+*(1000+3) → *(1012) ⇒ a[3] ⇒3[a] →14
+*(1000+4) → *(1016) ➜ a[4] →4[a] →15
+*(1000+5) → *(1020) → a[5] →5[a] ⇒16
+*(1000+6) → *(1024) ➜ a[6] →6[a] →17
+*(1000+7) → *(1028) ⇒ a[7] →7[a] →18
+*(1000+8) → *(1032) ⇒ a[8] →8[a] →19
+1012
+1016
+1020
+1024
+1028
+1032
+Note: Compiler change both the representation into
+pointer form.2013
+Home Insert Design Transitions
+Y
+From From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+File
+1
+2
+3
+AutoSave Off
+4
+DG
+Slide 2 of 4
+An Uncommon
+presentation of
+OG Thank you for watching!
+03
+Animations
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+e
+Slide Show Review
+Rehearse Record Slide
+Timings Show -
+Set Up
+View Help
+uncommon representation_of_array
+Play Narrations
+Use Timings
+Show Media Controls
+1000
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+Int a[9] = a[0]=11|a[1]=12|a[2]=13|a[3]=14
+1004
+1008
+Monitors
+a = 1000
+Array name(a) contains the base address of
+the array(1000).
+*1000 ➜ a[0] →[0]a →11
+*(1000+1) → *(1004) ➜a[1] ⇒1[a] → 12
+*(1000+2)→ *(1008) ➜ a[2] ⇒2[a] →13
+*(1000+3)→ *(1012) ➜a[3] →3[a] →14
+*(1000+4)*(1016) → a[4] →4[a] →15
+*(1000+5)*(1020) → a[5] →5[a] →16
+*(1000+6) → *(1024) → a[6] →6[a] →17
+*(1000+7) →*(1028) → a[7] →7[a] →18
+*(1000+8) → *(1032) ➜a[8] ⇒8[a] →19
+1012
+a[4]=15 a[5]=16 a[6]=17 a[7]=18 a[8]=19
+1016 1020 1024
+1028 1032
+Note: Compiler change both the representation into
+pointer form.
+Notes
+10
+88
+Vishal Gulia
+Share
+Comments
+«»
++76% 3
+4:00 PM
+3/11/2019AutoSave Off H13
+File Home Insert Design Transitions
+甲 58
+From
+From Present Custom Slide
+Set Up
+Hide Rehearse Record Slide
+Beginning Current Slide OnlinecumenShow.onal_doc Slide Show SlidesiccTimingspad Show
+File Start Slide Show View Encoding Language Settings Tools Macro Run Set Ups Window ?
+KLOPCE
+basic cpp
+1
+2
+3
+4
+DG
+Slide 2 of 4
+02
+contdio.h>
+presentation of
+file
+int arr[21:
+arr [0] =
+OG Thank you for watching!
+2;
+arr [3] = 3;
+printf("\n",0[arr]);
+printf(d\n",1 [arz]);
+printf(2[arr]);
+e
+Animations Slide Show Review View Help
+Play Narrations
+Use Timings
+Show Media Controls
+Click to add notes
+uncommon representation_of_array
+1000
+Storyboarding Tell me what you want to do
+e
+Int a[9] = a[0]=11 a[1]=12 a[2]=13 a[3]=14 a[4]=15 a[5]=16 a[6]=17 a[7]=18 a[8]=19
+1020
+Monitor: Automatic
+Use Presenter View
+1004
+1008
+Monitors
+a = 1000
+Array name(a) contains the base address of
+the array(1000).
+*1000 ➜ a[0] →→[0]a →11
+*(1000+1)→ *(1004) ➜a[1] →1[a] → 12
+*(1000+2)→ *(1008) ➜a[2] →2[a] →13
+*(1000+3)→ *(1012) → a[3] →3[a] →14
+*(1000+4)*(1016) ➜a[4] →4[a] →15
+*(1000+5)*(1020)→a[5] →5[a] →16
+*(1000+6) → *(1024) → a[6] →6[a] →17
+*(1000+7)→ *(1028) → a[7] →7[a] →18
+*(1000+8) → *(1032) → a[8] ⇒8[a] →19
+1012
+1016
+1024
+lengur 205 lines: 14
+1028
+Note: Compiler change both the representation into
+pointer farm
+Ln: 10 Col:27 Sel: 010
+1032
+Notes
+Windows (CRLF)
+Vishal Gulia
+UTF-8
+Share
+INS
+Comments
++76% 53
+4:00 PM
+3/11/2019C:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+UPC
+basic.cpp X
+gpu_info.py gpu_info.bxt X
+1 #include<stdio.h>
+2 int main()
+3
+B{
+34567890123
+LLL
+10
+11
+12
+13 }
+14
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+arr [2] = 3;
+printf("%d\n",0[arr]);
+printf("%d\n",1 [arr]);
+printf("%d\n", 2 [arr]);
+e
+ег
+O
+length: 205 lines: 14
+Ln: 10 Col:27 Sel: 010
+Windows (CRLF)
+UTF-8
+I
+4:00 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+*
+pc
+gpu_info.py Xgpu_info.txt X basic.cpp X
+1
+#includecatdin ha
+2 int ma: C:\WINDOWS\system32\cmd.exe
+3 (
+2345678SOH23
+9
+10
+11
+12
+13
+EPC
+}
+Recycle Bin
+ITSD
+in arr [2];
+ar: [0] = 1;
+ar: [1] = 2;
+printf("%d\n",0[arr]);
+Google Chrome
+printf(d\n [ar]);
+C++ source file
+IT Service Desk
+e
+C:\WINDOWS\system32\cmd.exe
+e
+014
+01
+ABC
+C:\WINDOWS\system32\c..... X
+N
+nes: 13
+Ln:8 Col:27 Sel: 010
+Windows (CRLF)
+UTF-8
+WINS
+4:01 PM
+3/11/2019C:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+gpu_info.py X gpu_info txt basic.cpp X
+1 #includecatdio ha
+2345 TOHN3
+3 (
+6
+7
+8
+9
+10
+11
+12
+int ma: C:\WINDOWS\system32\cmd.exe
+13
+}
+C++ source file
+in
+ar
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+arz[1] = 2;
+printf("%d\n",0[arr]):
+printf("\n", [arr]);
+I
+length: 166 lines: 13
+Ln:8 Col:27 Sel: 010
+T
+X
+Windows (CRLF)
+UTF-8
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+OPC
+basic.cpp X
+gpu_info.py gpu_info.txt X
+1 #include<stdio.h>
+2 int main() C:\WINDOWS\system32\cmd.exe
+3 (
+4
+5
+7
+8
+9
+10
+11
+12 }
+13
+C++ source file
+int ar
+arr [0]
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+printfC:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+printf d\n",1 [arr]);
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+ег
+N
+length: 166 lines: 13
+Ln:8 Col:27 Sel: 010
+T
+Windows (CRLF)
+UTF-8
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+BUC
+gpu_info.py gpu_info.txt X basic.cpp X
+1
+#include<stdio.h>
+int main()
+23456aOHN3
+3 (
+7
+8
+TELE
+9
+10
+11
+12
+13
+}
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+C:\WINDOWS\system32\cmd.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+printf("%d\n",0[C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+printf("%d\n",1[₁]);
+2
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+Aer
+e
+ABC
+N
+O
+length: 166 lines: 13
+Ln:8 Col:27 Sel: 010
+X
+Windows (CRLF)
+UTF-8
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+UPC
+gpu_info.py gpu_info.txt X basic.cpp X
+1 #include<stdio.h>
+int main()
+23456aOHN3
+3 (
+7
+8
+TELE
+9
+10
+11
+12
+13
+}
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+C:\WINDOWS\system32\cmd.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+printf("%d\n",0[arrc:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+printf("%d\n",1 [arr
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+e
+e
+O
+length: 166 lines: 13
+Ln:8 Col:27 Sel: 010
+Windows (CRLF)
+X
+UTF-8
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+UPC
+gpu_info.py gpu_info.txt X basic.cpp X
+1 #include<stdio.h>
+2 int main()
+3
+(
+34567890123
+10
+TELE
+11
+12 }
+13
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+printf("%d\n",0[arr])
+printf("%d\n",1 [arr]))
+C:\WINDOWS\system32\cmd.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+A e
+e
+O
+length: 166 lines: 13
+Ln:8 Col:27 Sel: 010
+T
+0
+Windows (CRLF)
+UTF-8
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+OPC
+gpu_info.py gpu_info.txt X basic.cpp X
+1
+#include<stdio.h>
+int main()
+23456aOHN3
+3 (
+7
+8
+TELE
+9
+10
+11
+12
+13
+}
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+printf("%d\n",0 [arz]):
+printf("%d\n",1[arr]); 1
+C:\WINDOWS\system32\cmd.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+A e
+e
+O
+length: 166 lines: 13
+Ln: 8 Col:27 Sel: 010
+0
+Windows (CRLF)
+UTF-8
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+OPC
+gpu_info.py gpu_info.txt X basic.cpp X
+1 #include<stdio.h>
+2
+34567890123
+3
+TELE
+10
+11
+12
+13
+int main()
+(
+}
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+C:\WINDOWS\system32\cmd.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+ABC
+printf("%d\n",0 [arr]); C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+printf("%d\n",1 [arr]); 1
+2
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+Ĥ e ▸
+O
+length: 166 lines: 13
+Ln:8 Col:27 Sel: 010
+Windows (CRLF)
+0 X
+UTF-8
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+UPC
+gpu_info.py gpu_info.txt X basic.cpp X
+1 #include<stdio.h>
+2
+34567890123
+3
+TELE
+10
+11
+12
+13
+int main()
+(
+}
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+printf("%d\n",0 [arr]);
+printf("%d\n",1[arr]);
+C:\WINDOWS\system32\cmd.exe
+1
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+ABC
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>,
+A e ▸ Se
+O
+length: 166 lines: 13
+Ln: 8 Col:27 Sel: 010
+Windows (CRLF)
+UTF-8
+X
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+UPC
+gpu_info.py gpu_info.txt X basic.cpp X
+1 #include<stdio.h>
+2
+34567890123
+3
+TELE
+10
+11
+12
+13
+int main()
+(
+}
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+printf("%d\n",0 [arr]);
+printf("%d\n",1[arr]);
+e
+C:\WINDOWS\system32\cmd.exe
+1
+ABC
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+O
+length: 166 lines: 13
+Ln: 8 Col:27 Sel: 010
+Windows (CRLF)
+UTF-8
+0
+4:01 PM
+3/11/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+UPC
+gpu_info.py gpu_info.txt X basic.cpp X
+1 #include<stdio.h>
+2
+int main ()
+(
+34567890123
+3
+TELE
+10
+11
+12
+13
+}
+C++ source file
+int arr [2];
+arr [0] = 1;
+arr [1] = 2;
+printf("%d\n",0 [arr]);
+printf("%d\n",1[arr]);
+e
+C:\WINDOWS\system32\cmd.exe
+ABC
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+length: 166 lines: 13
+Ln:8 Col:27 Sel: 010
+Windows (CRLF)
+I
+UTF-8
+4:01 PM
+3/11/2019
+X
+INS
+XAutoSave Off HE
+File Home Insert Design Transitions
+From From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+1
+2
+3
+4
+DG
+Slide 2 of 4
+An Uncommon
+presentation of
+08
+M2N8
+OG Thank you for watching!
+Animations Slide Show Review View Help
+Play Narrations
+Use Timings
+Show Media Controls
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+A e
+Rehearse Record Slide
+Timings Show
+Set Up
+uncommon representation_of_array
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+Monitors
+Int a[9] = a[0]=11 a[1]=12 a[2]=13 a[3]=14 a[4]=15 a[5]=16 a[6]=17|a[7]=18|a[8]=19
+1000
+1004
+1016
+1020 1024 1028 1032
+Se
+a = 1000
+Array name(a) contains the base address of
+the array(1000).
+1008
+*1000 ➜ a[0] →→[0]a →11
+*(1000+1)→→ *(1004) ➜a[1] →1[a] → 12
+*(1000+2)→ *(1008) → a[2] →2[a] →13
+*(1000+3)→→ *(1012) ➜a[3] →3[a] →14
+*(1000+4)*(1016) → a[4] →4[a] →15
+*(1000+5)*(1020) → a[5] →5[a] →16
+*(1000+6) →*(1024) → a[6] →6[a] →17
+*(1000+7) → *(1028) → a[7] →7[a] →18
+*(1000+8) → *(1032) → a[8] ⇒8[a] →19
+N
+1012
+Note: Compiler change both the representation into
+pointer form.
+Notes
+01
+88
+Vishal Gulia
+Share
+Comments
++76%
+4:01 PM
+3/11/2019
+«»AutoSave Off 2013
+File Home Insert Design Transitions Animations Slide Show Review View Help
+Play Narrations
+Use Timings
+Show Media Controls
+From From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+1
+2
+3
+4
+DG
+Slide 3 of 4
+An Uncommon
+presentation of
+OG Thank you for watching!
+8
+Set Up
+Slide Show
+Hide Rehearse Record Slide
+Slide Timings Show-
+Set Up
+Click to add notes
+e
+uncommon representation_of_array
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+Monitors
+Result:
+Because compiler converts the array operation in pointers before accessing
+the array elements.
+So a[1] == 1[a] but a[1] != [1]a, Remember this.
+Notes
+gl
+88
+Vishal Gulia
+Share
+(4¹))
+Comments
++76% 3
+4:01 PM
+3/11/2019

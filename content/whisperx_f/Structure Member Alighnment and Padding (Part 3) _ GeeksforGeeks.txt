@@ -1,0 +1,45 @@
+0.947 - 5.688:  Hello friends, today in this video we will discuss about structure member alignment and padding.
+6.088 - 8.029: So this is part three of this video.
+10.549 - 17.491: So in the part number one, we have discussed about the assumptions, why we are using this concept and some of the rules.
+18.191 - 24.193: And in the second part, we discussed this example that structure size will be of four bytes.
+24.753 - 30.054: Now we will take some another example and we'll see what will be the size of that structure.
+33.331 - 48.842:  So as you can see in this slide there is a structure struct b tag and we have made an object struct b t. In this structure we have three variables one is short int, character and int.
+50.343 - 50.603: Okay.
+51.384 - 57.768: Now we will apply rule number one and rule number two and we will see what will be the size of this structure.
+58.709 - 58.969: Okay.
+60.51 - 62.732: So if we will start from short int s.
+63.618 - 65.839:  So, short int s will be of 2 bytes.
+66.899 - 71.241: So, the first rule is it will always start from the multiple of 2.
+72.542 - 74.062: So, 0 is a multiple of 2 or not?
+74.082 - 75.283: Yes, it is a multiple of 2.
+76.403 - 80.465: So, it will take 0th index byte and 1 index byte.
+81.886 - 82.126: Okay.
+82.686 - 83.707: Then character will come.
+84.167 - 85.968: So, character is of 1 byte.
+86.248 - 88.849: So, it will always start from the multiple of 1.
+90.003 - 91.683:  So 2 is a multiple of 1 or not?
+91.783 - 92.044: Yes.
+92.484 - 95.144: So char will take 2nd index byte.
+96.045 - 97.265: Now int will come.
+98.505 - 103.206: Int is of 4 bytes and it will always start from the multiple of 4.
+104.547 - 105.867: 0 is already filled.
+106.107 - 108.148: So it will start from 4th index.
+109.288 - 109.568: Okay.
+109.968 - 111.489: And it will take 4 bytes.
+113.569 - 115.15: Index number 4, 5th, 6th and 7th.
+119.511 - 121.172:  Now we will see the rule number second.
+121.772 - 127.895: Structure will take size equal to multiple of maximum bytes taken by a variable in that structure.
+129.455 - 133.057: So what are the maximum bytes taken by a variable in this structure?
+134.217 - 134.398: Int.
+135.358 - 136.879: So int will take 4 bytes.
+137.979 - 140.48: So it should be multiple of 4 only.
+141.841 - 147.823: So as you can see these are 8 bytes and 8 is a multiple of 4 already.
+149.443 - 152.765:  this structure will take 8 bytes in total.
+154.966 - 163.752: Ok, so from now do not say that this structure is of size 4 plus 1 plus 2, 7 bytes.
+164.632 - 167.914: Because this structure is taking 8 bytes.
+169.815 - 176.639: Now we will see this structure in our program and we will run it, we will see what will be the result.
+179.502 - 187.706:  So this is our structure B. So we will uncomment this line and we will see what will be the size.
+195.449 - 200.111: See size of struct B T is equal to 8 bytes.
+203.272 - 207.314: So whatever we have discussed is totally right.
+208.427 - 209.735:  So thank you guys for watching.
+209.937 - 211.124: Please leave us your comments.

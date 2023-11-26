@@ -1,0 +1,208 @@
+0.109 - 2.13:  Hello friends, hope you are doing great.
+2.47 - 4.151: Welcome to my java programming series.
+4.492 - 8.354: In this session we will discuss about concept of variables in java.
+8.654 - 12.016: So, in this session we will learn everything under the sun regarding variables.
+12.536 - 13.076: Let's begin.
+13.296 - 15.638: So, first of all what is a variable?
+16.218 - 20.103:  In fact, a variable is nothing but a name given to a memory location.
+20.463 - 25.61: So, variable is nothing but a memory space where we can store data.
+25.89 - 27.792: So, some bytes of memory is allocated.
+27.852 - 29.855: So, in that space we are able to store data.
+29.915 - 31.577: That is the simple definition of a variable.
+31.977 - 37.322:  So, in Java, three types of variables are identified based on the behavior and the position.
+37.543 - 44.63: A clear distinction can be observed between these variables and the necessity of these three variables in their own way.
+44.93 - 49.535: So, we are having instance variables, static variables and local variables.
+50.035 - 53.779: Okay, first we will discuss about instance variables.
+54.079 - 55.801:  So, what are these instance variables?
+55.941 - 67.012: So, instance variables are something that are declared inside a class, but they must be declared outside a method or outside a block or outside a constructor, but inside a class.
+67.553 - 71.496: And this instance variable are stored in the heap area.
+71.597 - 72.037: Which area?
+72.457 - 73.218: Heap area.
+73.579 - 77.723: So, coming to the accessibility of this instance variable.
+78.203 - 84.766:  they are visible upon the creation of object and they are being destroyed upon the destruction of object.
+85.186 - 88.848: So, the scope of this instance variable is object scope.
+88.868 - 92.649: So, it depends upon the object creation to object destruction.
+93.01 - 95.611: For example, here I have taken an instant variable.
+95.671 - 97.612: Here I have taken an instant variable i equal to 10.
+99.153 - 111.184:  So, in the main method public static void main string of args, what I am doing is that I am creating object for this class in the main method and accessing this variable, accessing this instance variable.
+111.304 - 113.446: Always remember, instance variable
+114.327 - 120.392:  or directly referred, directly referred in the instance area, but in the static area, for example, it is static method.
+120.452 - 127.058: So, in the static area, instance method must be accessed using the reference, that means using the object.
+127.178 - 129.079: Hence, it is called with the object.
+129.099 - 132.502: So, v.i will execute 10 and v.m1.
+132.622 - 135.125: So, m1 is a method which is
+135.905 - 145.134:  non-static and we are accessing this non-static that means instance method in the static area that's why we are accessing using a object.
+145.554 - 151.28: If you see this is a non-static method and we are accessing this static variable
+152.12 - 155.243:  instance variable in the non-static area.
+155.443 - 160.427: In the non-static area, that means in the instance areas, instance variables will be directly called.
+160.847 - 166.892: In the static area, in the static methods, instance variable must be called using an object.
+167.112 - 169.014: So, they are class level
+169.554 - 170.095:  variables.
+171.055 - 172.257: Let me compile this program.
+172.677 - 173.838: Output is 10 and 10.
+174.218 - 179.623: But if you try to access non-static variables, that is instance variable in the static constant.
+179.703 - 180.604: This is the static area.
+180.624 - 188.571: The static method is static area is nothing but inside the static method, you are trying to access a instant variable without the object reference.
+188.731 - 190.873: Hence, you will get a compiled error.
+191.013 - 192.715: This is about instance variables.
+193.215 - 198.761:  And one more thing about this instance variable is that separate copies will be created for separate objects.
+199.001 - 207.51: For example, I have created a variable v2, for this class var2, object v is created.
+207.65 - 208.411: So, what happens?
+208.691 - 211.955: One copy of this i will be given for this object.
+212.475 - 221.781:  and if I create another object where v2 equal to q equal to new var2 then again another copy of i will be given to that new object.
+221.821 - 226.124: So each and every object will have separate copies of values.
+226.144 - 228.185: That is what essence of this instance variable.
+228.205 - 231.307: For example, I am creating var k equal to
+231.807 - 237.09:  Now, we haven't initialized the value of, value of k will be 10.
+238.291 - 239.471: The value of k will be 10.
+239.551 - 240.892: Value of v will also be 10.
+242.113 - 253.299: Now, what I want to do is that I want to maintain separate values for both v and k. Instant variable is, the purpose of instant variable is v1, separate copy will be maintained for v.
+254.259 - 271.905:  and separate copy will be maintained for the object k. Now i value will be separate for v and i value will be separate for k. Now as we haven't initialized separately for each and every object, it will be common for both v and k. That means it will be 10.
+272.105 - 272.926: Now I will do one thing.
+272.986 - 275.046: Now v.i equal to 20 and k.i equal to 30.
+279.708 - 287.235:  Now, if we access with object k, the value will be 30 and if we access with object v, then value will be 20.
+287.536 - 294.022: That means each and every object, there will be a separate copy associated with this instance variables.
+294.662 - 299.167: And in the case of this, if you don't initialize, then by default
+299.767 - 303.69:  compiler will provide some default value then that will be printed for each and every object.
+303.89 - 309.814: But if you give some initialization in the class level then that will be common to all the objects.
+310.014 - 312.436: If you don't initialize, if you overwrite then it is ok.
+312.516 - 318.9: What I want to say is that v.i, if you don't give this i then it will be 20. v.i value will be 10.
+319.1 - 320.541: If you are overwriting then it will be 20.
+320.661 - 323.063: In the same way k.i equal to 30.
+323.623 - 325.544: If you don't overwrite then k will be 10.
+325.724 - 326.245: Understood no?
+326.285 - 329.247: Separate copies will be created for each and
+329.827 - 341.039:  every object and if you don't initialize, class level variables will be given to each and every object and if you don't initialize at any level, then default values will be given.
+341.059 - 342.321: General default values will be 0.
+342.741 - 345.064: This is about instance variables.
+345.624 - 347.686:  And next one is static variables.
+348.147 - 350.449: Static variables is very interesting.
+350.509 - 360.779: In fact, the static variables are created inside the class, but outside the method, outside the block or outside the constructor.
+360.939 - 362.42: How this static variable works?
+362.78 - 365.883: They have been declared by using the modifier called static.
+366.644 - 369.587: What happens if you create this modifier static?
+370.007 - 370.348: We will see.
+371.048 - 375.149:  And another point is that they are created in the method area.
+375.469 - 378.71: We are having heap area, stack area, method area.
+378.97 - 381.63: So static variables are created in the method area.
+381.91 - 394.213: And next one is that they can be irrespective of whether instance area or static area, they can be directly called, they can be accessed with the class name and they can be accessed with object reference.
+394.533 - 394.653: Ok.
+395.453 - 402.296:  but it is recommended to access with the class name.
+402.316 - 411.74: So, they can access with object reference, class name or directly they can be called irrespective of whether it is instance area or static area.
+412.961 - 414.062:  Okay, that is one point.
+414.302 - 418.463: And next one is, what is the difference between the static variables and instance variables?
+419.044 - 422.865: If both are same, then what is the purpose of creating each separately, right?
+423.225 - 426.647: Okay, what is the difference between static variables and instance variables?
+427.347 - 431.689: In the instance variables, as we came to know that separate variables will be created for
+432.509 - 447.649:  separate object that means separate copies will be created by separate object but whenever it is a static variable only one copy will be created that means only one space will be given for that variable and that space is used by all the objects associated with that class.
+448.63 - 456.152:  See for example, test t1 equal to new test and t1 dot x equal to triple 8 and t1 dot y equal to triple 9.
+456.672 - 458.092: Now what will be my output here?
+458.112 - 462.693: t1 dot x will be triple 8 and t1 dot y will be triple 9.
+463.114 - 463.654: Ok fine.
+463.834 - 465.274: Now I am creating an object t2.
+466.314 - 472.556: Now t2 dot x equal to triple 5, t2 dot x equal to triple 5 and t2 dot y equal to triple 4.
+473.556 - 477.677:  Okay, that means t1.x is separate and t2.x is separate.
+478.257 - 485.039: But t1.y, t2.y, t1 and t2 are object pointing to the same copy, that means same space.
+485.499 - 492.441: If you are having a same space, if t2.y is changed, then automatically the past object t1.y also changes here.
+492.781 - 497.742: That means t1.x will be triplet here, t1.y will be triple 4.
+497.942 - 498.082: Why?
+498.142 - 499.703: Because whether it is t1 or t2,
+500.783 - 509.494:  Y is a static variable, only one space, that means any change by any object will affect all the objects sharing that variable.
+509.655 - 510.896: That means only common space.
+511.136 - 513.199: Now t2.x, what is the value of t2.x here?
+513.219 - 514.901: t2.x will be 555, but t2.y will be 444.
+518.866 - 519.426:  Understood no?
+519.786 - 525.729: If one object is changing in all the remaining past objects, future objects will also get changed.
+525.849 - 532.071: Now if you access with T3, then T3.y also becomes triple 4.
+532.592 - 538.394: That means past, present and future objects will also get changed because there is only one space.
+538.674 - 545.877: But in the case of instance variables, as separate copies are maintained, T1 will be separate and T2 will be separate.
+546.297 - 561.441:  Now in the same way, here if you try to initialize t3.y, I have not initialized t3.y, before this if you try to initialize t3.y, its value will be triple 4 only.
+561.901 - 566.943: Now what I am doing is that I am 3t.x equal to triple 6 and t3.y equal to triple 7.
+567.932 - 571.153:  Now what will be the value of t3.x?
+571.173 - 571.153: 666.
+571.233 - 577.434: That means t1.x is separate space, t2.x is separate space and t3.x is separate space.
+577.855 - 582.616: Now t3.y, y is a static variable and what will happen we have changed.
+582.636 - 585.076: So t3.y will be 777.
+585.116 - 587.277: What is the value of t2.x?
+587.297 - 587.277: 666.
+587.597 - 591.078: No, t2.x value is 555 because separate memory space.
+591.738 - 591.998: t2.y?
+592.018 - 593.178: 777 only.
+593.218 - 593.359: Why?
+593.399 - 594.579: Because only one space.
+595.519 - 601.902:  If you are having only one space, if any object is changed, modifying the y value, then it will reflect in all the objects.
+602.082 - 605.864: That means only one space is shared by all the objects.
+606.544 - 609.485: In the same way, what happens is t1.x.
+609.645 - 612.647: t1.x is 999 and t1.y is 777.
+613.707 - 616.749: The last modified value will represent all the objects.
+617.569 - 638.926:  understood no only one space concept behind the static variable in this point of time if you access t1, t1.y, t2.y or t3.y the value will be triple 4 after this t3.y equal to triple 7 the value will be triple 7 for both t1, t2, t3 whether it is initialized or uninitialized
+639.466 - 643.607:  the previous value will be shared or the current value will be shared for all the objects.
+644.028 - 658.032: Okay, let me compile this code, the change in one object, see separate copies are maintained for all the instance variable, whereas one object is changing all the remaining objects are also get changed because of the common space.
+658.252 - 661.413: Hope you understood clearly about this static variables.
+661.753 - 664.094: Next we are moving up moving to local variables.
+664.494 - 665.955:  Local variables are very simple.
+666.055 - 671.719: They will be created inside a block or inside a constructor or inside a method.
+672.359 - 677.823: Because of the temporary requirement, they will be created and destroyed within the block itself.
+677.843 - 679.464: For example, int i equal to 0.
+679.824 - 683.907: The scope of this variable will be within this method.
+684.347 - 687.069: They can be accessible within this method but not outside the method.
+687.149 - 688.55: And for example, int j equal to 0.
+688.77 - 691.372: We have declared inside a block, inside this for loop.
+691.992 - 694.314:  Hence, it is accessible inside this for loop only.
+694.374 - 696.255: Outside the for loop, it cannot be accessible.
+696.656 - 698.397: Hence, this program will raise an error.
+698.557 - 699.118: I is okay.
+699.358 - 704.082: I can be accessible outside this block or inside this block, no problem because it is having method scope.
+704.182 - 705.122: Here it is having blocks.
+705.222 - 711.287: So, both I and J are local variables but I is a method level scope, J is a block level scope.
+711.487 - 711.627: Okay.
+711.908 - 713.929: Now, what will happen if we try to do so?
+714.37 - 715.13: One error you are getting.
+715.17 - 715.631: What error?
+715.911 - 716.892: Cannot find symbol.
+716.972 - 719.414: So, J has been declared.
+720.074 - 722.736:  After the execution of this loop, j will be destroyed.
+723.236 - 735.863: Then if you are trying to access this j, where compiler cannot recognize that j. That's why local variables must be declared, must be accessed within that block or method or outside that no scope.
+736.043 - 744.328: Now to resolve this, what I will do is that as we are accessing outside, I will declare this local variable inside a method.
+744.528 - 748.15: Still it is a local variable only, so now what happens, you can access outside.
+748.53 - 749.63:  you can access outside.
+749.65 - 749.83: Why?
+749.85 - 755.813: Because inside a method we are accessing we have removed the declaration from the block and we have placed inside the method.
+755.953 - 767.597: Okay, now completion is three, three, hope you understand the concept of this local variables, local variables are created for temporary purpose and they are having the block scope once they are
+768.598 - 771.281:  Once the block execution is completed, they will be destroyed.
+771.642 - 774.926: They are stored in the stack area.
+774.946 - 781.455: We will try to establish a clear distinction between the instance variable and static variables with the help of an image.
+782.096 - 783.218: What I want to do is that
+783.658 - 784.959:  see one example I have taken.
+785.219 - 787.58: For example, there are three employees in a company.
+787.6 - 791.323: So each of these employees will have separate ID and separate name.
+791.883 - 795.905: Okay, that's the reason I will declare ID and name as instance.
+796.166 - 801.169: That means each employee one employee two employee three will well have separate spaces and separate data will be stored.
+801.869 - 822.943:  because now what I will do is that I will declare company name as a static why because even it is employee1, employee2, employee3 there will be only one company name in if there is only one company name why should I create separate spaces for each object only one space will be allocated and that space will be shared by all the objects e1, e2, e3 that's why
+823.283 - 827.187:  This figure E1 is pointing to different ID name but same company name.
+827.227 - 829.49: This is how non-static variables i.e.
+829.59 - 834.195: instance variables and static variables will work with respect to objects.
+834.475 - 838.18: Hope you understand the difference and let's summarize the things that we have learnt.
+838.8 - 841.804: Instance variables are variables that are created
+842.344 - 847.108:  outside a class, outside a block method constructor but inside a class.
+847.428 - 852.332: So, they will have, each and every object will have separate copies for separate variables.
+852.552 - 855.315: Each variable will have separate copy for each and every object.
+855.735 - 856.876: Next one is static variables.
+857.096 - 861.42: As we have discussed static variables, the same copy, only one copy will be created.
+862.0 - 868.163:  for variable and all the objects will be shared the same copy, separate copies will not be created for separate object.
+868.383 - 870.824: That is the difference between instance variables and static variables.
+870.864 - 874.966: And instance variables are stored in heap area, static variables are stored in method area.
+874.986 - 881.128: Coming to local variables, local variables are created within a block constructor and a method.
+881.408 - 885.23: And they are having block scope, that means created and destroyed within a block.
+885.37 - 889.712: Once the block is completed execution, the method will be, the variable will be destroyed.
+890.052 - 891.453:  and they are created in stack.
+891.733 - 893.633: They are created in stack area.
+893.693 - 895.814: This is about the variables in Java.
+895.954 - 897.095: Hope you have enjoyed the session.
+897.295 - 909.199: So, the purpose of why I am making this course is for students and beginners and who have basic knowledge and try to improve their coding skills, academics, teachers, faculty, research, interviews and for competitive exams like GATE.
+909.519 - 914.401: So, make use of this series, follow them, practice them and if you have any doubts, please do ask in the comment section.
+915.022 - 916.467:  We will definitely help you out.
+916.708 - 917.47: Stay tuned for more.
+917.831 - 918.273: Bye for now.
+918.293 - 919.416: See you in the next session.
+919.657 - 919.938: Bye-bye.

@@ -1,0 +1,3493 @@
+variable1.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java var2.java X Test.java Xuntitled
+behaviour and position of declaration
+1.// Instance variables
+2.//Static variables
+3./ALocal variables
+tus
+piler Test.java:45: error: cannot find symbol
+ages System.out.println(i+”—
+--"+j);
+oble
+/10
+javac "Test.java" (in directory: D:\javawork)
+Back Forward Compile Build
+Execute
+symbol: variable j
+col: 5 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown.
+Color Chooser
+Find
+Jump to
+Quit
+1variable1.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java X var2.java * Test.java X
+Save Save All Revert Close
+Back Forward
+FILIME
+|
+Compile Build
+1
+2 behaviour and position of declaration
+3
+4 1.// Instance variables
+5 2.//Static variables
+6 3. //Local variables
+7
+8
+9
+0
+Execute Color Chooser
+javac "Test.java" (in directory: D:\javawork)
+Taat hamra.AC. a
+find simhal
+/10 col: 5 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown
+Find
+Jump to Quit
+1ar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+Save Save All Revert Close
+java * Test.java X
+ble1.java
+1 class var2
+2 p{
+3 int i=10;
+Back Forward
+v.m1();
+|
+javac "Test.java" (in directory: D:\javawork)
+Taor iarra.AC. aPPARE cannot find armhal
+7/23 col: 14 sel: 0 INS TAB mode: CRLF encodina: UTF-8
+Compile Build
+4
+5 public static void main(String[] args)
+6 = {
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+System.out.println(v.i);//10(valid)
+4
+5
+Execute Color Chooser
+filetype: Java scope: var2
+Find
+Jump to
+Quit
+1var2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+/23
+Open
+ble1.java var2.java * Test.java
+4 //heap area
+5 public static void main(String[] args)
+6 = {
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+0
+1
+2
+6
+7
+8 = {
+Save Save All Revert Close
+var2 v=new var2();
+I
+var2 v=new var2();
+}
+public void m1()
+javac "Test.java" (in directory: D:\javawork)
+|
+Back Forward Compile Build Execute
+Taor iarra. 15. aPPARI
+col: 19 sel: 0
+Color Chooser
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+1var2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2 a{
+3 int i=10;
+4 //heap area
+5
+6
+7
+Save Save All Revert Close
+THIMI
+5/23
+public static void main(String[] args)
+{
+Back Forward
+var2 v=new var2();
+I
+System.out.println(v.i);//10(valid)
+v.m1();
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+3
+4
+5
+javac "Test.java" (in directory: D:\javawork)
+|
+Taor iarra.C. aPPARI
+col: 0 sel: 0
+Compile Build
+Execute Color Chooser
+Find
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+4 //heap area
+5 public static void main(String[] args)
+6 = {
+6
+Save Save All Revert Close
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+4 v.m1();
+5
+7
+8 = {
+FILIMI
+|
+Back Forward Compile Build Execute Color Chooser
+System.out.println(v.i);//10(valid)
+}
+public void m1()
+javac "Test.java" (in directory: D:\javawork)
+Taor iarra. A.C.
+0/23 col: 0 sel: 0
+Find
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+Save Save All Revert Close
+2
+{
+3 int i=10;
+4
+5
+6
+7
+THIMI
+Back Forward
+//heap area
+public static void main(String[] args)
+{
+v.m1();
+javac "Test.java" (in directory: D:\javawork)
+Taor iarra. A.C.
+0/23 col: 0 sel: 0
+|
+Compile Build
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+System.out.println(v.i);//10(valid)
+4
+5
+Execute Color Chooser
+Find
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+4 //heap area
+5 public static void main(String[] args)
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+System.out.println(v.i);//10(valid)
+={
+3
+4 v.m1();
+5
+Save Save All Revert Close
+6
+7 public void m1()
+8 = {
+FILIMI
+}
+javac "Test.java" (in directory: D:\javawork)
+Taor iarra. A.C.
+1/23 col: 18 sel: 0
+|
+Back Forward Compile Build Execute Color Chooser
+I
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java var2.java * Test.java
+0
+1
+2
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+3
+4
+5
+6}
+7 public void m1()
+8 = {
+9 System.out.println(i);//10(valid)
+0}
+THIMI
+|
+Back Forward Compile Build
+v.m1();
+9 System.out.println(i);//10(valid)
+0}
+3
+javac "Test.java" (in directory: D:\javawork)
+Execute
+Taor iarra.C. aPPARE
+4/23 col: 7 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+3 int i=10;
+4 //heap area
+5 public static void main(String[] args)
+6 = {
+1
+2
+3
+4 v.m1();
+1 var2 v=new var2();
+2
+3
+4
+5
+6
+7
+Save Save All Revert Close
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+System.out.println(v.i);//10(valid)
+v.m1();
+}
+public void m1()
+Back Forward
+javac "Test.java" (in directory: D:\javawork)
+Taor iarra. 15. www.not find armhal
+4/23 col: 7 sel: 0
+|
+Compile Build
+Execute
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+5
+Save Save All Revert Close
+4/23
+Back Forward
+v.m1();
+2
+{
+3 int i=10;
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+System.out.println(v.i);//10(valid)
+4
+public static void main(String[] args)
+{
+|
+I
+javac "Test.java" (in directory: D:\javawork)
+Compile Build
+Execute Color Chooser
+Find
+Taor iarra.C. aPPARE
+col: 7 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java
+0
+1
+2
+3
+4
+5
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+v.m1();
+THIMI
+|
+Back Forward Compile Build
+6}
+7 public void m1()
+8 ={
+9 System.out.println(i);//10(yalid)
+0}
+9 System.out.println(i);//10(valid)
+0}
+3
+javac "Test.java" (in directory: D:\javawork)
+Execute
+Taor iarra.C. aPPARE
+4/23 col: 7 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java
+3 int i=10;
+4 //heap area
+5 public static void main(String[] args)
+6
+={
+5
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+3
+4
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+v.m1();
+|
+Back Forward Compile Build Execute Color Chooser
+6}
+7 public void m1()
+javac "Test.java" (in directory: D:\javawork)
+Taor iarra. 15. www.not find armhal
+4/23 col: 7 sel: 0
+Find
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2 B{
+3 int i=10;
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+System.out.println(v.i);//10(valid)
+4
+5
+THIMI
+Back Forward
+v.m1();
+|
+public static void main(String[] args)
+{
+I
+Compile Build
+Execute Color Chooser
+javac "Test.java" (in directory: D:\javawork)
+Teor fara. A.C.
+1/23 col: 18 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java X var2.java * Test.java
+8 //System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+4
+v.m1();
+1 var2 v=new var2();
+2
+3
+4 v.m1();
+5
+6
+System.out.println(v.i);//10(valid)
+23
+|
+Back Forward Compile Build
+System.out.println(v.i);//10(valid)
+}
+public void m1()
+7
+8 = {
+javac "Test.java" (in directory: D:\javawork)
+Taor iarra 1. aPPARI
+col: 1 sel: 0
+Execute Color Chooser
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2
+Find
+Jump to Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java var2.java * Test.java
+5 public static void main(String[] args)
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+3
+4 v.m1();
+5
+{
+}
+Back Forward Compile Build Execute Color Chooser
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+6
+7 public void m1()
+8 ={
+9
+I
+System.out.println(i);//10(valid)
+javac "Test.java" (in directory: D:\javawork)
+Test Harra... mannot find armhal
+3/23 col: 35 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java X var2.java * Test.java
+8 //System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+System.out.println(v.i);//10(valid)
+4
+5
+6
+7 public void m1()
+8 ={
+9
+0}
+v.m1();
+FIXIME
+}
+1
+2 }
+System.out.println(i);//10(valid)
+javac "Test.java" (in directory: D:\javawork)
+|
+Back Forward Compile Build
+Taor iarra.C. aPPARE
+4/23 col: 7 sel: 0
+Execute Color Chooser
+INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java var2.java * Test.java
+5 public static void main(String[] args)
+6
+{
+7
+1
+2
+3
+1
+2
+3
+4 v.m1();
+5
+8/23
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+I
+6}
+7 public void m1()
+8 ={
+9
+Back Forward Compile Build
+System.out.println(i);//10(valid)
+Execute
+javac "Test.java" (in directory: D:\javawork)
+Test Harra.C. annot find armha1
+col: 1 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2
+Color Chooser
+Find
+Jump to
+Quit
+Iar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java var2.java * Test.java
+8 //System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+System.out.println(v.i);//10(valid)
+3
+4 v.m1();
+5
+6}
+7 public void m1()
+8 ={
+9
+0}
+1
+2 }
+FIZIME
+|
+Back Forward Come Build
+System.out.println(i);//10(valid)
+javac "var2.java" (in directory: D:\javawork)
+1/23 col: 18 sel: 0 INS TAB mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Execute Color Chooser
+Find
+Jump to
+Quit
+Iar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java *
+8 //Sy C:\WINDOWS\SYSTEM32\cmd.exe
+10
+9
+//C. 10
+0
+1
+2
+var2 (program exited with code: 8)
+Press any key to continue
+3
+4
+5
+6 }
+7
+8 {
+9
+0}
+1
+2 }
+FREMT
+Syste
+v.m1
+publ
+Syste
+1
+Back Forward Compile Build
+javac varz.java (in directory: D:\javawork)
+Compilation finished successfully.
+1/23 col: 18 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java scope: var2.main
+Execute Color Chooser
+Find
+I
+Jump to
+X
+|
+Quit
+1var2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java var2.java * Test.java
+8 //System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+System.out.println(v.i);//10(valid)
+4
+5
+v.m1();
+6}
+7 public void m1()
+8
+9
+0}
+{
+FREMT
+1
+Back Forward Compile Build
+1
+2 }
+System.out.println(i);//10(valid)
+javac var..Java (in directory: D:\javawork)
+Compilation finished successfully.
+1/23 col: 18 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java scope: var2.main
+Execute Color Chooser
+Find
+Jump to
+Quit
+1ar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java X var2.java X Test.java *
+5 public static void main(String[] args)
+6 = {
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+4
+5
+Back Forward Compile Build Execute Color Chooser
+System.out.println(v.i);//10(valid)
+v.m1();
+6-}
+7 public void m1()
+8 ={
+9
+TRIME
+System.out.println(i);//10(valid)
+I
+javac varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+1/23 col: 18 sel: 0 INS TAB mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Tar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+Save Save All Revert Close
+var2.java * Test.java
+2
+3
+4
+5
+6 }
+FREMT
+ble1.java
+2 {
+3 int i=10;
+4 //heap area
+8 //System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+|
+Back Forward Compile Build
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+I
+1
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+v.m1();
+Javac var..Java (in airectory: D:\javawork)
+Compilation finished successfully.
+1/23 col: 18 sel: 0 INS TAB mode: CRLF encodina: UTF-8
+Execute Color Chooser
+Find
+filetype: Java scope: var2.main
+Jump to
+|
+Quit
+Iar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2 B{
+3 int i=10;
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable cannot be referenced from a static context(invalid)
+0
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+Save Save All Revert Close
+Back Forward
+1
+2
+3
+4 v.m1();
+5
+|
+public static void main(String[] args)
+{
+javac "varz.java (in airectory: D:\javawork)
+Compilation finished successfully.
+1/23 col: 18 sel: 0 INS TAB mode: CRLF encodina: UTF-8
+Compile Build
+filetype: Java scope: var2.main
+Execute Color Chooser
+Find
+Jump to
+|
+Quit
+Iar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+8 //System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+var2 v=new var2();
+2
+3
+System.out.println(v.i);//10(valid)
+4
+5
+Save Save All Revert Close
+v.m1();
+|
+Back Forward Compile Build
+6
+}
+7 public void m1()
+8 ={
+9
+0}
+1
+2 }
+System.out.println(i);//10(valid)
+I
+javac var..Java (in directory: D:\javawork)
+Compilation finished successfully.
+0/23 col: 0 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java scope: var2.main
+Execute Color Chooser
+Find
+Jump to
+Quit
+Iar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+0
+1 var2 v=new var2();
+2
+3
+4 v.m1();
+5
+Save Save All Revert Close
+|
+Back Forward Compile Build
+System.out.println(v.i);//10(valid)
+6}
+7 public void m1()
+8 ={
+9
+0}
+1
+2}
+3
+System.out.println(i);//10(valid)
+I
+Javac var..Java (in directory: D:\javawork)
+Compilation finished successfully.
+0/23 col: 0 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java scope: var2.main
+Execute Color Chooser
+Find
+Jump to
+Quit
+Iar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2 B{
+3 int i=10;
+4 //heap area
+5 public static void main(String[] args)
+6
+{
+Save Save All Revert Close
+1
+2
+3
+4
+5
+Back Forward
+v.m1();
+|
+javac "varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+0/23 col: 0 sel: 0 INS TAB mode: CRLF encodina: UTF-8
+Compile Build
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+I
+0
+var2 v=new var2();
+System.out.println(v.i);//10(valid)
+Execute Color Chooser
+filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+ble1.java var2.java * Test.java
+8 //System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1 var2 v=new var2();
+2 var2 k=new var2();
+3
+4
+5
+6 v.m1();
+7
+|
+Back Forward Compile Build
+System.out.println(v.i);//10(valid)
+I
+-8}
+9 public void m1()
+0 ={
+1
+2}
+FREMT
+System.out.println(i);//10(valid)
+Execute Color Chooser
+javac "varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2 a{
+3 int i=10;
+4 //heap area
+5 public static void main(String[] args)
+6 = {
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+Save Save All Revert Close
+I
+var2 v=new var2();
+var2 k-new var2();
+FREMT
+Back Forward
+1
+2
+3
+4
+5 System.out.println(v.i);//10(valid)
+|
+Compile Build Execute
+javac varz.java (in directory: D:\javaworK)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+4 //heap area
+Save Save All Revert Close
+FREIMY
+public static void main(String[] args)
+{
+|
+Back Forward Compile Build Execute
+var2 v=new var2();
+var2 k=new var2();
+I
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+3
+4
+5
+6
+7
+8 |}
+System.out.println(v.i);//10(valid)
+v.m1();
+Javac var..Java (in directory: D:\javawork)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+1
+2
+3
+Open Save Save All
+ble1.java var2.java * Test.java
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+4
+5
+6
+7
+8
+9
+0
+1
+FREMT
+Revert Close
+var2 v=new var2();
+var2 k=new var2();
+v.m1();
+|
+Back Forward Compile Build Execute
+System.out.println(v.i);//10(valid)
+I
+}
+public void m1()
+{
+System.out.println(i);//10(valid)
+javac varz.java (in airectory: D:\JavaworK)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+0
+1 var2 v=new var2();
+2
+var2 k=new var2();
+3
+4
+5
+6 v.m1();
+7
+Save Save All Revert Close
+8}
+9 public void m1()
+0 ={
+1
+2}
+System.out.println(v.i);//10(valid)
+3
+4 |}
+FREIMY
+Back Forward
+System.out.println(i);//10(valid)
+|
+Compile Build
+Execute
+Javac var..Java (in directory: D:\javawork)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+3 int i=10;
+4 //heap area
+5 public static void main(String[] args)
+6
+1 var2 v=new var2();
+2 var2 k=new var2();
+3
+4
+1
+2
+3
+4
+5
+6
+7
+= {
+FREIMT
+Save Save All Revert Close
+var2 v=new var2();
+var2 k-new var2();
+Back Forward
+System.out.println(v.i);//10(valid)
+v.m1();
+|
+Compile Build
+Execute
+Javac var..Java (in directory: D:\javawork)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Save Save All Revert Close
+FREMT
+|
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2 a{
+3 int i=10;
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+3
+4
+5 System.out.println(v.i);//10(valid)
+Back Forward
+I
+var2 v=new var2();
+var2 k=new var2();
+public static void main(String[] args)
+{
+Compile Build Execute
+javac varz.java (in directory: D:\javaworK)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.javaTest.java
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1 var2 v=new var2();
+2 var2 k=new var2();
+3
+I
+4
+5
+6
+7
+8}
+Save Save All Revert Close
+FREIMT
+|
+Back Forward Compile Build Execute Color Chooser
+public static void main(String[] args)
+{
+System.out.println(v.i);//10(valid)
+v.m1();
+Javac var.Java (in airectory: D:\javawork)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+Save Save All Revert Close
+Back Forward
+FREIME
+I
+var2 v=new var2();
+var2 k=new var2();
+|
+public static void main(String[] args)
+{
+1
+2
+3
+4
+5 System.out.println(v.i);//10(valid)
+2 B{
+3 int i=10;
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+Compile Build
+Execute Color Chooser
+javac "varz.java (in directory: D:\javawork)
+Compilation finished successfully.
+3/25 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java var2.java * Test.java
+4 //heap area
+public static void main(String[] args)
+{
+FREIMT
+|
+Back Forward Compile Build Execute Color Chooser
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+3
+4
+5
+6
+7
+8}
+var2 v=new var2();
+var2 k=new var2();
+System.out.println(v.i);//10(valid)
+v.m1();
+javac "varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+1/25 col: 18 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+x
+Open Save Save All Revert Close
+ble1.java var2.java * Test.java
+1 var2 v=new var2();
+2 var2 k=new var2();
+3
+4
+5
+6
+7
+System.out.println(v.i);//10(valid)
+v.m1();
+4
+5
+6 v.m1();
+7
+FREIMT
+-8}
+9 public void m1()
+0
+{
+1
+|
+Back Forward Compile Build
+System.out.println(v.i);//10(valid)
+I
+System.out.println(i);//10(valid)
+Execute
+javac varz.java (in airectory: D:\Javawork)
+Compilation finished successfully.
+1/25 col: 18 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+Save Save All Revert Close
+2 a{
+3 int i=10;
+4 //heap area
+5
+6
+7
+8
+9
+0
+FREEMT
+Back Forward
+public static void main(String[] args)
+{
+var2 v=new var2();
+var2 k=new var2();
+1
+2
+3
+4
+5 System.out.println(v.i);//10(valid)
+|
+I
+Compile Build
+//System.out.println(i);
+//C.E:non-static variable i cannot be referenced from a static context(invalid)
+Execute Color Chooser
+javac varz.java (in airectory: D:\Javawork)
+Compilation finished successfully.
+1/25 col: 18 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+4 //heap area
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8}
+Save Save All Revert Close
+public static void main(String[] args)
+{
+Back Forward Compile Build Execute Color Chooser
+var2 v=new var2();
+I
+var2 k=new var2();
+//System.out.println(i);
+//C.E:non-static variable i cannot be referenced from a static context(invalid)
+System.out.println(v.i);//10(valid)
+v.m1();
+Find
+javac "varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+1/25 col: 18 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2 a{
+3 int i=10;
+4 //heap area
+5
+6
+7
+8
+//System.out.println(
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+3
+4
+5 System.out.println(v.i);//10(valid)
+Save Save All Revert Close
+FREIMT
+|
+Back Forward
+var2 v=new var2();
+var2 k=new var2();
+public static void main(String[] args)
+{
+Compile Build
+Execute Color Chooser
+javac varz.java (in airectory: D:\Javawork)
+Compilation finished successfully.
+1/25 col: 18 sel: 0 INS TAB MOD mode: CRLF encodina: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java var2.java * Test.java
+1
+2 9
+3
+4 a
+5 tic void main(String[] args)
+6
+7
+8 out.println(i);
+9
+static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+3
+4
+5
+w var2();
+w var2();
+FREIMT
+|
+Back Forward Compile Build Execute Color Chooser
+t.println(v.i);//10(valid)
+javac varz.java (in airectory: D:\javework)
+Compilation finished successfully.
+2/25 col: 18 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+Save Save All Revert Close
+1
+2
+Back Forward
+var2 v=new_var2();
+var2 k=new var2();
+|
+public static void main(String[] args)
+{
+2
+{
+3 int i=10;
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+3
+4
+5 System.out.println(v.i);//10(valid)
+Compile Build
+Execute Color Chooser
+Find
+javac varz.java (in airectory: D:\javaworK)
+Compilation finished successfully.
+2/25 col: 18 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java var2.java * Test.java
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2
+public static void main(String[] args)
+{
+var2 v=new var2();
+var2 k=new var2();
+0
+1
+2
+6
+7
+8 }
+FREIMT
+|
+Back Forward Compile Build Execute Color Chooser
+var2 v=new var2();
+Systern.out.println(v.i);//10(valid)
+v.m1();
+Javac var. Java (in directory: D:\javawork)
+Compilation finished successfully.
+2/25 col: 18 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All
+ble1.java var2.java * Test.java
+7
+Revert Close
+var2 v=new var2();
+3 var2 k=new var2();
+4 k.i=30;
+5
+6
+7
+8 v.m1();
+9
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2 v.i=20;
+I
+|
+Back Forward Compile Build
+System.out.println(v.i);//10(valid)
+0}
+1 public void m1()
+Execute Color Chooser
+Find
+javac varz.java (in directory: D:\javawork)
+Compilation finished successfully.
+4/27 col: 7 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java X var2.java * Test.java
+4 //heap area
+5 public static void main(String[] args)
+6 ={
+0
+1
+2
+0
+Save Save All Revert Close
+var2 v=new var2();
+v.i=20;
+var2 v=new var2();
+|
+Back Forward Compile Build
+1
+2 v.i=20;
+3 var2 k=new var2();
+4
+k.i=30;
+5
+6
+7
+8 v.m1();
+System.out.println(v.i);//10(valid)
+Execute
+javac varz.java (in directory: D:\javaworK)
+Compilation finished successfully.
+4/27 col: 7 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2 a{
+3 int i=10;
+4
+//heap area
+5 public static void main(String[] args)
+6
+={
+Save Save All Revert Close
+|
+Back Forward
+var2 v=new var2();
+Compile Build
+Execute Color Chooser
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2 v.i=20;
+3 var2 k=new var2();
+4 k.i=30;
+5
+Find
+Javac var..Java (in directory: D:\Javawork)
+Compilation finished successfully.
+4/27 col: 7 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java X var2.java * Test.java
+4 //heap area
+Save Save All Revert Close
+public static void main(String[] args)
+{
+THEIMT
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+1
+2 v.i=20;
+0
+1
+2
+3 var2 k-new var2();
+4 k.i=30;
+5
+var2 v=new var2();
+|
+Back Forward Compile Build Execute Color Chooser
+var2 v=new var2();
+v.i=20;
+Javac var..Java (in airectory: D:\Javawork)
+Compilation finished successfully.
+2/27 col: 7 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java var2.java * Test.java
+1 class var2
+2
+3 int i=10;
+4
+//heap area
+5 public static void main(String[] args)
+6 ={
+7
+a{
+Save Save All Revert Close
+FREIMT
+1
+2 v.i=20;
+3 var2 k=new var2(),
+4 k.i=30;
+5
+var2 v=new var2();
+|
+Back Forward
+Compile Build
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+Execute Color Chooser
+Javac var..Java (in airectory: D:\javawork)
+Compilation finished successfully.
+2/27 col: 7 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Save Save All
+Open
+ble1.java var2.java * Test.java
+4
+k.i=30;
+5
+6
+7
+8
+9
+v.m1();
+System.out.println(v.i);//10(valid)
+0}
+1 public void m1()
+2
+3
+4}
+5
+{
+Revert
+6}
+7
+Close
+I
+|
+Back Forward Compile Build
+System.out.println(i);//10(valid)
+Execute
+Javac var.Java (in directory: D:\javawork)
+Compilation finished successfully.
+4/27 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Color Chooser
+Find
+Jump to
+Quit
+Ivar2.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java var2.java * Test.java
+1 class var2
+3
+3
+4 //heap area
+5
+6
+7
+8
+//System.out.println(i);
+9 //C.E:non-static variable i cannot be referenced from a static context(invalid)
+0
+int i=10;
+int i=10;
+5
+public static void main(String[] args)
+{
+1
+2 v.i=20;
+3
+4
+var2 v=new var2();
+Back Forward Compile Build Execute Color Chooser
+I
+var2 k=new var2();
+k.i=30;
+javac var..Java (in directory: D:\javawork)
+Compilation finished successfully.
+4/27 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: var2.main
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.java * Testaya X
+1
+2 e/*class Test
+3 {
+4 static int i=10;
+Back Forward Compile Build
+5 public static void main(String[] args)
+6 {
+7 Test t=new Test();
+System.out.println(t.i);//10
+System.out.println(Test.i);//10
+0 System.out.println(i);//10
+8
+9
+1}
+_2}
+javac "varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+7/50 col: 1 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java Scope: Test
+Execute Color Chooser
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+mble1.java X var2.java * Test.java
+4 static int i=10;
+Save Save All Revert Close
+Back Forward Compile Build
+5 public static void main(String[] args)
+6 {
+7 Test t=new Test();
+8
+9
+System.out.println(t.i);//10
+System.out.println(Test.i);//10
+7 Test1=new reštt);":\. //^^
+8 System.out.println(t.i);//10
+System.out.println(Test.i);//10
+9
+3 /*class Test
+4 {
+5 int x=10;
+javac "varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+7/50 col: 1 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java
+Scope: Test
+Execute
+Color Chooser
+Find
+Jump to
+|
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java
+8 System.out.println(t.i);//10
+9 System.out.println(Test.i);//10
+0 System.out.println(i);//10
+.1 }
+_2}
+3 /*class Test
+4 {
+5 int x=10;
+I
+6
+7
+8 {
+9 Test t1-new Test();
+static int y=20;
+public static void main(String[] args)
+Back Forward Compile Build
+000.
+javac "varz.java (in directory: D:\javawork)
+Compilation finished successfully.
+7/50 col: 1 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java Scope: Test
+Execute Color Chooser
+Find
+Jump to
+Quit
+Iest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java *
+1
+2 e/*class Test
+3 {
+4
+static int i=10;
+9 System.out.println(Test.i);//10
+0 System.out.println(i);//10
+I
+1}
+_2}
+Back Forward Compile Build
+9 System.out.println(Test.i);//10
+0 System.out.println(i);//10
+1}
+2}
+FREEMT
+javac varz.java (in airectory: D:\Javawork)
+Compilation finished successfully.
+7/50 col: 1 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java Scope: Test
+Execute Color Chooser
+Find
+Jump to Quit
+Iest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+x
+Close
+Open Save Save All Revert
+ble1.java X var2.java * Test.java *
+4 static int i=10;
+5 public static void main(String[] args)
+6 {
+7
+8
+Test t=new Test();
+System.out.println(t.i);//10
+System.out.println(Test.i);//10
+LO System.out.println(i);//10
+9
+1}
+_2}
+3 /*class Test
+4 {
+5 int x=10;
+Back Forward Compile Build
+javac varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+7/50 col: 1 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java scope: Test
+FREEMT
+Execute Color Chooser
+Find
+Jump to
+Quit
+Iest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java *
+1
+2 /*class Test
+3
+4 static int i=10;
+5 public static void main(String[] args)
+6 {
+7
+{
+Back Forward Compile Build
+Test t=new Test();
+8
+System.out.println(t.i);//10
+System.out.println(Test.i);//10
+0 System.out.println(i);//10
+9
+1}
+2}
+FREEMT
+/*
+javac varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+7/50 col: 1 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java scope: Test
+Execute Color Chooser
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+x
+Save All Revert Close
+Open Save
+ble1.java X var2.java * Test.java *
+4 static int i=10;
+5 public static void main(String[] args)
+6 = {
+7 Test t=new Test();
+8
+9
+0
+1 }
+2}
+FREEMT
+_3 /*class Test
+4 {
+5 int x=10;
+50
+System.out.println(t.i);//10
+System.out.println(Test.i);//10
+System.out.println(i);//10
+I
+Back Forward Compile Build
+javac varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+col: 0
+Execute Color Chooser
+sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+*
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java
+1
+2 class Test
+FREEMT
+Back Forward
+3 = {
+4 static int i=10;
+5 public static void main(String[] args)
+6 = {
+7 Test t=new Test();
+/50
+|
+8
+System.out.println(t.i);//10
+9
+System.out.println(Test.i);//10
+0 System.out.println(i);//10
+.1 }
+2}
+javac "varz.java (in directory: D:\Javawork)
+Compilation finished successfully.
+col: 0
+Compile Build
+Execute
+sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown.
+Color Chooser
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save
+ble1.java X var2.java * Test.java *
+4 static int i=10;
+FREEMT
+Save All Revert Close
+I
+3 /*class Test
+4 {
+5 int x=10;
+/50
+5 public static void main(String[] args)
+6 = {
+7 Test t=new Test();
+8
+System.out.println(t.i);//10
+9 System.out.println(Test.i);//10
+LO System.out.println(i);//10
+.1 }
+2}
+Back Forward
+javac varz.java (in airectory: D:\Javawork)
+Compilation finished successfully.
+col: 0
+|
+Compile Build
+Execute
+sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown.
+Color Chooser
+Find
+Jump to
+Quit
+Iest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java
+1
+2 classi
+3 B{
+4 stati
+8 Syste
+9 Syste
+_0
+LO Syste
+1}
+2}
+GIN C:\WINDOWS\SYSTEM32\cmd.exe
+10
+10
+(program exited with code: 0)
+5 publPress
+Press any key to continue..
+6 = {
+7 Test
+FREMT
+4 errors
+Compilation failed.
+8/51 col: 3 sel: 0 INS
+Back Forward Compile Build
+TAB mode: CRLF encodina: UTF-8 filetype: Java scope: unknown
+Execute
+Color Chooser
+Find
+Jump to
+X
+Quit
+1est.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java
+1
+2 class Test
+3 B{
+4 static int i=10;
+5 public static void main(String[] args)
+6 = {
+7 Test t=new Test();
+8
+System.out.println(t.i);//10
+System.out.println(Test.i);//10
+0 System.out.println(i);//10
+9
+.1 }
+_2}
+/*-1--- T-
+FREEMT
+|
+Back Forward
+Compile Build
+4 errors
+Compilation failed.
+8/51 col: 3 sel: 0 INS TAB mode: CRLF encodina: UTF-8 filetype: Java scope: unknown.
+Execute Color Chooser
+Find
+Jump to
+O
+|
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+x
+Open Save Save All Revert Close
+ble1.java X var2.java * Test.java *
+2 /*class Test
+8
+3
+4 static int i=10;
+5 public static void main(String[] args)
+6 {
+7 Test t=new Test();
+{
+1}
+2}
+3
+FREMT
+Back Forward
+8 System.out.println(t.i);//10
+9 System.out.println(Test.i);//10
+0 System.out.println(i);//10
+I
+|
+Compile Build
+|
+Execute Color Chooser
+4 errors
+Compilation failed.
+3/52 col: 2 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown
+Find
+Jump to
+Quit
+1Test.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+x
+Save Save All Revert Close
+Open
+ble1.java X var2.java * Test.java *
+9 System.out.println(Test.i);//10
+System.out.println(i);//10
+0
+1}
+2}
+_3 */
+4 /*class Test
+5 {
+6
+int x=10;
+7 static int y=20;
+8
+9 {
+20 Test t1-new Test();
+FREMT
+Compile Build
+Back Forward
+public static void main(String[] args)
+4 errors
+Execute
+Compilation failed.
+3/52 col: 2 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown.
+Color Chooser
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.javá * Test.java
+6 int x=10;
+6
+{
+Back Forward
+7 static int y=20;
+8
+public static void main(String[] args)
+9
+mx 1u; *--^/\.
+|
+Compile Build
+7 static int y=20;
+8
+public static void main(String[] args)
+I
+9 {
+20 Test t1-new Test();
+1 t1.x=888;
+22 t1.y=999;
+23
+A
+System.out.println(t1.x+""+t1.y);
+1/1.
+Execute
+2 errors
+Compilation failed.
+4/52 col: 0 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown.
+Color Chooser
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All
+ble1.java X var2.java X Test.java X
+28 t3.x=666;
+*/
+29 t3.y=777;
+30
+System.out.println(t3.x+"----"+t3.y);
+1 System.out.println(t2.x+"----"+t2.y);
+System.out.println(t1.x+""+t1.y);
+2
+63 }
+4
+35
+36 /*class Test
+37 {
+38 public static void main(String[] args)
+39 {
+I
+2 errors
+Compilation failed.
+4/52 col: 0
+Revert
+Close
+Back Forward Compile Build Execute Color Chooser
+sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown.
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+ble1.java X var2.javá * Test.java
+5 int x=10;
+6
+static int y=20;
+7 public static void main(String[] args)
+_8 = {
+9 Test t1-new Test();
+20 t1.x=888;
+21 t1.y=999;
+2 System.out.println(t1.x+"
+23 Test t2-new Test();
+System.out.println(t1.x+".
+24
+25
+26 Test t3-new Test();
+Back Forward Compile Build
+'+t1.y);
+'+t1.y);
+Execute Color Chooser
+System.out.println(t2.x+""+t2.y);//
+2 errors
+Compilation failed.
+2/51 col: 3 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: unknown.
+Find
+Jump to Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+ble1.java X var2.java * Test.java
+8 ={
+9 Test t1-new Test();
+FREEMT
+Save Save All Revert Close
+20 t1.x=888;
+1 t1.y=999;
+22 System.out.println(t1.x+".
+23 Test t2-new Test();
+24 t2.x=555;
+5 t2.y=444;
+26 System.out.println(t1.x+'
+System.out.println(t2.x+".
+27
+28 Test t3-new Test();
+29 t3.x=666;
+5/53
+|
+Back Forward Compile Build
+Execute
+'+t1.y);//888 999
+'+t1.y);//
+'+t2.y);//
+Color Chooser
+4 errors
+Compilation failed.
+col: 8 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: Test.main
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+x
+Close
+Open
+ble1.java X var2.java * Test.java
+24 t2.x=555;
+Save Save All Revert
+Back Forward
+|
+FREMT
+Compile Build
+'+t3.y);
+System.out.println(t2.x+". "+t2.y);
+'+t1.y);
+4 System.out.println(t1.x+".
+35 }
+25 t2.y=444;
+26 System.out.println(t1.x+" '+t1.y);//888 444
+System.out.println(t2.x+""+t2.y);//555 444
+Test t3-new Test()
+27
+28
+29
+30 t3.x=666;
+1 t3.y=777;
+32 System.out.println(t3.x+'
+3
+Execute
+11
+2 errors
+Compilation failed.
+0/54 col: 9 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: Test.main
+Color Chooser
+Find
+Jump to
+Quit
+ITest.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All
+ble1.java X var2.java * Test.java
+1 t1.y=999;
+2 System.out.println(t1.x+".
+23 Test t2-new Test();
+24 t2.x=555;
+Revert Close
+Back Forward Compile Build
+25 t2.y=444;
+26 System.out.println(t1.x+".
+27
+System.out.println(t2.x+"
+28 Test t3-new Test()
+I
+29
+Execute Color Chooser
+"+t1.y);//888 999
+'+t1.y);//888 444
+'+t2.y);//555 444
+30 t3.x=666;
+$1 t3.y=777;
+32 System.out.println(t3.x+""+t3.y);//666 777
+11
+..//cr
+4 errors
+Compilation failed.
+0/54 col: 9 sel: 0 INS TAB MOD mode: CRLF encoding: UTF-8 filetype: Java scope: Test.main
+Find
+Jump to
+Quit
+Ist.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+Save Save All
+le1.java X var2.java X Test.java
+5 t2.y=444;
+6
+7
+8
+9
+Revert
+Close
+System.out.println(t1.x+".
+System.out.println(t2.x+"
+Test t3-new Test();
+I
+Back Forward Compile Build
+0 t3.x=666;
+1 t3.y=777;
+3
+2 System.out.println(t3.x+"
+System.out.println(t2.x+"
+4 System.out.println(t1.x+"
+5}
+6 }
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Execute
+11
+Color Chooser
+'+t1.y);//888 444
+"+t2.y);//555 444
++t3.y);//666 777
+"+t2.y);//555 777
+"+t1.y);//999 777
+Find
+Jump to
+Quit
+Tst.java-D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+O
+GIN. C:\WINDOWS\SYSTEM32\cmd.exe
+lel.jav 888-99
+888--- -444
+-444
+777
+5 555-
+666-
+555----777
+6 888----777
+7
+8
+9
+0
+1
+2
+3
+4
+5
+16 }
+(program exited with code: 0)
+Press any key to continue
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+X
+Jump to
+Quit
+Tst.java-D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+of
+G. Select C:\WINDOWS\SYSTEM32\cmd.exe
+lel.javi888----999
+888----444
+5 555----444
+6
+666----777
+555----777
+888---- -777
+7
+8
+9
+0
+1
+2
+3
+4
+5
+16 }
+L
+(program exited with code: 0)
+Press any key to continue
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+X
+Jump to
+Quit
+Tst.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+lel.java var2.java X Test.java *
+5 t2.y=444;
+6 System.out.println(t1.x+"
+7
+8 Test t3-new Test();
+9
+0 t3.x=666;
+1 t3.y=777;
+2 System.out.println(t3.x+"
+'+t3.y);//666 777
+3 System.out.println(t2.x+" "+t2.y);//555 777
+4 System.out.println(t1.x+""+t1.y);//999 777
+5}
+6 }
+Save Save All Revert
+Close
+Back Forward Compile Build
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Execute
+Color Chooser
+'+t1.y);//888 444
+System.out.println(t2.x+""+t2.y);//555 444
+Find
+Jump to Quit
+Tst.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+le1.java var2.java X Test.java X
+2 System.out.println(t3.x+"
+3 System.out.println(t2.x+"
+4 System.out.println(t1.x+".
+5}
+6 }
+7
+8 /* class Test
+9 {
+0 public static void main(String[] args)
+1 {
+2 int i=0;
+3 for(int j=0;j<3;j++)
+I
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Back Forward Compile Build
+11
+Execute
+Color Chooser
+'+t3.y);//666 777
++t2.y);//555 777
+"+t1.y);//999 777
+Find
+Jump to
+Quit
+T
+0st.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+le1.java var2.java X Test.java *
+9
+Back Forward
+0 t3.x=666;
+1 t3.y=777;
+2 System.out.println(t3.x+"
+3 System.out.println(t2.x+".
+4
+5}
+6}
+3 System.out.println(t2.x+"
+4 System.out.println(t1.x+"
+5}
+6 }
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Compile Build
+Execute
+'+t3.y);//666 777
+'+t2.y);//555 777
+System.out.println(t1.x+"----"+t1.y);//999 777
+Color Chooser
+'+t2.y);//555 777
+"+t1.y);//999 777
+Find
+Jump to Quit
+Tst.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Close
+Open Save Save All
+le1.java var2.java X Test.java X
+5 t2.y=444;
+6 System.out.println(t1.x+".
+7
+8
+9
+Revert
+Back Forward
+0 t3.x=666; I
+1 t3.y=777;
+2 System.out.println(t3.x+"
+3 System.out.println(t2.x+".
+4 System.out.println(t1.x+"
+5}
+6 }
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Compile Build
+Execute
+'+t1.y);//888 444
+System.out.println(t2.x+""+t2.y);//555 444
+Test t3-new Test();
+Color Chooser
++t3.y);//666 777
+"+t2.y);//555 777
+"+t1.y);//999 777
+Find
+Jump to Quit
+Tst.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Open Save Save All Revert Close
+le1.java var2.java X Test.java X
+"+t3.y);//666 777
+2 System.out.println(t3.x+"
+3 System.out.println(t2.x+"
+'+t2.y);//555 777
+4 System.out.println(t1.x+"-__-"+t1.y);//999 777
+5}
+2 System.out.println(t3.x+
+3 System.out.println(t2.x+".
+4
+5}
+Back Forward Compile Build
++t3.y);//bbb ///
++t2.y);//555 777
+System.out.println(t1.x+"-__-"+t1.y);//999 777
+0 public static void main(String[] args)
+1 {
+2 int i=0;
+3 for(int j=0;j<3;j++)
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Execute Color Chooser
+Find
+Jump to Quit
+Test.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+le1.java var2.java X Test.java *
+9
+Back Forward
+/*class Test
+Compile Build
+6 }
+7
+8
+9 {
+0 public static void main(String[] args)
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+0 t3.x=666;
+1 t3.y=777;
+2 System.out.println(t3.x+"
+"+t3.y);//666 777
+'+t2.y);//555 777
+3 System.out.println(t2.x+".
+4 System.out.println(t1.x+". "+t1.y);//999 777
+5}
+Execute
+Color Chooser
+Find
+Jump to Quit
+Test.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Close
+Open Save Save All Revert
+le1.java var2.java X Test.java *
+0 t1.x=888;
+1 t1.y=999;
+2 System.out.println(t1.x+""+t1.y);//888 999
+3 Test t2=new Test();
+4 t2.x=555;
+Back Forward
+5 t2.y#444;
+6 System.out.println(t1.x+"
+7
+System.out.println(t2.x+"
+8 Test t3-new Test();
+9
+0 t3.x=666;
+1 t3.y=777;
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Compile Build
+Execute
+Color Chooser
++t1.y);//888 444
+"+t2.y);//555 444
+Find
+Jump to Quit
+Test.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close Back Forward Compile Build
+le1.java X var2.java X Test.java X
+0 public static void main(String[] args)
+1 {
+2 int i=0;
+3 for(int j=0;j<3;j++)
+4 {
+5 i=i+j;
+6}
+7
+8 System.out.println(i+".
+9}
+0}
+1
+I
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+"'+j);
+Execute
+Color Chooser
+Find
+Jump to Quit
+Test.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open Save Save All Revert Close
+lel.java var2.java X Test.java *
+7 */
+class Test
+8
+9
+0 public static void main(String[] args)
+1 ={
+2 int i=0;
+3 for(int j=0;i<3;j++)
+4 ={
+I
+5 i=i+j;
+6}
+7
+8 System.out.println(i+"-
+{
+Back Forward
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Compile Build
+Execute
+"+j);
+Color Chooser
+Find
+Jump to Quit
+Test.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+le1.java X var2.java X Test.java X
+0 public static void main(String[] args)
+1 {
+Save Save All Revert Close
+2 int i=0;
+3
+4 {
+5 i=i+j;
+6}
+7
+I
+8 System.out.println(i+"
+9}
+0}
+1
+for(int j=0;j<3;j++)
+Back Forward Compile Build
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+"+j);
+Execute
+Color Chooser
+Find
+Jump to Quit
+Test.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+le1.java var2.java X Test.java *
+7 */
+Back Forward
+8 class Test
+9
+0
+1 ={
+2 int i=0;
+3 for(int j=0;j<3;j++)
+4 ={
+I
+5 i=i+j;
+6}
+7
+8 System.out.println(i+".
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Compile Build
+{
+public static void main(String[] args)
+-"'+j);
+Execute
+Color Chooser
+Find
+Jump to Quit
+Test.java-D:\javawork
+- Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close Back Forward Compile Build
+Open
+le1.java X var2.java * Test.java X
+0 public static void main(String[] args)
+1 {
+2 int i=0;
+3 for(int j=0;j<3;j++)
+4 ={
+5 i=i+j;
+6}
+7
+8 System.out.println(i+".
+9}
+0}
+1
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+"'+j);
+Execute
+Color Chooser
+Find
+Jump to
+Quit
+Test.java-D:\javawork
+- Geany
+Edit Search View Document Project Build Tools Help
+X
+Open Save Save All Revert Close
+le1.java var2.java X Test.java X
+7 */
+class Test
+8
+9
+0 public static void main(String[] args)
+1 ={
+2 int i=0;
+3 for(int j=0;j<3;j++)
+4 = {
+5 i=i+j;
+{
+Back Forward
+6}
+7
+8 System.out.println(i+".
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Compile Build
++j);
+Execute
+Color Chooser
+Find
+Jump to
+Quit
+T
+0st.java-D:javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+Save
+le1.java var2.java X Test.java X
+TINDOWS
+0 public static void main(String[] args)
+1 {
+2 int i=0;
+3 int j;
+4 for(j=0;j<3;j++)
+5 ={
+6 i=i+j;
+7 }
+8
+9
+0}
+1}
+Save All Revert Close
+Back Forward Compile Build
+System.out.println(i+"
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
++j);
+Execute
+Color Chooser
+Find
+Jump to
+Quit
+1st.java-D:javawork - Geany
+Edit Search View Document Project Build Tools Help
+Save Save All Revert Close
+Open
+le1.java X
+C:\WINDOWS\SYSTEM32\.cmd.exe
+0 public static void main(String[] args)
+1 {
+2 int i=0;
+3
+int j;
+4
+for(j=0;j<3;j++)
+5 ={
+Back
+6|i=i+j;
+7 }
+8
+9 System.out.println(i+"
+0}
+1 }
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Forward Compile Build
++j);
+Execute
+Color Chooser
+Find
+X
+Jump to
+Quit
+1st.java-D:javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Close
+Open
+le1.java X
+0 p
+1 ={|
+Save Save All Revert
+C:\WINDOWS\SYSTEM32\cmd.exe
+--3
+0}
+1}
+(program exited with code: 0)
+2 pres
+3
+i
+4 f
+5 {
+6 i
+7 }
+8
+9 S Tout penting
+Press any key to continue.
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Back Forward
+Compile Build
+Execute
+Color Chooser
+Find
+I
+X
+Jump to
+Quit
+1st.java-D:javawork - Geany
+Edit Search View Document Project Build Tools Help
+Open
+le1.java X
+0
+1
+2
+3 i
+4 f
+5 {
+6 i
+7}
+8
+9 S
+IP
+{|
+0}
+1}
+Save Save All Revert Close
+CC:\WINDOWS\SYSTEM32\cmd.exe
+-3
+(program exited with code: 0)
+Press any key to continue
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Back
+Forward
+Compile Build
+Execute
+Color Chooser
+Find
+-
+Jump to
+0 X
+Quit
+1stjava - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+le1.java var2.java X Test.java *
+0 public static void main(String[] args)
+1 {
+Back Forward Compile Build
+2 int i=0;
+3
+int j
+4 for(j=0;j<3;j++)
+5 ={
+6 i=i+j;
+7}
+8
+9 System.out.println(i+"-
+0}
+1 }
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
++j);
+Execute
+Color Chooser
+Find
+Jump to
+Quit
+Tst.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Close
+Open Save Save All
+le1.java var2.java X Test.java X
+3
+int j
+4 for(j=0;j<3;j++)
+5 ={
+6 i=i+j;
+7}
+2
+3
+4
+Revert
+8
+9 System.out.println(i+".
+0}
+1}
+I
+Back Forward
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Compile Build
+Execute
+'+j);
+Color Chooser
+Find
+Jump to
+Quit
+Tst.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+le1.java var2.java X Test.java X
+0 public static void main(String[] args)
+1 {
+2 int i=0;
+int j
+3
+4 for(j=0;j<3;j++)
+5 ={
+6 i=i+j;
+7 }
+8
+9
+0}
+1 }
+I
+Back Forward Compile Build
+System.out.println(i+"
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
++j);
+Execute
+Color Chooser
+Find
+Jump to
+Quit
+Tst.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+le1.java X var2.java * Test.java X
+6}
+7 *1
+8 class Test
+2 int i=0;
+3
+int j
+4
+5 ={
+6 i=i+j;
+7 }
+0
+public static void main(String[] args)
+1 {
+I
+for(j=0;j<3;j++)
+Back Forward
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+Compile Build
+Execute
+Color Chooser
+Find
+Jump to
+Quit
+Tst.java - D:\javawork - Geany
+Edit Search View Document Project Build Tools Help
+X
+Save Save All Revert Close
+Open
+lel.java var2.java X Test.java *
+9 {
+0
+public static void main(String[] args)
+1
+{
+2
+int i=0;
+3 int j;
+4
+5 ={
+6 i=i+j;
+for(j=0;j<3;j++)
+Back Forward Compile Build
+7}
+8
+9 System.out.println(i+".
+0}
+javac "Test.java" (in directory: D:\javawork)
+Compilation finished successfully.
+el
+R
+Execute
+_____"+j);
+Color Chooser
+Static
+Find
+Company
+nane
+Jump to Quit
+Tstjava - Djavawork - Geany
+hotos - Screenshot (98).png
+See all photos + Add to
+0 public static void main(String[] arg Non Static
+1
+Id
+3
+8
+{
+6|i=i+j;
+9
+j;
+System.out.println(i+
+el -
+e2
+c3
+↑
+↑
+Id
+arb
+Id
+Name
+Name
+Name
+Objects Separate copies
+Static
+Company
+name
+Single copy
+||
+Edit & Create Share
+8
+0- Screenshot (98).png
+all photos + Add to
+el
+e2
+e3
+↑
+↑
+Objects
+Non Static
+Id
+Id
+Name
+Name
+Id Name
+44
+Separate copies
+Static
+Company
+name
+Single copy
+Edit & Create
+Share
+8Screenshot (38) gng
+all photos
+-
+Add to
+el
+e2
+e3
+Objects
+el
+P3
+Uffects
+Non Static
+Id Non Stalin me static
+Id Name
+dld
+ld
+Name
+Namic ame
+Id. Name
+Separate
+Static
+Separate copies
+Companyompany
+name
+Single copy
+Single copy
+Share
+Share- Screenshot (98).png
+all photos + Add to
+el
+e3
+↑
+Non Static
+&
+Id Name
+Id Name
+ld Name
+Objects Separate copies
+Static
+Company
+name
+Single copy
+Edit & Create
+Share- Screenshot (98).png
+all photos + Add to
+el
+e2
+Non Static
+Id
+Id
+Id
+$
+14
+Name
+Name
+Name
+Objects Separate copies
+Static
+Company
+name
+Single copy
+Edit & Create ✓
+Share- Screenshot (98).png
+all photos + Add to
+el
+e2
+e3
+Non Static
+Id
+14
+Name
+Id Name
+Id Name
+Objects Separate copies
+Static
+Company
+name
+Edit & Create ✓
+Single copy
+Share- Screenshot (98).png
+all photos + Add to
+el
+e2
+e3
+→
+Non Static
+IN
+N
+Name
+Name
+Id Name
+Objects Separate copies
+Static
+Company
+name
+Edit & Create ✓
+Single copy
+Share- Screenshot (98).png
+all photos + Add to
+el
+e2
+e3
+Non Static
+Id
+Id
+#
+Name
+Name
+Id Name
+Objects Separate copies
+Static
+Company
+name
+Edit & Create ✓
+Single copy
+Share- Screenshot (98).png
+all photos + Add to
+el
+e2
+Non Static
+Id
+Id
+Id
+过
+Name
+Name
+Name
+Objects Separate copies
+Static
+Company
+name
+Edit & Create
+Single copy
+Share- Screenshot (98).png
+Your Account
+← → C screencast-o-matic.com/account
+SCREENCAST MATIC for Education for Work for Developers Product Pricing
+Mix and match your videos!
+With Premier, automatically transfer iPhone and iPad recordings to the desktop editor.
+Upgrade to Premier
+e2
+Start Recorder
+My Uploads
+▸ Uploads O My Plan Ⓒ Earn Rewards
+Id
+Non Static
+Channels
+No channels for this account
+Obj
+My Uploads
+Open Video Editor
+H
+Name
+You haven't uploaded any screencasts yet. See a tutorial for how to get started
+Edit & Create
+nai
+ABP
+Stall BLOG TUTORIALS SUPPORT
+mahathikalakonda@gmail.com
+Download Install
+Single copy
+12? Share Fox
+How to manage uploadsYour Account
+→ C ® screencast-o-matic.com/account
++
+SCREENCAST MATIC for Education for Work for Developers Product Pricing
+Mix and match your videos!
+With Premier, automatically transfer iPhone and iPad recordings to the desktop editor.
+Upgrade to Premier
+Uploads
+My Uploads
+Start Recorder
+O My Plan
+Channels
+No channels for this account.
+Add a channel
+Earn Rewards
+My Uploads
+Open Video Editor
+You haven't uploaded any screencasts yet. See a tutorial for how to get started
+BLOG TUTORIALS SUPPORT
+mahathikalakonda@gmail.com
+Download Install
+Get advanced hosting collaboration and video editing
+How to manage uploads
+Go Premier!
+mour Account
+Cscreencast-o-matic.com/account
+x +
+SCREENCAST MATIC for Education for Work for Developers Product Pricing
+Mix and match your videos!
+With Premier, automatically transfer iPhone and iPad recordings to the desktop editor.
+Upgrade to Premier
+Uploads
+My Uploads
+Start Recorder
+O My Plan
+Channels
+No channels for this account.
+Add a channel
+Earn Rewards
+My Uploads
+Open Video Editor
+You haven't uploaded any screencasts yet. See a tutorial for how to get started
+BLOG TUTORIALS SUPPORT
+ABP
+mahathikalakonda@gmail.com
+Download Install
+Get advanced hosting collaboration and video editing
+How to manage uploads
+Go Premier!
+X
+□- Screenshot (98).png
+all photos + Add to
+screencast-o-matic.com/groupt
+Uploads
++
+Uploads
+Channels
+Start Recorder
+SCREENCAST MATIC for Education for Work for Developers Product Pricing
+Mix and match your videos!
+ame
+With Premier, automatkally trander Phone and iPad ordings to the deskton edito
+Upgrade to Premier
+My Plan
+Non Static
+TJ
+0
+Id
+Earn Rewards
+□
+Name
+Open Video Editor
+ObjectsMy Uploads rate copies
+You haven't uploaded any screencasts yet. Se a tutorial for how to get started
+Name
+Static
+BLOG TOR5 SUPPORT
+mahathikalakonda@gmail.com
+Company
+name
+Edit & Create
+Download Install
+Single-copy-
+to manage uploads
+Share- Screenshot (98).png
+all photos + Add to
+el
+e2
+e3
+Non Static
+Id
+N
+Name
+Id Name
+Id Name
+Objects Separate copies
+Static
+Company
+name
+Edit & Create
+Single copy
+ShareDG
+Students
+Beginners and advanced
+Academics
+Teachers
+Research
+Interviews
+Competitive Exams
+TARGET AUDIENCEDG
+Thank you for watching!
+Please leave us your comments.

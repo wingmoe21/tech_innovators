@@ -1,0 +1,55 @@
+0.27 - 0.831:  Hello friends!
+1.171 - 2.292: Welcome to GeeksforGeeks.
+2.852 - 8.157: In this tutorial, we are going to see how to convert an octal number to a decimal number.
+8.998 - 20.509: The problem statement is, given an octal number as input, we need to write a program to convert the given octal number into the equivalent decimal number i.e.
+20.629 - 23.932: convert the number with base value 8 to base value 10.
+25.089 - 31.111:  The base value of a number system determines the number of digits used to represent a numeric value.
+31.971 - 36.592: For example, the binary number system uses 2 digits 0 and 1.
+37.192 - 46.494: Octal number system uses 8 digits from 0 to 7 and decimal number system uses 10 digits 0 to 9 to represent any numeric value.
+47.075 - 48.555: Now let us look at the algorithm.
+49.033 - 49.913:  Step 1.
+50.233 - 60.435: Multiply each digit separately from left to right by 8 raised to the power 0, 8 raised to the power 1, 8 raised to the power 2 and so on respectively.
+60.975 - 61.815: Step 2.
+62.335 - 64.856: Add all the results coming from step 1.
+65.396 - 66.276: Step 3.
+66.796 - 70.277: Equivalent decimal number would be the result obtained in step 2.
+70.677 - 73.277: Now let us understand the algorithm by an example.
+73.618 - 75.038: Suppose the octal number is 123.
+76.434 - 86.596:  Now step number 1 is to multiply each digit separately from left to right, that is 3, 2, 1 by 8 raised to power 0, 8 raised to power 1 and so on.
+86.996 - 96.498: So 3 will be multiplied by 8 raised to the power 0, 2 will be multiplied by 8 raised to the power 1 and 1 will be multiplied by 8 raised to the power 2.
+97.298 - 100.079: Then we add all the results coming from step number 1.
+100.559 - 105.48: So we add 3 plus 16 plus 64 and obtain the decimal number 83.
+106.952 - 108.253:  Now let us look at the code.
+109.033 - 115.438: In the function octalToDecimal, we have passed an octal number n and it returns its decimal equivalent.
+116.038 - 119.38: We initialize numWithN and decimal value as 0.
+120.521 - 125.044: We initialize the value of base as 1 which is 8 raised to the power 0.
+126.045 - 127.726: We initialize temp as num.
+128.346 - 131.849: Now we run a while loop until temp is not equals to 0.
+132.754 - 137.916:  Inside the while loop, first of all, we extract the last digit and store it in last digit.
+138.417 - 141.938: Then we change the value of temp by dividing it by 10.
+142.779 - 148.481: Then we multiply the last digit with appropriate base value and add it to the decimal value.
+148.941 - 152.623: In the end, we change the value of base by multiplying it by 8.
+153.403 - 156.785: These steps will continue until temp is not equal to zero.
+157.305 - 160.927: In the end of the while loop, we finally return the decimal value.
+161.573 - 163.555:  Now let us look at this with an example.
+164.275 - 165.876: Suppose we have a number 123.
+166.297 - 171.44: We initialize num as 123 and decimal value as 0.
+172.221 - 176.964: The value of base will be 1 and temp will be initialized as 123.
+177.485 - 185.271: In the first iteration the last digit of temp 123 is 3 and we change the value of 123 to 12.
+186.331 - 189.894: Now the decimal value will be last digit into base.
+190.327 - 192.749:  that is 3 into 1 equals 3.
+193.45 - 196.232: Now we change the value of base from 1 to 8.
+197.112 - 202.337: In the next iteration, we extract the last digit of temp which is 12 as 2.
+203.217 - 207.461: Now we change the value of temp by dividing it by 10 and get 1.
+208.141 - 217.409: Now we multiply the base 8 with the last digit 2 which gives 16 and add it to the previous decimal value 3 to obtain the new decimal value 19.
+218.467 - 224.49:  We change the value of base by multiplying it by 8 which gives 8 into 8 equals 64.
+225.29 - 229.772: As the value of temp is not equal to 0 we continue on to the next iteration.
+230.413 - 237.216: Now the last digit of temp will equal to 1 and we change the value of temp from 1 to 0.
+238.256 - 245.64: Last digit 1 into base 64 will give 64 and we add that into the decimal value 19 to obtain 83.
+246.86 - 249.463:  We change the value of base by multiplying it by 8.
+249.963 - 252.546: That is 8 into 64 will now give 512.
+253.808 - 257.992: As the value of temp is equal to 0, we can exit the while loop.
+258.393 - 261.156: Finally, we can return the decimal value, which is 83.
+262.457 - 263.859: I hope you understood the code.
+264.399 - 265.36: Thank you for watching.
+265.56 - 266.702: Please leave us your comments.

@@ -1,0 +1,71 @@
+0.67 - 3.394:  Hello friends and welcome to GeeksforGeeks.
+4.356 - 8.302: In this tutorial, we learn about Min Cost Path Problem.
+9.895 - 30.279:  problem statement given a cost matrix where all the costs are positive and a position m,n in the cost matrix, I need to find a function that returns cost of minimum cost path to reach m,n from 0,0.
+31.899 - 39.701: The total cost of the path is sum of all the costs on that path including source and destination.
+42.506 - 52.914:  the allowed movements to reach the cell m,n from the cell 0,0 are up, right and diagonally upper.
+54.655 - 54.775: i.e.
+55.255 - 60.639: from a given cell i,j I can go to i plus 1,j i.e.
+60.82 - 64.022: upper cell i,j plus 1 i.e.
+64.082 - 69.386: right cell or i plus 1,j plus 1 i.e.
+69.766 - 70.827: diagonally upper cell
+73.769 - 83.318:  Taking example of cost matrix of size 3x3 which is like this and I want to reach the cell 2,2.
+86.561 - 93.247: So to reach the cell 2,2 from the cell 0,0 the minimum cost path is this.
+95.328 - 98.391: The minimum cost is 1 plus 2 plus 2 plus 3 that is 8.
+103.26 - 115.704:  this problem has optimal substructure because the path to reach the cell m,n goes through one of the cells either m-1,n-1 or m-1,n or m,n-1.
+124.301 - 143.293:  We can recursively write minCost to reach cell m,n as minimum of the minimum cost to reach m-1,n-1, minimum cost to reach m-1,n and minimum cost to reach m,n-1.
+144.033 - 149.857: We take the minimum amongst them plus the cost of the destination.
+153.308 - 171.416:  code of this recursive knife solution taken from geeksforgeeks.com is we take a function minCost which takes as input the cost matrix and the cell m,n which we want to reach.
+172.937 - 175.678: If m and n both are 0 i.e.
+175.738 - 181.641: source and destination are same then we just return the cost of m,n.
+183.522 - 191.874:  Otherwise, we return cost plus minimum of the possible places from where I can come.
+193.909 - 196.892:  if n or m is less than 0, i.e.
+197.612 - 202.416: the particular cell is not valid, we return int max.
+203.717 - 217.589: This int max helps when the min cost of some path reaching to a particular cell is not valid.
+218.83 - 222.013: So we return int max so that path is ignored.
+224.656 - 228.719:  time complexity of this naive recursive solution is exponential.
+230.16 - 233.202: This can be seen from its recursive tree.
+237.816 - 249.7:  as we see that if I call for cell 2,2 it is further broken down to 1,1 1,2 and 2,1 which is further subdivided into subproblems.
+250.78 - 258.743: We see that we have overlapping subproblems over here like 1,1 1,1 0,1 0,1 So this problem has overlapping subproblems property.
+265.541 - 275.01:  Overall the problem has both optimal substructure and overlapping subproblems property so we decide to solve it using dynamic programming.
+276.872 - 277.012: i.e.
+277.412 - 281.616: constructing a temporary array tc in bottom-up manner.
+284.399 - 286.421: Taking example of this cost matrix
+288.692 - 307.288:  If from the start, I want to reach this cell, i.e., m equals to 2, n equals to 2, then I'll make TC matrix of size 3 x 3 i.e., the highest cell would be 2,2.
+311.672 - 314.254: So, I construct a TC matrix
+316.348 - 320.131:  This is my start cell and I want to reach this cell.
+320.872 - 324.095: I need to find the minimum cost to reach the cell 2,2.
+327.678 - 336.106: The cell 0,0 of tc equals to cost of 0,0 because here the destination and source are same.
+338.228 - 346.634:  Now to reach any cell in the bottom most row, there is only one way of moving that is in right direction.
+347.915 - 353.299: So to reach the cell 0,1 the cost will be 1 plus 2 that is 3.
+354.16 - 358.323: To reach the cell 0,2 the cost will be 3 plus 3 that is 6.
+359.524 - 363.247: Similarly to reach any cell in the left most
+364.795 - 368.703:  column, there is only one way of moving from cell 0,0 i.e.
+368.723 - 369.284: upwards direction.
+373.806 - 385.993:  So to reach the cell 1,0 cost is 1 plus 4 that is 5 and to reach the cell 2,0 there is only one way that is 5 plus 1, 6.
+388.234 - 397.899: Now to fill rest of the cell I loop from i equals to 1 till less than equals to 2 and j equals to 1 till less than equals to 2.
+401.181 - 402.582: To reach this cell
+405.302 - 409.565:  To reach this cell, I'll come from either of these cells.
+410.786 - 421.275: I take the minimum of these, that is 1, and add this cell's cost to the minimum cost among these.
+421.855 - 424.457: So, to reach this cell, the cost will be 9.
+426.368 - 431.633:  Now, to reach this cell, I'll come from either of these 3 cells.
+432.174 - 433.155: Minimum of these is 3.
+434.136 - 435.897: I add 2 to it.
+436.298 - 438.58: The cost to reach this cell would be 5.
+440.822 - 444.706: To reach this cell, I'll come from either of these 3 cells.
+446.417 - 450.56:  the cost to reach this cell would be 5 plus 5 that is 10.
+451.781 - 458.145: Now, to reach this cell, I'll come from either of these cells, minimum cost amongst them is 5.
+459.006 - 463.329: To reach this cell, cost will be 5 plus 3 that is 8.
+465.57 - 468.753: So, the cost to reach the cell 2,2 is 8.
+469.413 - 470.514: I return this cost.
+472.375 - 474.817: Coming on to the code for this problem,
+476.331 - 478.712:  This code is taken from geeksforgeeks.com.
+480.333 - 490.539: I construct a tc array of size row, column and initialize 0,0 cell as the same as cost.
+491.84 - 500.504: Now, I fill the bottom most row with tc i-1,0 plus cost i0.
+501.265 - 504.927: Similarly, I fill the left most column like this.
+506.115 - 529.264:  Now, I loop from i equals to 1 till less than equals to m and j equals to 1 from less than equals to n and tcij is given by minimum of these three, the diagonally lower cell, the bottom cell or the left cell plus the cost of that particular cell.
+530.205 - 533.566: At last, I return tc of mn.
+535.908 - 551.312:  Finding the time complexity for this code, this loop takes O of m time, this loop takes O of n time and this nested loop takes O of m into n time.
+551.752 - 565.315: So overall the time complexity for this problem is O of m into n. And the space complexity is also O of m into n because I construct another array.
+567.685 - 568.606:  of the same size.
+570.788 - 571.749: Thank you for watching!
+572.15 - 574.072: Please leave us your likes and comments.

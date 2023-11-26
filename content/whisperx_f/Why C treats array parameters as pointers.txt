@@ -1,0 +1,80 @@
+0.137 - 4.92:  Friends, today in this video we will discuss why C treats array parameters as pointers.
+6.902 - 7.962: So some prerequisites.
+8.543 - 9.884: So this is our first program.
+11.185 - 12.746: We will discuss it line by line.
+14.007 - 17.789: So whenever our program will be formed, our main function will be called.
+18.93 - 23.093: So whenever any function will be called, it will be stored into our stack memory.
+23.953 - 25.234: So this is our stack memory.
+26.075 - 27.616: So the stack first context
+28.755 - 49.18:  will be act as main function inside main function we have an array which has five elements 1 2 3 4 5 so these elements we have assumed that they are stored at 100 104 108 112 and 116 address location and their values are 1 2 3 4 5
+58.809 - 88.216:  second line is printf air so what it will print air will give us the base address of the array so what will be the base address base address is the address location of first element of the array which is hundred so this line will print hundred as the value okay second printf statement is printing address of air so what
+88.786 - 115.443:  what is the meaning of address of air it is the same as air only it will also give the location of first element of the array which is also hundred so this line will also print hundred as the value then we are calling a print function and inside this print function we are providing air and what is the value of air air value is hundred so we are
+116.078 - 143.779:  sending 100 as the argument in our print function so whenever print will be called another new context will be formed into our stack memory and this 100 will be going to the argument of print function so see int ptr is the argument of print function it means int star ptr only
+144.758 - 173.699:  so these two are same either we will write int ptr these brackets or we will write int star ptr so what is the meaning of this ptr is a pointer to an integer so what it will store it will store the address and what is hundred hundred is the address of first element so in ptr hundred will be stored but the address of ptr is different which is 700
+176.013 - 203.052:  okay so our first printf statement in our print function is ptr so it will print this 100 only second line is address of ptr so it will print 700 then the third line is size of ptr so what is ptr ptr is a pointer to an integer so what will be the size of a pointer it will print 8 okay
+205.356 - 208.677:  So our next line is printf sizeof ptr 0.
+210.077 - 212.557: So ptr 0 what will be ptr 0?
+213.457 - 216.958: So see ptr 0 means star ptr only.
+218.498 - 225.66: So star ptr means it will fetch the value which is stored at the location which is present in ptr.
+226.62 - 229.6: So in ptr what is the location stored?
+229.62 - 230.42: 100 is the location.
+231.341 - 233.001: And at 100 what is the value?
+233.401 - 234.001: 1 is the value.
+234.898 - 236.079:  So it will give 1.
+236.86 - 237.16: Okay.
+237.7 - 239.001: And what is the type of 1?
+239.802 - 240.802: It is an int type.
+241.703 - 243.264: So what will be the size of int?
+243.605 - 244.005: It will be 4.
+245.146 - 246.347: So this line will print 4.
+246.667 - 248.068: Okay.
+248.748 - 251.05: So let us go to the next example.
+253.152 - 254.753: So this is our next example.
+256.474 - 258.156: So let us start from the main function.
+258.796 - 261.538: This is the same array with same content 1, 2, 3, 4, 5.
+263.542 - 292.741:  now we are predicting the size so size is equal to size of air so size of air see here air is a array so it will give us the size one two three four five into four twenty twenty divided by size of air zero and what will air zero will give air zero will give one and what will be the size of one four so this size will come five okay so it will print five
+293.36 - 321.145:  the value then it will call the function print okay and it will send the argument as air so air will be the base address of first element okay and it will go and stored into this air pointer okay so now what we are doing see we are predicting the size of air divided by size of air zero
+321.963 - 349.271:  so air zero will give us one and size of will be four but size of air will be eight only because air is a pointer here so size will be eight divided by four means two only so it will print only two elements of the array that is one and two okay so whenever we want to send
+350.04 - 356.022:  an array elements into another function we should send the size of the array also.
+357.743 - 359.424: So let us go to the next example.
+361.085 - 363.906: See here we are sending size also.
+365.546 - 369.668: So this size will be 5 and we copied this size here also.
+371.009 - 374.51: So size value will be 5 only in both the function.
+375.911 - 382.494:  Now if it will print through for loop then it will print all the values not only one and two.
+383.274 - 391.138: That's why always we should send the size of the array if we want to access all the elements into another function.
+392.398 - 395.96: Let us go to the next example or slide.
+398.581 - 400.262: So what will be our final decision?
+400.282 - 403.103: So in C programming language
+403.502 - 413.15:  array parameters are always treated as pointers only because it is inefficient to copy the array data in terms of both memory and time.
+414.251 - 424.76: And most of the times when we pass an array our intention is to just tell the array we interested in not to create a copy of the array.
+425.941 - 431.806: So we always send the base address of the array and will store this base address
+432.375 - 462.116:  into a pointer and through that pointer we can access all the elements of the array but what is needed size is always needed if we do not know the size then we do not know how many bytes we have to fetch through that pointer so this is the reason all the array pointers are always treated as pointers only in c programming language let us see through programming code
+466.099 - 467.419:  So this is our first program.
+467.699 - 468.6: So let us run it.
+486.588 - 487.709: So this is the output.
+489.33 - 489.81: So array 5.
+490.649 - 492.491:  So, what is the first printf statement?
+492.511 - 492.891: Error.
+493.311 - 494.252: So, error will be this.
+495.353 - 495.553: Okay.
+495.613 - 499.276: Inside the main function, see these both are same.
+499.756 - 504.16: It means address of error and error are giving the address of first location of the array.
+504.841 - 505.061: Okay.
+505.621 - 512.767: So, after that when we will call print function then ptr in the ptr what will be gone?
+513.347 - 514.408: This address will be gone.
+514.829 - 515.069: Okay.
+515.429 - 520.073: So, this ptr will give us the value same as the address of the
+520.563 - 546.817:  first location of array okay but the address of ptr inside print function is different right and size of ptr will be 8 here and size of ptr 0 will be 4 here so these are the outputs which we have discussed in our slide and totally these are same so let us run the second program so this is our second program which we have discussed so let us run it
+561.553 - 567.458:  See size of the array inside main function is 5 and size of array inside print function is 2.
+568.219 - 568.419: Why?
+568.819 - 574.284: Because we have not sent the size of the array inside the arguments of the function.
+574.544 - 577.106: That's why it is telling us the wrong size.
+577.127 - 578.147: Okay.
+578.568 - 579.869: Let us run the third example.
+595.703 - 601.806:  So the size of array inside main function is five and size of array inside print function is also five.
+602.166 - 602.366: Why?
+602.867 - 605.828: Because we have sent this size as an argument here.
+606.849 - 607.129: Okay.
+607.149 - 609.03: So it will go into this function also.
+609.97 - 617.814: Now we can access all the elements, all the five elements of this array into another function also.
+622.616 - 623.537: Thank you for watching.

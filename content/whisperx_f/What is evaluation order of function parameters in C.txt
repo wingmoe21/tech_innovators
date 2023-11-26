@@ -1,0 +1,38 @@
+0.805 - 9.528:  Hello friends, today in this video we will discuss about what is evaluation order of function parameters in C programming language.
+10.169 - 10.989: So, let us start.
+13.03 - 25.515: So, in this slide as you can see there is a function definition whose name is func and it is taking two arguments both of the arguments are of integer type.
+26.375 - 28.836: Okay, so this is the definition of the function.
+29.778 - 37.324:  Now what we are doing int i is equal to 2 means we are declaring a variable i which is of type integer and has the value 2.
+38.485 - 51.577: Right, now we are calling a function using two arguments and in the first argument we are giving i++ and in the second argument also we are giving i++.
+52.638 - 56.541: Now we will see different evaluation order outputs of this program.
+57.239 - 63.443:  and after that we will decide which one of these evaluation order is right or correct.
+64.124 - 70.268: Okay, so first of all we will take this one from left to right means it's in this direction.
+70.808 - 77.292: Okay, so see this is our func method and these are our two arguments.
+77.492 - 81.095: Now first argument and this is our second argument.
+81.875 - 84.297: In the first argument we have i plus plus
+85.422 - 89.044:  i++ means it is post increment operator.
+89.504 - 92.826: Okay, so initially what is the value of i?
+93.166 - 94.387: i value is equal to 2.
+95.727 - 105.492: Right, so i++ means it will provide 2 as the value and increment this i value also.
+106.593 - 110.314: So i value will be 3 and first argument will be 2 only.
+111.975 - 113.336: Then in the second argument
+113.815 - 140.145:  we again provide i plus plus now i is three right and we will increment after this so we will send these parameters two and three okay now if we will take the second case from right to left means in this direction okay so see i value is two initially
+142.262 - 168.835:  now this is func method and these are our two arguments first one and second one now we will do i plus plus in the second argument okay so what will happen i value is equal to 2 and it will be incremented as 3 then again i plus plus in first argument means here we will write 3
+169.815 - 174.297:  and i value will be incremented to 4 because it is post increment operator.
+175.098 - 175.298: Right.
+176.078 - 183.182: So if we will take this case then we will send 3 2 as the parameters or we can say 3 2 as the arguments.
+183.962 - 188.124: So see these two orders are different here 2 3 here 3 2.
+189.765 - 189.945: Right.
+191.106 - 197.429: So how we will decide that what will be the evaluation order of these arguments.
+198.589 - 199.59: How we will decide that.
+201.46 - 211.806:  So, just want to tell you that it is compiler dependent in C programming language also and C++ programming language also.
+213.327 - 220.292: That's why it is never safe to depend on order of evaluation of these side effects.
+221.532 - 221.773: Okay.
+222.253 - 229.017: For example, a function call like above may very well behave differently from one compiler to another.
+230.258 - 230.438: Right.
+231.107 - 233.368:  so it may disrupt your logic also.
+234.568 - 260.139: As you can see in the func method maybe some compiler is following the first case from left to right then it will send 2 3 as the argument and might be some compiler will follow the second case from right to left so it may send 3 2 as the arguments or parameters right so it is totally dependent on our compilers so it is never safe to use
+261.292 - 266.101:  these increment operators inside the arguments of a function.
+267.764 - 268.004: Ok.
+270.088 - 271.01: Thank you for watching.
+271.09 - 273.134: Please leave us your comments if you have any doubt.

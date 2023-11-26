@@ -1,0 +1,571 @@
+Program ...
+#include<stdio.h>
+/* Apply the constructor attribute to myStartupFun() so that it
+is executed before main() */
+void myStartupFun (void) _attribute_ ((constructor));
+/* Apply the destructor attribute to myCleanupFun() so that it
+is executed after main() */
+void myCleanupFun (void) __attribute___ ((destructor));
+/* implementation of myStartupFun */
+void myStartupFun (void)
+{
+}
+/* implementation of myCleanupFun */
+void myCleanupFun (void)
+{
+}
+int main (void)
+{
+}
+printf ("startup code before main()\n");
+printf ("cleanup code after main()\n");
+printf ("hello\n");
+return 0;AutoSave Off HEE
+File Home Insert Design Transitions Animations
+From From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+1
+2
+3
+DG
+Slide 1 of 3
+OG Thank you for watching!
+0
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+зес
+Slide Show Review
+Rehearse Record Slide
+Timings Show -
+Set Up
+S
+View Help
+Play Narrations
+Use Timings
+Show Media Controls
+DG
+functions
+Storyboarding
+Monitor: Automatic
+✓Use Presenter View
+Tell me what you want to do
+Microsoft PowerPoint
+Monitors
+Keep
+Want to keep your ink annotations?
+Distid
+Functions that are executed
+before and after main() in C
+Notes
+A Vishal Gulia
+01
+00
+Share
+ই AD ক4)
+Comments
++76% 5
+8:49 PM
+4/11/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show Review
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+1
+2
+3
+DG
+Slide 2 of 3
+OG Thank you for watching!
+0
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+зес
+Rehearse Record Slide
+Timings Show-
+Set Up
+Program ...
+#include<stdio.h>
+View Help Storyboarding Tell me what you want to do
+Play Narrations
+Use Timings
+Show Media Controls
+/* Apply the constructor attribute to myStartupFun() so that it
+is executed before main() */
+void myStartupFun (void) _attribute_ ((constructor));
+/* implementation of myStartupFun */
+void myStartupFun (void)
+{
+printf ("startup code before main()\n");
+}
+/* implementation of myCleanupFun */
+void myCleanupFun (void)
+{
+}
+int main (void)
+{
+}
+/* Apply the destructor attribute to myCleanupFun() so that it
+is executed after main() */
+void myCleanupFun (void)_attribute_ ((destructor));
+S
+functions
+Monitor: Automatic
+Use Presenter View
+printf ("cleanup code after main()\n");
+printf ("hello\n");
+return 0;
+Monitors
+Notes
+01
+A Vishal Gulia
+00
+Share
+^ 4¹))
+Comments
++76% 5
+8:49 PM
+4/11/2019AutoSave Off HEE
+File Home Insert Design Transitions Animations Slide Show
+From
+Beginning
+1
+2
+3
+Slide 2 of 3
+16
+E
+Play Narrations
+Use Timings
+Prom
+CUsers\gulia Documents personal documents Printers basic.cpReNeteketord Slide
+researchOrWiew-Encosting Languagsliettings Tenise Macrom Rus Plugins Window Show Media Controls
+Start Side Stick
+#include<stdio.h>
+2277~~~~3
+5/* Apply the constructor attribute Program
+is executed before main () */ #include<stdio.h>
+void myStartupFun (void) __attribute_ ((constructor));
+/* implementation of myStartupFun */
+void myStartupFun (void)
+Thank you for watching
+/* implementation of myCleanupFun /
+20 void myCleanupFun (void)
+21 (
+22
+23 }
+24
+25 int main (void)
+26 B{
+27
+28
+29
+30
+source file
+Review
+printf ("hello\n");
+return 0;
+/* implementation of myStartupFun */
+printf ("startup code before main(StartupFun (void)
+Click to add notes
+View Help
+myStartupFun() so that it
+printf ("cleanup code after main () \n");
+/* Apply the destructor attribute to mycleanupFun
+to my startupFun (s) ttribute_ ((constructor));
+is executed after main () */
+void myCleanupFun (void) __attribute___ ((destructor)); attribute to myCleanupFun() so that it
+is executed after main() */
+void myCleanupFun (void) _attribute_ ((destructor));
+}
+er S
+/* implementation of myCleanupFun */
+void myCleanupFun (void)
+}
+int main (void)
+{
+printf ("startup code before main()\n");
+Storyboarding
+Apply the constructor attribute to myStartupFun() so that it
+is executed before main() */
+functions
+Monitor: Automatic
+✔Use Presenter View
+printf ("cleanup code after main()\n");
+printf ("hello\n");
+return 0;
+Tell me what you want to do
+Monitors
+basic.cpp
+length: 635 lines:30
+Ln: 30 Col: 1 Sel: 010
+Notes
+A Vishal Gulia
+Windows (CRLF)
+Share
+UTF-8
+AD (4)
+Comments
+X
++76%
+IN$3:49 PM
+4/11/2019
+>«»>>C:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+80
+OPC's
+new 2 X cmd bat X create bd X syncobi pending.txt7cdefxtsyncob_fence.txt X gpu_info.py X
+1 #include<stdio.h>
+2
+2345
+5
+6
+7
+8
+9
+10 void myCleanupFun (void)
+11
+12
+13 /* implementation of myStartupFun */
+14 void myStartupFun (void)
+15 B{
+1222223
+/* Apply the constructor attribute to myStartupFun () so that it
+is executed before main () */
+void myStartupFun (void) _attribute_ ((constructor));
++567
+/* Apply the destructor attribute to myCleanupFun () so that it
+is executed after main () */
+16
+17 }
+18
+19 /* implementation of myCleanupFun */
+20 void myCleanupFun (void)
+21 B{
+22
+23 }
+24
+27
+28
+29
+30
+printf ("startup code before main () \n");
+25 int main (void)
+26 B{
+C++ source file
+_attribute_
+printf ("cleanup code after main () \n");
+printf ("hello\n");
+return 0;
+e
+((destructor));
+Ĥers
+gpu_info.bt X
+inputh X
+basic.cpp X
+length: 635 lines: 30
+Ln: 30 Col: 1 Sel: 010
+Windows (CRLF)
+I
+UTF-8
+^ D (4»)
+8:49 PM
+4/11/2019
+INS
+XC:\Users\vgulia\Documents personal documents\C_Pointers basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window?
+D'a
+new 2 CAN WS\system3ndex_coding bd 23 Todell123yncribi funct
+1
+#include<stdio.h>
+1234SSTO123
+5
+2222
+6
+7
+1222223
+10 void myCleanupFun (void) __attribute_ ((destructor));
+11
+8 /* Apply the destructor attribute to myCleanupFun () so that it
+9 is executed after main () */
+12
+13 /* implementation of myStartupFun */
+14 void myStartupFun (void)
+15 B{
+16
+17 ·}
+18
+19 /* implementation of myCleanupFun */
+20 void myCleanupFun (void)
+21 B{
+22
+23 }
+24
+/* Apply the constructor attribute to myStartupFun () so that it
+is executed before main () */
+void myStartupFun (void) _attribute_ ((constructor));
+567890
+27
+25 int main (void)
+26 B{
+28
+29
+30
+printf ("startup code before main () \n");
+C++ source file
+printf ("cleanup code after main () \n");
+printf ("hello\n");
+return 0;
+The name of a prop foldes document in
+e
+e
+S
+gou no X
+basic.cpp X
+length: 635 lines : 30
+Ln: 19 Col:37 Sel: 010
+UTF-8
+^ D (4¹)
+Windows (CRLF)
+8:49 PM
+4/11/2019
+INS
+XC:\Users\vgulia\Documents personal documents\C_Pointers basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+HARGA hse Do
+C:\WINDOWS\system32\cmd.exe
+new 2 X
+1 Microsoft Windows [Version 10.0.16299.1029]
+(c) 2017 Microsoft Corporation. All rights reserved.
+2
+3
+4
+5
+6
+1222223
+1567690
+7
+8 B* Apply the destructor attribute to myCleanupFun () so that it
+9 Ls executed after main () */
+10
+void myCleanupFun (void) _attribute_ ((destructor));
+11
+12
+13
+14 void myStartupFun (void)
+15 81
+16
+17
+18
+19
+20 void myCleanupFun (void)
+21 B
+22
+23
+24
+27
+28
+Apply the constructor attribute to myStartupFun() so that it
+C:\Users\vgulia before main () */
+void myStartupFun (void) _attribute_ ((constructor));
+29
+B
+30
+25 int main (void)
+26 B
+implementation of myStartupFun */
+printf ("startup code before main ()\n");
+* implementation of myCleanupFun */
+C++ source file
+printf ("cleanup code after main () \n");
+printf ("hello\n");
+return 0;
+e
+es
+ABC
+length: 635 lines.30
+Ln:19 Col.37 Sel:010
+Windows (CRLF)
+UTF-8
+^ D (4¹)
+X
+8:49 PM
+4/11/2019
+INS
+XC:\Users\vgulia Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window?
+C:\WINDOWS\system32\cmd.exe
+new 2
+1
+2
+3 C:\Users\vguliaonstructor attribute to myStartupFun () so that it
+4
+is executed before main () */
+5
+void myStartupFun (void) _attribute_ ((constructor));
+6
+7
+8
+9
+10
+11
+12
+13 /* implementation of myStartupFun */
+Microsoft
+[Version 10.0.16299.1029]
+(c) 2017 Michal Corporation. All rights reserved.
+4567
+/* Apply the destructor attribute to myCleanupFun () so that it
+is executed after main () */
+void myCleanupFun (void) _attribute_ ((destructor));
+14 void myStartupFun (void)
+15 B{
+16
+17 }
+18
+19
+20 void myCleanupFun (void)
+21 E{
+22
+23 }
+24
+/* implementation of myCleanupFun */
+26 B{
+27
+28
+29
+30
+25 int main (void)
+}
+printf ("startup code before main () \n");
+C++ source file
+Q
+printf ("cleanup code after main () \n");
+printf ("hello\n");
+return 0;
+e
+e
+ARC..
+length:635 lines:30
+In:19 Col:37 Sel:010
+Windows (CRLF)
+UTF-8
+^ D (4¹)
+X
+O
+8:49 PM
+4/11/2019
+INS
+XAutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show Review View Help Storyboarding
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show
+Start Slide Show
+1
+2
+3
+DG
+Slide 2 of 3
+OG Thank you for watching!
+0
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+ег
+Rehearse Record Slide
+Timings Show-
+Set Up
+Program ...
+#include<stdio.h>
+Play Narrations
+Use Timings
+Show Media Controls
+/* implementation of myStartupFun */
+void myStartupFun (void)
+{
+printf ("startup code before main()\n");
+}
+/* implementation of myCleanupFun */
+void myCleanupFun (void)
+{
+}
+int main (void)
+{
+}
+/* Apply the constructor attribute to myStartupFun() so that it
+is executed before main() */
+void myStartupFun (void) _attribute_ ((constructor));
+S
+/* Apply the destructor attribute to myCleanupFun() so that it
+is executed after main() */
+void myCleanupFun (void) _attribute_ ((destructor));
+functions
+Monitor: Automatic
+Use Presenter View
+Tell me what you want to do
+printf ("cleanup code after main()\n");
+printf ("hello\n");
+return 0;
+Monitors
+Notes
+01
+A Vishal Gulia
+88
+Share
+Comments
++76% 5
+8:50 PM
+4/11/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show Review View Help
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show
+Start Slide Show
+1
+N
+3
+DG
+Slide 3 of 3
+OG Thank you for watching!
+e
+Set Up
+Slide Show
+Hide Rehearse Record Slide
+Slide Timings Show-
+Set Up
+Click to add notes
+ег S
+Play Narrations
+Use Timings
+Show Media Controls
+functions
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+DG
+Monitors
+Thank you for watching!
+Please leave us your comments.
+Notes
+01
+A Vishal Gulia
+88
+Share
+Comments
+▸ «»
++76% 5
+8:50 PM
+4/11/2019

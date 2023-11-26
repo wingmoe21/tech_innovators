@@ -1,0 +1,33 @@
+0.089 - 4.472:  Friends today in this video we will discuss about dereference and reference of pointers.
+6.253 - 11.537: So after going through this video you will be able to get the output of following snippet of codes.
+12.417 - 18.741: Like a series of m% and asterisk operator on a pointer variable and so on.
+20.543 - 21.984: So this is our first example.
+22.564 - 24.425: In this example there is a main method.
+26.807 - 29.929: And we have declared a pointer which is pointing to a character.
+31.112 - 32.933:  And the value stored is gigs for gigs.
+34.154 - 37.896: After that we will print a sequence of operator on this pointer variable.
+39.077 - 41.118: So this is the memory map of gigs for gigs.
+41.839 - 46.382: Like G is stored at 100, E is stored at 101 location and so on.
+46.942 - 51.345: And at the last null character is stored at 113 address location.
+52.866 - 56.208: Now PTR is a pointer which is pointing to a character variable.
+56.468 - 58.89: So PTR will contain the base address of G.
+60.296 - 89.826:  or gigs for gigs so base address is 100 so 100 will be stored in ptr and we have assumed that address of ptr is 200 now we will see what will be the execution sequence of this printf statement let us start so first we will execute this one so it will be star ptr so star ptr in ptr what what is the value 100 so it will
+90.979 - 120.345:  sol asterisk 100 this one okay so asterisk 100 will give us the value which is stored at location 100 and which is g so it will give us g okay next operator is end percent so m percent of g will give us address of g which is 100 okay then star operator we will apply on 100 it means it will fetches the value which is stored at location 100
+121.325 - 129.509:  So it will give us G. Then again M% will act on G. It will give us the address of G. Okay.
+130.649 - 130.929: Sorry.
+131.95 - 132.75: So it will give us 100.
+134.171 - 138.052: Then again asterisk operator is operated on 100.
+138.713 - 141.634: It means it will again fetch the value which is stored at 100.
+142.274 - 148.117: So it will give us G. So the output is G. Let us go to the next example.
+150.086 - 175.264:  so again example is same but the sequence of operator has been changed so let us see the series of execution of this printf statement ok so see m% of ptr m% of ptr will give us address of ptr and which is 200 ok then we will apply asterisk operator on 200
+176.776 - 196.772:  it will give us the value which is present at this address so at address 200 what is the value present 100 okay so 100 will come then on 100 we will apply again m percent so what it will give address of 100 okay so what is the address of 100 again 200 okay 200
+200.396 - 229.314:  and if we will apply asterisk operator on this 200 what it will give it will give us the value which is stored at 200 that is 100 only ok now in the printf statement let us carefully watch here we have used star sorry %s ok what is the meaning of %s it will start from a address ok and it will fetch the string up to the null character so
+230.117 - 257.835:  what is the value of this execution series 100 so it will start from 100 as the base address and it will go to the null character so what will be the value so output will be gigs for gigs okay now let us see the programming code so this is our first code which we have discussed let us
+258.547 - 260.648:  Carefully watch the output of this code.
+284.663 - 287.204: See output is G only.
+287.865 - 288.125: Okay.
+288.877 - 291.322:  So it is matching with our discussed output.
+291.923 - 294.267: Let us see our next code.
+295.469 - 297.553: So this is our next code which we have discussed.
+298.174 - 299.897: Let us check the output of this code.
+317.25 - 346.382:  so see output is gigs for gigs ok now see this icon is blinking again and again it means we have not completed our program execution sequence why because we have used get care here ok so it needs some character so if I will give one character and press enter it will be completed ok thank you for watching these slides thank you for watching

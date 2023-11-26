@@ -1,0 +1,282 @@
+Problem Statement
+Given a decimal number as input, we need to write a program to convert the given
+decimal number into the equivalent hexadecimal number. i.e convert the number
+with base value 10 to base value 16.
+Waiting for docs.google.com.
+Google SlidesProblem Statement
+Given a decimal number as input, we need to write a program to convert the given
+decimal number into the equivalent hexadecimal number. i.e convert the number
+with base value 10 to base value 16.
+The base value of a number system determines the number of digits used to
+represent a numeric value.
+For example, the binary number system uses two digits 0 and 1, octal number
+system uses 8 digits from 0-7 and decimal number system uses 10 digits 0-9 to
+represent any numeric value.
+Waiting for docs.google.com
+Google SlidesHexadecimal Number
+In hexadecimal number uses 16 symbols {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F} to
+represent all numbers.
+Waiting for docs.google.com
+Google SlidesWaiting for docs.google.com...
+Algorithm
+1. If the remainder when the number is
+divided by 16 is less than 10, insert (48
++ temp) in a character array otherwise
+if it is greater than or equals to 10,
+insert (55 + temp) in the character
+array.
+Divide the number by 16 now
+Repeat the above two steps until the
+number is not equal to 0.
+Print the array in reverse order now.
+2.
+3.
+4.
+Google Slides16
+Decimal Number: 2545
+2545 1 <10, arr[0] = 1
+16 159 15 >10, arr[1] = F
+16
+9
+9 <10, arr[2] = 9
+Waiting for docs.google.com...
+Algorithm
+0
+Hexadecimal number: 9F1
+remainder
+1. If the remainder when the number is
+divided by 16 is less than 10, insert (48
++ temp) in a character array otherwise
+if it is greater than or equals to 10,
+insert (55 + temp) in the character
+array.
+Divide the number by 16 now
+Repeat the above two steps until the
+number is not equal to 0.
+Print the array in reverse order now.
+2.
+3.
+4.
+Google SlidesSlide 9
+Code
+// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+}
+// chan array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while(n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if (temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+itt;
+}
+else
+{
+hexaDeciNum[i] = temp + 55;
+i++;
+}
+n = n/16;
+}
+// printing hexadecimal number array in reverse
+for(int j-i-1; j>-0; j--)
+cout << hexaDeciNum[j];
+Google Slides// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+// char array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while (n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if(temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+i++;
+}
+else
+{
+Waiting for docs.google.com...
+hexaDeciNum[i] = temp + 55;
+itt;
+}
+n = n/16;
+}
+// printing hexadecimal number array in reverse
+for(int j-i-1; j>=0; j--)
+cout << hexaDeciNum[j];
+Code
+n = 2545
+Dry Run
+i = 0
+hexaDeciNum[] = {
+Google Slides// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+}
+// char array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while(n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if(temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+i++;
+}
+else
+{
+Slide 11
+hexaDeciNum[i] = temp + 55;
+itt;
+}
+n = n/16;
+}
+// printing hexadecimal number array in reverse
+for(int j-i-1; j>=0; j--)
+cout << hexaDeciNum[j];
+Code
+n = 2545
+Dry Run
+i=0
+hexaDeciNum[] = {
+temp = 2545 % 16 = 1
+hexDeciNum[0] = 1 + 48 = '1'
+n = 2545 / 16 = 159
+i=1
+hexDeciNum] = {1}
+Google Slides// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+}
+// char array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while (n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if(temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+i++;
+}
+else
+{
+Waiting for docs.google.com...
+hexaDeciNum[i] = temp + 55;
+itt;
+}
+n = n/16;
+}
+// printing hexadecimal number array in re erse
+for(int j-i-1; j>=0; j--)
+cout << hexaDeciNum[j];
+Code
+Dry Run
+n = 2545 i=0
+temp = 1
+hexDeciNum[0] = '1'
+n = 159
+hexaDeciNum[] = {
+hexDeciNum[] = {1}
+i=1
+temp = 159 % 16 = 15
+hexDeciNum[1] = 15 + 55 = 'F i=2
+n = 159/16=9
+hexDeciNum] = {1, F}
+Google Slides// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+}
+// char array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while(n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if(temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+i++;
+}
+else
+{
+Waiting for docs.google.com...
+hexaDeciNum[i] = temp + 55;
+itt;
+}
+n = n/16;
+}
+// printing hexadecimal number array in reve
+for(int j-i-1; j>=0; j--)
+cout << hexaDeciNum[j];
+Code
+Dry Run
+n = 2545 i=0
+hexaDeciNum[] = {
+temp = 1
+hexDeciNum[0] = '1' hexDeciNum[] = {1}
+n = 159
+temp = 15
+hexDeciNum[1] = 'F'
+i=1
+hexDeci Num[] = {1, F}
+i=2
+n = 9
+temp = 9 % 16 = 9
+hexDeciNum[2] = 9 + 48 = '9'
+n = 9/16=0
+hexDeciNum[] = {1, F, 9}
+Google SlidesSlide 15
+DG
+Thank you for watching!
+Please leave us your comments.
+Google SlidesWhatsApp
+Apps
+Slide 15
+* Lab Instructions | Lab - Write X
+GFG_Yashvardhan - Google ▷ X
+docs.google.com/presentation/d/1AxOYE18b6jPB545EJY4AeZOEP1mQz7Bw9z9AwPllhrk/preview?slide-id.g720ab70ed3_0_232
+Search Windows
+W
+✿
+D2H - Google Slides
+ƏG
+gay interest - The Pirate Bay X
+Thank you for watching!
+Please leave us your comments.
++
+4) ENG
+Google Slides
+03:45
+28-03-2020
