@@ -1,0 +1,17 @@
+Page 1: The lecture slide introduces a problem statement for converting an octal number to its equivalent decimal number. The task is to write a program that takes an octal number as input and converts it from base 8 to base 10.
+
+Page 2: The slide continues to explain the problem statement, detailing that the base value of a number system determines the number of digits used to represent a numeric value. It provides examples of the binary and octal systems, which use 2 and 8 digits, respectively, compared to the decimal system, which uses 10 digits.
+
+Page 3: The proposed algorithm for the conversion is described as follows: 1) Multiply each octal digit separately from left to right by increasing powers of 8 (8^0, 8^1, 8^2...), 2) Sum all the results obtained from step 1, 3) The equivalent decimal number is the result of the summation.
+
+Page 4: A detailed example illustrates the algorithm with the octal number 123. Each digit is multiplied by the corresponding power of 8, the results are summed up (64 + 16 + 3), and the final equivalent decimal number is calculated to be 83.
+
+Page 5: This slide displays code for a function `octalToDecimal` that implements the conversion algorithm described. The function initializes variables to store the number, base value, and decimal value. It performs a loop to process each digit, multiply it by the base, and accumulate the result.
+
+Page 6: A dry run of the code is provided with an example octal number '123'. The initial variable values are displayed (`num`, `base`, `dec_value`, `temp`) before entering the loop for processing.
+
+Page 7: The dry run continues, breaking down the process into steps for each digit of the example octal number '123'. It shows the sequential calculation of the decimal value as each digit is multiplied by the correct power of 8 and added to the result.
+
+Page 8: A continued part of the dry run demonstrates the conversion process for the remaining digits of the octal number '123', ultimately arriving at the final decimal value of 83.
+
+Page 9: The slide concludes the presentation with a "Thank you for watching" message and an invitation for viewers to leave comments.

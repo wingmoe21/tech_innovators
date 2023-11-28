@@ -1,0 +1,9 @@
+Page1: The image shows a C program snippet demonstrating how to declare a structure variable named 'p1' of type 'struct Point' which contains two integer members, 'x' and 'y'. The structure declaration is inside the main function, showing that it can be used to declare a variable like ordinary data types.
+
+Page2: This image contains a snippet of C code with two examples. The first example illustrates that one cannot initialize structure members within the structure declaration itself, which results in a compiler error. The second example demonstrates correct initialization of a 'struct Point' variable named 'p1' within the main function using curly braces containing the values {0, 1}, which are assigned to 'x' and 'y' respectively, matching the order of declaration.
+
+Page3: This code snippet shows including the 'stdio.h' header and declaring a 'struct Point' with two members, 'x' and 'y'. In the main function, a 'struct Point' variable 'p1' is initialized with {0, 1} and modified by setting 'p1.x' to 20. The values of 'p1.x' and 'p1.y' are then printed out using 'printf'.
+
+Page4: The code example demonstrates the use of designated initializers with structures in C. A struct named 'Point' with three members 'x', 'y', and 'z' is defined. Two instances of 'struct Point' are initialized using different syntax; 'p1' is initialized with all member values, and 'p2' with only member 'x'. The print statements display the values of 'p1.x', 'p1.y', 'p1.z', and 'p2.x'.
+
+Page5: This is a closing slide with the text "Thank you for watching! Please leave us your comments." indicating the end of the presentation or video.

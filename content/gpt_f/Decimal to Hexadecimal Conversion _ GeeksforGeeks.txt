@@ -1,0 +1,41 @@
+Page1: The slide presents a problem statement where the task is to write a program that converts a given decimal number (base 10) into an equivalent hexadecimal number (base 16).
+
+Page2: The problem statement is extended to explain that the base value of a number system determines the number of digits used to represent a numeric value, providing examples of binary and decimal systems for context.
+
+Page3: The slide introduces the hexadecimal number system, noting that it uses 16 different symbols, ranging from 0 to 9 and followed by A to F, to represent all numbers.
+
+Page4: An algorithm is provided for converting a decimal number to hexadecimal. It involves dividing the number by 16, finding the remainder, and converting this remainder into hexadecimal until the number becomes zero. The resultant hexadecimal digits are then printed in reverse order.
+
+Page5: The algorithm is illustrated with an example, converting the decimal number 2545 to hexadecimal. Each division by 16 and the corresponding remainders are shown, eventually yielding the hexadecimal number 9F1.
+
+Page6: The slide displays a code snippet for a function `decToHexa(int n)` written in C programming language that implements the previously described algorithm for decimal to hexadecimal conversion.
+
+Page7: The same code from Page 6 is shown with a dry run panel beside it, setting up variables for the dry run.
+
+Page8: The dry run continues with the first iteration of the loop in the code, calculating the remainder of 2545 divided by 16, which is 1, storing it as '1' in the character array.
+
+Page9: The dry run shows the second iteration with the updated value of n (159) and determines that the remainder when divided by 16 is 15, which corresponds to the hexadecimal 'F'.
+
+Page10: The dry run illustrates the third iteration, where the number 9 is stored as '9' in the character array, completing the conversion process as the value of n becomes 0.
+
+Page11: The slide contains a thank-you note for watching, indicating the end of the presentation.
+
+Page12: The same thank-you note is displayed again, possibly from a different view or after a mouse click.
+
+Page13: A different program unrelated to the previous slides is shown, with a sample code in C++, demonstrating the usage of pointers.
+
+Page14: The same program window is shown, but the pointer string has changed to "*ptr".
+
+Page15: Another instance of the same program, with the pointer string changing back to its original definition "geeksforgeeks".
+
+Page16: Further modification has been made to the program where the string is altered again.
+
+Page17: The previous program is partially obscured, and another window shows the compilation process with a warning message about the string conversion in C++.
+
+Page18: The same compilation with the warning message is shown without the overlay of another window.
+
+Page19: An application window is illustrated, with a PowerPoint presentation in the background showcasing an overview of the slides.
+
+Page20: The PowerPoint application is maximized, and it shows the thank-you slide with the full list of slides in the presentation view.
+
+Given the intentional focus and repetition across Pages 13 to 20, they may contain aspects of a programming tutorial separate from the initial series of slides about converting decimal to hexadecimal numbers. The error message on Page 17 suggests a common issue in C++ where a string literal is assigned to a non-const character pointer.

@@ -1,0 +1,23 @@
+Page1: This slide presents an algorithm for converting a decimal number to binary. The example given is the decimal number 17. The process involves dividing the number by 2, storing the remainder, and repeating this process until the number is greater than zero, then printing the stored remainders in reverse order to get the binary equivalent, which in this case is 10001.
+
+Page2: Here is a C code snippet that implements the algorithm described in the previous slide. The function `decToBinary` takes an integer `n` as input, uses an array `binaryNum[32]` to store the binary digits, and a loop to divide `n` by 2 while storing the remainder in the array. Once complete, the binary number is printed in reverse order by another loop.
+
+Page3: This slide is titled "Dry Run" indicating a step-by-step walkthrough of the `decToBinary` function using the example of converting the decimal number 17 to binary. The array `binaryNum[]` is initially empty `{}`, `n` is set to 17, and the counter `i` is at 0.
+
+Page4: The "Dry Run" slide from the previous image resumes, but the view is zoomed in and the specifics of the dry run are not visible in this image.
+
+Page5: A closing slide with a "Thank You for watching!" message, asking for comments.
+
+Page6: This slide presents an alternative code snippet for converting a decimal number to octal, using the function `decToOctal`. It utilizes an array `octalNum[100]` to store the octal digits and a similar while loop structure as the previous binary conversion function.
+
+Page7: Similar to Page 3, this "Dry Run" slide provides a step-by-step example of the `decToOctal` function with an example decimal number 33. It shows the initially empty array `octalNum[]`, sets `n` to 33, and initializes the counter `i` at 0.
+
+Page8: Again, a closing slide with "Thank You for watching!" and a space for comments.
+
+Page9: A screenshot of a Windows Command Prompt window displaying a C code snippet. The code involves special functions using `__attribute__` to designate work to be done before (`constructor`) and after (`destructor`) `main()` in a C program.
+
+Page10: A view of a PowerPoint presentation in edit mode showing three slides thumbnail on the left and the second slide containing the C code snippet with `constructor` and `destructor` attributes in large view. 
+
+Page11: This slide shows a PowerPoint presentation in editing mode, zoomed out, displaying the second slide which contains the C code snippet with `constructor` and `destructor` attributes.
+
+Page12: This is a zoom-out view of the third slide from the PowerPoint presentation with a "Thank You for watching!" message, similar to Page 5 and 8, indicating the end of the slide deck.

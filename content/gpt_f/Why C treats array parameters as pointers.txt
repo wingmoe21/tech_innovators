@@ -1,0 +1,13 @@
+Page1: The slide presents a C program code snippet demonstrating the declaration and definition of a function `print` that takes an array as argument, made to highlight the concept that function parameters declared as arrays are treated as pointers in C. The `print` function prints the value, address, and sizes of the array and its elements. It's noted that `sizeof` on the function parameter `ptr` will return the size of `int *` and not the array size. A visual diagram illustrates the array `arr[5]` and its address in the stack, the value being pointed by the pointer `ptr`, and the relationship between the addresses inside the `print` function and the `main` function.
+
+Page2: This slide contains a C program example that demonstrates the difference in the perceived size of an array when passed to a function. It shows that the array size calculation within the function, using `sizeof(arr)/sizeof(arr[0])`, will yield an incorrect size as the array is treated as a pointer within the function context. The example outputs the sizes of the array from both inside the `main` function and the `print` function, highlighting the discrepancy between the two.
+
+Page3: Similar to the previous page, this slide includes C code that prints the same information, but with the size of the array directly passed to the `print` function. It emphasizes that while the array appears to have the correct size within the `main` function, the size within the `print` function must be passed explicitly since the array parameter is treated as a pointer.
+
+Page4: The slide outlines the final decision that in C programming language, array parameters are treated as pointers to avoid the inefficiency of copying array data in terms of memory and time. It states that since the usual intent is to work with the original array rather than a copy, all array parameters are treated as pointers.
+
+Page5: There is a slide with a title that reads, "Why C treats array parameters as pointers."
+
+Page6: This slide reinforces the final decision that array parameters in C are treated as pointers to enhance performance and efficiency, and it summarizes the conclusion from the preceding slides.
+
+Page7: An ending slide thanks the viewers for watching the presentation and invites them to leave comments.

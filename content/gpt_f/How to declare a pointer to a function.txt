@@ -1,0 +1,26 @@
+Page1: This page is introducing the basics of function pointers in C programming. It explains two declarations of function pointers:
+1. `int *foo(int)` signifies that `foo` is a function which takes an integer as an argument and returns a pointer to an integer.
+2. `int (*foo)(int)` indicates that `foo` is a pointer to a function that takes an integer as an argument and returns an integer.
+
+Page2: This page presents a simple C program that demonstrates the use of a function pointer. Initially, a function `fun` is defined to take an integer argument and print its value. In the `main` function, a function pointer `fun_ptr` is declared and set to point to `fun`. It is highlighted that this can be done in a single line with `void (*fun_ptr)(int) = &fun;` or by separating the declaration and assignment into two lines:
+```
+void (*fun_ptr)(int);
+fun_ptr = &fun;
+```
+Finally, the function `fun` is called through the function pointer using `(*fun_ptr)(10);`, which will print the value of `a` (10) to the output.
+
+Page3: This page simply thanks the viewer for watching and invites them to leave comments, suggesting that it is the end of the presentation or video.Page 1: The slide explains the basics of function pointers in C. It defines two cases. First, 'int *foo(int)' means that foo is a function accepting an integer argument and returning a pointer to an integer. Second, 'int (*foo)(int)' indicates that foo is a pointer to a function which accepts an integer as an argument and returns an integer.
+
+Page 2: This slide provides a hands-on example of how to use function pointers in C. It includes a simple program with a function 'fun' that takes an integer parameter and prints its value. The program then demonstrates how to declare a function pointer 'fun_ptr', assign it the address of the 'fun' function, and invoke 'fun' using 'fun_ptr' with 10 as the argument. The commented section shows an alternative, equivalent way of assigning the function's address to the function pointer.
+
+Page 3: The slide displays a closing message thanking viewers for watching and asks for comments.Page1: The slide explains the basics of function pointers in C. The first point describes that the syntax "int *foo(int)" defines 'foo' as a function that takes an integer as an argument and returns a pointer to an integer. The second point clarifies that "int (*foo)(int)" makes 'foo' a pointer to a function that accepts an integer as an argument and returns an integer.
+
+Page2: This slide provides a programming example showcasing how to declare and use function pointers in C. The code defines a simple function 'fun' that takes an integer argument and prints its value. In the 'main' function, a pointer to the 'fun' function is declared with the name 'fun_ptr'. This pointer is then assigned the address of 'fun' using the '&' operator, and the function 'fun' is subsequently called through the pointer using the syntax "(*fun_ptr)(10);", which passes the integer value 10 to 'fun' via the function pointer.
+
+Page3: The slide appears to be a closing slide with the text "Thank you for watching! Please leave us your comments." This signifies the end of the presentation or video.Page1: The slide introduces the basics of function pointers in C/C++. It describes two key concepts:
+1. `int *foo(int)` indicates that `foo` is a function that accepts an integer argument and will return a pointer to an integer.
+2. `int (*foo)(int)` indicates that `foo` is a pointer to a function which accepts an integer as an argument and will return an integer.
+
+Page2: This slide provides a code example illustrating the use of function pointers in C. It includes the declaration and definition of a simple function `void fun(int a)` that prints the value of its integer argument. Then in the `main` function, a pointer to the `fun` function, named `fun_ptr`, is declared and initialized. The code has a comment that indicates two ways to associate the pointer with the function: by direct initialization or by separate declaration and assignment. Finally, the code demonstrates how to call the function using the function pointer `fun_ptr` by passing the integer value 10 to it.
+
+Page3: The last image is a closing slide with a logo that appears to be 'GeeksforGeeks' (based on the 'g' design), thanking viewers for watching and inviting them to leave comments.

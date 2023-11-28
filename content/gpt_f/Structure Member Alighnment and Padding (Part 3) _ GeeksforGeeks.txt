@@ -1,0 +1,25 @@
+Page1: This slide presents basic assumptions for a system or machine, specifically a 32-bit machine. It indicates the sizes of various data types in this context: 'char' is 1 byte, 'short int' is 2 bytes, 'int' is 4 bytes, and 'double' is 8 bytes.
+
+Page2: The slide illustrates memory architecture, focusing on structure member alignment and padding. It displays a banked memory structure, showing how data buses are aligned across memory banks, which is an important consideration for memory alignment and access efficiency.
+
+Page3: This page lays out some foundational rules for memory allocation. It states that any data type will store its value at an address which is a multiple of the size of that data type (e.g., 'int' will start at addresses 4, 8, 12, etc.). It also explains that structures will take a size that is a multiple of the maximum bytes taken by any variable within that structure.
+
+Page4: The slide outlines a sequential memory structure and provides a visual representation of how a 'char' and 'short int' are allocated in memory. The allocation table shows that the total size is 4 bytes, aligned according to a rule where any data type stores its value at a multiple of its own size. The second rule detailed is that a structure's size is a multiple of the size of the largest member data type within the structure.
+
+Page5: This slide appears to repeat the content of page 4, explaining the sequential memory structure with the same allocation table and rules.
+
+Page6: The image displays a different structure memory allocation where a 'short int', 'char', and 'int' are defined in the structure, leading to a total size of 8 bytes. The allocation table on the slide reflects the positioning of the different data types within the structure and emphasizes the same rules as before regarding memory allocation and structure size.
+
+Page7: This slide repeats the information from page 6, showcasing the structure with 'short int', 'char', and 'int' and the corresponding memory allocation diagram alongside the rules.
+
+Page8: This slide is similar to page 6 and page 7 but poorly rendered which indicates an error occurred while trying to view the content.
+
+Page9: The slide contains source code in C, defining four different structures named 'structa_t', 'structb_t', 'structc_t', and 'structd_t'. Each structure contains different data types, including 'char', 'short int', 'int', and 'double'. Below the code, a command-line interface shows the use of the 'sizeof' operator to determine the memory size of structures 'structa_t' and 'structb_t', which are respectively 4 and 8 bytes in size, consistent with the rules presented in previous slides.
+
+Page10: This slide is displaying a C++ source file in an editor with the same content regarding structure definitions and the corresponding sizes as found in page 9.
+
+Page11: The image is a more zoomed-out view of the C++ source file from page 10, without any additional information.
+
+Page12: This slide demonstrates the behavior of the compiler when handling arrays and the equivalence between array index notation and pointer arithmetic. It explains how an integer array in C, when accessed via index or pointer, is treated equivalently by the compiler.
+
+Page13: The final slide contains the resulting concept that the compiler converts array operations into pointer operations before accessing the elements. It reinforces the equivalence between array access and pointer dereferencing syntax.

@@ -1,0 +1,15 @@
+Page1: The slide provides basic information on pointers in C programming language. It highlights two key points: (1) Every computer system has a fixed random access memory, and (2) to store memory addresses, the C programming language uses pointers.
+
+Page2: This slide outlines the declaration of a pointer variable along with examples. It suggests that a pointer variable is declared with a specific data type and is used to store the address of another variable of the same data type. It also explains the use of the '&' operator to find a variable's address in memory and the '*' operator to access the value at a given address.
+
+Page3: The slide offers a practical view of pointers, showcasing a simple C program that prints the address of a variable. A diagram illustrates the association between the variable 'x' and its memory address.
+
+Page4: This slide continues the practical view of pointers, showing a C program that demonstrates the declaration of pointer variables and the assignment of an address to a pointer. A table depicts the variable 'x' with a value '10' and its memory address, alongside a pointer 'ptr' with its own address.
+
+Page5: The slide provides a C program example illustrating the use of '*' to access values stored at memory addresses held by pointers. It explains how modifying a value through a pointer changes the value at the memory location the pointer is referencing.
+
+Page6: Here, the concept of pointer arithmetic is introduced with a C/C++ program example. Pointer arithmetic allows incrementing pointers, effectively moving them to point to consecutive elements in an array. It explains how pointers are incremented by the size of the data type they point to.
+
+Page7: The last programming slide repeats the content of Page6 with a practical representation, showing the actual output after incrementing the pointers and accessing the values of an array using those pointers.
+
+Page8: This slide simply thanks viewers for watching and invites comments. It does not include any technical content related to pointers.

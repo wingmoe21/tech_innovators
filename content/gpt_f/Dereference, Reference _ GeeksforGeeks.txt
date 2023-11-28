@@ -1,0 +1,17 @@
+Page 1: The image shows a lecture slide promising that after watching a specific video, one will be able to understand the output of given snippets of code related to pointer operations. The snippets use varying levels of pointer indirection and involve a variable named "ptr".
+
+Page 2: This slide provides an example of code in C language that demonstrates the use of multiple levels of pointers (indirection). The code includes a character pointer "ptr" pointing to a string "geeksforgeeks". It illustrates how applying the dereference operator (*) multiple times on "ptr", combined with the address of operator (&), results in printing the character 'g'. The slide includes a table mapping the ASCII values of characters to their respective letters of "geeksforgeeks" and highlights the pointer address and dereferencing steps involved.
+
+Page 3: A continuation of the previous explanation, but this time it shows how multiple dereferences of the "ptr" variable result in printing the entire string "geeksforgeeks". The process involves dereferencing the pointer to get the location of the first character's ASCII value and then resolving that location to print the whole string. The slide also includes a similar ASCII value table and further clarifies the steps of pointer dereferencing.
+
+Page 4: This slide provides a visible setup and overview of the presentation in a presentation software, showcasing all five slides with the title "Array_parameters_as_pointers." It is not directly informational but rather an organizational view of the slide deck.
+
+Page 5: The slide shown, within the overall view of the presentation, is similar to page 3, detailing the example of multiple levels of pointer indirection leading to the output "geeksforgeeks."
+
+Page 6: Another overview of the presentation from a different angle, showing the slide layout in presentation mode, which confirms the content we've seen on the individual slides and the topic related to pointers in C.
+
+Page 7: This screenshot shows a coding environment where the same example code from the previous slides is open in a text editor, Notepad++, with the file named "basic.cpp".
+
+Page 8 to Page 13: These are repetition of the code snippet shown on Page 7 with slight variations in the environment, such as displaying the command prompt window, or editor window zoom level changes. They all present the same C code where a character pointer "ptr" is initialized with the string "geeksforgeeks" and a statement prints the string through pointer indirection.
+
+Page 14: A view of the last slide of the presentation, expressing thanks for watching and inviting viewers to leave comments. This slide serves as the conclusion of the lecture or presentation.

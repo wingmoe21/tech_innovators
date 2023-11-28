@@ -1,0 +1,15 @@
+Page1: The slide presents a code example demonstrating a function that creates a memory leak. The code is written in C and shows a function `f()` where memory is dynamically allocated using `malloc()` to a pointer `*ptr`. However, the memory is not freed before the function returns, which would result in a memory leak since the allocated memory is no longer accessible but not returned to the system.
+
+Page2: The second slide illustrates how to properly release memory to prevent a memory leak. It shows a revised version of the function `f()` where the allocated memory is correctly freed using `free(ptr)` before the function returns. Additionally, there is an explanation that when memory allocation is done, the actual heap space allocated is one word larger than the requested memory. This extra word stores the size of the allocation and is utilized by `free()` when releasing memory.
+
+Page3: This slide seems to be a closing slide thanking viewers for watching and inviting comments. There is no code or technical content presented.
+
+Page4: The fourth slide repeats the example where a memory leak is present, similar to the content described in Page1. It's showing the code before the memory leak was fixed.
+
+Page5: The fifth slide is identical to the second slide, which contains the corrected version of the code with a proper memory deallocation using `free()` and explanatory notes.
+
+Page6: The sixth slide is again a closing slide identical to Page3, with a thank you message.
+
+Page7: This slide contains code in C for detecting a memory leak using the Valgrind tool. The program allocates memory but does not free it, leading to a memory leak. Below the code, the output from Valgrind is shown, which detects that 10 bytes were definitely lost in 1 block, indicating the memory leak.
+
+Page8: The final slide presents a C program that initially creates a memory leak by allocating memory and not freeing it. However, it then uses `realloc(ptr, 0)` to effectively free the memory. The output from Valgrind shows that there are no more memory leaks, demonstrating an alternative way to release allocated memory.

@@ -1,0 +1,21 @@
+Page1: The slide explains the concept of array indexing and memory addressing in C programming. An integer array 'a' with 9 elements is shown, with each element assigned a value from 11 to 19 and a corresponding memory address starting at 1000 and increasing in increments of 4 bytes (the size of an integer). The base address of the array 'a' is 1000. It illustrates that the array name 'a' contains the base address of the array, and then demonstrates how the compiler treats array indexing as pointer arithmetic. Each array element access, like a[0] or a[1], is translated by the compiler to pointer form, *(a+0) for a[0] and *(a+1) for a[1], and so on, highlighting how pointer arithmetic is used to traverse the array.
+
+Page2: This shows a desktop with multiple windows open, one of which is the PowerPoint application in which the previous slide is visible. This is likely a screenshot taken during the preparation or review of the presentation slides.
+
+Page3: This is similar to page 2, showing the same desktop with the PowerPoint window displaying the slide on array memory addressing and pointer arithmetic.
+
+Page4: The image shows a Notepad++ editor window with a C program written in it. The program declares an array 'arr' of size 2 and initializes its elements. It then prints the value at index 0 and 1 using the pointer notation (*(arr+0) and *(arr+1)) and directly using array indexing (arr[0] and arr[1]).
+
+Page5: This image displays the Notepad++ window from page 4 along with two command prompt windows in the background, but the contents are not clearly visible.
+
+Page6: This capture is similar to page 5, showing the Notepad++ window along with two blurred command prompt windows.
+
+Page7: Like the previous two pages, it shows the basic C program in Notepad++ for array manipulation with overlaid command prompt windows, but the content is not discernible due to the blurriness.
+
+Page8: The image displays the C program text within Notepad++, similar to pages 4, 5, and 6. However, the content of the command prompt windows remains indistinct.
+
+Page9: Similar to the previous pages, the Notepad++ window showing the C program code is visible. The image is a screenshot of a desktop, with two command prompt windows open but their contents are unclear.
+
+Page10: This page repeats the same content as seen in pages 4 through 9, with the C source file in Notepad++ and the command prompt windows, which cannot be read due to the image’s resolution.
+
+Page11: This is a slide from the PowerPoint presentation, displaying the summary "Result: Because the compiler converts the array operation in pointers before accessing the array elements. So a[1] == 1[a] but a[1] != [1]a, Remember this." It emphasizes that the compiler translates array access into pointer operations, and it provides a quirky but valid way to access array elements using the syntax 1[a] instead of a[1], highlighting an obscure but correct use of the C language. It also notes a common misinterpretation to avoid, stating a[1] is not the same as [1]a.

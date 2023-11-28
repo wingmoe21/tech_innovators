@@ -1,0 +1,17 @@
+Page1: The slide presents a problem statement that involves writing a program to convert a given decimal number into its equivalent octal number. This means translating a number from base 10 to base 8.
+
+Page2: The problem statement continues, providing more context to the nature of number systems, specifying that different bases use different numbers of digits, with binary (base 2) using two digits (0 and 1), and decimal (base 10) using ten digits (0-9).
+
+Page3: The algorithm slide explains the process for converting a decimal number to its octal equivalent. The steps are to store the remainder of the division by 8 in an array, divide the number by 8, repeat these steps until the number is zero, and finally, print the array in reverse order. An example with the decimal number 33 is provided, showing its conversion to the octal number 41.
+
+Page4: This slide contains the code implementation in C language of the previously explained algorithm. The function 'decToOctal' is responsible for taking an integer value 'n' as input, storing the conversion result into an array 'octalNum,' and then printing the octal number in reverse order due to the division method effectively building the octal number in reverse.
+
+Page5: A dry run of the code is shown for when the input 'n' is the decimal number 33. It illustrates how the array 'octalNum' is populated and the value of the counter 'i' as the loop iterates. After the loop completes, the array will contain the octal equivalent of the decimal number in reverse order.
+
+Page6: The final slide is a thank-you note and a request for comments, signaling the end of the presentation.
+
+Page7: An image of a text editor with C code unrelated to the previous content, showing an example of a program with constructor and destructor attributes used in functions before and after main, respectively.
+
+Page8: The presentation slide deck overview depicting slides 1 to 3, which correspond to the code snippet about constructor and destructor attributes in a program.
+
+Page9: A single-page overview of the slide deck with an emphasis on a “Thank You” slide, marking the conclusion of the presentation.

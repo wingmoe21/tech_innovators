@@ -1,0 +1,5 @@
+Page1: The first slide showcases an example of binary to decimal conversion. The binary number '110' is being converted to its decimal equivalent using the algorithm outlined on the slide. This involves multiplying each binary digit by the powers of 2 (beginning from the right-most digit), adding the results to find the sum, and the sum represents the decimal equivalent. For '110', the conversion is as follows: 1*2^2 + 1*2^1 + 0*2^0 = 4 + 2 + 0 = 6. Therefore, 110 in binary is equal to 6 in decimal.
+
+Page2: The second slide details a function in C programming language for converting a binary number to a decimal number. The function `binaryToDecimal` takes an integer parameter, computes the decimal value using a while loop and base multiplication of powers of 2, and returns the equivalent decimal value. A 'Dry Run' example is also provided, where the binary input '110' is processed by the function, resulting in a decimal output '6'.
+
+Page3: The third slide is a slide template saying "Thank you for watching! Please leave us your comments." indicating the conclusion of the presentation.

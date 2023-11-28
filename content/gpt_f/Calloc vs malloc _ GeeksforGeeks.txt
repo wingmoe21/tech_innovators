@@ -1,0 +1,27 @@
+Page 1: The slide explains the library functions malloc() and calloc(), used in C programming for dynamic memory allocation. malloc() allocates a memory block of a specified size and returns a pointer to the beginning of the block without initializing the allocated memory, leading to garbage values. On the other hand, calloc() allocates memory for an array of elements, initializes the memory to zero and thus, provides initialized memory blocks. Unlike malloc(), calloc() takes two arguments: the number of blocks to be allocated and the size of each block. Both functions return NULL if memory allocation fails, signaling an error.
+
+Page 2: This is a code example in C demonstrating the usage of malloc() and calloc(). It includes the standard libraries stdio.h and stdlib.h. The main() function contains sample code for allocating memory for an array of 5 integers using both malloc() and calloc(), and then deallocates the memory using free(). The comments explain that malloc() will lead to memory containing garbage values, while calloc() will initialize the allocated memory to zero.
+
+Page 3: The slide suggests an alternative to using calloc() by combining malloc() with memset(). It points out that malloc() can be used to allocate memory, and then memset() can be used to initialize the allocated memory to zero. This combination achieves the same functionality as calloc(). The note emphasizes that malloc() is generally faster than calloc(); hence, if the need for zero-initialization is not critical, malloc() would be the preferable choice.
+
+Page 4: The final slide is an acknowledgment slide that simply says "Thank you for watching! Please leave us your comments." with the logo of the content creator.
+
+Page 5: This slide defines a null pointer as a defined value for a pointer meant to indicate an empty address, and distinguishes it from a wild pointer, which is an uninitialized pointer that can cause unpredictable behavior.
+
+Page 6: The acknowledgment slide repeats the message "Thank you for watching! Please leave us your comments." with a logo.
+
+Page 7: The presentation has transitioned to a video loading screen, indicating that the content was part of a video, and it's prompting the viewer to leave comments.
+
+Page 8: A screenshot of a text editor with C code that utilizes the constructor and destructor attributes is shown. This C code demonstrates functions that are run before and after the main() function in a C program.
+
+Page 9: This is a repetition of Page 1, where malloc() and calloc() are described.
+
+Page 10: This is a repetition of Page 2, showing a code example using malloc() and calloc() in C.
+
+Page 11: This is a repetition of Page 3, suggesting the combination of malloc() with memset() as an alternative to calloc().
+
+Page 12: The acknowledgment slide is repeated again with the message of gratitude for watching and a request for comments.
+
+Page 13: It appears to be an image of a slide in a presentation application, showing an overview of the slides which includes an acknowledgment slide and a page with C code for constructor and destructor attributes.
+
+Page 14: This appears to be a transition slide, perhaps the last slide in a video or presentation, reiterating the thanks to the viewer and prompting for comments.

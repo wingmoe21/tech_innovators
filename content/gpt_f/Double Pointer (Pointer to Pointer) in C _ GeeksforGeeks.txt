@@ -1,0 +1,15 @@
+Page1: This slide provides an introductory explanation of double pointers in C programming. A double pointer is a pointer that points to another pointer, thereby being able to indirectly access the value of a variable. The slide gives an example with variable `a` holding a value of 80, pointer `p` containing the address of `a`, and pointer `q` containing the address of `p`. Dereferencing `q` once gives the address of `a`, and dereferencing `q` twice gives the value of `a`.
+
+Page2: This slide presents an example of a C program demonstrating the use of pointer-to-pointer. The program defines a variable `var` with a value of 789, and two pointer variables, `*ptr2` and `**ptr1`. `ptr2` is assigned the address of `var`, and `ptr1` is assigned the address of `ptr2`. The output shows how the value of `var` can be accessed using both the single pointer `*ptr2` and double pointer `**ptr1`.
+
+Page3: The third slide displays a screenshot of Microsoft PowerPoint in editing view, showing the second slide of the presentation, which is the same as described for Page 2.
+
+Page4: The fourth slide is identical to the third slide, with a greyed-out effect, indicating a duplicated or unused slide.
+
+Page5: This slide displays a simple C program, demonstrating the printing of a variable's address. The variable `x` is declared without initialization, and its address is printed using the `printf` function and the `%p` format specifier. The example makes it apparent that addresses can differ between program runs due to the nature of how memory is allocated.
+
+Page6: The sixth slide shows another C program example that explains how to declare a pointer variable and print the address and value of an integer variable using that pointer. The sample code demonstrates declaring an integer variable `Var`, setting it to 10, then creating a pointer `ptr` that stores the address of `Var`. It prints both the value and the address stored in `ptr`.
+
+Page7: This slide illustrates a sample C++ program that demonstrates pointer arithmetic. An integer array `v` is declared along with a pointer `ptr`. The program shows how we can iterate through the array using the pointer. With each iteration, the pointer is incremented using the `ptr++` command, and it prints the value and the address held by the pointer, demonstrating how pointers can be used to traverse arrays.
+
+Page8: The final slide thanks viewers for watching the presentation, inviting them to leave their comments. It serves as a closing remark slide for the presentation.

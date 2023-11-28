@@ -1,0 +1,13 @@
+Page 1: The slide presents a question on how to deallocate dynamic memory without using the "free()" function. The solution offered is to use the "realloc()" function from the standard library. The syntax for "realloc()" is given as "void *realloc(void *ptr, size_t size);". It notes that if the "size" argument is zero, then the call to realloc will effectively free the memory pointed to by "ptr". If "ptr" is NULL and size is non-zero, the call to realloc acts like a "malloc(size)" call.
+
+Page 2: This slide shows a simple C program that illustrates a code with a memory leak. The program allocates memory using "malloc()" but does not free it. The slide includes output from the Valgrind tool, reporting a memory leak of 10 bytes that were not freed.
+
+Page 3: Here, we see an update to the previous program, where "realloc()" is used with a size argument of zero to deallocate the memory that was initially allocated with "malloc()". Following this change, Valgrind output confirms that all heap blocks were freed, indicating no memory leaks.
+
+Page 4: This is identical to Page 3, reiterating that using realloc with a size of zero effectively frees the allocated memory, as evidenced by the Valgrind output showing no memory leaks.
+
+Page 5: The slide seems to be a thank you message indicating the end of the presentation, asking viewers for comments. No technical content is present on this page.
+
+Page 6: A function is displayed on the left, "octalToDecimal(int n)", which converts an octal number to decimal. The right side of the slide shows a step-by-step dry run of this function using the octal number 123, and demonstrates how the decimal value 83 is derived.
+
+Page 7: This slide appears to be the same end-of-presentation message as in Page 5, with a thank you to viewers and a request for comments.

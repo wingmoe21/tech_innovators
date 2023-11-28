@@ -1,0 +1,9 @@
+Page 1: Registers provide faster access compared to memory, so in C programming, frequent-use variables can be designated for register storage with the "register" keyword. However, whether a variable actually gets stored in a register is at the compiler’s discretion, and modern compilers typically handle this optimization themselves without the keyword.
+
+Page 2: Attempting to use the address-of operator (&) on a register variable can lead to an error or a warning, since register variables are stored in the CPU's registers, not in memory where addresses are relevant. The example program provided illustrates this misuse, which would likely cause a compiler error.
+
+Page 3: The keyword "register" can also be applied to pointers. Since registers can store the address of a memory location, there would not be an issue if the "register" keyword is used with a pointer that holds the address of an integer, as shown in the provided example program.
+
+Page 4: You cannot use "register" together with "static" or other storage class specifiers on the same variable because C does not permit multiple storage class specifiers for a single variable. There is no fixed limit to the number of register variables you can declare, but the actual number of variables that can be held in registers is determined by the compiler and the architecture’s capabilities. The example shows incorrect usage that would likely lead to a compilation error due to the combined storage class specifiers.
+
+Page 5: This page appears to be a closing slide with a thank you message for viewing the presentation. No further information related to the lecture content is provided.

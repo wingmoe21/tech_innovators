@@ -1,0 +1,33 @@
+Page1: The problem statement is defined as creating a function that computes the cost of the minimum cost path to reach a position (m, n) in a cost matrix cost[][]. All costs in the matrix are positive, and the total cost of a path is the sum of all costs from the source (0, 0) to the destination (m, n), including the cost at both the source and destination.
+
+Page2: The allowed movements in the cost matrix to reach the destination are either up, right, or diagonally up from a given cell (i, j), meaning from any cell (i, j), one can move to (i+1, j), (i, j+1), or (i+1, j+1).
+
+Page3: A visual representation of a 3x3 cost matrix is displayed with specific costs assigned to each cell. The Y axis ranges from 0 to 2 and the X axis ranges from 0 to 2.
+
+Page4: The minimum cost path in the given cost matrix is illustrated, showing the path with the lowest sum of costs from the bottom left cell (0,0) to the top right cell (2,2). The path chosen is the one that results in the total cost of 8, which is the sum of costs 1, 2, 2, and 3 from the traversed cells.
+
+Page5: The concept of 'Optimal Substructure' is introduced, stating that the minimum cost to reach a cell (m, n) can be computed as the minimum of three possible previous cells: (m-1, n-1), (m-1, n), or (m, n-1), plus the cost of the current cell (m, n).
+
+Page6: A recursive function `minCost` is shown, which calculates the cost of the minimum cost path to a cell (m, n), using the minimum of the costs from three possible previous steps plus the current step's cost. The base cases are also defined for when either index m or n is less than 0 and when both indices are 0.
+
+Page7: It's indicated that the naive recursive solution presented has an exponential time complexity, which implies it is inefficient for larger matrices due to the huge number of calculations required.
+
+Page8: The problem of 'Overlapping Subproblems' is illustrated, showing a tree diagram of recursive calls with repeated calculations, which is characteristic of problems that benefit from dynamic programming.
+
+Page9: This page states that the problem presents both 'Optimal Substructure' and 'Overlapping Subproblems', leading to the conclusion that the problem can be efficiently solved using dynamic programming. The approach includes constructing a temporary array tc[][] in a bottom-up manner.
+
+Page10: A side-by-side comparison between the original 'cost' matrix and the 'tc' matrix of total costs is shown, where 'tc' is initialized with 0s and will be computed based on the 'cost' matrix.
+
+Page11: The dynamic programming approach to solve the problem is detailed through a function `minCostDP`, which fills out the 'tc' matrix by iteratively combining subproblem solutions to build up the final answer. This method involves initializing the first column and first row of the 'tc' array and then constructing the rest of the solution from there.
+
+Page12: It's stated that the time complexity of the dynamic programming approach is O(m * n), which is significantly more efficient than the exponential time complexity of the naive recursive solution.
+
+Page13: A thank you note for watching the content, with a call to action for likes and comments, is presented as the closing slide of the presentation.
+
+Page14: This is an image of a code editor displaying a C++ program that includes an array initialization and print statements. It's unrelated to the previous dynamic programming content.
+
+Page15: The image shows a PowerPoint interface with a slide selected which appears to be discussing arrays in programming, again unrelated to the dynamic programming content.
+
+Page16: Another slide from the same PowerPoint presentation, further explaining the concept of array indexing in the context of pointer arithmetic in programming.
+
+Page17: This is a duplicate of the first image provided, showing the problem statement slide from the dynamic programming content discussed earlier.

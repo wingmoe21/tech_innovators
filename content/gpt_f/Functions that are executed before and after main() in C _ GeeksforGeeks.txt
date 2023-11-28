@@ -1,0 +1,19 @@
+Page 1: The image showcases a PowerPoint presentation slide featuring a coding example. The code includes a C program which demonstrates the use of constructor and destructor attributes. Specifically, the attributes are applied to the functions `myStartupFun(void)` and `myCleanupFun(void)`, so that `myStartupFun` executes before `main()` and `myCleanupFun` executes after `main()`. The implementation of these functions includes simple `printf` statements to indicate when they are being called relative to the `main()` function, which itself just prints "hello" to the standard output.
+
+Page 2: This image shows a thumbnail view inside a PowerPoint presentation software window that displays three slides. The main focus is on the second slide, which replicates the information from the first image, showing a piece of code in C that utilizes constructor and destructor attributes.
+
+Page 3: The image shows a full view of the second slide from the PowerPoint presentation previously seen in thumbnail form, which contains the same code example demonstrating the application of constructor and destructor attributes in a C program.
+
+Page 4: Similar to the first image, the image clearly presents a C program to illustrate the function of constructor and destructor attributes. The code comments indicate where and how to use these attributes within the code, and a small implementation is provided showing the messages printed during the program execution lifecycle.
+
+Page 5: This is an overview of a PowerPoint application window with three slides visible in the thumbnails pane. The selected slide demonstrates functions in C that execute before and after the `main()` function, with the detailed code example shown on the right side of the window.
+
+Page 6: This image shows the same PowerPoint slide presentation window as the previous image, with a focus on the second slide, identical to the program code presented in Page 3. The slide title mirrors the same content, framing the usage of constructor and destructor attributes in the C programming language.
+
+Page 7: We see the C program code in a text editor again, laid out as described in Page 1 and Page 4. This view provides a straightforward representation of how the constructor and destructor attributes are applied in a simple C program to control the execution timing of functions in relation to the `main()` function.
+
+Page 8: The image shows an IDE or text editor with the C code displaying the use of constructor and destructor attributes before and after `main()`. The format and content match the C program detailed in the earlier images.
+
+Page 9: This image, displaying a computer command prompt window overlapping the C code in a text editor, reiterates the application of constructor and destructor attributes in a C program. The command prompt window does not contribute to the explanation but suggests an environment where the C program might be compiled and executed.
+
+Page 10: A final slide in a PowerPoint presentation with a "Thank you for watching" message, indicating the conclusion of the lecture or presentation. No technical content is provided here, only an invitation for comments or feedback.

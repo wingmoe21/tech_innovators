@@ -1,0 +1,9 @@
+Page1: The slide presents a set of assumptions regarding data types and their sizes based on a 32-bit machine system architecture. The sizes are as follows: char is 1 byte, short int is 2 bytes, int is 4 bytes, and double is 8 bytes.
+
+Page2: This slide describes "Structure member alignment and padding" and displays a memory architecture diagram. In this context, memory banks are shown, illustrating how data is aligned in memory, with the banked memory accommodating data buses of varying lengths during a single memory cycle.
+
+Page3: The slide outlines some rules concerning data storage and structure sizing. The first rule states that any data type will always store its value at an address that is a multiple of the size of that data type, with the example given that ints will start at addresses that are multiples of 4. The second rule is that any structure will have a size equal to a multiple of the maximum bytes taken by a variable in that structure.
+
+Page4: This slide features an example C program that demonstrates the use of structures and designated initialization. The struct named 'Point' contains three integer members: x, y, and z. The program declares two 'Point' variables, initializing them with different values using designated initializer syntax. It then prints out the values of these variables to demonstrate the results of the initialization.
+
+Page5: The final slide is a "Thank you" slide from the content source, inviting feedback in the form of comments.

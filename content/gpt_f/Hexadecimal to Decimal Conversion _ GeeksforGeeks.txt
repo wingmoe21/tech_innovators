@@ -1,0 +1,12 @@
+Page 1: The slide presents a problem statement where the task is to write a program that converts a given hexadecimal number (base 16) into its equivalent decimal number (base 10).
+Page 2: The slide continues to explain the problem statement, indicating the significance of the base value in a number system which denotes the number of digits used. It exemplifies how the binary system uses two digits (0 and 1), the octal system uses eight digits (0-7), and the decimal system uses ten digits (0-9) to represent numeric values.
+Page 3: This slide introduces the concept of hexadecimal numbers, which use 16 different symbols: the numerals 0 to 9 and the letters A to F, to represent all the possible values.
+Page 4: The slide reiterates the goal to convert a hexadecimal number to a decimal number.
+Page 5: It expands on the problem statement explaining the meaning of base values in number systems, using binary and octal as examples, stressing the need for converting a hexadecimal number to decimal.
+Page 6: This slide revisits the hexadecimal number system and its 16 unique symbols (0-9 and A-F) for numbers.
+Page 7: The slide clarifies that decimal values 10 to 15 are represented as letters A to F in hexadecimal to avoid confusion and offers a substitution legend for these conversions.
+Page 8: An algorithm is outlined for converting hexadecimal to decimal in four steps: 1) Convert letters to numerals, 2) Multiply each digit from left to right by ascending powers of 16, 3) Sum all results from step 1, 4) The equivalent decimal is the sum obtained in step 3.
+Page 9: The slide presents an example of how the algorithm works by converting the hexadecimal number '1AB' to the decimal number 427, demonstrating each step in the process.
+Page 10: This slide contains code for a function 'hexadecimalToDecimal' written in C that converts a hexadecimal string to its decimal equivalent. It includes initializing the base, converting each character from the end of the string, and cumulatively calculating the decimal value.
+Page 11: The given code is broken down in a dry run using the hexadecimal number '1AB', illustrating how the function processes the string, the initial values of the variables, and the execution flow.
+Page 12: The final slide thanks viewers for watching, inviting them to leave comments.
