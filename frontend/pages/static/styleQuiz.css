@@ -463,4 +463,52 @@
   border-radius: 15.5px;
   border: 1px solid;
   border-color: #8484b8;
+} 
+.QUIZ {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  height: 100vh;
 }
+
+.message-rectangle {
+  position: relative;
+  width: 600px;
+  height: auto;
+  background-color: #a0a0bf66;
+  backdrop-filter: blur(4px) brightness(100%);
+  -webkit-backdrop-filter: blur(4px) brightness(100%);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 8px 8px #00000040;
+}
+
+.question-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7f8291;
+  margin-bottom: 20px;
+}
+
+.option {
+  margin-bottom: 10px;
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+.submit-button {
+  background-color: purple;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
