@@ -63,6 +63,7 @@ def dropdown_quiz():
     selected_lecture = data['lecture']
     session['file_path'] = f"content/{selected_lecture}.txt"
     output = get_quiz(session['file_path'])
+    print(output)
     return output
 
 

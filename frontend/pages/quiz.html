@@ -145,6 +145,7 @@
           .then(response => response.text())
           .then(data => {
             console.log('Success:', data);
+            updateQuizSection(data)
             displayLoading(false); // Hide loader
           })
           .catch((error) => {
@@ -154,6 +155,55 @@
         } else {
           label.style.display = "block"; // Show the "LECTURES" text
           selectedLectureSpan.style.display = "none"; // Hide the selected text
+        }
+      }
+      function updateQuizSection(quizData) {
+        var quizContent = document.querySelector('.QUIZ .message-rectangle');
+        if (quizContent) {
+          // Clear existing content
+          quizContent.innerHTML = '';
+          
+          // Loop through each question and create HTML elements
+          for (var i = 1; i <= 3; i++) {  // Assuming there are 3 questions
+            var question = quizData['Question ' + i];
+            var qTitle = document.createElement('p');
+            qTitle.className = 'question-title';
+            qTitle.textContent = question;
+            
+            // Create a div for options
+            var optionsDiv = document.createElement('div');
+            optionsDiv.className = 'options';
+            
+            // Add options for the question
+            for (var j = 1; j <= 3; j++) {
+              var optionValue = quizData['q' + i + 'c' + j];
+              var input = document.createElement('input');
+              input.type = 'radio';
+              input.id = 'q' + i + 'option' + j;
+              input.name = 'question' + i;
+              input.value = optionValue;
+              
+              var label = document.createElement('label');
+              label.htmlFor = 'q' + i + 'option' + j;
+              label.textContent = optionValue;
+              
+              var optionDiv = document.createElement('div');
+              optionDiv.className = 'option';
+              optionDiv.appendChild(input);
+              optionDiv.appendChild(label);
+              
+              optionsDiv.appendChild(optionDiv);
+            }
+            // Append question title and options to quizContent
+            quizContent.appendChild(qTitle);
+            quizContent.appendChild(optionsDiv);
+          }
+          // Add a submit button
+          var submitButton = document.createElement('input');
+          submitButton.type = 'submit';
+          submitButton.value = 'Submit';
+          submitButton.className = 'submit-button';
+          quizContent.appendChild(submitButton);
         }
       }
       function displayLoading(show) {

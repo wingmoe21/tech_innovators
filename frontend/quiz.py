@@ -1,25 +1,57 @@
 import os
 
-from langchain.chains import ConversationalRetrievalChain
-from langchain.chat_models import ChatOpenAI
-from langchain.document_loaders import TextLoader
-from langchain.indexes import VectorstoreIndexCreator
+from openai import OpenAI
 
-os.environ["OPENAI_API_KEY"] = "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"
 
 def get_quiz(file_path):
-    query = "Extract all info. Then, make three questions with three choices and their answers."
-    loader = TextLoader(file_path)
-    index = VectorstoreIndexCreator().from_loaders([loader])
+    os.environ["OPENAI_API_KEY"] = "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"
+    client = OpenAI()
 
-    chain = ConversationalRetrievalChain.from_llm(
-        llm=ChatOpenAI(model="gpt-3.5-turbo"),
-        retriever=index.vectorstore.as_retriever(search_kwargs={"k": 1}),
+    with open(file_path, 'r') as file:
+        text_content = file.read()
+
+    query = """I'm using you as an API with automated requests that primarily have text files contains lecture material in them and nothing else.  Your goal is to extract the info from them then, make three questions with three choices and their answers.
+
+The input will always be of this form:
+<long text>
+
+And I want you to respond always, without fail, in this form:
+
+Question 1:
+<question 1>
+A) <first choice>
+B) <second choice>
+C) <third choice>
+Answer: <Correct answer>
+
+Question 2:
+<question 2>
+A) <first choice>
+B) <second choice>
+C) <third choice>
+Answer: <Correct answer>
+
+Question 3:
+<question 3>
+A) <first choice>
+B) <second choice>
+C) <third choice>
+Answer: <Correct answer>
+
+Meaning you should only respond with the explained summarized text. There is no limit for how many words you write."""
+    
+    combined_prompt = f"{query}\n\n{text_content}"
+
+    response = client.chat.completions.create(
+        model="gpt-4",
+        messages=[
+            {"role": "user", "content": combined_prompt}
+        ]
     )
-    chat_history = []
-    result = chain({"question": query, "chat_history": chat_history})
+    result = response.choices[0].message.content
+
     # Splitting the string into parts for each question
-    questions = result['answer'].split("Question ")
+    questions = result.split("Question ")
     # Processing each question to extract the desired parts
     sliced_parts = {}
     for q in questions[1:]:  # skipping the first split part as it's not a question
@@ -35,5 +67,5 @@ def get_quiz(file_path):
             choice_parts = choice.split(") ")
             sliced_parts[f"q{question_number[-1]}c{i+1}"] = choice_parts[1] if len(choice_parts) > 1 else "Unknown"
         sliced_parts[f"q{question_number[-1]}ans"] = answer
-
+        
     return sliced_parts
