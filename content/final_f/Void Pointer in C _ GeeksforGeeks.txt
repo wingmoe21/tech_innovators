@@ -1,0 +1,184 @@
+Transcript of the audio for the lecture:
+1.152 - 7.356:  Hello friends today in this video we will discuss about void pointer in C. So let us start.
+7.876 - 16.862: In this program as we can see we have an integer variable a whose value is 10 and stored at 1000 as the location.
+17.983 - 25.328: Then we have a character variable b whose value is x and stored at 2000 as location.
+26.568 - 30.411: Then we have defined a void pointer p.
+32.008 - 60.952:  who is storing address of a variable so what is the address of a variable 1000 so p value will be 1000 then in the next line p is storing address of b so address of b is 2000 so p value will be updated by 2000 okay so here p is an void pointer that's why it is able to store
+62.287 - 80.043:  address of a variable of any data type like a is of type int, b is of type character and our void pointer p is able to store address of integer also and character also.
+81.564 - 82.946: So let us go to the next slide.
+84.567 - 86.309: So in this slide we have three programs.
+86.709 - 88.791: These are very interesting facts about void
+92.247 - 121.247:  so in the first program as we can see we have a variable a whose value is 10 so this is a whose value is 10 and stored at 1000 as the location then we have defined a pointer which is of type void and storing address of a so this is pointer address of a will be 1000 so it will store 1000 as the value okay and ptr address let us assume it is 3000
+122.324 - 151.874:  instead of 1000 okay then we are printing star ptr so star ptr what it will give so as we can see ptr is a void pointer right so when we will dereference ptr then how compiler will get to know that how many bytes it has to fetch from this address because it is a void pointer so it doesn't know so it will throw an error
+153.191 - 182.448:  okay in the next example we have again a variable a whose value is 10 and stored at 1000 as the location then we are defining a pointer which is of white type and storing address of a and address of a is 1000 so it will store 1000 as its value and let us assume this ptr is stored at location 3000 now i'm printing
+183.243 - 212.735:  ptr but before printing ptr we are typecasting it right so what we are doing we are typecasting it to integer pointer and then we are dereferencing it now our compiler knows that we have to fetch 4 bytes or bytes equal to size of int that's why it will give us this 10 value in the next example
+213.473 - 219.656:  We have an array which is of size 2 and storing 1 and 2 as its elements.
+220.637 - 226.68: We have assumed that 1 is stored at 1000 location, 2 is stored at 1004 location.
+228.201 - 235.465: Then we have defined a pointer ptr which is storing address of a and this pointer is of type void.
+236.686 - 239.407: So address of a will be 1000 so it will store 1000 as its value.
+243.038 - 268.579:  then what we are doing we are adding size of int to ptr okay so ptr value is 1000 so if we will add 4 bytes in it then it will become 1004 after that what we are doing we are typecasting it to integer pointer and then dereferencing it so 1004
+272.964 - 298.776:  then we will typecast it into int star okay and then we are dereferencing the value at this location so at 1004 location value is 2 so it will give output 2 so in this slide we will deal with some advantages of word pointers
+299.915 - 303.958:  So as we all know that malloc and calloc always return wide star type.
+305.58 - 310.524: So this allows these functions to be used to allocate memory of any data type.
+313.346 - 313.626: OK.
+314.787 - 322.994: Second important advantage is world pointer in C are used to implement generic functions in C programming language.
+324.756 - 328.859: For example compare function used in quick short method.
+331.903 - 332.745:  Thank you for watching.
+
+
+The content from the lecture slides:
+Page1: This slide presents an algorithm for converting a decimal number to binary. The example given is the decimal number 17. The process involves dividing the number by 2, storing the remainder, and repeating this process until the number is greater than zero, then printing the stored remainders in reverse order to get the binary equivalent, which in this case is 10001.
+
+Page2: Here is a C code snippet that implements the algorithm described in the previous slide. The function `decToBinary` takes an integer `n` as input, uses an array `binaryNum[32]` to store the binary digits, and a loop to divide `n` by 2 while storing the remainder in the array. Once complete, the binary number is printed in reverse order by another loop.
+
+Page3: This slide is titled "Dry Run" indicating a step-by-step walkthrough of the `decToBinary` function using the example of converting the decimal number 17 to binary. The array `binaryNum[]` is initially empty `{}`, `n` is set to 17, and the counter `i` is at 0.
+
+Page4: The "Dry Run" slide from the previous image resumes, but the view is zoomed in and the specifics of the dry run are not visible in this image.
+
+Page5: A closing slide with a "Thank You for watching!" message, asking for comments.
+
+Page6: This slide presents an alternative code snippet for converting a decimal number to octal, using the function `decToOctal`. It utilizes an array `octalNum[100]` to store the octal digits and a similar while loop structure as the previous binary conversion function.
+
+Page7: Similar to Page 3, this "Dry Run" slide provides a step-by-step example of the `decToOctal` function with an example decimal number 33. It shows the initially empty array `octalNum[]`, sets `n` to 33, and initializes the counter `i` at 0.
+
+Page8: Again, a closing slide with "Thank You for watching!" and a space for comments.
+
+Page9: A screenshot of a Windows Command Prompt window displaying a C code snippet. The code involves special functions using `__attribute__` to designate work to be done before (`constructor`) and after (`destructor`) `main()` in a C program.
+
+Page10: A view of a PowerPoint presentation in edit mode showing three slides thumbnail on the left and the second slide containing the C code snippet with `constructor` and `destructor` attributes in large view. 
+
+Page11: This slide shows a PowerPoint presentation in editing mode, zoomed out, displaying the second slide which contains the C code snippet with `constructor` and `destructor` attributes.
+
+Page12: This is a zoom-out view of the third slide from the PowerPoint presentation with a "Thank You for watching!" message, similar to Page 5 and 8, indicating the end of the slide deck.
+Problem Statement
+Given an octal number as input, we need to write a program to convert the given
+octal number into the equivalent decimal number. i.e convert the number with base
+value 8 to base value 10.
+Waiting for docs.google.com....
+Google SlidesProblem Statement
+Given an octal number as input, we need to write a program to convert the given
+octal number into the equivalent decimal number. i.e convert the number with base
+value 8 to base value 10.
+The base value of a number system determines the number of digits used to
+represent a numeric value.
+For example, the binary number system uses two digits 0 and 1, octal number
+system uses 8 digits from 0-7 and decimal number system uses 10 digits 0-9 to
+represent any numeric value.
+Waiting for docs.google.com...
+Google SlidesWaiting for docs.google.com...
+1.
+2.
+3.
+Algorithm
+Multiply each digit separately from left
+to right by 8^0, 8^1, 8^2... respectively.
+Add all the results coming from step 1.
+Equivalent decimal number would be
+the result obtained in step 2.
+Google Slides64
+Octal Number: 123
+Waiting for docs.google.com...
+1 2 3
+1 x (8^2)+2 x (8^1) + 3 x (8^0)
++
+16
+83
++
+Decimal Number: 83
+Algorithm
+3
+1.
+2.
+3.
+Multiply each digit separately from left
+to right by 8^0, 8^1, 8^2... respectively.
+Add all the results coming from step 1.
+Equivalent decimal number would be
+the result obtained in step 2.
+Google SlidesSlide 7
+#F
+Code
+// Function to convert octal to decimal
+int octalToDecimal (int n)
+{
+}
+int num = n;
+int dec_value = 0;
+// Initializing base value to 1, i.e 80
+int base = 1;
+int temp = num;
+while (temp) {
+}
+// Extracting last digit
+int last_digit = temp % 10;
+temp = temp / 10;
+// Multiplying last digit with appropriate
+// base value and adding it to dec_value
+dec_value += last_digit * base;
+base = base * 8;
+return dec_value;
+Google Slides// Function to convert octal to decimal
+int octalToDecimal(int n)
+{
+int num = n;
+int dec_value = 0;
+// Initializing base value to 1, i.e 8^8
+int base = 1;
+int temp = num;
+while (temp) {
+}
+// Extracting last digit
+int last_digit = temp % 10;
+temp = temp / 10;
+// Multiplying last digit with appropriate
+// base value and adding it to dec_value
+dec_value += last_digit * base;
+base = base * 8;
+return dec_value;
+Waiting for docs.google.com...
+Code
+Dry Run
+num= 123
+base = 1
+dec_value = 0
+temp = 123
+Google Slides// Function to convert octal to decimal
+int octal ToDecimal(int n)
+{
+}
+int num = n;
+int dec_value = 0;
+// Initializing base value to 1, i.e 8^0
+int base = 1;
+int temp = num;
+while (temp) {
+}
+// Extracting last digit
+int last_digit = temp % 10;
+temp temp / 10;
+// Multiplying last digit with appropriate
+// base value and adding it to dec_value
+dec_value += last_digit * base;
+base = base * 8;
+return dec_value;
+Waiting for docs.google.com...
+Code
+Dry Run
+num= 123
+base = 1
+last_dig = 3
+temp = 12
+dec_val=3
+base = 8
+dec_value = 0
+temp = 123
+last_dig = 2_last_dig = 1
+temp = 1
+temp = 0
+dec_val= 19 dec_val=19+64=83
+base = 64 base = 512
+Google SlidesWaiting for docs.google.com...
+DG
+Thank you for watching!
+Please leave us your comments.
+Google Slides

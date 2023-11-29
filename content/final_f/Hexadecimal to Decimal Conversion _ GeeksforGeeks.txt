@@ -1,0 +1,363 @@
+Transcript of the audio for the lecture:
+0.342 - 2.483:  Hello friends, welcome to GeeksforGeeks.
+3.044 - 8.767: In this tutorial, we are going to see how to convert a hexadecimal number to a decimal number.
+9.608 - 21.295: The problem statement is, given a hexadecimal number as input, we need to write a program to convert the given hexadecimal number into the equivalent decimal number, i.e.
+21.415 - 24.717: convert the number with base value 16 to base value 10.
+25.788 - 31.772:  The base value of a number system determines the number of digits used to represent a numeric value.
+32.032 - 36.754: For example, the binary number system uses 2 digits 0 and 1.
+37.295 - 46.96: Octal number system uses 8 digits from 0 to 7 and decimal number system uses 10 digits 0 to 9 to represent any numeric value.
+47.701 - 51.083: In hexadecimal number, we use 16 symbols that are 0, 1, 2, 3, 4,
+55.79 - 65.057:  5, 6, 7, 8, 9, A, B, C, D, E, F to represent all the numbers.
+65.538 - 81.83: In order to remove any confusion, we have substituted 10 as A, 11 as B, 12 as C, 13 as D, 14 as E and 15 as F. Now let us look at the algorithm to convert a hexadecimal number to a decimal number.
+82.111 - 82.991: Step 1.
+83.292 - 85.133: Convert Alphabets to Numerals
+85.674 - 86.555:  Step 2.
+86.855 - 97.103: Multiply each digit separately from left to right by 16 raised to the power 0, 16 raised to the power 1, 16 raised to the power 2, so on respectively.
+97.784 - 98.304: Step 3.
+99.105 - 101.567: Add all the results coming from step 1.
+102.047 - 102.608: Step 4.
+103.428 - 107.211: Equivalent decimal number would be the result obtained in step 2.
+107.912 - 110.534: Now let us understand this algorithm with an example.
+111.094 - 113.476: Suppose the hexadecimal number is 1AB.
+114.778 - 118.44:  Now step number 1 asks us to convert the alphabets to numerals.
+119.08 - 123.143: Therefore, A will be converted to 10 and B will be converted to 11.
+123.703 - 124.503: Step number 2.
+124.764 - 127.065: Multiply each digit separately from left.
+127.285 - 133.108: That is B, A, 1 by 16 raised to the power 0, 16 raised to the power 1 and so on.
+133.228 - 142.834: Therefore, 11 will be multiplied by 16 raised to the power 0, 10 will be multiplied by 16 raised to the power 1 and 1 will be multiplied by 16 raised to the power 2.
+143.749 - 146.131:  Add all the results coming from step number 1.
+146.571 - 152.956: So we add 11, 160 and 256 to obtain the decimal equivalent 427.
+153.457 - 154.898: Now let us look at the code.
+155.558 - 165.906: In the function hexadecimal to decimal, we have passed a character array hex value in which we have the hexadecimal number and the function returns its decimal equivalent.
+166.346 - 169.409: First of all, we find the length of the hex value array.
+169.989 - 173.152: We initialize base with 1 which is 16 raised to the power 0.
+174.068 - 176.23:  we initialize decimal value as 0.
+176.79 - 186.857: Now we run a for loop initializing i equal to length minus 1 until i is greater than equal to 0 and decrement i by 1 in each iteration.
+187.517 - 192.861: Inside the for loop, first of all we will check if the character lies in the range 0 to 9.
+193.341 - 200.366: If yes, we will convert that character value into integral value by subtracting 48 from its ASCII value.
+201.044 - 218.509:  Therefore, if hex value i is greater than equal to character 0 and hex value i is less than equal to character 9, we subtract 48 from hex value i to convert it into integral value and then we multiply it with base and add it to the decimal value.
+218.909 - 222.83: After that, we change the value of base by multiplying it by 16.
+223.511 - 227.832: But in case the character is an alphabet and lies in the range a to f,
+228.328 - 234.31:  We convert it into integral value 10 to 15 by subtracting 55 from the S chi value.
+234.81 - 249.013: So if hex value I is greater than equal to character A and hex value I is less than equal to character F, we subtract 55 from hex value I and multiply it with base and then add it into the decimal value.
+249.673 - 251.974: In the end, we multiply base by 16.
+252.394 - 255.835: The for loop will continue until I is greater than equal to zero.
+256.559 - 258.7:  In the end we will return the decimal value.
+259.14 - 261.221: Now let us understand this with an example.
+262.041 - 264.102: Let hex value contain 1ab.
+264.562 - 275.366: Initially, the decimal value will be 0, the base will be 1 and the value of i will be 2 as the length of hex value is 3 so i will be length-1 which is 2.
+276.226 - 283.789: In the first iteration, hex value 2 is an alphabet B. We find the equivalent numeric value for that alphabet which is 11.
+284.795 - 287.857:  Currently, i is equal to 2 and base is equal to 1.
+288.378 - 293.341: Therefore, decimal value will be hex value that is 11 into the base that is 1.
+293.881 - 298.545: Add it to the previous decimal value which is currently 0 which gives 11.
+299.065 - 302.187: We change the value of base by multiplying it by 16.
+302.287 - 304.749: Therefore, 1 into 16 will give 16.
+305.25 - 309.953: As the value of i is greater than equal to 0, we continue to the next iteration.
+310.553 - 312.635: Now, the value of i will be equal to 1.
+313.445 - 319.347:  As hex value 1 is an alphabet A, we convert it into its equivalent numeric value which is 10.
+319.948 - 331.292: The decimal value will be the hex value 10 into the base 16 which gives 160 and we add that to the previous decimal value 11 to obtain the current decimal value 171.
+331.852 - 334.994: We change the value of base by multiplying it by 16.
+335.594 - 339.896: As 1 is still greater than equal to 0, we continue to the next iteration.
+341.227 - 345.41:  As hex value 0 is already a numeric value, we need not convert it.
+345.95 - 356.558: The decimal value will be the hex value that is 1 into the base 256 added to the previous decimal value 171 which gives us 427.
+357.178 - 360.28: We change the value of base by multiplying it by 16.
+361.061 - 365.344: On decrementing the value of i, the value of i will now become minus 1.
+365.844 - 369.687: As i is not greater than equal to 0, we can exit the loop.
+370.149 - 372.292:  and return the decimal value which is 427.
+373.914 - 375.357: I hope you understood the code.
+375.957 - 376.919: Thank you for watching.
+377.179 - 378.281: Please leave us your comments.
+
+
+The content from the lecture slides:
+Page1: The image shows a C program snippet demonstrating how to declare a structure variable named 'p1' of type 'struct Point' which contains two integer members, 'x' and 'y'. The structure declaration is inside the main function, showing that it can be used to declare a variable like ordinary data types.
+
+Page2: This image contains a snippet of C code with two examples. The first example illustrates that one cannot initialize structure members within the structure declaration itself, which results in a compiler error. The second example demonstrates correct initialization of a 'struct Point' variable named 'p1' within the main function using curly braces containing the values {0, 1}, which are assigned to 'x' and 'y' respectively, matching the order of declaration.
+
+Page3: This code snippet shows including the 'stdio.h' header and declaring a 'struct Point' with two members, 'x' and 'y'. In the main function, a 'struct Point' variable 'p1' is initialized with {0, 1} and modified by setting 'p1.x' to 20. The values of 'p1.x' and 'p1.y' are then printed out using 'printf'.
+
+Page4: The code example demonstrates the use of designated initializers with structures in C. A struct named 'Point' with three members 'x', 'y', and 'z' is defined. Two instances of 'struct Point' are initialized using different syntax; 'p1' is initialized with all member values, and 'p2' with only member 'x'. The print statements display the values of 'p1.x', 'p1.y', 'p1.z', and 'p2.x'.
+
+Page5: This is a closing slide with the text "Thank you for watching! Please leave us your comments." indicating the end of the presentation or video.
+Problem Statement
+Given a decimal number as input, we need to write a program to convert the given
+decimal number into the equivalent hexadecimal number. i.e convert the number
+with base value 10 to base value 16.
+Waiting for docs.google.com.
+Google SlidesProblem Statement
+Given a decimal number as input, we need to write a program to convert the given
+decimal number into the equivalent hexadecimal number. i.e convert the number
+with base value 10 to base value 16.
+The base value of a number system determines the number of digits used to
+represent a numeric value.
+For example, the binary number system uses two digits 0 and 1, octal number
+system uses 8 digits from 0-7 and decimal number system uses 10 digits 0-9 to
+represent any numeric value.
+Waiting for docs.google.com
+Google SlidesHexadecimal Number
+In hexadecimal number uses 16 symbols {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F} to
+represent all numbers.
+Waiting for docs.google.com
+Google SlidesWaiting for docs.google.com...
+Algorithm
+1. If the remainder when the number is
+divided by 16 is less than 10, insert (48
++ temp) in a character array otherwise
+if it is greater than or equals to 10,
+insert (55 + temp) in the character
+array.
+Divide the number by 16 now
+Repeat the above two steps until the
+number is not equal to 0.
+Print the array in reverse order now.
+2.
+3.
+4.
+Google Slides16
+Decimal Number: 2545
+2545 1 <10, arr[0] = 1
+16 159 15 >10, arr[1] = F
+16
+9
+9 <10, arr[2] = 9
+Waiting for docs.google.com...
+Algorithm
+0
+Hexadecimal number: 9F1
+remainder
+1. If the remainder when the number is
+divided by 16 is less than 10, insert (48
++ temp) in a character array otherwise
+if it is greater than or equals to 10,
+insert (55 + temp) in the character
+array.
+Divide the number by 16 now
+Repeat the above two steps until the
+number is not equal to 0.
+Print the array in reverse order now.
+2.
+3.
+4.
+Google SlidesSlide 9
+Code
+// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+}
+// chan array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while(n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if (temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+itt;
+}
+else
+{
+hexaDeciNum[i] = temp + 55;
+i++;
+}
+n = n/16;
+}
+// printing hexadecimal number array in reverse
+for(int j-i-1; j>-0; j--)
+cout << hexaDeciNum[j];
+Google Slides// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+// char array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while (n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if(temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+i++;
+}
+else
+{
+Waiting for docs.google.com...
+hexaDeciNum[i] = temp + 55;
+itt;
+}
+n = n/16;
+}
+// printing hexadecimal number array in reverse
+for(int j-i-1; j>=0; j--)
+cout << hexaDeciNum[j];
+Code
+n = 2545
+Dry Run
+i = 0
+hexaDeciNum[] = {
+Google Slides// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+}
+// char array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while(n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if(temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+i++;
+}
+else
+{
+Slide 11
+hexaDeciNum[i] = temp + 55;
+itt;
+}
+n = n/16;
+}
+// printing hexadecimal number array in reverse
+for(int j-i-1; j>=0; j--)
+cout << hexaDeciNum[j];
+Code
+n = 2545
+Dry Run
+i=0
+hexaDeciNum[] = {
+temp = 2545 % 16 = 1
+hexDeciNum[0] = 1 + 48 = '1'
+n = 2545 / 16 = 159
+i=1
+hexDeciNum] = {1}
+Google Slides// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+}
+// char array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while (n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if(temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+i++;
+}
+else
+{
+Waiting for docs.google.com...
+hexaDeciNum[i] = temp + 55;
+itt;
+}
+n = n/16;
+}
+// printing hexadecimal number array in re erse
+for(int j-i-1; j>=0; j--)
+cout << hexaDeciNum[j];
+Code
+Dry Run
+n = 2545 i=0
+temp = 1
+hexDeciNum[0] = '1'
+n = 159
+hexaDeciNum[] = {
+hexDeciNum[] = {1}
+i=1
+temp = 159 % 16 = 15
+hexDeciNum[1] = 15 + 55 = 'F i=2
+n = 159/16=9
+hexDeciNum] = {1, F}
+Google Slides// function to convert decimal to hexadecimal
+void decToHexa(int n)
+{
+}
+// char array to store hexadecimal number
+char hexaDeciNum[100];
+// counter for hexadecimal number array
+int i = 0;
+while(n!=0)
+{
+// temporary variable to store remainder
+int temp = 0;
+// storing remainder in temp variable.
+temp = n % 16;
+// check if temp < 10
+if(temp < 10)
+{
+hexaDeciNum[i] = temp + 48;
+i++;
+}
+else
+{
+Waiting for docs.google.com...
+hexaDeciNum[i] = temp + 55;
+itt;
+}
+n = n/16;
+}
+// printing hexadecimal number array in reve
+for(int j-i-1; j>=0; j--)
+cout << hexaDeciNum[j];
+Code
+Dry Run
+n = 2545 i=0
+hexaDeciNum[] = {
+temp = 1
+hexDeciNum[0] = '1' hexDeciNum[] = {1}
+n = 159
+temp = 15
+hexDeciNum[1] = 'F'
+i=1
+hexDeci Num[] = {1, F}
+i=2
+n = 9
+temp = 9 % 16 = 9
+hexDeciNum[2] = 9 + 48 = '9'
+n = 9/16=0
+hexDeciNum[] = {1, F, 9}
+Google SlidesSlide 15
+DG
+Thank you for watching!
+Please leave us your comments.
+Google SlidesWhatsApp
+Apps
+Slide 15
+* Lab Instructions | Lab - Write X
+GFG_Yashvardhan - Google ▷ X
+docs.google.com/presentation/d/1AxOYE18b6jPB545EJY4AeZOEP1mQz7Bw9z9AwPllhrk/preview?slide-id.g720ab70ed3_0_232
+Search Windows
+W
+✿
+D2H - Google Slides
+ƏG
+gay interest - The Pirate Bay X
+Thank you for watching!
+Please leave us your comments.
++
+4) ENG
+Google Slides
+03:45
+28-03-2020

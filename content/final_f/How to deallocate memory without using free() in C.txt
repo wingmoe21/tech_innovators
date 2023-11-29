@@ -1,0 +1,103 @@
+Transcript of the audio for the lecture:
+0.779 - 9.565:  Hello friends, today in this video we will discuss about how to deallocate memory without using free function in C. So let us start.
+11.266 - 13.568: So as you can see there is a question in this slide.
+14.849 - 19.452: How to deallocate dynamically allocated memory without using free function?
+20.953 - 27.357: Okay, so as we all know that free function is used to deallocate dynamically allocated memory.
+29.46 - 56.748:  if anybody will say you that you do not have to use this free function so how you will deallocate dynamically allocated memory this is the question so what is the solution we have a standard library function which is realloc okay so this function can be used to deallocate previously allocated memory so
+57.449 - 84.681:  this is the function declaration of realloc function which is accepting two arguments one is a pointer and one is size so this realloc function is present inside stdlib.h okay yeah so let us carefully watch the note so in the note he is saying that if size is zero
+85.905 - 113.873:  means if this size argument is zero then this realloc function will be equivalent to free ptr ok and if ptr is equal to null this ptr is equal to null and size is not zero then it is equivalent to malloc size ok so this realloc function
+115.518 - 116.518:  is bidirectional.
+117.299 - 117.499: How?
+118.299 - 129.582: If size is zero then it is directing to free and if ptr is equal to null then it is directing to malloc function.
+130.583 - 130.823: Ok.
+133.463 - 139.265: So, let us see a program in which some memory leak is present.
+140.185 - 140.426: Ok.
+141.246 - 145.227: So, see inside the main method what we have done
+145.996 - 148.578:  We have dynamically allocated 10 bytes.
+150.039 - 150.299: Okay.
+151.019 - 156.563: And whatever pointer it will give us, it will be stored into PTR variable.
+159.085 - 159.325: Okay.
+159.725 - 162.887: So as we all know that malloc will give us void pointer.
+164.048 - 166.89: And we are storing this into an integer pointer.
+168.091 - 170.172: So what we will do, we will typecast it.
+171.653 - 171.853: Right.
+172.674 - 172.854: Yeah.
+174.035 - 175.716: Now we are returning from the function.
+177.754 - 205.716:  so what we have done we have allocated 10 bytes at the run time or we can say dynamically but have you freed that memory when main function is existing no definitely not so we do not have used any free function here so in ubuntu we have wellgreen tool
+206.784 - 232.954:  using wellgreen what you can do you can see what the memory leak so see in the red color as you can see it is written that definitely lost 10 bytes in one block so this is memory leak we have 10 bytes memory leak present in this program because we
+233.795 - 241.757:  have not freed that memory which we have allocated at the run time when program exit ok.
+242.857 - 244.698: Now, go to the second program.
+245.658 - 260.022: So, in this program first of all we have allocated 10 bytes then we are using realloc function and in the realloc function what we are doing in the second argument we are specifying zero size.
+261.252 - 266.937:  It means this realloc function will be work as free PTR.
+268.498 - 268.718: Right.
+269.379 - 270.28: So, what it will do?
+270.46 - 272.302: It will freed this 10 bytes memory.
+273.623 - 279.087: Now, if we will use valgreen tool, then it is not showing any memory leak.
+280.268 - 281.349: So, what is the output?
+281.75 - 283.151: All heap blocks were freed.
+283.771 - 285.153: No leaks are possible.
+286.614 - 287.875: But in the previous program,
+288.8 - 293.841:  Definitely it is saying that we have lost 10 bytes in one block.
+294.181 - 298.142: So, this is memory leak and it is not present in this program.
+300.162 - 302.142: So, what is the solution now?
+302.542 - 309.484: Solution is if we do not want to use free then we can use realloc function also.
+310.644 - 312.724: This realloc function is bidirectional.
+313.424 - 318.145: If we will take size is equal to zero then it will work like free function.
+318.863 - 324.389:  And if we will take ptr is equal to null, then it will work like malloc function.
+326.511 - 327.412: Thank you for watching.
+327.593 - 328.654: Please leave us your comments.
+
+
+The content from the lecture slides:
+Page1: The slide presents a problem statement where the task is to write a program that converts a given decimal number (base 10) into an equivalent hexadecimal number (base 16).
+
+Page2: The problem statement is extended to explain that the base value of a number system determines the number of digits used to represent a numeric value, providing examples of binary and decimal systems for context.
+
+Page3: The slide introduces the hexadecimal number system, noting that it uses 16 different symbols, ranging from 0 to 9 and followed by A to F, to represent all numbers.
+
+Page4: An algorithm is provided for converting a decimal number to hexadecimal. It involves dividing the number by 16, finding the remainder, and converting this remainder into hexadecimal until the number becomes zero. The resultant hexadecimal digits are then printed in reverse order.
+
+Page5: The algorithm is illustrated with an example, converting the decimal number 2545 to hexadecimal. Each division by 16 and the corresponding remainders are shown, eventually yielding the hexadecimal number 9F1.
+
+Page6: The slide displays a code snippet for a function `decToHexa(int n)` written in C programming language that implements the previously described algorithm for decimal to hexadecimal conversion.
+
+Page7: The same code from Page 6 is shown with a dry run panel beside it, setting up variables for the dry run.
+
+Page8: The dry run continues with the first iteration of the loop in the code, calculating the remainder of 2545 divided by 16, which is 1, storing it as '1' in the character array.
+
+Page9: The dry run shows the second iteration with the updated value of n (159) and determines that the remainder when divided by 16 is 15, which corresponds to the hexadecimal 'F'.
+
+Page10: The dry run illustrates the third iteration, where the number 9 is stored as '9' in the character array, completing the conversion process as the value of n becomes 0.
+
+Page11: The slide contains a thank-you note for watching, indicating the end of the presentation.
+
+Page12: The same thank-you note is displayed again, possibly from a different view or after a mouse click.
+
+Page13: A different program unrelated to the previous slides is shown, with a sample code in C++, demonstrating the usage of pointers.
+
+Page14: The same program window is shown, but the pointer string has changed to "*ptr".
+
+Page15: Another instance of the same program, with the pointer string changing back to its original definition "geeksforgeeks".
+
+Page16: Further modification has been made to the program where the string is altered again.
+
+Page17: The previous program is partially obscured, and another window shows the compilation process with a warning message about the string conversion in C++.
+
+Page18: The same compilation with the warning message is shown without the overlay of another window.
+
+Page19: An application window is illustrated, with a PowerPoint presentation in the background showcasing an overview of the slides.
+
+Page20: The PowerPoint application is maximized, and it shows the thank-you slide with the full list of slides in the presentation view.
+
+Given the intentional focus and repetition across Pages 13 to 20, they may contain aspects of a programming tutorial separate from the initial series of slides about converting decimal to hexadecimal numbers. The error message on Page 17 suggests a common issue in C++ where a string literal is assigned to a non-const character pointer.
+void func (int, int);
+int i = 2;
+func (i++, i++);
+Lets discuss the different evaluation order outputs of this program.
+From left to right
+From right to left
+It is compiler dependent in C. It is never safe to depend on the order of evaluation of side
+effects. For example, a function call like above may very well behave differently from one
+compiler to another:DG
+Thank you for watching!
+Please leave us your comments.

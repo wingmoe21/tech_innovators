@@ -1,0 +1,183 @@
+Transcript of the audio for the lecture:
+0.316 - 3.917:  Hello friends, today in this video we will discuss how to declare a pointer to a function.
+5.298 - 7.099: So first of all we will cover the basics.
+8.659 - 13.641: So what is the difference between int star foo int and int bracket star foo int.
+14.862 - 17.083: These are very two important concepts.
+17.783 - 18.963: Let us carefully watch them.
+20.564 - 27.667: So the definition of this representation means foo is a function.
+28.601 - 35.123:  which will accept integer as an argument and will return int star which is pointer to an integer.
+36.604 - 48.007: And second representation this one means foo is a pointer to a function which will accept integer as an argument and will return an integer.
+49.868 - 52.048: So these two representations are totally different.
+55.049 - 57.13: So now let us carefully watch this program
+58.174 - 59.535:  and we'll see what it is doing.
+60.976 - 63.799: So it has two functions one is fun and one is main.
+65.12 - 80.392: So in the main function we have declared a pointer to a function whose name is funptr and that function will accept integer as an argument and will return void as an value.
+82.954 - 87.158: Now in this pointer we are storing address of fun.
+87.777 - 88.517:  And what is fun?
+89.158 - 90.198: Fun is a function.
+92.179 - 95.6: So function, this function is returning void value.
+95.9 - 97.401: That's why we have written here void.
+98.621 - 100.562: And is accepting integer as a value.
+101.463 - 103.663: And that's why we are writing here int.
+104.844 - 107.605: And this is our pointer to this function.
+108.746 - 110.846: And we are storing address of this function here.
+113.147 - 117.189: So in the next line, if we want to invoke this
+117.774 - 145.007:  function using this function pointer what we will do we will write star fun ptr and we will pass the value which we want to send so it will accept one integer value that's why we have given 10 here so if we will give 10 then it will call this function fun and will print this printf statement so what we are printing value of a and a value we are sending 10
+146.01 - 148.716:  That's why value of a will become 10.
+149.938 - 151.923: So output will be 10 only.
+153.987 - 154.969: Thank you for watching.
+
+
+The content from the lecture slides:
+Page1: The slide presents a code example demonstrating a function that creates a memory leak. The code is written in C and shows a function `f()` where memory is dynamically allocated using `malloc()` to a pointer `*ptr`. However, the memory is not freed before the function returns, which would result in a memory leak since the allocated memory is no longer accessible but not returned to the system.
+
+Page2: The second slide illustrates how to properly release memory to prevent a memory leak. It shows a revised version of the function `f()` where the allocated memory is correctly freed using `free(ptr)` before the function returns. Additionally, there is an explanation that when memory allocation is done, the actual heap space allocated is one word larger than the requested memory. This extra word stores the size of the allocation and is utilized by `free()` when releasing memory.
+
+Page3: This slide seems to be a closing slide thanking viewers for watching and inviting comments. There is no code or technical content presented.
+
+Page4: The fourth slide repeats the example where a memory leak is present, similar to the content described in Page1. It's showing the code before the memory leak was fixed.
+
+Page5: The fifth slide is identical to the second slide, which contains the corrected version of the code with a proper memory deallocation using `free()` and explanatory notes.
+
+Page6: The sixth slide is again a closing slide identical to Page3, with a thank you message.
+
+Page7: This slide contains code in C for detecting a memory leak using the Valgrind tool. The program allocates memory but does not free it, leading to a memory leak. Below the code, the output from Valgrind is shown, which detects that 10 bytes were definitely lost in 1 block, indicating the memory leak.
+
+Page8: The final slide presents a C program that initially creates a memory leak by allocating memory and not freeing it. However, it then uses `realloc(ptr, 0)` to effectively free the memory. The output from Valgrind shows that there are no more memory leaks, demonstrating an alternative way to release allocated memory.
+Problem Statement
+Given a hexadecimal number as input, we need to write a program to convert the
+given hexadecimal number into the equivalent decimal number. i.e convert the
+number with base value 16 to base value 10.
+Waiting for docs.google.com
+Google SlidesProblem Statement
+Given a hexadecimal number as input, we need to write a program to convert the
+given hexadecimal number into the equivalent decimal number. i.e convert the
+number with base value 16 to base value 10.
+The base value of a number system determines the number of digits used to
+represent a numeric value.
+For example, the binary number system uses two digits 0 and 1, octal number
+system uses 8 digits from 0-7 and decimal number system uses 10 digits 0-9 to
+represent any numeric value.
+Waiting for docs.google.com.
+Google SlidesHexadecimal Number
+In hexadecimal number we use 16 symbols {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F} to
+represent all numbers.
+Waiting for docs.google.com
+Google SlidesHexadecimal Number
+In hexadecimal number uses 16 symbols {0, 1, 2, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F} to
+represent all the numbers.
+To remove confusion here we substitute,
+Waiting for docs.google.com
+10-> A
+11 -> B
+12 -> C
+13 -> D
+14 -> E
+15-> F
+Google SlidesSlide 7
+4
+#
+Algorithm
+1. Convert alphabets to numerals.
+2. Multiply each digit separately from left
+to right by 16^0, 16^1, 16^2...
+respectively.
+3.
+Add all the results coming from step 1.
+4. Equivalent decimal number would be
+the result obtained in step 2.
+Google SlidesHexadecimal Number: 1AB
+256
+Waiting for ssi.gstatic.com.
+1
+A B
+1 x (16^2)+10x (16^1) + 11x(16^0)
++
+10
+160 +
+11
+427
+11
+Decimal Number: 427
+Algorithm
+1.
+2.
+Convert alphabets to numerals.
+Multiply each digit separately from left
+to right by 16^0, 16^1, 16^2…..
+respectively.
+4.
+3. Add all the results coming from step 1.
+Equivalent decimal number would be
+the result obtained in step 2.
+Google SlidesWaiting for docs.google.com.
+int hexadecimalToDecimal(char hexVal[])
+(
+int len strlen(hexval);
+Initializing base value to 1, f. 18²0
+int base = 1;
+int dec_val= 0;
+// Extracting characters as digits from last character
+for (int i-len-1; i>-0; i--)
+{
+}
+Code
+If character lies in
+// it to Integral 0-9 by subtracting 48 from
+// ASCII value.
+(hexVal[i]>-'0' && hexVal[i]<-*9')
+dec_val+- (hexVal[i] - 48) base;
+Incrementing base by power
+1
+{
+}
+base base 16;
+If character lies in 'a'
+// it to integral 10-15 by subtracting 55
+// from ASCII value
+else if (hexval[i]>-'A' && hexVal[i]<-'F')
+dec_val+- (hexVal[i] - 55)*base;
+# incrementing base by power
+base - base*16;
+return dec_val;
+Google Slides// Function to convert hexadecimal to decimal
+int hexadecimalToDecimal(char hexVal[])
+{
+int len = strlen(hexval);
+// Initializing base value to 1, i.e 16'
+int base = 1;
+int dec_val = 0;
+// Extracting characters as digits from last character
+for (int i-len-1; i>=0; i--)
+{
+}
+// if character lies in
+'9", converting
+// it to integral 6-9 by subtracting 48 from
+// ASCII value.
+1# (hexVal[i]>='0' && hexVal[i]<='9')
+dec_val += (hexVal[i] - 48)*base;
+// incrementing base by power
+base = base 16;
+}
+// if character lies in 'A'-"F" converting
+// it to Integral 10-15 by subtracting 55
+// from ASCII value
+else if (hexVal[i]>='A' && hexVal[i]<='F')
+{
+dec_val += (hexVal[i] - 55)*base;
+// incrementing base by power
+base = base 16;
+return dec_val;
+Waiting for docs.google.com...
+Code
+Dry Run
+hexVal] = 1AB
+base = 1
+dec_val = 0
+i=2
+Google SlidesSlide 15
+DG
+Thank you for watching!
+Please leave us your comments.
+Google Slides

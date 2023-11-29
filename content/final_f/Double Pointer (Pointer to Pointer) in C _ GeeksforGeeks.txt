@@ -1,0 +1,944 @@
+Transcript of the audio for the lecture:
+0.367 - 5.628:  Hello friends, today in this video we will discuss about double pointer in C programming language.
+7.648 - 9.949: So this is the representation of double pointer.
+10.769 - 15.13: We have three line of code and we will discuss it what they are doing.
+15.85 - 18.41: So first line is int a is equal to 80.
+19.65 - 29.152: It means a is a variable of integer type which contained 80 value at some address location and we assumed that the location is 1000.
+30.814 - 56.373:  okay second line int star p is equal to address of a it means p is a pointer which is pointing to an integer variable okay it's storing the address of a variable it means p contains address of a which is 1000 so p value will be 1000 and p will also be stored
+56.914 - 83.984:  in the memory at some other location we assumed that 2000 now third line int star star q is equal to address of p means q is a double pointer which is pointing to an integer is containing address of p and what is the address of p address of p is 2000 okay so q will contain 2000 as its value
+84.693 - 89.497:  Now Q also stored at some other location in the memory which we assumed 3000.
+90.358 - 93.14: Now we will print some lines of code.
+93.92 - 94.141: Okay.
+94.521 - 96.943: So like this is the programmer.
+97.423 - 102.147: He's saying, Hey, is a variable stored at 1000 location, right?
+103.008 - 106.05: P is a pointer, which contains the address of a variable.
+106.511 - 110.274: So P is containing address of a variable, which is thousand.
+110.834 - 114.377: And Q is a double pointer, which contains the address of P pointer.
+114.81 - 141.218:  so address of people enter is 2000 that is stored in queue now what will be the value of star star queue okay so how we will get this value let us see so if we will do star queue then what it will give it will give us the value at location 2000 so value at location 2000 is 1000 okay so star queue will give us 1000
+144.122 - 171.77:  now star star q will give the value at location 1000 okay so at location 1000 what is the value 80 is the value so it will give 80 second line is star p star p means it will fetch the value which is present at the location which is stored in p so at p 1000 is stored at 1000 location 80 is stored so it will give us 80
+173.524 - 175.245:  What will be the value of A?
+175.845 - 177.225: A value is already 80.
+179.086 - 180.487: What will be the value of P?
+181.347 - 182.227: P value will be 1000.
+182.267 - 185.008: What will be the value of Q?
+185.108 - 186.749: Q value is 2000.
+188.53 - 190.53: And what will be the value of &A?
+191.071 - 194.932: Means address of A. What will be the address of A?
+195.492 - 194.932: 1000.
+195.652 - 196.433: So it will give us 1000.
+200.674 - 202.255: Now this is our example.
+203.297 - 204.719:  See what is happening in it.
+205.499 - 209.844: Where is a variable of integer type which has the value 789.
+209.904 - 216.09: See and it is stored at 1000 location which we have assumed.
+217.432 - 220.775: Now the second line is ptr star int.
+221.155 - 226.441: It means we have declared a pointer to variable which is pointing to an integer.
+227.623 - 234.687:  And in this line ptr1 is a pointer to a pointer or double pointer which is pointing to an integer type.
+237.069 - 240.671: Then the fourth line is ptr2 is equal to address of where.
+241.252 - 246.515: It means ptr2 pointer will store address of variable where.
+247.435 - 248.816: So see pointer2 is this.
+249.557 - 251.318: It is storing address of where.
+251.478 - 252.138: Where address is 1000.
+253.199 - 253.979: Hence its value is 1000.
+255.362 - 257.504:  And PTR2 is stored at the location 2000.
+259.385 - 263.049: Now the next line is PTR1 is equal to address of PTR2.
+264.009 - 264.73: What does it mean?
+265.27 - 269.554: It means PTR1 is a double pointer which is storing address of pointer 2.
+270.455 - 271.636: And what is the address of pointer 2?
+272.937 - 271.636: 2000.
+273.637 - 276.9: So pointer 1 will store 2000 as its value.
+277.761 - 279.222: And it is stored at the location 3000.
+280.283 - 281.224: We have assumed that.
+282.759 - 284.62:  Now we have three printf statements.
+284.7 - 285.96: Let us take the output.
+287.0 - 289.081: So first is we have to print where.
+289.541 - 291.382: Where value is 789.
+293.062 - 294.903: Second is starptr2.
+295.303 - 302.985: Starptr2 means it will fetch the value which is stored at the location which pointer 2 has.
+303.785 - 305.426: So pointer 2 has 1000 as the location.
+305.446 - 307.626: So at the 1000 location value is 789.
+310.626 - 337.583:  so it will give us the output 789 so next line is **ptr1 so what it will give ptr1 is a pointer to a pointer so ptr1 contains 2000 which is the address of ptr2 ptr2 contains 1000 which is the address of where so **ptr1 will give us the value which is stored at this location which is 789 ok
+340.111 - 347.977:  let us see the output of programming code so this is our code now we have to run it
+379.281 - 380.521:  So see these are the outputs.
+381.502 - 382.862: Value of var is 789.
+383.483 - 385.663: Value of var using single pointer is 789.
+386.324 - 388.724: And value of var using double pointer will be also 789.
+389.345 - 394.506: Okay, so these outputs are totally matching with our slides output.
+398.048 - 398.908: Thank you for watching.
+
+
+The content from the lecture slides:
+Page 1: In the C programming language, as per the standard post-99, the keyword 'restrict' has been introduced. This keyword is applied mainly in the declaration of pointers as a type qualifier. Its primary purpose is not to introduce new functionality, but to inform the compiler of optimizations it can perform by considering that the 'restrict'-qualified pointer is the only reference to the memory being pointed to, allowing the compiler to avoid unnecessary checks. However, if the 'restrict' contract is broken by the programmer, the behavior of the program is undefined. It is important to note that 'restrict' is unique to C and is not supported in C++.
+
+Page 2: The slide illustrates an example of how to use the 'restrict' keyword in a C program. The code shows a function named `use` with three pointer parameters, where the third pointer `c` is qualified with 'restrict'. Within `use`, the variable pointed to by `a` is increased by the value pointed to by `c`, and the same for the variable pointed to by `b`. Since `c` is declared with 'restrict', the compiler is informed that `c` is the sole pointer through which the pointed value can be accessed, which leads to more optimized assembly code since the compiler won't reload the value from `c` on every access. The `main` function demonstrates the use of the `use` function by passing addresses of three integer variables `a`, `b`, and `c`. The result is printed to the standard output, demonstrating that variables `a` and `b` have been modified by the value of `c` as defined in the `use` function.
+
+Page 3: This slide simply contains a thank you message for attending the presentation or lecture. It also offers an invitation for comments, indicating an openness to feedback or questions about the presented content.
+After going through this video, you will be able to get the
+output of following snippet of codes:
+1. &*&*&**&&*ptr
+2.
+3. So on...
+**&&**&&**&&**ptr
+PTT
+BOUD
+3Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+getchar();
+return 0;
+}
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+g
+E
+102
+K
+103
+S
+F
+104 105
+*&*&*ptr
+Series of execution will be → *ptr → *(100)
+→g →&g → 100 ➜ *(100) →g →⇒ &g →
+100 ➜ *(100) →g
+ORG
+E
+E
+106 107 108 109 110
+K
+111
+S
+112
+\0
+113Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+geeksforgeeks
+E
+K
+102 103
+S
+F
+104 105
+*&*&ptr
+Series of execution will be →&ptr → 200 ➜
+*(200) → 100 ➜&100 ➜ 200 ➜ *(200)
+➜100
+ORG E
+106 107 108 109
+E
+110
+K
+111
+S
+112
+\0
+113Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+getchar();
+return 0;
+}
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+g
+E
+102
+K
+103
+S
+F
+104 105
+*&*&*ptr
+Series of execution will be → *ptr → *(100)
+➜g ⇒ &g ⇒ 100 ➜ *(100) ⇒g ⇒ &g →
+100 ➜ *(100) →g
+ORG
+106 107 108
+E
+E
+109 110
+K
+111
+S
+112
+\0
+113Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+geeksforgeeks
+E
+102
+K
+103
+S
+104
+F
+105
+*&*&ptr
+Series of execution will be →&ptr → 200 ➜
+*(200) → 100 ➜&100 ➜ 200 ➜ *(200)
+➜100
+ORG E
+106 107 108 109
+E
+110
+K
+111
+S
+112
+\0
+1131
+File
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+2
+3
+AutoSave Off HE
+4
+5
+Home Insert Design Transitions Animations Slide Show Review
+DG
+Slide 1 of 5
+Dereference,
+Reference
+OG Thank you for watching!
+DE
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+Rehearse Record Slide
+Timings Show -
+Set Up
+View Help
+енее
+Play Narrations
+Use Timings
+✔Show Media Controls
+DG
+A
+Array_parameters_as_pointers
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+Monitors
+Dereference,
+Reference
+Notes
+gl
+88
+Vishal Gulia
+Share
+Comments
+«»
++76% 53
+7:53 PM
+3/7/2019File
+1
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+2
+AutoSave Off HE
+4
+5
+Home Insert Design Transitions Animations Slide Show Review
+DG
+Dereference,
+Reference
+OG Thank you for watching!
+Slide 4 of 5 DE
+e
+Set Up
+Slide Show
+Hide Rehearse Record Slide
+Slide Timings Show-
+Set Up
+Click to add notes
+Example ...
+#include<stdio.h>
+int main()
+{
+getchar();
+return 0;
+char *ptr = "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+}
+G
+100
+Play Narrations
+Use Timings
+Show Media Controls
+E
+101
+Ptr = 100
+200
+View Help
+енее
+Output:
+geeksforgeeks
+E
+102
+K
+103
+A
+Array_parameters_as_pointers
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+S
+104
+Monitors
+*&*&ptr
+Series of execution will be →&ptr → 200 →
+*(200)→→ 100 →→&100 ➜ 200→*(200)
+→100
+FOR
+G
+105 106 107 108
+| | |κ |s
+109
+110 111
+\0
+112 113
+Notes
+gl
+88
+Vishal Gulia
+Share
+Comments
+«»
++76% 53
+7:53 PM
+3/7/2019From
+Beginning Current Sunbasic.cpp Show Timings Show-
+Set Up
+1
+AutoSave Off HE
+Review View Help
+File Home Insert Design Transitions Animations Slide Show
+C:\Users\vgulia\Documents personal documents\C_Pointers basic.cpp-Notepad++
+-File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window Pay Narrations
+P
+03-17
+2
+3
+5
+1 #include<stdio.h>
+int main()
+Slide 4 of
+3 8(
+DG
+char *ptr = "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+getchar();
+return 0;
+OG Thank you for watching
+C++ source file
+Click to add notes
+еге
+Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+Show Media Controls
+G
+100
+E
+101
+Ptr = 100
+200
+Output:
+geeksforgeeks
+E
+102
+K
+103
+A
+Array_parameters_as_pointers
+Storyboarding O Tell me what you want to do
+Monitor: Automatic
+ABC
+Use Presenter View
+S
+104
+F
+105
+0
+106
+*&*&ptr
+Series of execution will be → &ptr → 200 →
+*(200) 100 ➜&100 ➜200 ➜ (200)
+→ 100
+R
+107
+length: 127 lines: 10
+108
+E
+E
+109 110
+K
+111
+Ln: 10 Col:1 Sel: 010
+S
+112
+\0
+113
+Vishal Gulia
+Share
+Windows (CRLF) UTF-8
+Comments
+INS
+7:53 PM
+3/7/2019
+X
+>«»
+83C:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+|DC|
+gpu_info.py X gpu_info bxt X basic.cpp X basic1.cpp X
+1 #include<stdio.h>
+2 int main()
+3 (
+4 char *ptr "geeksforgeeks";
+5 printf("%c\n", *&*&*ptr);
+9
+10
+getchar();
+return 0;
+}
+C++ source file
+e
+e
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+UC
+E
+Windows (CRLF)
+UTF-8
+I
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DOC
+basic.cpp X basic1.cpp X
+gpu_info.py X gpu_info.bxt X
+1
+#include<stdio.h>
+int main()
+2345678
+3 (
+10
+char *ptr "geeksforgeeks";
+printf("3c\n", *&*&*ptr);
+getchar();
+return 0;
+9 }
+C:\WINDOWS\system32\cmd.exe
+C++ source file
+e
+e
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Tra
+Windows (CRLF)
+UTF-8
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DOC
+gpu_info.py Xgpu_info.txt X basic.cpp basic1.cpp X
+1
+#include<stdio.h>
+234567890
+int mai C:\WINDOWS\system32\cmd.exe
+3 (
+char Microsoft Windows [Version 10.0.16299.967]
+printf ((c) 2017 Microsoft Corporation. All rights reserved.
+getchar \Users\vgulia>
+return
+10
+}
+C++ source file
+e
+ене
+A
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+UC
+E
+X
+Windows (CRLF)
+UTF-8
+7:53 PM
+3/7/2019
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+*DOC
+gpu_info.py X gpu_info.txt basic.cpp basic1.cpp X
+1
+23456698
+#includecatdio ha
+int ma C\WINDOWS\system32\cmd.exe
+3 (
+Microsoft Windows [Version 10.0.16299.967]
+char (c) 2017 Microsoft Corporation. All rights reserved.
+getchas:\Users\vgulia>
+printf
+10
+return
+}
+C++ source file
+e
+ене
+A
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+T
+0 X
+Windows (CRLF)
+UTF-8
+7:53 PM
+3/7/2019
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DPC
+gpu_info.py gpu_info.txt X basic.cpp basic1.cpp X
+1 #include<stdio.h>
+2
+3
+34567890
+10
+C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.967]
+char *ptr="geeks (c) 2017 Microsoft Corporation. All rights reserved.
+printf("%c\n", *&* pal
+C:\Users\vgulia>
+int main()
+(
+getchar();
+return 0;
+}
+C++ source file
+e
+еге
+A
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Windows (CRLF)
+UTF-8
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DPC
+gpu_info.py gpu_info.txt X
+1 #include<stdio.h>
+2 int main()
+3 (
+67794456
+10
+getchar();
+return 0;
+}
+C++ source file
+basic.cpp basic1.cpp X
+char *ptr "geeksforge
+printf("%c\n", *&*&*ptzc:\Users\vgulia>
+e
+C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+енее
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+0
+Windows (CRLF)
+X
+UTF-8
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DPC
+basic.cpp X base
+gpu_info.py gpu_info.txt X
+1 #include<stdio.h>
+2 int main()
+3
+(
+char *ptr "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+34567890
+10
+getchar();
+return 0;
+}
+C++ source file
+e
+C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+C:\Users\vgulia>
+енее
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+I
+Windows (CRLF) UTF-8
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DPC
+basic.cpp X
+gpu_info.py gpu_info.txt X
+1 #include<stdio.h>
+2 int main()
+3 (
+67794456
+10
+char *ptr "geeksforgeeks";
+printf("%c\n", *&*&*ptr);
+getchar();
+return 0;
+}
+C++ source file
+e
+basicl
+C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+C:\Users\vgulia>
+енее
+A
+ABC
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Windows (CRLF)
+T
+UTF-8
+0
+X
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+DUC
+gpu_info.pygpu_info.txt basic cop X
+1 #include<stdio.h>
+2 int main()
+3 (
+4 char *ptr "geeksforgeeks";
+5 printf("%c\n", *&*&*ptr);
+9
+10
+getchar();
+return 0;
+}
+C++ source file
+e
+C:\Users\vgulia\Documents personal_documents\C_Pointers\basic1.cpp
+еге
+length: 127 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Windows (CRLF)
+UTF-8
+I
+0
+7:53 PM
+3/7/2019
+X
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic1.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window?
+DSC
+gpu_info pygpu_info.txt Xbasic.cpp basic1.c C:\WINDOWS\system32\cmd.exe - basic.exe
+Microsoft Windows [Version 10.0.16299.967]
+1 #include<stdio.h>
+2
+3
+3456TBSO
+7
+8
+10
+0
+int main()
+(
+9 }
+O
+char *ptr "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+Thence Dais
+C++ source file
+e
+(c) 2017 Microsoft Corporation. All rights reserved.
+C:\Users\vgulia>cd Documents\personal_documents\C_Pointers
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+basic.cpp: In function 'int main()':
+basic.cpp:4:13: warning: ISO C++ forbids converting a string constant to 'char** [-Wwrite-strings]
+char *ptr = "geeksforgeeks";
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+E
+C:\WINDOWS\system32\cmd.___
+ABC
+e ег
+C:\WINDOWS\system32\- X
+N
+length: 126 lines: 10
+Ln: 10 Col: 1 Sel: 010
+Windows (CRLF)
+UTF-8
+7:54 PM
+3/7/2019
+INS
+XC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic1.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window?
+XDDPE
+gpu_info.py X
+1 #include<stdio.h>
+2 int main()
+3
+(
+34567890
+10
+gpu_info.txt basic.cpp
+char *ptr "geeksforgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+C++ source file
+e
+C:\WINDOWS\system32\cmd.exe - basic.exe
+Microsoft Windows [Version 10.0.16299.967]
+(c) 2017 Microsoft Corporation. All rights reserved.
+C:\Users\vgulia>cd Documents\personal_documents\C_Pointers
+basic1.co
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp -o basic
+basic.cpp: In function 'int main()':
+basic.cpp:4:13: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+char *ptr = "geeksforgeeks";
+ABC
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>basic.exe
+C
+ене
+A
+length: 126 lines: 10
+Ln: 10 Col: 1 Sel: 010
+LUC
+LIER
+Windows (CRLF)
+T
+UTF-8
+X
+7:54 PM
+3/7/2019
+X
+INS
+XFile
+5
+From
+From Present Custom Slide
+Beginning Current Slide Online- Show -
+Start Slide Show
+1
+N
+3
+AutoSave Off HE
+Home Insert Design Transitions Animations Slide Show Review View Help
+Play Narrations
+Use Timings
+Show Media Controls
+4
+5
+DG
+Slide 4 of 5
+H
+Mary
+Dereference
+OG Thank you for watching!
+C
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+Rehearse Record Slide
+Timings Show
+Set Up
+e ве
+Example ...
+#include<stdio.h>
+int main()
+{
+char *ptr = "geeks forgeeks";
+printf("%s\n", *&*&ptr);
+getchar();
+return 0;
+}
+100
+E
+101
+Ptr = 100
+200
+Output:
+geeksforgeeks
+EK
+102 103
+A
+Array_parameters_as_pointers
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+S
+104
+Monitors
+*&*&ptr
+Series of execution will be →&ptr → 200 →
+*(200)→→ 100 →&100 ➜ 200 ➜ *(200)
+→100
+FOR
+105 106 107
+G
+108
+| | | |s
+109
+110
+111
+\0
+112 113
+Notes
+88
+Vishal Gulia
+D
+Share
+Comments
+«»
++76% 5
+7:54 PM
+3/7/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show Review View Help
+Play Narrations
+Use Timings
+Show Media Controls
+From From Present Custom Slide
+Beginning Current Slide Online- Show-
+Start Slide Show
+1
+2
+4
+5
+DG
+Slide 5 of 5
+H
+Dereference,
+Reference
+OG Thank you for watching!
+E
+e
+Set Up
+Slide Show
+Hide
+Slide
+Click to add notes
+Rehearse Record Slide
+Timings Show -
+Set Up
+енее
+Array_parameters_as_pointers
+A
+Storyboarding Tell me what you want to do
+Monitor: Automatic
+Use Presenter View
+DG
+P
+Monitors
+Thank you for watching!
+Please leave us your comments.
+Notes
+gl
+88
+Vishal Gulia
+0+
+Share
+Comments
++76% 5
+7:54 PM
+3/7/2019

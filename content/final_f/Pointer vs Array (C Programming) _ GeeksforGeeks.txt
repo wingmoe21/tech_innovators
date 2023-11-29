@@ -1,0 +1,143 @@
+Transcript of the audio for the lecture:
+0.247 - 3.828:  Today in this video, we will discuss about pointer versus array.
+5.889 - 13.071: So in this slide, we will deal with some important points and then we will see the examples corresponding to those points.
+13.751 - 16.092: So the first point is size of operator.
+16.872 - 25.935: So if you will apply the size of operator on an array, then it will return the amount of memory used by all the elements in the array.
+27.751 - 38.035:  and if you will apply size of operator on pointer then it will only returns the amount of memory used by the pointer variable itself.
+40.056 - 43.597: Second point is the address of operator.
+45.338 - 56.942: So if you will apply this operator on the array name or on the first element of the array then both will give the same address that's why
+57.819 - 68.623:  They are saying that address of array is an alias for address of array 0 because both will returns the address of first element in the array.
+71.324 - 79.126: Then if you will apply this operator on a pointer itself then it will return the address of the pointer where it is stored.
+82.467 - 87.309: Our next point is a string literal initialization of a character array.
+88.772 - 117.063:  so we have two types of representations one is this and the second is this both have some differences with each other so let us see if we will use this representation so it means we have an array who has four elements first one is a second one is b third one is c
+117.856 - 146.601:  and fourth one is null character okay and if we will print the address of array then it will give us the first element address and if we will represent using this representation then it means there is an array and there is a pointer which is pointing to a character
+147.935 - 174.854:  okay so there is a pointer who is stored at some other location and storing the address of first element of this array it has also four elements first one is a second one is b third one is c and fourth one is null but the difference between these both two representation
+176.556 - 202.431:  that the second representation will be stored in a read-only memory so if we will change any one of those elements using this pointer then it will be impossible but you can change any of these elements using this array okay
+204.508 - 210.211:  So one more point is pointer variable can be assigned a value whereas array variable cannot be.
+211.212 - 214.974: Right because we cannot change the base address of an array.
+217.295 - 222.418: Now we will see some examples which will deal with the above points which we have discussed.
+225.52 - 231.163: See we have an integer array which has four elements 1 2 3 4.
+233.939 - 239.884:  They are stored at 100, 104, 108, 112 location.
+241.545 - 253.954: Then we have a character array who has 4 elements a, b, c and null character who are stored at 100, 101, 102, 103 locations.
+258.117 - 262.761: Now we are creating a pointer ptr which is pointing to a character.
+264.065 - 289.498:  okay and this character location is 100 so this character location is 100 right and this ptr is stored at 1000 location and this is an array which has four elements a b c and null character they are stored at 100 101 102 and 103 location
+293.723 - 298.024:  Now we are printing some lines and we will see what will be the result.
+300.304 - 302.184: So the first one is size of array.
+303.625 - 311.566: So this array has 4 elements and each element is of 4 bytes.
+312.966 - 314.407: Then what will be the size of array.
+315.227 - 317.267: Size of array will be 16 bytes.
+319.688 - 319.888: Right.
+321.568 - 322.328: In the next line.
+323.172 - 352.528:  we are printing value of array so what it will give it will give us the address of the first element location which is 100 and if you will print address of array then also it will give us 100 as the value so in the next line we are defining this is equal to a b c and corresponding to this line this is the memory map
+353.792 - 356.193:  And corresponding to this line, this is the memory map.
+358.293 - 364.555: Then what we are doing, we are printing r. So r will give us this 100 as the value.
+366.156 - 369.417: And if we do r plus 1, then where it will go?
+370.257 - 373.118: It will go to the next location.
+374.938 - 378.6: And now what we are doing, we are dereferencing at this location.
+381.02 - 381.26: Okay.
+381.58 - 383.241: And we are updating its value by z.
+383.843 - 413.443:  so we will update this value by z in the next line what we are doing star ptr plus 1 so what is ptr ptr is a pointer to a character okay whose value is 100 and stored at 1000 location so if i will do ptr plus 1 then 100 plus 1 so it will go to the next location now what we are doing we are updating this location by z
+415.43 - 444.621:  okay so we want to update this location by z but it is impossible because see this type of representation will be stored in the read only memory what is the meaning of read only memory it means we can only read the content which ptr is pointing but we cannot write
+445.367 - 446.227:  or update them.
+447.068 - 448.588: So, this is impossible.
+450.169 - 454.491: So, it will throw an error because it is stored in read only memory.
+456.091 - 459.313: In the last line, we are printing ARR.
+460.733 - 461.013: Okay.
+462.154 - 464.875: Not printing, we are updating this ARR value.
+465.275 - 465.875: What is ARR?
+466.475 - 472.798: ARR is the name of the array or we can say if we will print ARR, it will give us the
+474.505 - 476.807:  location of the first element of the array which is 100.
+478.648 - 482.251: Now we are updating the location of first element of the array.
+483.212 - 484.433: So it is impossible.
+484.974 - 491.339: So it will throw an error because we cannot change the base address of the array itself.
+493.1 - 494.181: Thank you for watching.
+
+
+The content from the lecture slides:
+Page 1: The image shows a lecture slide promising that after watching a specific video, one will be able to understand the output of given snippets of code related to pointer operations. The snippets use varying levels of pointer indirection and involve a variable named "ptr".
+
+Page 2: This slide provides an example of code in C language that demonstrates the use of multiple levels of pointers (indirection). The code includes a character pointer "ptr" pointing to a string "geeksforgeeks". It illustrates how applying the dereference operator (*) multiple times on "ptr", combined with the address of operator (&), results in printing the character 'g'. The slide includes a table mapping the ASCII values of characters to their respective letters of "geeksforgeeks" and highlights the pointer address and dereferencing steps involved.
+
+Page 3: A continuation of the previous explanation, but this time it shows how multiple dereferences of the "ptr" variable result in printing the entire string "geeksforgeeks". The process involves dereferencing the pointer to get the location of the first character's ASCII value and then resolving that location to print the whole string. The slide also includes a similar ASCII value table and further clarifies the steps of pointer dereferencing.
+
+Page 4: This slide provides a visible setup and overview of the presentation in a presentation software, showcasing all five slides with the title "Array_parameters_as_pointers." It is not directly informational but rather an organizational view of the slide deck.
+
+Page 5: The slide shown, within the overall view of the presentation, is similar to page 3, detailing the example of multiple levels of pointer indirection leading to the output "geeksforgeeks."
+
+Page 6: Another overview of the presentation from a different angle, showing the slide layout in presentation mode, which confirms the content we've seen on the individual slides and the topic related to pointers in C.
+
+Page 7: This screenshot shows a coding environment where the same example code from the previous slides is open in a text editor, Notepad++, with the file named "basic.cpp".
+
+Page 8 to Page 13: These are repetition of the code snippet shown on Page 7 with slight variations in the environment, such as displaying the command prompt window, or editor window zoom level changes. They all present the same C code where a character pointer "ptr" is initialized with the string "geeksforgeeks" and a statement prints the string through pointer indirection.
+
+Page 14: A view of the last slide of the presentation, expressing thanks for watching and inviting viewers to leave comments. This slide serves as the conclusion of the lecture or presentation.
+
+Program ...
+int a = 10;
+char b = 'x';
+void *p = &a; // void pointer holds address of int 'a'
+p = &b; // void pointer holds address of char 'b'
+a = 10
+1000
+b = x
+2000
+p = 1000 ➜ 2000
+3000
+Note: void pointer can contain the address of a
+variable of any type.Program ...
+#include<stdio.h>
+int main()
+{
+}
+#include<stdio.h>
+int main()
+{
+}
+int a = 10;
+void *ptr = &a;
+printf("%d", *ptr);
+return 0;
+}
+int a = 10;
+void *ptr = &a;
+printf("%d", *(int *)ptr);
+return 0;
+#include<stdio.h>
+int main()
+{
+int a[2] = {1, 2};
+void *ptr = &a;
+ptr = ptr + sizeof(int);
+printf("%d", *(int *)ptr);
+return 0;
+a = 10
+1000
+a = 10
+1000
+1
+1000
+2
+1004
+ptr = 1000
+1000
+ptr = 1000
+1000
+ptr = 1000
+3000
+While dereferencing ptr, how compiler will get
+to know that how many bytes it has to fetch
+from this address, as it is void pointer? Hence
+throw an error.
+While dereferencing ptr, now compiler knows
+that it has to fetch bytes equal to sizeof(int),
+hence it will give 10 as value.
+Ptr = 1000 ➜ 1004 → typecasting to
+int pointer → 2Advantages of void pointers:
+1) malloc() and calloc() return void * type and this allows
+these functions to be used to allocate memory of any
+data type (just because of void *).
+2) void pointers in C are used to implement generic
+functions in C. For example compare function used in
+qsort.DG
+Thank you for watching!
+Please leave us your comments.

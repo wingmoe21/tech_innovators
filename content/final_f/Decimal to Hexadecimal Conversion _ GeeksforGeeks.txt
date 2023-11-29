@@ -1,0 +1,148 @@
+Transcript of the audio for the lecture:
+0.293 - 0.893:  Hello friends.
+1.154 - 2.294: Welcome to GeeksforGeeks.
+2.715 - 8.178: In this tutorial, we are going to see how to convert a decimal number to a hexadecimal number.
+8.938 - 19.164: The problem statement is that given a decimal number as input, we need to write a program to convert the given decimal number into the equivalent hexadecimal number.
+19.685 - 23.547: That is convert the number with the base 10 to base 16.
+24.248 - 29.871: The base value of a number system determines the number of digits used to represent a numeric value.
+30.336 - 45.186:  For example, the binary number system uses 2 digits 0 and 1, octal number system uses 8 digits from 0 to 7 and decimal number system uses 10 digits 0 to 9 to represent any numeric value.
+45.567 - 51.691: In a hexadecimal number, we use 16 symbols namely 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D,
+59.406 - 62.529:  e and f to represent all the numbers.
+63.129 - 80.023: To remove any confusion, here we have substituted 10 as a, 11 as b, 12 as c, 13 as d, 14 as e and 15 as f. Now let us look at the algorithm to convert a decimal number into an hexadecimal number.
+80.583 - 81.184: Step 1.
+81.624 - 84.546: We find the remainder of the number when it is divided by 16
+85.586 - 92.731:  And according to the value of the remainder, we either add 48 or 55 to it and store it inside the character array.
+93.112 - 96.074: Step number 2, we divide the number by 16 now.
+96.574 - 101.158: Step number 3, we repeat the above two steps until the number is not equal to 0.
+102.018 - 105.481: Step number 4, we finally print the array in the reverse order.
+105.941 - 108.603: Now let us understand this algorithm with an example.
+109.304 - 110.965: Suppose the decimal number is 2545.
+112.987 - 119.729:  So according to step number 1, we find the remainder of 2545 when it is divided by 16, which is 1.
+120.209 - 126.071: As 1 is less than 10, we just add 48 to its ASCII value and insert it into the array.
+126.531 - 128.712: Now step number 2, we divide the number by 16.
+129.452 - 133.573: Therefore, 2545 divided by 16 will give 159.
+134.093 - 139.395: Step number 3 asks us to perform step number 1 and 2 until the number is not equal to 0.
+140.205 - 145.289:  So, we find the remainder of 159 when it is divided by 16, which is 15.
+145.93 - 154.437: As the value of 15 is greater than 9, we insert 55 to its ASCII value and obtain F, which we insert into the character array.
+154.918 - 157.9: Again, 159 divided by 16 will give 9.
+158.481 - 164.426: As the value of number is still not equal to 0, we again find the remainder of 9 when it is divided by 16, which is 9.
+166.445 - 172.25:  As the value of 9 is less than 10, we add 48 to its ASCII value and insert it into the array.
+173.05 - 175.692: Now 9 is divided by 16 to obtain 0.
+176.633 - 182.738: As the value of number is now 0, we go to step number 4 which asks us to print the array in reverse order.
+183.238 - 188.162: Therefore, for the decimal number 2545, the hexadecimal equivalent will be 951.
+189.603 - 190.884: Now let us look at the code.
+191.542 - 197.265:  In the function we have passed decimal number n and the function prints its hexadecimal equivalent.
+197.765 - 202.067: We declare a character array hexadecimal number to store the hexadecimal number.
+202.647 - 204.568: We also declare a counter i as 0.
+205.729 - 208.83: Now we run a while loop until n is not equal to 0.
+208.95 - 213.092: Inside the while loop we have a variable temp to store the remainder.
+213.653 - 218.395: Then we find the remainder of n when it is divided by 16 and store it into temp.
+219.159 - 223.041:  Now we check if either temp is less than 10 or greater than equal to 10.
+223.561 - 231.826: If it is less than 10 we add 48 to its ASCII value and if it is greater than equal to 10 then we add 55 to its ASCII value.
+232.466 - 239.51: In both the cases we store it into the ith position of the hexadecimal array and increase the value of i by 1.
+240.23 - 243.612: After this we change the value of n by dividing it by 16.
+244.132 - 247.774: The while loop will continue until the value of n is not equal to 0.
+248.701 - 256.288:  After the while loop, we will print the hexadecimal number character array in reverse order to obtain the hexadecimal equivalent of the number.
+256.968 - 259.03: Now let us understand this with an example.
+259.631 - 262.153: Suppose we have the decimal number n as 2545.
+262.493 - 268.458: We initialize i as 0 and the hexadecimal array will be empty in the beginning.
+269.079 - 272.582: As the value of n is not equal to 0, we enter the while loop.
+273.297 - 278.82:  In the first iteration we will find the remainder of 2545 when it is divided by 16.
+279.5 - 280.761: Here in this case it is 1.
+281.221 - 283.322: We assign 1 to the value of temp.
+284.042 - 288.825: As temp is less than 10 we add 48 to it to obtain the ASCII value of 1.
+289.545 - 296.228: We push 1 to the 0th index of hexadecimal array and we increase the value of i by 1.
+296.808 - 298.549: Now we divide n by 16 to obtain 159.
+300.729 - 305.592:  As the value of n is still not equal to 0, we continue on to the next iteration.
+306.352 - 310.254: In this iteration, we again find the remainder when temp is divided by 16.
+311.295 - 312.456: Here it is 15.
+312.576 - 314.657: We assign the value of 15 to temp.
+315.257 - 328.745: As the value of temp which is 15 is greater than equal to 10, this time we add 55 to it to obtain the fchi value of character f. We place f at the 1 index of the hexadecimal number array.
+330.134 - 337.496:  Now we increase the value of i by 1 to 2 and then we divide the value of n by 16 to obtain 9.
+338.016 - 341.938: As n is still not equal to 0, we continue on to the next iteration.
+342.418 - 347.839: In this iteration, we again find the value of temp which is the remainder when 9 is divided by 16.
+347.959 - 349.38: It will give 9.
+350.5 - 356.682: As the value of temp is less than 10, we add 48 to it to obtain the ASCII value of character 9.
+357.597 - 365.381:  We push character 9 to the second index of the hexadecimal number array and finally we divide n by 16 to obtain 0.
+366.242 - 379.589: As now the value of n is equal to 0 we can exit the while loop and we will print the hexadecimal number in its reverse form to get 951 which is the hexadecimal number output of the decimal number 2545.
+381.29 - 382.57: I hope you understood the code.
+382.991 - 383.931: Thank you for watching.
+384.131 - 385.212: Please leave us your comments.
+
+
+The content from the lecture slides:
+Page1: The slide explains the use of the `realloc()` function in C programming, which allows for the resizing of dynamically allocated memory. The function prototype is `void *realloc(void *ptr, size_t size);`. It deallocates the old memory block pointed to by `ptr` and allocates a new block with the size specified by `size`. The contents of the new memory block are identical to the old block up to the minimum of the new and old sizes. If the memory beyond the old size is accessed, it will have indeterminate values. A crucial point to note is that `realloc()` should only be used with memory that was dynamically allocated, such as through `malloc()` or `calloc()`. If `realloc()` is used with memory not dynamically allocated, the behavior is undefined, meaning the result cannot be predicted and the program may crash or behave erratically.
+
+Page2: This slide contains a code example in C demonstrating an incorrect use of `realloc()`. A static array `arr` of 2 integers is defined. The `realloc()` function is erroneously used to attempt to resize the array, which is not dynamically allocated. The program assigns a value to a position beyond the original array size, causing undefined behavior. This code is likely to lead to runtime errors or unexpected results because `realloc()` is not intended for use with static arrays.
+
+Page3: The slide shows a correct usage of dynamic memory allocation and resizing in C. It creates an initial dynamic array with `malloc()`, assigns values to it, and then uses `realloc()` to resize the array to hold three integers instead of two. The new element is assigned a value, and the array is printed out. This example correctly employs `realloc()` with previously dynamically allocated memory, which is the intended use case.
+
+Page4: This is a closing slide thanking viewers for watching and inviting them to leave comments. It does not contain instructional content.
+Decimal number: 17
+Waiting for play.google.com....
+2 17 1
+28 0
+24
+0
+2 0
+1
+2
+Binary number: 10001
+Algorithm
+1.
+Store the remainder when the number
+is divided by 2 in an array.
+Divide the number by 2
+2.
+3. Repeat the above two steps until the
+number is greater than zero.
+4. Print the array in reverse order now.
+Google SlidesSlide 3
+>
+17
+Code
+// function to convert decimal to binary
+void decToBinary(int n)
+{
+}
+// array to store binary number
+int binaryNum[32];
+// counter for binary array
+int i = 0;
+while (n > 0) {
+// storing remainder in binary array
+binaryNum[i] = n % 2;
+n = n / 2;
+i++;
+}
+// printing binary array in reverse order
+for (int j = i - 1; j >= 0; j--)
+cout << binaryNum[j];
+Google Slides// function to convert decimal to binary
+void decToBinary(int n)
+{
+// array to store binary number
+int binaryNum[32];
+// counter for binary array
+int i = 0;
+while (n > 0) {
+// storing remainder in binary array
+binaryNum[i] = n % 2;
+n = n / 2;
+i++;
+}
+// printing binary array in reverse order
+for (int j = i - 1; j >= 0; j--)
+cout << binaryNum[j];
+Slide 4
+47
+Code
+Dry Run
+binaryNum] = {
+n = 17
+i=0
+Google SlidesWaiting for docs.google.com...
+DG
+Thank you for watching!
+Please leave us your comments.
+Google Slides

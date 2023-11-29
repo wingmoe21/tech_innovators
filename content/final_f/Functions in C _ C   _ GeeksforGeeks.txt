@@ -1,0 +1,72 @@
+Transcript of the audio for the lecture:
+0.299 - 4.723:  friends today in this video we will discuss about functions in C and C++.
+7.325 - 8.085: So let us start.
+9.627 - 15.091: So these are the basics of how to define a function and how to call a function.
+16.592 - 28.402: So as we can see first of all we will write the return type of the function then the function name then the arguments and for each argument we have a argument type.
+29.844 - 35.286:  then body will come and in the last or in between the body we will return something.
+36.826 - 43.869: Okay, so whatever we will return it should be of same type as return type otherwise error will come.
+45.169 - 46.89: Now we will see how to call a function.
+47.85 - 59.374: So using the function name and the required parameters we will call the function and whatever it will return it will be stored into our variable and this variable should be
+60.279 - 66.082:  of the same type as return type because it will contain the value which function is returning.
+69.545 - 71.506: So let us understand this program.
+74.227 - 76.168: So in this program we have a main function.
+77.049 - 83.273: Inside main function two values are there a and b. a value is 10 b value is 20.
+83.833 - 88.896: Now we are calling a max function and sending a and b values.
+89.884 - 93.225:  a value is 10 and b value is 20.
+95.565 - 107.368: So whenever we will send these values or we will call this function it will go here and int x value will be 10 and int y value will be 20.
+109.908 - 113.909: So if x is greater than y means 10 is greater than 20 it is false.
+114.749 - 118.41: So it will go into else statement and it will return y value.
+118.934 - 148.495:  y value will be 20 so 20 will go here okay so int m will be 20 only then we will print m value so m value will be 20 so output will be m is 20 in this slide we will see what is the difference between col by value and col by reference so first program is corresponding to col by value
+148.979 - 151.961:  and second program is corresponding to call by reference.
+153.623 - 155.344: So, let us discuss the first program.
+156.064 - 158.266: So, we have a main method and fun method.
+158.826 - 162.669: So, whenever compiler will run this program.
+163.95 - 178.441: So, first of all it will form a first context with main method and inside it, it will create a local variable int x is equal to 20 and we assume that this 20 has been stored
+179.187 - 181.028:  at 1000 address location.
+182.389 - 191.655: Then we are calling function x. So x is the value which is 20 so we are sending 20 as the value in function.
+192.936 - 200.66: So when it will call this function it will go into another context of stack memory where fun context will be created.
+202.822 - 206.464: In fun method int x is a local variable
+207.27 - 233.942:  where we will pass this 20 so x value will be 20 now what we are doing we are updating x value so x will be 30 so whenever this function will be completed we will return from here and this context will be deleted when we will come back we have to print x so which x value it will take this x value it will take 20 so it will print 20 as the value
+235.569 - 264.954:  this problem is known as call by value reference because we are sending value in the arguments in the second program instead of sending value we will send address of the variable so as we can see there is a main method int x is equal to 20 and we are sending address of x okay so see we will send address address will be 1000 so we are sending 1000 as the value so when we will call
+265.45 - 291.31:  this function fun another context will be created and we have a int star ptr ok so ptr is a variable so it will contain an address which is 1000 then what we are doing see star ptr means star 1000 what it will give star 1000 will give us the value
+293.581 - 319.028:  which is present at 1000 location and at 1000 location what is the value 20 is the value so we will update it by 30 so it has been updated by 30 now this function has been completed it will deleted from the context and we will come back so when we will come back and if we will print x value what it will be it will be 30 so x value will be 30
+320.114 - 323.664:  So this is the difference between colby value and colby reference.
+325.769 - 326.772: Thank you for watching.
+
+
+The content from the lecture slides:
+Page1: This slide introduces the basics of function definitions in programming. It outlines that a function definition consists of a return type, function name, and parameters with their types. The body of the function contains the code to be executed, and the function should return a result that matches the return type. The slide also shows how to assign the result of a function call to a variable of the return type.
+
+Page2: The slide presents a practical example of a simple C program that includes defining and using functions. It features a function `max()` that takes two integer parameters and returns the larger of the two. The `main()` function declares two variables, `a` and `b`, calls the `max()` function with these variables, and then prints the result.
+
+Page3: This slide illustrates the difference between call by value and call by reference in C programming. It uses two blocks of code to highlight how modifying a parameter inside a function does not affect the argument passed in call by value, while using pointers in call by reference allows the function to modify the original argument's value.
+
+Page4: This page simply contains a "Thank you for watching!" message, likely signifying the end of the presentation. There is a request for comments, indicating that feedback is welcomed.
+Basics:
+1. int *foo(int) → foo is a function which accepts integer as argument and will return a pointer to an
+integer.
+2. int (*foo)(int) → foo is a pointer to a function which accepts integer as argument and will return an
+integer.Program ...
+#include <stdio.h>
+// A normal function with an int parameter
+// and void return type
+void fun(int a)
+{
+}
+int main()
+{
+}
+printf("Value of a is %d\n", a);
+// fun_ptr is a pointer to function fun()
+void (*fun_ptr)(int) = &fun;
+/* The above line is equivalent of following two
+void (*fun_ptr)(int);
+fun_ptr = &fun;
+*/
+// Invoking fun() using fun_ptr
+(*fun_ptr) (10);
+return 0;
+♂o
+DG
+Thank you for watching!
+Please leave us your comments.

@@ -1,0 +1,62 @@
+Transcript of the audio for the lecture:
+0.089 - 4.51:  Hello friends today in this video we will discuss about an uncommon representation of array elements.
+4.93 - 7.971: This is very interesting concept let us carefully watch it.
+11.591 - 19.933: So in this slide we have declared an array whose name is a and is of nine element size and each element is of integer type.
+21.233 - 25.674: We have assumed that first element is stored at 1000 location.
+27.274 - 29.775: So if we will print a value
+30.216 - 58.0:  then what it will give it will give us the base address of the array which is 1000 only so if we will do star 1000 what is the meaning of it it means we want to fetch the value which is stored at the location 1000 so as we can see at 1000 location 11 is the value so it will give 11 as the result but we also know that a
+58.621 - 85.929:  bracket 0 and close bracket will also give us the result 11 and the nice concept is if we will do bracket 0 bracket a it will also give us the result 11 why because both these representation form will be converted into pointer representation using compiler so finally if we will do a 0 or 0 a
+87.714 - 117.465:  both these will be converted into star 1000 and star 1000 will give us the value 11 only so let us see the next point if we will do star 1000 plus 1 so what is the meaning of it it means we are incrementing a pointer so pointer is of integer type so if if we will increment the pointer then it will increment by 4 bytes
+118.331 - 146.191:  okay so 1000 plus 1 will give us 1004 so star 1004 means we want to fetch the value which is stored at the location 1004 and 12 is the value so it will give us 12 as the result again a1 and 1a both these representation will be converted into star 1004 and this will give us 12 as the value now
+147.139 - 149.981:  Let us see this representation into code form.
+153.703 - 154.644: So this is our code.
+155.704 - 157.845: Here I have declared an array of size 2.
+158.026 - 165.85: Okay and on the first index I am storing 1 on the second index I am storing 2.
+168.952 - 172.194: And I am printing two printf statements.
+173.255 - 173.555: One is
+174.517 - 190.907:  zero bracket air and one bracket air this is the nice concept again because these representation will be converted into pointer form using compiler so let us see what will be the result
+205.936 - 208.257:  See the value is 1 and 2.
+209.938 - 216.562: So using these representation also we are accessing the right results 1 and 2.
+217.983 - 228.43: It means see compiler converts these array operations in a pointers only before accessing the array elements.
+229.05 - 232.732: That's why these two forms are giving the same result.
+233.032 - 233.913: But remember this.
+235.274 - 255.859:  these representations are same a1 and 1a but these are not same a1 and bracket 1a so remember this point this is very important only these two representations are same not these representations remember this thank you for watching
+
+
+The content from the lecture slides:
+Page 1: The slide presents a problem statement where the task is to write a program that converts a given hexadecimal number (base 16) into its equivalent decimal number (base 10).
+Page 2: The slide continues to explain the problem statement, indicating the significance of the base value in a number system which denotes the number of digits used. It exemplifies how the binary system uses two digits (0 and 1), the octal system uses eight digits (0-7), and the decimal system uses ten digits (0-9) to represent numeric values.
+Page 3: This slide introduces the concept of hexadecimal numbers, which use 16 different symbols: the numerals 0 to 9 and the letters A to F, to represent all the possible values.
+Page 4: The slide reiterates the goal to convert a hexadecimal number to a decimal number.
+Page 5: It expands on the problem statement explaining the meaning of base values in number systems, using binary and octal as examples, stressing the need for converting a hexadecimal number to decimal.
+Page 6: This slide revisits the hexadecimal number system and its 16 unique symbols (0-9 and A-F) for numbers.
+Page 7: The slide clarifies that decimal values 10 to 15 are represented as letters A to F in hexadecimal to avoid confusion and offers a substitution legend for these conversions.
+Page 8: An algorithm is outlined for converting hexadecimal to decimal in four steps: 1) Convert letters to numerals, 2) Multiply each digit from left to right by ascending powers of 16, 3) Sum all results from step 1, 4) The equivalent decimal is the sum obtained in step 3.
+Page 9: The slide presents an example of how the algorithm works by converting the hexadecimal number '1AB' to the decimal number 427, demonstrating each step in the process.
+Page 10: This slide contains code for a function 'hexadecimalToDecimal' written in C that converts a hexadecimal string to its decimal equivalent. It includes initializing the base, converting each character from the end of the string, and cumulatively calculating the decimal value.
+Page 11: The given code is broken down in a dry run using the hexadecimal number '1AB', illustrating how the function processes the string, the initial values of the variables, and the execution flow.
+Page 12: The final slide thanks viewers for watching, inviting them to leave comments.
+Program
+/* Function with memory leak */
+#include <stdlib.h>
+void f()
+{
+}
+int *ptr = (int *) malloc(sizeof(int));
+/* Do some work */
+return; /* Return without freeing ptr*/Program
+/* Function without memory leak */
+#include <stdlib.h>;
+void f()
+{
+}
+int *ptr = (int *) malloc(sizeof(int));
+/* Do some work */
+free(ptr);
+return;
+When memory allocation is done, the actual heap
+space allocated is one word larger than the requested
+memory. The extra word is used to store the size of
+the allocation and is later used by free()DG
+Thank you for watching!
+Please leave us your comments.

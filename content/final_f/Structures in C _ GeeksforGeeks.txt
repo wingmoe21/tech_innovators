@@ -1,0 +1,84 @@
+Transcript of the audio for the lecture:
+0.299 - 3.201:  Hello friends, today in this video we will discuss about structures.
+5.402 - 6.122: So let us start.
+7.283 - 12.566: In this program, we have two representations of how to declare a structure.
+13.206 - 14.947: So let us see the first representation.
+16.068 - 17.549: So we have a point structure.
+19.049 - 27.514: Okay, the name of the structure is point and it has two variables x and y. Both of these variables are of integer type.
+28.976 - 33.298:  In the last we have a p1 variable which is of type struct point.
+34.539 - 41.803: Using this variable we can fetch the value or we can insert the value into point structure.
+43.164 - 43.424: Okay.
+44.485 - 57.412: If we will see the next representation so what we are doing again we are declaring a point structure which has two variable x and y both of these variables are of integer type.
+58.314 - 87.318:  but now we are defining p1 variable inside main method so what we will do we will write the type of this variable which is struct point and then we will give the name which is p1 now using this p1 we can insert and fetch the value again let us go to the next example this example will tell you the representation of how to initialize the values of a structure okay
+87.932 - 116.194:  so let us see the first one so what we have done here we have a point structure we have two variable x and y inside it which is of type integer now we are initializing it inside the structure only using zero value which will give us compiler error because we cannot initialize members inside our structure so what we will do we will see into next representation
+117.469 - 146.029:  so what we have done here we have a point structure which has two variable x and y which are of type integer now in the main method we have defined a p1 variable which is of type struct point only okay and we are initializing the values 0 and 1 so this 0 will be corresponding to this x variable and this 1 will be corresponding to y variable let us go to the next example
+147.219 - 156.121:  So in this example again we have a point structure which has two variables x and y both of these are of integer type.
+157.162 - 164.064: Now in the main method we are defining p1 variable which is of type struct point and has the values 0 and 1.
+164.824 - 175.027: So this 0 will be corresponding to x and this 1 will be corresponding to y. Now what we are doing we are initializing p1 dot x is equal to 20.
+175.747 - 176.547: Now what will happen
+177.119 - 203.003:  this 0 will be updated by 20 as the value ok now p1.x is 20 and p1.y is 1 so now if you will print p1.x so what it will give it will give us 20 as the value and if you will print p1.y then it will give us 1 as the value so let us go to the next program
+204.11 - 211.296:  So in this program we have a different representation of initializing the members of a structure.
+212.877 - 222.144: So this representation will tell you that we can initialize the members of a structure in any order in which we want.
+223.085 - 223.685: So let us see.
+225.026 - 226.207: We have a point structure.
+227.528 - 232.072: Inside this point structure we have three variables x y and z.
+233.51 - 235.611:  three of these variables are of integer type.
+238.031 - 262.158: Now inside the main method we have defined a p1 variable which is of type struct point and in this p1 variable what we are doing we have written dot y is equal to zero what does it mean it means p1 dot y will be zero means this zero will be corresponding to
+262.959 - 290.125:  y variable dot z is equal to 1 means this 1 will be representing to this z variable dot x is equal to 2 so this 2 will be representing x variable ok but in the last representation what we have done we have represented like this 0 1 and 2 ok so if you write like this
+290.959 - 318.336:  it means x is equal to 0 y is equal to 1 and z is equal to 2 because it will take in a specific order but now we can give any order which we want ok in the next line what we have done we have defined a p2 variable which is also a struct point and inside this p2 variable we have defined p2 dot x is equal to 20 now we are printing
+319.019 - 339.729:  p1.x p1.y and p1.z so p1.x will be 2 p1.y will be 0 and p1.z will be 1 and what will be p2.x p2.x will be 20 thank you friends for watching please leave us your comments
+
+
+The content from the lecture slides:
+Page1: The slide provides basic information on pointers in C programming language. It highlights two key points: (1) Every computer system has a fixed random access memory, and (2) to store memory addresses, the C programming language uses pointers.
+
+Page2: This slide outlines the declaration of a pointer variable along with examples. It suggests that a pointer variable is declared with a specific data type and is used to store the address of another variable of the same data type. It also explains the use of the '&' operator to find a variable's address in memory and the '*' operator to access the value at a given address.
+
+Page3: The slide offers a practical view of pointers, showcasing a simple C program that prints the address of a variable. A diagram illustrates the association between the variable 'x' and its memory address.
+
+Page4: This slide continues the practical view of pointers, showing a C program that demonstrates the declaration of pointer variables and the assignment of an address to a pointer. A table depicts the variable 'x' with a value '10' and its memory address, alongside a pointer 'ptr' with its own address.
+
+Page5: The slide provides a C program example illustrating the use of '*' to access values stored at memory addresses held by pointers. It explains how modifying a value through a pointer changes the value at the memory location the pointer is referencing.
+
+Page6: Here, the concept of pointer arithmetic is introduced with a C/C++ program example. Pointer arithmetic allows incrementing pointers, effectively moving them to point to consecutive elements in an array. It explains how pointers are incremented by the size of the data type they point to.
+
+Page7: The last programming slide repeats the content of Page6 with a practical representation, showing the actual output after incrementing the pointers and accessing the values of an array using those pointers.
+
+Page8: This slide simply thanks viewers for watching and invites comments. It does not include any technical content related to pointers.
+Registers are faster than memory to access, so the variables which are most frequently used in
+a C program can be put in registers using register keyword. The keyword register hints to
+compiler that a given variable can be put in a register. It's compiler's choice to put it in a register
+or not. Generally, compilers themselves do optimizations and put the variables in register.If you use & operator with a register variable then compiler may give an error or warning
+(depending upon the compiler you are using), because when we say a variable is a register, it
+may be stored in a register instead of memory and accessing address of a register is invalid. Try
+below program.
+int main()
+{
+}
+register int i = 10;
+int *a = &i;
+printf("%d", *a);
+getchar();
+return 0;register keyword can be used with pointer variables. Obviously, a register can have
+address of a memory location. There would not be any problem with the below program.
+int main()
+{
+}
+int i = 10;
+register int *a = &i;
+printf("%d", *a);
+getchar();
+return 0;Register is a storage class, and C doesn't allow multiple storage class specifiers for a
+variable. So, register can not be used with static. Try below program.
+int main()
+{
+}
+int i = 10;
+register static int *a = &i;
+printf("%d", *a);
+getchar();
+return 0;
+There is no limit on number of register variables in a C program, but the point is compiler
+may put some variables in register and some not.DG
+Thank you for watching!
+Please leave us your comments.

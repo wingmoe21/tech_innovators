@@ -1,0 +1,152 @@
+Transcript of the audio for the lecture:
+1.237 - 6.22:  Hello friends, today in this video, we will discuss about structure member alignment and padding.
+6.78 - 8.942: So this is part number one of this video.
+9.602 - 10.342: So let us start.
+11.503 - 17.066: So before discussing the topic, first of all, we have some assumptions which we will use in this video.
+18.047 - 29.794: So the first assumption is system will be of 32 bit machine, care will take one byte, short int will take two bytes, int will take four bytes and double will take eight bytes.
+33.601 - 36.944:  So our topic is structure member alignment and padding.
+37.684 - 44.169: So first of all, we will see why structure member alignment and padding is needed.
+45.81 - 50.874: So as you can see in the slide, there is a memory architecture of our assumed system.
+52.735 - 63.083: So this memory architecture has four banks, bank number 0, 1, 2, 3, and there is a data bus present.
+64.158 - 67.979:  through which we can fetch out the data from the memory.
+68.939 - 69.199: Okay.
+70.68 - 76.121: So now we will see why this concept come into the account.
+77.201 - 77.441: Okay.
+78.581 - 88.744: So let us assume if we will give one memory cycle, then how many continuous blocks we can fetch out from the memory.
+90.344 - 93.805: So if we want to fetch out this block, this
+94.463 - 119.055:  this and this then we only need one memory cycle because in one single memory cycle we can fetch out four blocks which are at same level that's why it has four banks okay
+120.635 - 129.38:  But if we want to fetch out the data which are not in the same level, there may be more than one memory cycle we will need.
+131.602 - 132.742: So, let us take an example.
+133.703 - 133.943: Okay.
+135.124 - 135.344: See.
+138.446 - 145.03: If we want to fetch out this block, this one, this one and this one.
+146.191 - 150.013: So, these all four blocks are at different levels.
+152.247 - 157.709:  So for fetching out these data blocks, we need four memory cycles.
+159.25 - 161.311: And one memory cycle is very costly.
+163.331 - 167.753: And if we want four memory cycles, it will be very, very costly.
+170.014 - 176.957: So to increase the performance of our system, we need structure member alignment and padding.
+178.637 - 180.438: So after learning this concept,
+182.639 - 194.166:  you will find that how it is possible to fetch out four blocks parallely which are at the same level in one memory cycle only.
+195.807 - 196.047: Okay.
+196.727 - 204.512: So this structure member alignment and padding has some rules and regulation which our compiler has to follow.
+207.054 - 208.535: So let us see those rules.
+209.435 - 210.776: First of all we will learn that
+211.73 - 217.333:  and in the coming videos then we will see how we can use them.
+220.775 - 229.861: So our rule number one is any data type will always store its value at the address which is multiple of the size of that data type.
+231.522 - 235.004: So let us take an example if we are using an integer.
+236.865 - 239.927: So integer is of 4 bytes so it will always
+241.044 - 246.805:  It will always store its value starting at the index which is multiple of 4.
+247.706 - 249.866: Like 4, 8, 12 etc.
+251.146 - 256.408: And if you will take long then it will start from 8, 16, 24, 32 etc.
+257.628 - 259.488: So this is our rule number 1st.
+260.769 - 269.911: Then rule number 2nd says that any structure will take the size equal to multiple of maximum bytes taken by a variable in that structure.
+271.118 - 276.521:  So let us take an example if we have a structure and inside that structure we have three variables.
+277.801 - 283.284: One is of type char, second is integer and third is long.
+285.205 - 289.948: So maximum bytes taken by a variable in this structure is 8 bytes.
+291.289 - 297.852: So according to this rule the size of the structure will always be the multiple of 8 only.
+300.472 - 305.216:  So these are the two rules which are the core heart of this concept.
+305.956 - 306.217: Okay.
+307.277 - 310.2: And again, why we are using this concept?
+310.64 - 313.863: Because we want to increase the performance of our system.
+314.843 - 324.571: We always want that the data which we want to fetch from the memory will come in only one memory cycle.
+326.653 - 329.075: It should not take more than one memory cycle.
+329.864 - 331.384:  because it is very costly.
+333.485 - 339.047: So this is just a concept which will increase the performance of our system.
+340.847 - 344.428: It is just a necessary step.
+347.189 - 356.511: Okay, so thank you guys in the coming videos definitely we will see some of the examples related to this concept and we will find the structure sizes.
+357.632 - 358.652: Thank you for watching.
+
+
+The content from the lecture slides:
+Page1: This slide presents basic assumptions for a system or machine, specifically a 32-bit machine. It indicates the sizes of various data types in this context: 'char' is 1 byte, 'short int' is 2 bytes, 'int' is 4 bytes, and 'double' is 8 bytes.
+
+Page2: The slide illustrates memory architecture, focusing on structure member alignment and padding. It displays a banked memory structure, showing how data buses are aligned across memory banks, which is an important consideration for memory alignment and access efficiency.
+
+Page3: This page lays out some foundational rules for memory allocation. It states that any data type will store its value at an address which is a multiple of the size of that data type (e.g., 'int' will start at addresses 4, 8, 12, etc.). It also explains that structures will take a size that is a multiple of the maximum bytes taken by any variable within that structure.
+
+Page4: The slide outlines a sequential memory structure and provides a visual representation of how a 'char' and 'short int' are allocated in memory. The allocation table shows that the total size is 4 bytes, aligned according to a rule where any data type stores its value at a multiple of its own size. The second rule detailed is that a structure's size is a multiple of the size of the largest member data type within the structure.
+
+Page5: This slide appears to repeat the content of page 4, explaining the sequential memory structure with the same allocation table and rules.
+
+Page6: The image displays a different structure memory allocation where a 'short int', 'char', and 'int' are defined in the structure, leading to a total size of 8 bytes. The allocation table on the slide reflects the positioning of the different data types within the structure and emphasizes the same rules as before regarding memory allocation and structure size.
+
+Page7: This slide repeats the information from page 6, showcasing the structure with 'short int', 'char', and 'int' and the corresponding memory allocation diagram alongside the rules.
+
+Page8: This slide is similar to page 6 and page 7 but poorly rendered which indicates an error occurred while trying to view the content.
+
+Page9: The slide contains source code in C, defining four different structures named 'structa_t', 'structb_t', 'structc_t', and 'structd_t'. Each structure contains different data types, including 'char', 'short int', 'int', and 'double'. Below the code, a command-line interface shows the use of the 'sizeof' operator to determine the memory size of structures 'structa_t' and 'structb_t', which are respectively 4 and 8 bytes in size, consistent with the rules presented in previous slides.
+
+Page10: This slide is displaying a C++ source file in an editor with the same content regarding structure definitions and the corresponding sizes as found in page 9.
+
+Page11: The image is a more zoomed-out view of the C++ source file from page 10, without any additional information.
+
+Page12: This slide demonstrates the behavior of the compiler when handling arrays and the equivalence between array index notation and pointer arithmetic. It explains how an integer array in C, when accessed via index or pointer, is treated equivalently by the compiler.
+
+Page13: The final slide contains the resulting concept that the compiler converts array operations into pointer operations before accessing the elements. It reinforces the equivalence between array access and pointer dereferencing syntax.
+Program
+// A variable declaration with structure declaration.
+struct Point
+{
+int x, y;
+} p1; // The variable p1 is declared with 'Point'
+// A variable declaration like basic data types
+struct Point
+{
+};
+int main()
+{
+struct Point p1; // The variable p1 is declared like a normal variable
+}
+int x, y;Program
+struct Point
+{
+int x =
+0; // COMPILER ERROR: cannot initialize members here
+int y = 0; // COMPILER ERROR: cannot initialize members here
+};
+struct Point
+{
+int x, y;
+};
+int main()
+{
+}
+// A valid initialization. member x gets value 0 and y
+// gets value 1. The order of declaration is followed.
+struct Point p1 = {0, 1};Program
+#include<stdio.h>
+struct Point
+{
+int x, y;
+};
+int main()
+{
+}
+struct Point p1
+=
+{0, 1};
+// Accesing members of point pl
+p1.x = 20;
+printf ("x = %d, y = %d", pl.x, pl.y);
+return 0;Program
+#include<stdio.h>
+struct Point
+{
+};
+int main()
+{
+}
+int x, y, z;
+// Examples of initializtion using
+struct Point p1 = {.y = 0, .Z = 1, .x = 2};
+struct Point p2
+=
+{.x
+=
+20};
+designated initialization
+printf ("x = %d, y = %d, z = %d\n", p1.x, pl.y, pl.z);
+printf ("x = %d", p2.x);
+return 0;DG
+Thank you for watching!
+Please leave us your comments.

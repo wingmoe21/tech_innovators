@@ -1,0 +1,1268 @@
+Transcript of the audio for the lecture:
+0.947 - 5.688:  Hello friends, today in this video we will discuss about structure member alignment and padding.
+6.088 - 8.029: So this is part three of this video.
+10.549 - 17.491: So in the part number one, we have discussed about the assumptions, why we are using this concept and some of the rules.
+18.191 - 24.193: And in the second part, we discussed this example that structure size will be of four bytes.
+24.753 - 30.054: Now we will take some another example and we'll see what will be the size of that structure.
+33.331 - 48.842:  So as you can see in this slide there is a structure struct b tag and we have made an object struct b t. In this structure we have three variables one is short int, character and int.
+50.343 - 50.603: Okay.
+51.384 - 57.768: Now we will apply rule number one and rule number two and we will see what will be the size of this structure.
+58.709 - 58.969: Okay.
+60.51 - 62.732: So if we will start from short int s.
+63.618 - 65.839:  So, short int s will be of 2 bytes.
+66.899 - 71.241: So, the first rule is it will always start from the multiple of 2.
+72.542 - 74.062: So, 0 is a multiple of 2 or not?
+74.082 - 75.283: Yes, it is a multiple of 2.
+76.403 - 80.465: So, it will take 0th index byte and 1 index byte.
+81.886 - 82.126: Okay.
+82.686 - 83.707: Then character will come.
+84.167 - 85.968: So, character is of 1 byte.
+86.248 - 88.849: So, it will always start from the multiple of 1.
+90.003 - 91.683:  So 2 is a multiple of 1 or not?
+91.783 - 92.044: Yes.
+92.484 - 95.144: So char will take 2nd index byte.
+96.045 - 97.265: Now int will come.
+98.505 - 103.206: Int is of 4 bytes and it will always start from the multiple of 4.
+104.547 - 105.867: 0 is already filled.
+106.107 - 108.148: So it will start from 4th index.
+109.288 - 109.568: Okay.
+109.968 - 111.489: And it will take 4 bytes.
+113.569 - 115.15: Index number 4, 5th, 6th and 7th.
+119.511 - 121.172:  Now we will see the rule number second.
+121.772 - 127.895: Structure will take size equal to multiple of maximum bytes taken by a variable in that structure.
+129.455 - 133.057: So what are the maximum bytes taken by a variable in this structure?
+134.217 - 134.398: Int.
+135.358 - 136.879: So int will take 4 bytes.
+137.979 - 140.48: So it should be multiple of 4 only.
+141.841 - 147.823: So as you can see these are 8 bytes and 8 is a multiple of 4 already.
+149.443 - 152.765:  this structure will take 8 bytes in total.
+154.966 - 163.752: Ok, so from now do not say that this structure is of size 4 plus 1 plus 2, 7 bytes.
+164.632 - 167.914: Because this structure is taking 8 bytes.
+169.815 - 176.639: Now we will see this structure in our program and we will run it, we will see what will be the result.
+179.502 - 187.706:  So this is our structure B. So we will uncomment this line and we will see what will be the size.
+195.449 - 200.111: See size of struct B T is equal to 8 bytes.
+203.272 - 207.314: So whatever we have discussed is totally right.
+208.427 - 209.735:  So thank you guys for watching.
+209.937 - 211.124: Please leave us your comments.
+
+
+The content from the lecture slides:
+Page1: The problem statement is defined as creating a function that computes the cost of the minimum cost path to reach a position (m, n) in a cost matrix cost[][]. All costs in the matrix are positive, and the total cost of a path is the sum of all costs from the source (0, 0) to the destination (m, n), including the cost at both the source and destination.
+
+Page2: The allowed movements in the cost matrix to reach the destination are either up, right, or diagonally up from a given cell (i, j), meaning from any cell (i, j), one can move to (i+1, j), (i, j+1), or (i+1, j+1).
+
+Page3: A visual representation of a 3x3 cost matrix is displayed with specific costs assigned to each cell. The Y axis ranges from 0 to 2 and the X axis ranges from 0 to 2.
+
+Page4: The minimum cost path in the given cost matrix is illustrated, showing the path with the lowest sum of costs from the bottom left cell (0,0) to the top right cell (2,2). The path chosen is the one that results in the total cost of 8, which is the sum of costs 1, 2, 2, and 3 from the traversed cells.
+
+Page5: The concept of 'Optimal Substructure' is introduced, stating that the minimum cost to reach a cell (m, n) can be computed as the minimum of three possible previous cells: (m-1, n-1), (m-1, n), or (m, n-1), plus the cost of the current cell (m, n).
+
+Page6: A recursive function `minCost` is shown, which calculates the cost of the minimum cost path to a cell (m, n), using the minimum of the costs from three possible previous steps plus the current step's cost. The base cases are also defined for when either index m or n is less than 0 and when both indices are 0.
+
+Page7: It's indicated that the naive recursive solution presented has an exponential time complexity, which implies it is inefficient for larger matrices due to the huge number of calculations required.
+
+Page8: The problem of 'Overlapping Subproblems' is illustrated, showing a tree diagram of recursive calls with repeated calculations, which is characteristic of problems that benefit from dynamic programming.
+
+Page9: This page states that the problem presents both 'Optimal Substructure' and 'Overlapping Subproblems', leading to the conclusion that the problem can be efficiently solved using dynamic programming. The approach includes constructing a temporary array tc[][] in a bottom-up manner.
+
+Page10: A side-by-side comparison between the original 'cost' matrix and the 'tc' matrix of total costs is shown, where 'tc' is initialized with 0s and will be computed based on the 'cost' matrix.
+
+Page11: The dynamic programming approach to solve the problem is detailed through a function `minCostDP`, which fills out the 'tc' matrix by iteratively combining subproblem solutions to build up the final answer. This method involves initializing the first column and first row of the 'tc' array and then constructing the rest of the solution from there.
+
+Page12: It's stated that the time complexity of the dynamic programming approach is O(m * n), which is significantly more efficient than the exponential time complexity of the naive recursive solution.
+
+Page13: A thank you note for watching the content, with a call to action for likes and comments, is presented as the closing slide of the presentation.
+
+Page14: This is an image of a code editor displaying a C++ program that includes an array initialization and print statements. It's unrelated to the previous dynamic programming content.
+
+Page15: The image shows a PowerPoint interface with a slide selected which appears to be discussing arrays in programming, again unrelated to the dynamic programming content.
+
+Page16: Another slide from the same PowerPoint presentation, further explaining the concept of array indexing in the context of pointer arithmetic in programming.
+
+Page17: This is a duplicate of the first image provided, showing the problem statement slide from the dynamic programming content discussed earlier.
+AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse
+Slide Slides
+2
+3
+5
+6
+Slides
+ƏG
+COFF
+Table Pictures Online Screenshot Photo Shapes Icons
+Pictures
+Album -
+Slide 2 of 9
+Tables
+Structure member alignment and padding
+03
+Sequential memory structure
+Some Rules
+Hrveure Member
+Alignment and
+Padding-Part
+Images
+A e
+Review View Help
+F
+Forms
+3D SmartArt Chart
+Models -
+Illustrations
+Forms
+pointer_to_array_1
+Storyboarding Search
+Get Add-ins
+My Add-ins
+Add-ins
+Zoom Link Action Comment
+Links
+Comments
+Assumptions
+1. System or machine: (32 bit machine)
+2. char (1 byte)
+3. short int (2 bytes)
+4. int (4 bytes)
+5. double (8 bytes)
+A
+Text Header WordArt
+Box & Footer
+GEEKSFORGEEKS
+Text
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+Notes
+▲ Vishal Gulia
+10
+88
+8²
+Media
+Share
+DH
+Comments
++ 86%
+6:22 PM
+5/23/2019
+>«»AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse Table Pictures Online Screenshot Photo Shapes Icons
+Slide Slides
+Pictures
+Album -
+1
+2
+3
+5
+6
+Slides
+DG
+1. Spon: (21
+Tables
+Structure member alignment and padding
+Slide 3 of 9
+Sequential memory structure
+08
+Some Rules
+Hrveture Member
+Alignment and
+Padding-Part
+Images
+e
+Review View Help
+F
+Forms
+3D SmartArt Chart
+Models -
+Illustrations
+Memory architecture:
+D7 data bus DO
+Forms
+Byte
+Addressable
+Memory
+D31
+pointer_to_array_1
+BANK 3
+Storyboarding Search
+Get Add-ins
+My Add-ins
+Add-ins
+Zoom Link Action Comment
+BANK 2
+Links
+Structure member alignment and padding
+BANK 1
+Comments
+data bus (one memory cycle)
+Banked
+Memory
+GEEKSFORGEEKS
+A
+Text Header WordArt
+Box & Footer
+BANK O
+DO
+Text
+Ox000C
+0x0008
+0x0004
+0x0000
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+▲ Vishal Gulia
+Notes
+10
+88
+8²
+Media
+Share
+DH
+Comments
+>«»
++ 86% E
+6:22 PM
+5/23/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse Table Pictures Online Screenshot Photo Shapes Icons
+Slide Slides
+Pictures
+Album -
+1
+2
+3
+5
+6
+Slides
+DG
+1. Spor
+1. Jude
+Tables
+Structure member alignment and padding
+Slide 4 of 9
+Sequential memory structure
+08
+Some Rules
+Hrveture Member
+Alignment and
+Padding-Part
+Images
+A e
+Review View Help
+F
+Forms
+3D SmartArt Chart
+Models -
+Illustrations
+Forms
+pointer_to_array_1
+Storyboarding Search
+Get Add-ins
+My Add-ins
+Add-ins
+Zoom Link Action Comment
+Links
+Comments
+A
+Text Header WordArt
+Box & Footer
+GEEKSFORGEEKS
+Text
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+Some Rules
+1. Any data type will always store its value at the address which is
+multiple of the size of that data type.
+Example: int will always start from 4,8,12,.......
+2. any structure will take the size equal to the multiple of maximum
+bytes taken by a variable in that structure.
+▲ Vishal Gulia
+Notes
+10
+88
+8²
+Media
+Share
+DH
+Comments
++ 86%
+6:22 PM
+5/23/2019
+>«»AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse Table Pictures Online Screenshot Photo Shapes Icons
+Slide Slides
+Album -
+Pictures
+1
+2
+3
+5
+6
+Slides
+DG
+1. Jude
+Tables
+Structure member alignment and padding
+Sequential memory structure
+Slide 5 of 9
+08
+Hrveture Member
+Alignment and
+Padding-Part
+Images
+A e
+Review View Help
+F
+Forms
+3D SmartArt Chart
+Models -
+Illustrations
+char
+C;
+short int S;
+} structa_t; I
+Bytes
+0
+Forms
+Allocation char
+pointer_to_array_1
+1
+Storyboarding Search
+Get Add-ins
+My Add-ins
+Add-ins
+Sequential memory structure
+typedef struct structa_tag
+{
+Zoom Link Action Comment
+2
+Links
+3
+Comments
+Short int Short int
+Total size: 4bytes
+Rule1 -Any data type will always store its value at the address,
+which is multiple of the size of that data type
+Rule2 - structure will take the size equal to the multiple of
+maximum bytes taken by a variable in that structure.
+A
+Text Header WordArt
+Box & Footer
+GEEKSFORGEEKS
+5
+Text
+6
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+7
+Notes
+▲ Vishal Gulia
+10
+88
+8²
+8
+Media
+Share
+DH
+Comments
++ 86%
+6:22 PM
+5/23/2019
+>«»AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse Table Pictures Online Screenshot Photo Shapes Icons
+Slide Slides
+Pictures
+Album -
+2
+5
+Slides
+Tables
+Structure member alignment and padding
+Slide 6 of 9
+Assumptions
+Sequential memory structure
+OB
+Images
+A e
+3D SmartArt Chart
+Models -
+Illustrations
+Review View Help
+F
+Forms
+char
+c;
+short int s;
+} structa_t;
+Bytes
+Allocation
+0
+Forms
+char
+pointer_to_array_1
+1
+Storyboarding Search
+Sequential memory structure
+typedef struct structa_tag
+{
+Get Add-ins
+My Add-ins
+Add-ins
+Zoom Link Action
+2
+Links
+3
+Comment
+Short int Short int
+Comments
+Total size: 4bytes
+Rule1 -Any data type will always store its value at the address,
+which is multiple of the size of that data type
+Rule2 - structure will take the size equal to the multiple of
+maximum bytes taken by a variable in that structure.
+A
+Text Header WordArt
+Box & Footer
+GEEKSFORGEEKS
+5
+Text
+6
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+7
+Notes
+A Vishal Gulia
+01
+8
+8
+Media
+Share
+DH
+Comments
+>«»
++ 86% E
+6:22 PM
+5/23/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse Table Pictures Online Screenshot Photo Shapes Icons
+Slide Slides
+Album -
+Pictures
+3
+5
+9
+Slides
+Tables
+Structure member algment and padding
+8
+Slide 6 of 9
+Some Rules
+Sequential memory structure
+e
+Images
+A e
+Review
+3D SmartArt Chart
+Models -
+Illustrations
+View Help
+F
+Forms
+short int
+char
+int
+} structb_t;
+typedef struct structb_tag
+{
+s;
+c;
+i;
+Forms
+pointer_to_array_1
+Storyboarding Search
+Get Add-ins
+My Add-ins
+Add-ins
+Bytes
+0
+1
+2
+Allocation Short Short char
+int
+int
+3
+Zoom Link Action Comment
+Links
+int
+Comments
+5
+int
+Total size: 8bytes
+Rule1 -Any data type will always store its value at the address,
+which is multiple of the size of that data type
+Rule2 - structure will take the size equal to the multiple of
+maximum bytes taken by a variable in that structure.
+GEEKSFORGEEKS
+A
+Text Header WordArt
+Box & Footer
+6
+int
+Text
+7
+int
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+Notes
+A Vishal Gulia
+01
+8
+Media
+Share
+DH
+Comments
+>«»
++ 86% E
+6:22 PM
+5/23/2019AutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse Table Pictures Online Screenshot Photo Shapes Icons
+Slide Slides
+Pictures
+Album -
+3
+5
+7
+Slides
+Tables
+Structure member alignment and padding
+Sequential memory structure
+Slide 6 of 9
+C
+Images
+A e
+Review View Help
+F
+Forms
+3D SmartArt Chart
+Models -
+Illustrations
+typedef struct structb_tag
+{
+short int
+char
+int
+} structb_t;
+Forms
+s;
+c;
+i;
+pointer_to_array_1
+Storyboarding Search
+Get Add-ins
+My Add-ins
+Add-ins
+Bytes
+1
+2
+0
+Allocation Short Short char
+int
+int
+3
+Zoom Link Action Comment
+Links
+int
+Comments
+5
+int
+Total size: 8bytes
+Rule1 -Any data type will always store its value at the address,
+which is multiple of the size of that data type
+Rule2 - structure will take the size equal to the multiple of
+maximum bytes taken by a variable in that structure.
+GEEKSFORGEEKS
+A
+Text Header WordArt
+Box & Footer
+6
+int
+Text
+7
+int
+Symbols
+ΠΩ
+Equation Symbol Video Audio Screen
+Recording
+Notes
+A Vishal Gulia
+01
+8
+Media
+Share
+DH
+Comments
+>«»
++ 86% E
+6:22 PM
+5/23/2019AutoSave Off 2013
+File Home Insert Design Transitions Animations Slide Show
+New Reuse
+Slide Slides
+3
+5
+6
+8
+Slides
+Table Pictures Online Screenshot Photo Shapes Icons
+Pictures
+Album -
+Slide 6 of 9
+Tables
+Structure member alignment and padding
+03
+CUsersvgumayDocum
+Some Rules
+double
+Sequential memory structuhar
+int
+short ant
+duct structa_tag
+// structure B
+typedef suct structb_tag
+double
+int
+4 bytes
+1
+Images
+onal documents Pointerbarpo Notepad
+Encoding Language Sengs Tools Macro Run Plugins Window?
+BDC515
+8 bytes
+// structure C
+typedef struct structc_tag
+e file
+ructe:
+// structure b
+typedef struct structd_tag
+printf("reof(structs_t) =
+//printf sizeof(structb
+Desintilesizeof(structc_t)
+Review View Help
+F
+Forms
+3D SmartArt Chart
+Models -
+Illustrations
+e
+basic.cpp
+typedef struct structb_tag
+{
+short int
+char
+int
+} structb_t;
+d\n", aizeof (structc_t)):
+//printfizeor (structd_t) = d\n", sizeof (structd_t));
+Forms
+s;
+c;
+i;
+", sizeof (structa_t)):
+tructb t));
+pointer_to_array_1
+Storyboarding Search
+Bytes
+0
+1
+2
+Allocation Short Short char
+int
+int
+Get Add-ins
+My Add-ins
+Add-ins
+3
+Zoom Link Action
+Links
+4
+int
+292410
+Header WordArt
+Box & Footer
+Total size: 8bytes
+Rule1 -Any data type will always store its value at the address,
+which is multiple of the size of that data type
+Rule2 - structure will take the size equal to the multiple of
+maximum bytes taken by a variable in that structure.
+length 858 lines: 51
+Comment Text
+Comments
+5
+int
+GEEKSFORGEEKS
+A
+6
+int
+Ln:12 Col: 1 Sel: 7415
+Text
+7
+int
+ΠΩ
+Equation Symbol
+Symbols
+Notes 19
+Windows (CRLF)
+DO
+UTER
+Vishal Gulia
+Video Audio Screen
+Recording
+Media
+Share
+0+
+Comments
+>«»
++ 86% E
+6:25 PM
+5/23/2019S
+AutoSave
+C:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+BUR
+Off A 2-0 E
+programming questions b Bramdump pygpu_info_script py
+bytesre
+8 bytes
+// int
+// double
+9
+10
+11
+// structure A
+12 typedef struct structa_tag
+13 B
+14 char
+C;
+15 short int s;
+16 -} structa_t:
+17
+18 // structure B
+19 typedef struct structb_tag
+20 B{
+21 short int s;
+22
+char
+23
+int
+24
+25
+26
+27
+28 B{
+29
+// structure C
+typedef struct structe_tag
+i;
+structb_t;
+char
+double
+30
+31 int
+32
+33
+34
+35
+36 (
+37 double
+38
+39
+40
+41
+42
+43
+} structc_t:
+// structure D
+typedef struct structd_tag
+int
+char
+) structd_t;
+8(
+int main()
+return 0;
+new
+e
+basic.cpp X
+typedef struct structb_tag
+C
+short int
+} structb_t;
+45
+44 printf("sizeof (structa_t) = %d\n", sizeof (structa_t));
+//printf("sizeof (structb_t) = %d\n", sizeof (structb_t));
+46 //printf ("sizeof (structc_t) = %d\n", sizeof (structc_t));
+47 //printf("sizeof (structd_t) = %d\n", sizeof (structd_t));
+48
+49
+50
+51
+SI C++ source file
+Help Storyboarding
+ABC
+Bytes
+1
+2
+0
+Allocation Short Short char
+int
+int
+pointer_to_array_1
+int
+int
+Total size: 8bytes
+Rule1 -Any data type will always store its value at the address,
+which is multiple of the size of that data type
+Rule2 - structure will take the size equal to the multiple of
+maximum bytes taken by a variable in that structure.
+length: 858 lines: 51
+int
+7
+int
+Ln: 12 Col: 1 Sel: 7415
+A Vishal Gulia
+πO 04)
+Windows (CRLF)
+UTF-8
+X
+Commen's
+INS
+6:25 PM
+5/23/2019
+>«»>
+PAC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+GPC
+programming questions.bd ramdump pygpu_info_script py new 1 basic.cpp X
+8 // int
+HE
+96
+9
+222NN
+// double
+10
+11 // structure A
+12 typedef struct structa_tag
+13
+B(
+14 char
+c;
+15 short int s;
+16
+structa_t;
+17
+18
+19
+20 B(
+21
+22 char
+23
+int
+24 -} structb_t;
+25
+26 // structure C
+27 typedef struct structc_tag
+28
+29
+30
+31
+32
+33
+34
+// structure D
+35 typedef struct structd_tag
+// structure B
+typedef struct structb_tag
+short int S;
+B{
+C;
+i;
+char
+C;
+double d;
+s;
+4 bytes
+int
+-} structc_t;
+36 B{
+37 double d;
+38 int
+S;
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+C++ source file
+char
+-} structd_t;
+int main()
+B(
+8 bytes
+return 0;
+}
+printf ("sizeof (structa_t) = %d\n", sizeof (structa_t));
+//printf ("sizeof (structb_t) = %d\n", sizeof (structb_t));
+//printf("sizeof (structc_t) = %d\n", sizeof (structc_t));
+//printf ("sizeof (structd_t) = %d\n", sizeof (structd_t));
+e
+ег
+length: 858 lines: 51
+Ln: 12 Col: 1 Sel: 7415
+Windows (CRLF)
+²
+UTF-8
+6:25 PM
+5/23/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+PC
+programming questions.bxt X ramdump.py X gpu_info_script.py X new 1 X basic.cpp X
+4 bytes
+8 // int
+9 // double
+10
+TT
+96
+CAWINDOWS\system32\cmd.exe
+typedderosoft Windocta (Varsion 10.0.16299.1146]
+13 B{ (c) 2017 Microsoft Corporation. All rights reserved.
+14
+char
+11 // structure A
+TTTTT
+12
+15
+10105
+7722N N N N N N N N M m m m m 3
+16
+-} structa_t;
+17
+C:\Users\vgulia\Documents>cd personal_documents\C_Pointers
+18 // structure B
+19 typeder Useruegatructbetaents personal_documents\C_Pointers>ls
+20 B{ 'New Text Document.txt' basic.c
+21 short aintes;
+22 char
+c;
+23 int C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++ basic.cpp
+24 -} structb_t;
+25
+26
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>ls
+basic.exe
+// strictreet Document.txt' basic.c
+27 typedef struct structc_tag basic.cpp basic1.cpp basic1.o
+c;
+shortsitisersvgulia>cd Documents
+28 B{
+8 bytes
+33
+29 char C:\Users\vgulia\Documents\personal_documents\C_Pointers>a.exe
+30 doublizeof(structa_t) = 4
+31 int
+32 - structs\vgulia\Documents\personal_documents\C_Pointers>
+char
+} structd_t;
+c;
+basic.exe basic1.exe basic2.cpp basic3.cpp basic4.exe theory.docx
+basic.cpp basic1.cpp basic1.o basic2.exe basic3.exe test.p
+34 // structure D
+35 typedef struct structd_tag
+36 B{
+37 double d;
+38 int
+s;
+39
+40
+41
+42
+43 B(
+45
+44 printf ("sizeof (structa_t) = d\n", sizeof (structa_t));
+printf ("sizeof (structb_t) = %d\n", sizeof (structb_t));
+46 //printf("sizeof(structc_t) = %d\n", sizeof (structc_t));
+//printf ("sizeof (structd_t) %d\n", sizeof (structd_t));
+47
+48
+49
+50
+51
+C++ source file
+int main()
+basic1.exe basic2.cpp basic3.cpp basic4.exe theory.docx
+basic2.exe basic3.exe test.p
+return 0;
+}
+length: 856 lines: 51
+Ln:45 Col: 1 Sel: 010
+Windows (CRLF)
+UTF-8
+6:25 PM
+5/23/2019
+X
+INS
+XC:\Users\vgulia\Documents personal_documents\C_Pointers\basic.cpp - Notepad++
+File Edit Search View Encoding Language Settings Tools Macro Run Plugins Window ?
+C:\WINDOWS\system32\cmd.exe
+prog
+Microsoft Windows [Version 10.0.16299.1146]
+8(c) 2017 Microsoft Corporation. All rights reserved.
+9
+10 C:\Users\vgulia>cd Documents
+11
+12 C:\Users\vgulia\Documents>cd personal_documents\C_Pointers
+13
+14 C:\Users\vgulia\Documents\personal_documents\C_Pointers>ls
+15
+16 New Text Document.txt' basic.c
+17 a.exe
+18
+19 C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++
+20
+tructure B
+36
+37
+38
+39
+40
+41
+42
+43
+21 C:\Users\vgulia\Documents\personal_documents\C_Pointers>ls
+'New Text Document.txt' basic.c
+22
+23
+a.exe uth_ta
+24
+25
+26
+27 sizeof(structa_t) = 4 tag
+28
+H
+basic.exe
+basic.cpp basic1.cpp basic1.o
+29 C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+30
+31
+32
+33
+34
+35
+structo_t;
+basic1.exe basic2.cpp basic3.cpp basic4.exe theory.docx
+basic2.exe basic3.exe test.p
+basic.exe basic1.exe basic2.cpp basic3.cpp basic4.exe theory.docx
+basic.cpp basic1.cpp basic1.o basic2.exe basic3.exe test.p
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>a.exe
+typedef struct structd_tag
+printf("witand festucte - Na
+printf(was punce
+44
+45
+46 //print£]"alesofistructo_tj sd\n", stanof(structe_tiny
+47 //printf("sizeof(structd tidlay sizeof(structd_$11/
+48
+49
+50
+51
+C++ so a life
+e
+basic.cpp
+sizeof(structa_t));
+sizeof(structb_t)):-
+length: 855 lines: 51
+श्र
+1
+I
+6:25 PM
+5/23/2019
+X
+X
+X
+INSC:\Users\vgulia\Documents\personal_documents\C_Pointers\basic.cpp - Notepad++
+File C:\WINDOWS\system32\cmd.exe
+Microsoft Windows [Version 10.0.16299.1146]
+(c) 2017 Microsoft Corporation. All rights reserved.
+8
+SC:\Users\vgulia>cd Documents
+12C:\Users\vgulia\Documents > cd personal_documents\C_Pointers
+10
+13
+14C:\Users\vgulia
+15 New Text Document.txt' basic.c
+basic.exe
+basic.cpp basic1.cpp basic1.o
+C:\Users\vgulia\Documents\personal_documents\C_Pointers>g++
+21C:\Users\vgulia\Documents\personal_documents\C_Pointers>ls
+22 'New Text Document.txt' basic.c
+23 a.exe
+24
+16 a.exe
+17
+18
+19
+20
+wwwNNNNNN!
+26 sizeof(structa_t) = 4
+27
+\Documents\personal_documents\C_Pointers>ls
+28
+25C:\Users\vgulia\Documents\personal_documents\C_Pointers>a.exe
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+C++ s
+29C:\Users\vgulia\Documents\personal_documents\C_Pointers>
+H
+basic1.exe basic2.cpp basic3.cpp basic4.exe theory.docx
+basic2.exe basic3.exe test.p
+basic.exe
+basic1.exe basic2.cpp basic3.cpp basic4.exe theory.docx
+basic.cpp basic1.cpp basic1.o basic2.exe basic3.exe test.p
+basic.cpp
+e
+8
+T
+6:25 PM
+5/23/2019
+XAutoSave Off HE
+File Home Insert Design Transitions Animations Slide Show
+New Reuse Table Pictures Online Screenshot Photo Shapes Icons
+Slide Slides
+Album -
+Pictures
+3
+5
+6
+8
+Slides
+Tables
+Structure member alignment and padding
+Slide 6 of 9
+Some Rules
+Sequential memory structure
+wwwwwwwww
+Images
+e
+Review View Help
+F
+Forms
+3D SmartArt Chart
+Models -
+Illustrations
+typedef struct structb_tag
+{
+short int
+char
+int
+} structb_t;
+s;
+c;
+i;
+Forms
+0
+Bytes
+Allocation Short
+int
+pointer_to_array_1
+Storyboarding Search
+Get Add-ins
+My Add-ins
+Add-ins
+1
+2
+Short char
+int
+3
+Zoom Link Action Comment
+Links
+int
+Comments
+5
+int
+Total size: 8bytes
+Rule1 -Any data type will always store its value at the address,
+which is multiple of the size of that data type
+Rule2 - structure will take the size equal to the multiple of
+maximum bytes taken by a variable in that structure.
+GEEKSFORGEEKS
+A
+Text Header WordArt
+Box & Footer
+6
+int
+Text
+7
+int
+ΠΩ
+Equation Symbol
+Symbols
+Notes
+01
+8
+Vishal Gulia
+»)
+Video Audio Screen
+Recording
+Media
+Share
+DH
+Comments
++ 86%
+6:25 PM
+5/23/2019
+>«»
