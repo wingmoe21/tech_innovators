@@ -277,8 +277,8 @@
 
 .QUIZ .message-rectangle {
   position: absolute;
-  width: 600px;
-  height: 150px;
+  width: 850px;
+  height: 170px;
   top: 188px;
   left: 553px;
   background-color: #a0a0bf66;
@@ -290,8 +290,8 @@
   top: 373px;
   left: 553px;
   position: absolute;
-  width: 600px;
-  height: 150px;
+  width: 850px;
+  height: 170px;
   background-color: #a0a0bf66;
   backdrop-filter: blur(4px) brightness(100%);
   -webkit-backdrop-filter: blur(4px) brightness(100%);
@@ -301,8 +301,8 @@
   top: 558px;
   left: 558px;
   position: absolute;
-  width: 600px;
-  height: 150px;
+  width: 850px;
+  height: 170px;
   background-color: #a0a0bf66;
   backdrop-filter: blur(4px) brightness(100%);
   -webkit-backdrop-filter: blur(4px) brightness(100%);
@@ -475,7 +475,29 @@
 
 .message-rectangle {
   position: relative;
-  width: 600px;
+  width: 700px;
+  height: auto;
+  background-color: #a0a0bf66;
+  backdrop-filter: blur(4px) brightness(100%);
+  -webkit-backdrop-filter: blur(4px) brightness(100%);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 8px 8px #00000040;
+}
+.message-rectangle-2{
+  position: relative;
+  width: 700px;
+  height: auto;
+  background-color: #a0a0bf66;
+  backdrop-filter: blur(4px) brightness(100%);
+  -webkit-backdrop-filter: blur(4px) brightness(100%);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 8px 8px #00000040;
+}
+.message-rectangle-3{
+  position: relative;
+  width: 700px;
   height: auto;
   background-color: #a0a0bf66;
   backdrop-filter: blur(4px) brightness(100%);

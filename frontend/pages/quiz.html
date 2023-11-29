@@ -51,71 +51,69 @@
           <div class="overlap-group-wrapper">
             <div class="overlap-group"><div class="ellipse-4"></div></div>
           </div>
-          <div class="QUIZ">
-            <div class="message-rectangle">
-              <form action="/submit-your-choice">
-                <p class="question-title">Please select your favorite fruit:</p>
-            
-                <div class="option">
-                  <input type="radio" id="apple" name="fruit" value="apple">
-                  <label for="apple">Apple</label>
-                </div>
-            
-                <div class="option">
-                  <input type="radio" id="orange" name="fruit" value="orange">
-                  <label for="orange">Orange</label>
-                </div>
-            
-                <div class="option">
-                  <input type="radio" id="banana" name="fruit" value="banana">
-                  <label for="banana">Banana</label>
-                </div>
-            
-                <div class="option">
-                  <input type="radio" id="grape" name="fruit" value="grape">
-                  <label for="grape">Grape</label>
-                </div>
-            
-                <input type="submit" value="Submit" class="submit-button">
-              </form>
-            </div>
+          <div class="message-rectangle">
+              <p class="question-title" id="questionTitle"></p>
+              
+              <div class="option">
+                <input type="radio" id="option1" name="quizOption" value="">
+                <label for="option1" id="labelOption1"></label>
+              </div>
+              
+              <div class="option">
+                <input type="radio" id="option2" name="quizOption" value="">
+                <label for="option2" id="labelOption2"></label>
+              </div>
+              
+              <div class="option">
+                <input type="radio" id="option3" name="quizOption" value="">
+                <label for="option3" id="labelOption3"></label>
+              </div>
+              
+              <input type="submit" value="Submit" class="submit-button" id="submitBtn1">
+              <div id="resultMessage1"></div>
           </div>
           <div class="message-rectangle-2">
             <form action="/submit-your-choice">
-              <p>Please select your favorite fruit:</p>
-      
-              <input type="radio" id="apple" name="fruit" value="apple">
-              <label for="apple">Apple</label><br>
-      
-              <input type="radio" id="orange" name="fruit" value="orange">
-              <label for="orange">Orange</label><br>
-      
-              <input type="radio" id="banana" name="fruit" value="banana">
-              <label for="banana">Banana</label><br>
-      
-              <input type="radio" id="grape" name="fruit" value="grape">
-              <label for="grape">Grape</label><br>
-      
-              <input type="submit" value="Submit">
+              <p class="question-title" id="questionTitle"></p>
+              
+              <div class="option">
+                <input type="radio" id="option1" name="quizOption" value="">
+                <label for="option1" id="labelOption1"></label>
+              </div>
+              
+              <div class="option">
+                <input type="radio" id="option2" name="quizOption" value="">
+                <label for="option2" id="labelOption2"></label>
+              </div>
+              
+              <div class="option">
+                <input type="radio" id="option3" name="quizOption" value="">
+                <label for="option3" id="labelOption3"></label>
+              </div>
+              
+              <input type="submit" value="Submit" class="submit-button">
           </form>
           </div>
           <div class="message-rectangle-3">
             <form action="/submit-your-choice">
-              <p>Please select your favorite fruit:</p>
-      
-              <input type="radio" id="apple" name="fruit" value="apple">
-              <label for="apple">Apple</label><br>
-      
-              <input type="radio" id="orange" name="fruit" value="orange">
-              <label for="orange">Orange</label><br>
-      
-              <input type="radio" id="banana" name="fruit" value="banana">
-              <label for="banana">Banana</label><br>
-      
-              <input type="radio" id="grape" name="fruit" value="grape">
-              <label for="grape">Grape</label><br>
-      
-              <input type="submit" value="Submit">
+              <p class="question-title" id="questionTitle"></p>
+              
+              <div class="option">
+                <input type="radio" id="option1" name="quizOption" value="">
+                <label for="option1" id="labelOption1"></label>
+              </div>
+              
+              <div class="option">
+                <input type="radio" id="option2" name="quizOption" value="">
+                <label for="option2" id="labelOption2"></label>
+              </div>
+              
+              <div class="option">
+                <input type="radio" id="option3" name="quizOption" value="">
+                <label for="option3" id="labelOption3"></label>
+              </div>
+              
+              <input type="submit" value="Submit" class="submit-button">
           </form>
           </div>
         </div>
@@ -142,10 +140,11 @@
             },
             body: JSON.stringify({ lecture: selectedOption })
           })
-          .then(response => response.text())
+          .then(response => response.json())
           .then(data => {
             console.log('Success:', data);
             updateQuizSection(data)
+            data1= data
             displayLoading(false); // Hide loader
           })
           .catch((error) => {
@@ -158,54 +157,24 @@
         }
       }
       function updateQuizSection(quizData) {
-        var quizContent = document.querySelector('.QUIZ .message-rectangle');
-        if (quizContent) {
-          // Clear existing content
-          quizContent.innerHTML = '';
-          
-          // Loop through each question and create HTML elements
-          for (var i = 1; i <= 3; i++) {  // Assuming there are 3 questions
-            var question = quizData['Question ' + i];
-            var qTitle = document.createElement('p');
-            qTitle.className = 'question-title';
-            qTitle.textContent = question;
-            
-            // Create a div for options
-            var optionsDiv = document.createElement('div');
-            optionsDiv.className = 'options';
-            
-            // Add options for the question
-            for (var j = 1; j <= 3; j++) {
-              var optionValue = quizData['q' + i + 'c' + j];
-              var input = document.createElement('input');
-              input.type = 'radio';
-              input.id = 'q' + i + 'option' + j;
-              input.name = 'question' + i;
-              input.value = optionValue;
-              
-              var label = document.createElement('label');
-              label.htmlFor = 'q' + i + 'option' + j;
-              label.textContent = optionValue;
-              
-              var optionDiv = document.createElement('div');
-              optionDiv.className = 'option';
-              optionDiv.appendChild(input);
-              optionDiv.appendChild(label);
-              
-              optionsDiv.appendChild(optionDiv);
-            }
-            // Append question title and options to quizContent
-            quizContent.appendChild(qTitle);
-            quizContent.appendChild(optionsDiv);
-          }
-          // Add a submit button
-          var submitButton = document.createElement('input');
-          submitButton.type = 'submit';
-          submitButton.value = 'Submit';
-          submitButton.className = 'submit-button';
-          quizContent.appendChild(submitButton);
-        }
+        console.log(quizData)
+        // Update question title
+        document.getElementById('questionTitle').innerText = quizData['Question 1'];
+        // Update options
+        document.getElementById('option1').value = quizData['q1c1'];
+        document.getElementById('labelOption1').innerText = quizData['q1c1'];
+        
+        document.getElementById('option2').value = quizData['q1c2'];
+        document.getElementById('labelOption2').innerText = quizData['q1c2'];
+        
+        document.getElementById('option3').value = quizData['q1c3'];
+        document.getElementById('labelOption3').innerText = quizData['q1c3'];
+
       }
+      document.getElementById('submitBtn1').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        document.getElementById('resultMessage1').innerText = data1['q1ans'];
+      });
       function displayLoading(show) {
         console.log('Displaying loader:', show);
         var loader = document.querySelector('.loader');
