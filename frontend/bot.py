@@ -47,7 +47,7 @@ def bot(file_path, user_input):
 
         result = chain({"question": query, "chat_history": chat_history})
 
-        if result['answer'] and "I don't know" not in result['answer'] and "I don't have enough" not in result['answer'] and "I'm sorry" not in result['answer']and "There is no mention" not in result['answer']:
+        if result['answer'] and "I don't know" not in result['answer'] and "I don't have " not in result['answer'] and "I'm sorry" not in result['answer']and "There is no mention" not in result['answer']:
             # If there is a valid answer from the file, use it
             chat_history.append((query, result['answer']))
             query = None
