@@ -14,7 +14,6 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
-
 @app.route('/')
 def home():
     return render_template('home.html')

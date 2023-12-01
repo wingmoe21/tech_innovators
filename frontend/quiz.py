@@ -4,7 +4,7 @@ from openai import OpenAI
 
 
 def get_quiz(file_path):
-    os.environ["OPENAI_API_KEY"] = "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"
+    os.environ["OPENAI_API_KEY"] = "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"
     client = OpenAI()
 
     with open(file_path, 'r') as file:
