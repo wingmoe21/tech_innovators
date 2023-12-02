@@ -12,7 +12,8 @@
             <div class="rectangle"></div>
             <div class="text-wrapper">Welcome</div>
             <img class="group" src="{{ url_for('static', filename='img1/group.png') }}" />
-            <img class="vector" src="{{ url_for('static', filename='img1/vector-4.svg') }}" />
+            <a href="{{ url_for('home') }}" class="button-link">
+            <img class="vector" src="{{ url_for('static', filename='img1/vector-4.svg') }}" /></a>
             <div class="list-menu">
               <a href="{{ url_for('summary') }}" class="button-link">
                 <div class="div">
@@ -27,7 +28,8 @@
               <div class="overlap-2"><div class="text-wrapper-4">Chatbot</div></div>
             </a>
             </div>
-            <div class="text-wrapper-5">Exit</div>
+            <a href="{{ url_for('home') }}" class="button-link">
+            <div class="text-wrapper-5">Exit</div></a>
           </div>
           <div class="overlap-3">
             <div class="overlap-4">
