@@ -17,7 +17,7 @@ Session(app)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/chatbot', methods=['GET', 'POST'])
 def chat():

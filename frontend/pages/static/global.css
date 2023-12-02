@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-caudex: Caudex;
+  --font-cairo: Cairo;
+  --font-mulish: Mulish;
+  --font-abeezee: ABeeZee;
+
+  /* font sizes */
+  --font-size-13xl: 32px;
+  --font-size-mini: 15px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-dimgray-100: #696871;
+  --color-darkcyan: #268971;
+  --color-lightgray: rgba(188, 214, 196, 0.5);
+
+  /* Border radiuses */
+  --br-xs: 12px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caudex:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-4">
+      <div class="desktop-4-child"></div>
+      <div class="desktop-4-item" data-scroll-to="ellipse"></div>
+      <div class="desktop-4-inner"></div>
+      <div class="frame-parent">
+        <div class="home-wrapper" id="frameContainer">
+          <div class="home">Home</div>
+        </div>
+        <div class="features" id="featuresText">About us</div>
+      </div>
+      <div class="grow-your-subscripti-wrapper">
+        <b class="grow-your-subscripti-container">
+          <p class="learn">Learn Intelligently</p>
+        </b>
+      </div>
+      <div class="outcome-centered-pro">
+        You will discover the world of intelligent dialogue and start your
+        wonderful journey today
+      </div>
+      <a href="{{ url_for('chat') }}" class="start-link">
+      <div class="button">
+        <div class="bg"></div>
+        <b class="get-started" id="getStartedText1">Get Started</b>
+      </div>
+      </a>
+      <b class="get-started1" data-scroll-to="getStartedText">About us</b>
+      <div class="we-are-here-container">
+        <p class="learn">
+          We are here to aspire to provide you with an exciting and enjoyable
+          learning experience. Our goal is to make the learning process both
+          engaging and practical, ensuring that each moment you spend acquiring
+          knowledge is not only productive but also filled with enjoyment. Get
+          ready for an educational journey that is both thrilling and enriching!
+        </p>
+      </div>
+      <img class="image-7-icon" alt="" src="{{ url_for('static', filename='img/image-7@2x.png') }}" />
+
+      <img class="line-icon" alt="" src="{{ url_for('static', filename='img/line-348.svg') }}" />
+
+      <img class="image-8-icon" alt="" src="{{ url_for('static', filename='img/image-8@2x.png') }}" />
+
+      <img class="image-10-icon" alt="" src="{{ url_for('static', filename='img/image-10@2x.png') }}" />
+
+      <img class="slider-dec-1-icon" alt="" src="{{ url_for('static', filename='img/sliderdec-1@2x.png') }}" />
+    </div>
+
+    <script>
+      var frameContainer = document.getElementById("frameContainer");
+      if (frameContainer) {
+        frameContainer.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='ellipse']");
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var featuresText = document.getElementById("featuresText");
+      if (featuresText) {
+        featuresText.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='getStartedText']");
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var getStartedText1 = document.getElementById("getStartedText1");
+      if (getStartedText1) {
+        getStartedText1.addEventListener("click", function (e) {
+          // Please sync "SAMMARY 1" to the project
+        });
+      }
+      </script>
+  </body>
+</html>
