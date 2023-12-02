@@ -55,7 +55,7 @@ def chat():
 def dropdown_chatbot():
     data = request.json
     selected_lecture = data['lecture']
-    session['file_path'] = f"content/{selected_lecture}.txt"
+    session['file_path'] = f"content/final_f/{selected_lecture}.txt"
     return session['file_path']
 
 @app.route('/summary', methods=['GET','POST'])

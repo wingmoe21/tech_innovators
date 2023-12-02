@@ -243,8 +243,8 @@
 }
 
 .chatbot .text-wrapper-8 {
-    top: 34px;
-    left: 18px;
+    top: 43px;
+    left: 30px;
     color: #a0a0bf;
     font-size: 26px;
     letter-spacing: 0.26px;
@@ -351,7 +351,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    top: 31px;
+    top: 25px;
     left: 800px;
 }
 
@@ -372,7 +372,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    top: 31px;
+    top: 25px;
     left: 846px;
 }
 
@@ -390,9 +390,10 @@
     top: 110px; /* Existing style */
     left: 303px; /* Existing style */
     width: 1135px; /* Existing style */
-    height: 656px; /* Existing style */
+    height: 556px; /* Existing style */
     padding: 10px;
     padding-bottom: 100px; /* Add padding to ensure space for message input */
+    overflow-y: scroll; /* Enable vertical scrolling */
 }
 .chatbot .chat-messages-container{
     position: absolute;
@@ -405,6 +406,7 @@
     display: flex; /* Existing style */
     flex-direction: column; /* Existing style */
     align-items: center;
+    padding-bottom: 100px; /* Add padding to ensure space for message input */
 }
 
 .chatbot .vector-4 {
@@ -451,7 +453,7 @@
 .chatbot .user-icon {
     width: 40px;
     height: 52px;
-    margin-left: 1080px;
+    margin-left: 1060px;
 }
 
 .chatbot .frame-5 {
@@ -496,7 +498,7 @@
     width: fit-content;
     align-self: flex-end; /* Align to the end (right) */
     margin-left: auto; /* Push to the right */
-    margin-right: 20px; /* Margin on the right */
+    margin-right: 30px; /* Margin on the right */
     align-items: flex-start; /* This is redundant because of the container's align-items */
     display: flex;
     }
