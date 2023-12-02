@@ -18,30 +18,10 @@ Session(app)
 def home():
     return render_template('home.html')
 
-# @app.route('/chatbot', methods=['GET', 'POST'])
-# def chat():
-#     if request.method == 'GET':
-#         return render_template('page1.html')
-#     else:
-#         # When a message is sent from the interface, handle the POST request
-#         data = request.get_json()
-#         user_input = data['message']
-#         # The 'bot' function is called with the user input and expected to return a response
-#         file_path = session.get('file_path', '')
-#         bot_response = bot(file_path, user_input)
-#         return jsonify({'reply': bot_response})
-    
-# @app.route('/lecture_chatbot', methods=['POST'])
-# def dropdown_chatbot():
-#     data = request.json
-#     selected_lecture = data['lecture']
-#     session['file_path'] = f"content/{selected_lecture}.txt"
-#     return session['file_path']
-
 @app.route('/chatbot', methods=['GET', 'POST'])
 def chat():
     if request.method == 'GET':
-        return render_template('index.html')
+        return render_template('chatbot.html')
     else:
         # When a message is sent from the interface, handle the POST request
         data = request.get_json()
@@ -58,23 +38,10 @@ def dropdown_chatbot():
     session['file_path'] = f"content/final_f/{selected_lecture}.txt"
     return session['file_path']
 
-# @app.route('/summary', methods=['GET','POST'])
-# def summary():
-#     if request.method == 'GET':
-#         return render_template('summary.html')
-    
-# @app.route('/lecture_summary', methods=['POST'])
-# def dropdown_summary():
-#     data = request.json
-#     selected_lecture = data['lecture']
-#     session['file_path'] = f"content/{selected_lecture}.txt"
-#     output = get_summary(session['file_path'])
-#     return output
-
 @app.route('/summary', methods=['GET','POST'])
 def summary():
     if request.method == 'GET':
-        return render_template('index1.html')
+        return render_template('summary.html')
     
 @app.route('/lecture_summary', methods=['POST'])
 def dropdown_summary():
@@ -88,7 +55,7 @@ def dropdown_summary():
 @app.route('/quiz', methods=['GET','POST'])
 def quiz():
     if request.method == 'GET':
-        return render_template('index2.html')
+        return render_template('quiz.html')
 
 @app.route('/lecture_quiz', methods=['POST'])
 def dropdown_quiz():
