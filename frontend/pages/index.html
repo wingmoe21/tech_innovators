@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="chatbot">
+            <div class="div">
+                <div class="overlap">
+                    <div class="text-wrapper">Welcome</div>
+                    <img class="group" src="{{ url_for('static', filename='img1/group.png') }}" />
+                    <img class="vector" src="{{ url_for('static', filename='img1/vector-4.svg') }}" />
+                    <div class="text-wrapper-2">Exit</div>
+                    <div class="list-menu">
+                        <a href="{{ url_for('summary') }}" class="button-link">
+                            <div class="overlap-group"><div class="text-wrapper-3">Summary</div></div>
+                        </a>
+                        <a href="{{ url_for('quiz') }}" class="button-link">
+                            <div class="div-wrapper"><div class="text-wrapper-4">Quiz</div></div>
+                        </a>
+                        <a href="{{ url_for('chat') }}" class="button-link">
+                            <div class="overlap-group-2"><div class="text-wrapper-5">Chatbot</div></div>
+                        </a>
+                    </div>
+                    <div class="text-wrapper-6">Exit</div>
+                </div>
+                <div class="overlap-2">
+                    <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" />
+                    <div class="frame">
+                        <select class="lectures-dropdown" id="lecturesDropdown" onchange="updateSelectedLecture()">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="Calloc vs malloc">Calloc vs malloc</option>
+                            <option value="Decimal to Binary Conversion">Decimal to Binary Conversion</option>
+                            <option value="Pointers in C Basic">Pointers in C Basic</option>
+                        </select>
+                        <div class="text-wrapper-12">
+                            <span id="lecturesLabel">Choose a Lecture...</span>
+                            <span id="selectedLecture" style="display: none;"></span> <!-- Initially hidden -->
+                        </div>
+                        <img class="img" src="{{ url_for('static', filename='img1/vector-5.svg') }}" />
+                    </div>
+                    <div class="text-wrapper-8">Chatbot</div>
+                </div>
+                <div class="rectangle"></div>
+                <div class="overlap-3">
+                    <div class="frame-3">
+                        <form id="chat-form">
+                            <input type="text" id="chat-input" placeholder="Type your message here..." autocomplete="off" disabled>
+                        </form>
+                        <img class="vector-3" src="{{ url_for('static', filename='img1/vector-3.svg') }} "onclick="submitChatForm()" />
+                        <img class="fill-2" src="{{ url_for('static', filename='img1/fill-4.svg') }}" onclick="clearChatMessages()"/>
+                    </div>
+                </div>
+                <div class="rectangle-3">
+                <div id="chat-messages-container">
+                    <!-- Chat messages will be dynamically added here -->
+                    <div class="loader" style="display: none;"></div> <!-- Loader initially hidden -->
+                    <!-- <img class="vector-4" src="{{ url_for('static', filename='img1/vector-2.svg') }}"/>
+                        <div class="frame-4"><div class="text-wrapper-11">Hi</div></div>
+                        <img class="vector-5" src="{{ url_for('static', filename='img1/vector-1.svg') }}"/>
+                        <div class="frame-5"><p class="p">Hello! How can I assist you?</p></div> -->
+                    </div>
+                </div>
+                </div>
+            </div>
+        </body>
+        <script>
+            function updateSelectedLecture() {
+                var dropdown = document.getElementById("lecturesDropdown");
+                var selectedOption = dropdown.value;
+                document.getElementById("selectedLecture").innerText = selectedOption;
+                var selectedText = dropdown.options[dropdown.selectedIndex].text;
+                var label = document.getElementById("lecturesLabel");
+                var selectedLectureSpan = document.getElementById("selectedLecture");
+                // If the selected option is not the placeholder
+                var chatInput = document.getElementById("chat-input");
+                if(dropdown.selectedIndex > 0) {
+                    label.style.display = "none"; // Hide the "LECTURES" text
+                    selectedLectureSpan.textContent = selectedText; // Set the selected text
+                    selectedLectureSpan.style.display = "block"; // Show the selected text
+                    chatInput.disabled = false;
+                } else {
+                    label.style.display = "block"; // Show the "LECTURES" text
+                    selectedLectureSpan.style.display = "none"; // Hide the selected text
+                    chatInput.disabled = false;
+                }
+                fetch('/lecture_chatbot', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ lecture: selectedOption })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            }
+            function displayMessage(message, sender) {
+                var chatMessagesContainer = document.getElementById('chat-messages-container');
+                var messageContainer = document.createElement('div');
+                messageContainer.classList.add('message-container');
+                
+                var messageElement = document.createElement('div');
+                messageElement.textContent = message;
+                messageElement.classList.add('chat-message');
+                
+                if (sender === 'user') {
+                    var userIcon = document.createElement('img');
+                    userIcon.src = "{{ url_for('static', filename='img1/vector-2.svg') }}"; // Ensure the path to the bot icon is correct
+                    userIcon.classList.add('user-icon');
+
+                    messageElement.classList.add('user-message');
+                    messageContainer.appendChild(userIcon); // Append the bot icon to the container for bot
+                    messageContainer.appendChild(messageElement); // Append the message element to the container for user
+                } else {
+                    var botIcon = document.createElement('img');
+                    botIcon.src = "{{ url_for('static', filename='img1/vector-1.svg') }}"; // Ensure the path to the bot icon is correct
+                    botIcon.classList.add('bot-icon');
+                    
+                    messageElement.classList.add('bot-message');
+                    messageContainer.appendChild(botIcon); // Append the bot icon to the container for bot
+                    messageContainer.appendChild(messageElement); // Append the message element to the container for bot
+                }
+                
+                chatMessagesContainer.appendChild(messageContainer); // Append the whole container
+                chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight; // Scroll to the bottom of the chat container
+            }
+            function clearChatMessages() {
+                var chatMessagesContainer = document.getElementById('chat-messages-container');
+                // Select all elements with class 'user-message' and 'bot-message'
+                var userMessages = chatMessagesContainer.getElementsByClassName('user-message');
+                var botMessages = chatMessagesContainer.getElementsByClassName('bot-message');
+                var borIcons = chatMessagesContainer.getElementsByClassName('bot-icon');
+                var userIcons = chatMessagesContainer.getElementsByClassName('user-icon');
+                // Remove all found elements
+            while (userMessages.length > 0) {
+                userMessages[0].parentNode.removeChild(userMessages[0]);
+                userIcons[0].parentNode.removeChild(userIcons[0]);
+
+            }
+            while (botMessages.length > 0) {
+                borIcons[0].parentNode.removeChild(borIcons[0]);
+                botMessages[0].parentNode.removeChild(botMessages[0]);
+            }
+        }
+        function submitChatForm() {
+            var event = new Event('submit');
+            document.getElementById('chat-form').dispatchEvent(event);
+        }
+        
+        function displayLoading(show) {
+            console.log('Displaying loader:', show);
+            var loader = document.querySelector('.loader');
+            if (loader) {
+                loader.style.display = show ? 'block' : 'none';
+            }
+        }
+        
+        document.getElementById('chat-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var userInput = document.getElementById('chat-input').value;
+            
+            if (userInput.trim() !== '') {
+                displayMessage(userInput, 'user'); // Display user message on the front end
+                document.getElementById('chat-input').value = ''; // Clear the input right after sending the message
+                displayLoading(true); // Show loader
+                
+                fetch('/chatbot', {
+                    method: 'POST',
+                    body: JSON.stringify({ message: userInput }),
+                    headers: {
+                        'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                displayLoading(false); // Hide loader
+                displayMessage(data.reply, 'bot'); // Display bot message on the front end
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                displayLoading(false); // Hide loader in case of error
+            });
+        }
+    });
+    </script>
+    </html>
