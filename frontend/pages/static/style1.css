@@ -1,0 +1,326 @@
+.sammary {
+  background-color: #d9d9dfcc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.sammary .overlap-wrapper {
+  background-color: #d9d9dfcc;
+  width: 1440px;
+  height: 765px;
+}
+
+.sammary .overlap {
+  position: relative;
+  height: 765px;
+}
+
+.sammary .overlap-group {
+  position: absolute;
+  width: 325px;
+  height: 765px;
+  top: 0;
+  left: 0;
+}
+
+.sammary .rectangle {
+  position: absolute;
+  width: 306px;
+  height: 765px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 60px #e1ecf880;
+}
+
+.sammary .text-wrapper {
+  position: absolute;
+  top: 63px;
+  left: 80px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #89958d;
+  font-size: 26px;
+  letter-spacing: 0.26px;
+  line-height: normal;
+}
+
+.sammary .group {
+  position: absolute;
+  width: 176px;
+  height: 156px;
+  top: 521px;
+  left: 65px;
+}
+
+.sammary .vector {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 724px;
+  left: 64px;
+}
+
+.sammary .list-menu {
+  position: absolute;
+  width: 299px;
+  height: 282px;
+  top: 171px;
+  left: 26px;
+}
+
+.sammary .div {
+  position: absolute;
+  width: 293px;
+  height: 92px;
+  top: 0;
+  left: 0;
+}
+
+.sammary .rectangle-2 {
+  position: absolute;
+  width: 230px;
+  height: 74px;
+  top: 0;
+  left: 0;
+  background-color: #268971;
+  border-radius: 8px;
+}
+
+.sammary .text-wrapper-2 {
+  width: 238px;
+  top: 21px;
+  left: 55px;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: -0.24px;
+  position: absolute;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.sammary .div-wrapper {
+  position: absolute;
+  width: 230px;
+  height: 74px;
+  top: 104px;
+  left: 0;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: #268971;
+}
+
+.sammary .text-wrapper-3 {
+  position: absolute;
+  width: 101px;
+  top: 22px;
+  left: 82px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #a0a0bf;
+  font-size: 24px;
+  letter-spacing: -0.24px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.sammary .overlap-2 {
+  position: absolute;
+  width: 230px;
+  height: 74px;
+  top: 208px;
+  left: 0;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: #268971;
+}
+
+.sammary .text-wrapper-4 {
+  position: absolute;
+  width: 141px;
+  top: 22px;
+  left: 64px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #a0a0bf;
+  font-size: 24px;
+  letter-spacing: -0.24px;
+  line-height: normal;
+}
+
+.sammary .text-wrapper-5 {
+  position: absolute;
+  width: 180px;
+  top: 718px;
+  left: 90px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: #bfbfbf;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  line-height: normal;
+}
+
+.sammary .overlap-3 {
+  position: absolute;
+  width: 1134px;
+  height: 110px;
+  top: 0;
+  left: 306px;
+  background-color: #ffffff;
+}
+
+.sammary .overlap-4 {
+  position: absolute;
+  width: 957px;
+  height: 81px;
+  top: 17px;
+  left: 177px;
+}
+
+.sammary .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 672px;
+  padding: 8px 28px;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 885px;
+  height: 52px;
+  background-color: #507169;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sammary .lectures-dropdown {
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  opacity: 0; /* Make it invisible */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  z-index: 2; /* Ensure it's above the LECTURES text */
+  color: black;
+}
+.sammary .text-wrapper-12 {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  z-index: 1; /* Place it behind the dropdown */
+  font-family: "Actor", Helvetica;
+  font-weight: 400;
+  color: #d9d9d9; /* Color for the text */
+  font-size: 24px; /* Font size for the text */
+  letter-spacing: 0;
+  line-height: normal;
+  pointer-events: none; /* This makes clicks pass through the text to the dropdown */
+}
+
+.sammary .text-wrapper-2 #selectedLecture {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* Initially hidden */
+  z-index: 3; /* Above the lecturesLabel */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+
+.sammary .text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.sammary .img {
+  position: relative;
+  width: 28px;
+  height: 16px;
+  margin-right: -1.5px;
+  left: 810px;
+}
+
+.sammary .image {
+  position: absolute;
+  width: 76px;
+  height: 81px;
+  top: 0;
+  left: 881px;
+  mix-blend-mode: darken;
+  object-fit: cover;
+}
+
+.sammary .text-wrapper-7 {
+  top: 34px;
+  left: 18px;
+  color: #a0a0bf;
+  font-size: 26px;
+  letter-spacing: 0.26px;
+  position: absolute;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.sammary .rectangle-3 {
+  position: absolute;
+  width: 1134px;
+  height: 3px;
+  top: 110px;
+  left: 306px;
+  background-color: #7474dd14;
+}
+
+.sammary .rectangle-4 {
+  position: relative;
+  top: 110px; /* Existing style */
+  left: 303px; /* Existing style */
+  width: 1135px; /* Existing style */
+  height: 556px; /* Existing style */
+  padding: 10px;
+  padding-bottom: 100px; /* Add padding to ensure space for message input */
+}
+
+.sammary #rectangle-4-content {
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: 50;
+}
+
+.loader-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 70vh; /* Adjust this as per your need */
+}
+
+.loader {
+border: 5px solid #f3f3f3;
+border-top: 5px solid #3498db;
+border-radius: 50%;
+width: 150px;
+height: 150px;
+animation: spin 2s linear infinite;
+z-index: 13;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

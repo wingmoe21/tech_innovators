@@ -58,18 +58,32 @@ def dropdown_chatbot():
     session['file_path'] = f"content/final_f/{selected_lecture}.txt"
     return session['file_path']
 
+# @app.route('/summary', methods=['GET','POST'])
+# def summary():
+#     if request.method == 'GET':
+#         return render_template('summary.html')
+    
+# @app.route('/lecture_summary', methods=['POST'])
+# def dropdown_summary():
+#     data = request.json
+#     selected_lecture = data['lecture']
+#     session['file_path'] = f"content/{selected_lecture}.txt"
+#     output = get_summary(session['file_path'])
+#     return output
+
 @app.route('/summary', methods=['GET','POST'])
 def summary():
     if request.method == 'GET':
-        return render_template('summary.html')
+        return render_template('index1.html')
     
 @app.route('/lecture_summary', methods=['POST'])
 def dropdown_summary():
     data = request.json
     selected_lecture = data['lecture']
-    session['file_path'] = f"content/{selected_lecture}.txt"
+    session['file_path'] = f"content/final_f/{selected_lecture}.txt"
     output = get_summary(session['file_path'])
     return output
+
     
 @app.route('/quiz', methods=['GET','POST'])
 def quiz():

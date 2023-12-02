@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='globals1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+  <body>
+    <div class="sammary">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="overlap-group">
+            <div class="rectangle"></div>
+            <div class="text-wrapper">Welcome</div>
+            <img class="group" src="{{ url_for('static', filename='img1/group.png') }}" />
+            <img class="vector" src="{{ url_for('static', filename='img1/vector-4.svg') }}" />
+            <div class="list-menu">
+              <a href="{{ url_for('summary') }}" class="button-link">
+                <div class="div">
+                  <div class="rectangle-2"></div>
+                  <div class="text-wrapper-2">Summary</div>
+                </div>
+              </a>
+            <a href="{{ url_for('quiz') }}" class="button-link">
+              <div class="div-wrapper"><div class="text-wrapper-3">Quiz</div></div>
+            </a>
+            <a href="{{ url_for('chat') }}" class="button-link">
+              <div class="overlap-2"><div class="text-wrapper-4">Chatbot</div></div>
+            </a>
+            </div>
+            <div class="text-wrapper-5">Exit</div>
+          </div>
+          <div class="overlap-3">
+            <div class="overlap-4">
+                <div class="frame">
+                  <select class="lectures-dropdown" id="lecturesDropdown" onchange="updateSelectedLecture()">
+                      <option value="" disabled selected>Select your option</option>
+                      <!-- <option value="Decimal to Binary Conversion _ GeeksforGeeks">Decimal to Binary Conversion</option> -->
+                      <!-- <option value="Binary to Decimal Conversion _ GeeksforGeeks">Binary to Decimal Conversion</option> -->
+                      <option value="Decimal to Octal Conversion _ GeeksforGeeks">Decimal to Octal Conversion</option>
+                      <option value="Octal to Decimal Conversion _ GeeksforGeeks">Octal to Decimal Conversion</option>
+                      <option value="Decimal to Hexadecimal Conversion _ GeeksforGeeks">Decimal to Hexadecimal Conversion</option>
+                      <!-- <option value="Hexadecimal to Decimal Conversion _ GeeksforGeeks">Hexadecimal to Decimal Conversion</option> -->
+                      <option value="Pointers in C Basic _ GeeksforGeeks">Pointers in C Basic</option>
+                      <option value="Double Pointer (Pointer to Pointer) in C _ GeeksforGeeks">Double Pointer (Pointer to Pointer) in C</option>
+                      <!-- <option value="Dereference, Reference _ GeeksforGeeks">Dereference, Reference</option> -->
+                      <!-- <option value="Why C treats array parameters as pointers">Why C treats array parameters as pointers</option> -->
+                      <!-- <option value="Dangling, Void , Null and Wild Pointers _ GeeksforGeeks">Dangling, Void , Null and Wild Pointers</option> -->
+                      <option value="How to declare a pointer to a function">How to declare a pointer to a function</option>
+                      <!-- <option value="An Uncommon representation of array elements">An Uncommon representation of array elements</option> -->
+                      <!-- <option value="Functions that are executed before and after main() in C _ GeeksforGeeks">Functions that are executed before and after main() in C</option> -->
+                      <option value="Functions in C _ C   _ GeeksforGeeks">Functions in C </option>
+                      <!-- <option value="restrict keyword in C (C Programming) _ GeeksforGeeks">restrict keyword in C (C Programming)</option> -->
+                      <option value="Void Pointer in C _ GeeksforGeeks">Void Pointer in C</option>
+                      <option value="How does free() know the size of memory to be deallocated">How does free() know the size of memory to be deallocated</option>
+                      <!-- <option value="Understanding “register” keyword in C _ GeeksforGeeks">Understanding “register” keyword in C</option> -->
+                      <!-- <option value="What is evaluation order of function parameters in C">What is evaluation order of function parameters in C</option> -->
+                      <!-- <option value="Use of realloc _ GeeksforGeeks">Use of realloc</option> -->
+                      <!-- <option value="Structure Member Alighnment and Padding (Part 3) _ GeeksforGeeks">Structure Member Alighnment and Padding (Part 2)</option> -->
+                      <option value="Structure Member Alighnment and Padding (Part 1) _ GeeksforGeeks">Structure Member Alighnment and Padding (Part 1)</option>
+                      <option value="Structures in C _ GeeksforGeeks">Structures in C</option>
+                      <option value="Calloc vs malloc _ GeeksforGeeks">Calloc vs malloc</option>
+                      <option value="Pointer vs Array (C Programming) _ GeeksforGeeks">Pointer vs Array (C Programming)</option>
+                      <option value="How to deallocate memory without using free() in C">How to deallocate memory without using free() in C</option>
+                      <!-- <option value="Minimum Cost Path Problem _ GeeksforGeeks">Minimum Cost Path Problem</option>
+                      <option value="Variables (Core Java) _ GeeksforGeeks">Variables (Core Java)</option> -->
+                  </select>
+                  <div class="text-wrapper-12">
+                      <span id="lecturesLabel">Choose a Lecture...</span>
+                      <span id="selectedLecture" style="display: none;"></span> <!-- Initially hidden -->
+                  </div>
+          <img class="img" src="{{ url_for('static', filename='img1/vector-5.svg') }}" />
+              </div>
+              <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" />
+            </div>
+            <div class="text-wrapper-7">Summary</div>
+          </div>
+          <div class="rectangle-3"></div>
+          <div class="rectangle-4">
+            <span id="rectangle-4-content">Please choose a lecture</span> <!-- This element will display the output -->
+            <div class="loader-container">
+              <div class="loader" style="display: none;"></div> <!-- Loader initially hidden -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      function updateSelectedLecture() {
+        document.getElementById('rectangle-4-content').innerText = ''
+        displayLoading(true); // Show loader
+        var dropdown = document.getElementById("lecturesDropdown");
+        var selectedOption = dropdown.value;
+        document.getElementById("selectedLecture").innerText = selectedOption;
+        var selectedText = dropdown.options[dropdown.selectedIndex].text;
+        var label = document.getElementById("lecturesLabel");
+        var selectedLectureSpan = document.getElementById("selectedLecture");
+        // If the selected option is not the placeholder
+        if(dropdown.selectedIndex > 0) {
+          label.style.display = "none"; // Hide the "LECTURES" text
+          selectedLectureSpan.textContent = selectedText; // Set the selected text
+          selectedLectureSpan.style.display = "block"; // Show the selected text
+          fetch('/lecture_summary', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ lecture: selectedOption })
+          })
+          .then(response => response.text())
+          .then(data => {
+            console.log('Success:', data);
+            displayLoading(false); // Hide loader
+            document.getElementById('rectangle-4-content').innerText = data; // Update the rectangle-3 content
+          })
+          .catch((error) => {
+            displayLoading(false); // Hide loader
+            console.error('Error:', error);
+          });
+        } else {
+          label.style.display = "block"; // Show the "LECTURES" text
+          selectedLectureSpan.style.display = "none"; // Hide the selected text
+          rectangleContent.innerText = "Please choose a lecture"; // Remind the user to select a lecture
+        }
+      }
+      function displayLoading(show) {
+        console.log('Displaying loader:', show);
+        var loader = document.querySelector('.loader');
+        if (loader) {
+          loader.style.display = show ? 'block' : 'none';
+        }
+      }
+    </script>
+  </body>
+</html>
