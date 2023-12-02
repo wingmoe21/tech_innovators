@@ -88,13 +88,13 @@ def dropdown_summary():
 @app.route('/quiz', methods=['GET','POST'])
 def quiz():
     if request.method == 'GET':
-        return render_template('quiz.html')
+        return render_template('index2.html')
 
 @app.route('/lecture_quiz', methods=['POST'])
 def dropdown_quiz():
     data = request.json
     selected_lecture = data['lecture']
-    session['file_path'] = f"content/{selected_lecture}.txt"
+    session['file_path'] = f"content/final_f/{selected_lecture}.txt"
     output = get_quiz(session['file_path'])
     print(output)
     return output

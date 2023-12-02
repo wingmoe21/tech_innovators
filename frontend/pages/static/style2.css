@@ -1,0 +1,541 @@
+.quiz {
+  background-color: #d9d9dfcc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.quiz .div {
+  background-color: #d9d9dfcc;
+  width: 1440px;
+  height: 765px;
+  position: relative;
+}
+
+.quiz .overlap {
+  position: absolute;
+  width: 306px;
+  height: 765px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 60px #e1ecf880;
+}
+
+.quiz .text-wrapper {
+  position: absolute;
+  top: 62px;
+  left: 80px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #89958d;
+  font-size: 26px;
+  letter-spacing: 0.26px;
+  line-height: normal;
+}
+
+.quiz .group {
+  position: absolute;
+  width: 176px;
+  height: 156px;
+  top: 521px;
+  left: 65px;
+}
+
+.quiz .vector {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 724px;
+  left: 65px;
+}
+
+.quiz .list-menu {
+  position: absolute;
+  width: 236px;
+  height: 282px;
+  top: 171px;
+  left: 26px;
+}
+
+.quiz .overlap-group {
+  position: absolute;
+  width: 230px;
+  height: 74px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: #268971;
+}
+.quiz .radio{
+  visibility: hidden;
+}
+.quiz .text-wrapper-2 {
+  position: absolute;
+  width: 149px;
+  top: 19px;
+  left: 53px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #a0a0bf;
+  font-size: 24px;
+  letter-spacing: -0.24px;
+  line-height: normal;
+}
+
+.quiz .div-wrapper {
+  position: absolute;
+  width: 230px;
+  height: 74px;
+  top: 104px;
+  left: 0;
+  background-color: #268971;
+  border-radius: 8px;
+}
+
+.quiz .text-wrapper-3 {
+  width: 101px;
+  top: 24px;
+  left: 84px;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: -0.24px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.quiz .overlap-2 {
+  position: absolute;
+  width: 230px;
+  height: 74px;
+  top: 208px;
+  left: 0;
+  background-color: #f9fafa;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: #268971;
+}
+
+.quiz .text-wrapper-4 {
+  position: absolute;
+  width: 141px;
+  top: 22px;
+  left: 64px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #a0a0bf;
+  font-size: 24px;
+  letter-spacing: -0.24px;
+  line-height: normal;
+}
+
+.quiz .text-wrapper-5 {
+  position: absolute;
+  width: 180px;
+  top: 718px;
+  left: 90px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: #bfbfbf;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  line-height: normal;
+}
+
+.quiz .overlap-3 {
+  position: absolute;
+  width: 1134px;
+  height: 110px;
+  top: 0;
+  left: 306px;
+  background-color: #ffffff;
+}
+
+.quiz .overlap-4 {
+  position: absolute;
+  width: 957px;
+  height: 81px;
+  top: 16px;
+  left: 177px;
+}
+
+.quiz .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 672px;
+  padding: 8px 28px;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 885px;
+  height: 52px;
+  background-color: #507169;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.quiz .lectures-dropdown {
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  opacity: 0; /* Make it invisible */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  z-index: 2; /* Ensure it's above the LECTURES text */
+  color: black;
+}
+.quiz .text-wrapper-12 {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  z-index: 1; /* Place it behind the dropdown */
+  font-family: "Actor", Helvetica;
+  font-weight: 400;
+  color: #d9d9d9; /* Color for the text */
+  font-size: 24px; /* Font size for the text */
+  letter-spacing: 0;
+  line-height: normal;
+  pointer-events: none; /* This makes clicks pass through the text to the dropdown */
+}
+
+.quiz .text-wrapper-2 #selectedLecture {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* Initially hidden */
+  z-index: 3; /* Above the lecturesLabel */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.quiz .text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.quiz .img {
+  position: relative;
+  width: 28px;
+  height: 16px;
+  margin-right: -1.5px;
+  left: 810px;
+}
+.quiz .image {
+  position: absolute;
+  width: 76px;
+  height: 81px;
+  top: 0;
+  left: 881px;
+  mix-blend-mode: darken;
+  object-fit: cover;
+}
+
+.quiz .text-wrapper-7 {
+  top: 36px;
+  left: 59px;
+  color: #a0a0bf;
+  font-size: 26px;
+  letter-spacing: 0.26px;
+  position: absolute;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.quiz .rectangle {
+  position: absolute;
+  width: 1134px;
+  height: 3px;
+  top: 110px;
+  left: 306px;
+  background-color: #7474dd14;
+}
+
+.quiz .overlap-5 {
+  position: absolute;
+  width: 1060px;
+  height: 180px;
+  top: 137px;
+  left: 343px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.quiz .overlap-wrapper {
+  position: absolute;
+  width: 361px;
+  height: 44px;
+  top: 0;
+  left: 0;
+}
+
+.quiz .overlap-6 {
+  position: relative;
+  width: 359px;
+  height: 44px;
+  background-color: #9cafab;
+  border-radius: 12px;
+}
+
+.quiz .text-wrapper-8 {
+  position: absolute;
+  width: 123px;
+  top: 5px;
+  left: 15px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.quiz .frame-wrapper {
+  position: absolute;
+  width: 286px;
+  height: 120px;
+  top: 44px;
+  left: 32px;
+}
+
+.quiz .frame-2 {
+  display: flex;
+  flex-direction: column;
+  width: 205px;
+  height: 110px;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+  top: 10px;
+}
+
+.quiz .frame-3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 21px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.quiz .ellipse {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+.quiz .text-wrapper-9 {
+  position: relative;
+  width: 124px;
+  margin-top: -1px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #635d9d;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.quiz .frame-4 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.quiz .ellipse-2 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 6px;
+  left: 6px;
+  background-color: #635d9d;
+  border-radius: 4px;
+}
+
+.quiz .frame-5 {
+  display: inline-flex;
+  align-items: center;
+  gap: 21px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-bottom: -10px;
+}
+
+.quiz .overlap-7 {
+  position: absolute;
+  width: 1060px;
+  height: 180px;
+  top: 341px;
+  left: 343px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.quiz .text-wrapper-10 {
+  position: absolute;
+  width: 152px;
+  top: 5px;
+  left: 15px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.quiz .text-wrapper-14 {
+  position: absolute;
+  width: 152px;
+  top: 5px;
+  left: 15px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.quiz .frame-6 {
+  position: absolute;
+  width: 286px;
+  height: 120px;
+  top: 44px;
+  left: 25px;
+}
+
+.quiz .overlap-8 {
+  position: absolute;
+  width: 1060px;
+  height: 180px;
+  top: 545px;
+  left: 343px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+.question-title {
+  position: relative;
+  left: 370px;
+  top: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #7f8291;
+  margin-bottom: 20px;
+}
+
+.option {
+  position: relative;
+  top: 15px;
+  margin-bottom: 10px;
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+.submit-button {
+  background-color: #BFBFBF;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  /* cursor: pointer; */
+}
+
+.quiz .options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the flex container */
+  position: relative; /* Relative positioning to contain the absolute positioned result message */
+}
+
+.quiz #resultMessage1 {
+  position: absolute; /* Position it absolutely within the options container */
+  /* Add other styles such as font-family, line-height as per your design requirements */
+  top: 120%;
+  left: 15px;
+}
+.quiz #resultMessage2 {
+  position: absolute; /* Position it absolutely within the options container */
+  /* Add other styles such as font-family, line-height as per your design requirements */
+  top: 120%;
+  left: 15px;
+}
+.quiz #resultMessage3 {
+  position: absolute; /* Position it absolutely within the options container */
+  /* Add other styles such as font-family, line-height as per your design requirements */
+  top: 120%;
+  left: 15px;
+}
+
+.loader1 {
+  position: relative;
+  left: 975px;
+  top: 65px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  z-index: 15;
+}
+.loader2 {
+  position: relative;
+  left: 975px;
+  top: 65px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  z-index: 15;
+}
+.loader3 {
+  position: relative;
+  left: 975px;
+  top: 65px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  z-index: 15;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
