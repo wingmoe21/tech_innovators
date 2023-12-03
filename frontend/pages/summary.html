@@ -135,3 +135,50 @@
     </script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    @keyframes moveImage {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px); /* انتقال بمقدار 20 بكسل */
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .group {
+      animation: moveImage 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbot">
+    <!-- باقي العناصر الأخرى في صفحتك -->
+
+    <!-- الصورة المتحركة -->
+
+    <!-- السكريبت لتحريك الصورة -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var groupImage = document.querySelector(".group");
+
+        if (groupImage) {
+          groupImage.style.animationName = "moveImage";
+          groupImage.style.animationDuration = "2s";
+          groupImage.style.animationIterationCount = "infinite";
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>
+
