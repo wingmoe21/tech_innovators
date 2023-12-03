@@ -70,3 +70,62 @@ def dropdown_quiz():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+from flask import Flask, render_template, request, send_file
+from PyPDF2 import PdfReader
+
+
+        
+# كود رفع pdf
+
+import os
+
+app = Flask(__name__)
+
+# مجلد لتخزين الملفات النهائية
+FINAL_FOLDER = 'final_f'
+app.config['FINAL_FOLDER'] = FINAL_FOLDER
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/final_f', methods=['POST'])
+def final_f():
+    uploaded_file = request.files['file']
+    if uploaded_file.filename != '':
+        # تأكد من وجود مجلد final_f
+        if not os.path.exists(FINAL_FOLDER):
+            os.makedirs(FINAL_FOLDER)
+
+        processed_text = process_pdf(uploaded_file)
+        
+        # احفظ النص في ملف نصي داخل المجلد final_f
+        text_file_path = os.path.join(FINAL_FOLDER, f"{os.path.splitext(uploaded_file.filename)[0]}_output.txt")
+        with open(text_file_path, 'w', encoding='utf-8') as text_file:
+            text_file.write(processed_text)
+
+        # استخدم الطريق الكامل لملف النص عند إرساله
+        return send_file(os.path.abspath(text_file_path), as_attachment=True)
+    else:
+        return render_template('index.html', error='Select PDF.')
+
+def process_pdf(uploaded_file):
+    with uploaded_file.stream as file:
+        pdf_reader = PdfReader(file)
+        text = ''
+        for page_num in range(len(pdf_reader.pages)):
+            page = pdf_reader.pages[page_num]
+            text += page.extract_text()
+
+    print("Extracted text:")
+    print(text)
+
+    # اطبع المسار الكامل لملف النص بعد الحفظ
+    text_file_path = os.path.join(FINAL_FOLDER, f"{os.path.splitext(os.path.basename(uploaded_file.filename))[0]}_output.txt")
+    print(f"File saved at: {os.path.abspath(text_file_path)}")
+
+    return text
+
+if __name__ == '__main__':
+    app.run(debug=True)

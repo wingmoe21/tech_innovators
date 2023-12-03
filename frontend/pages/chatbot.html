@@ -26,7 +26,23 @@
                     <div class="text-wrapper-6">Exit</div>
                 </div>
                 <div class="overlap-2">
-                    <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" />
+                    <a href="#" class="image-button" onclick="triggerFileInput()">
+                        <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" alt="Button Image">
+                    </a>
+                    <script>
+                        function triggerFileInput() {
+                            document.getElementById('file-input').click();
+                        }
+                    
+                        function handleFileInputChange() {
+                            console.log("File input changed");
+                            // يمكنك إضافة المزيد من الكود هنا بعد تغيير الملف
+                        }
+                    </script>
+                    
+                       <input id="file-input" type="file" name="file" style="display: none;" onchange="handleFileInputChange()">
+                                        
+                    
                     <div class="frame">
                         <select class="lectures-dropdown" id="lecturesDropdown" onchange="updateSelectedLecture()">
                             <option value="" disabled selected>Select your option</option>
