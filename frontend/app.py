@@ -77,17 +77,23 @@ def upload_chat():
     if request.method == 'POST':
         f = request.files['file']
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
-        des = process_pdf(file_path)
+        con1, con2, con3 = process_pdf(file_path)
         # Path to the file you want to delete
         output_file_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\output.txt"
 
         # Check if file exists and delete it
         if os.path.exists(output_file_path):
             os.remove(output_file_path)
-
-        for i in des:
-            with open(output_file_path, 'a', encoding='utf-8') as f:
+        with open(output_file_path, 'a', encoding='utf-8') as f:
+            f.write("Transcript of the audio for the lecture:\n")
+            for i in con1:
                 f.write(i)
+            f.write("\n\nThe content from the lecture slides:\n")
+            for i in con2:
+                f.write(f"{i}\n")
+            f.write("\n\n")
+            for i in con3:
+                f.write(f"{i}\n")
     return redirect(url_for('chat_uploaded'))
 
 @app.route('/uploaded_chatbot', methods=['GET', 'POST'])
@@ -118,17 +124,23 @@ def upload_quiz():
     if request.method == 'POST':
         f = request.files['file']
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
-        des = process_pdf(file_path)
+        con1, con2, con3 = process_pdf(file_path)
         # Path to the file you want to delete
         output_file_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\output.txt"
 
         # Check if file exists and delete it
         if os.path.exists(output_file_path):
             os.remove(output_file_path)
-
-        for i in des:
-            with open(output_file_path, 'a', encoding='utf-8') as f:
+        with open(output_file_path, 'a', encoding='utf-8') as f:
+            f.write("Transcript of the audio for the lecture:\n")
+            for i in con1:
                 f.write(i)
+            f.write("\n\nThe content from the lecture slides:\n")
+            for i in con2:
+                f.write(f"{i}\n")
+            f.write("\n\n")
+            for i in con3:
+                f.write(f"{i}\n")
     return jsonify({'message': 'File uploaded successfully'})
 
 @app.route('/uploaded_summary', methods=['GET','POST'])
@@ -145,17 +157,23 @@ def upload_summary():
     if request.method == 'POST':
         f = request.files['file']
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
-        des = process_pdf(file_path)
+        con1, con2, con3 = process_pdf(file_path)
         # Path to the file you want to delete
         output_file_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\output.txt"
 
         # Check if file exists and delete it
         if os.path.exists(output_file_path):
             os.remove(output_file_path)
-
-        for i in des:
-            with open(output_file_path, 'a', encoding='utf-8') as f:
+        with open(output_file_path, 'a', encoding='utf-8') as f:
+            f.write("Transcript of the audio for the lecture:\n")
+            for i in con1:
                 f.write(i)
+            f.write("\n\nThe content from the lecture slides:\n")
+            for i in con2:
+                f.write(f"{i}\n")
+            f.write("\n\n")
+            for i in con3:
+                f.write(f"{i}\n")
     return jsonify({'message': 'File uploaded successfully'})
 
 
