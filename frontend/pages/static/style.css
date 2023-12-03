@@ -63,6 +63,7 @@
     position: absolute;
     font-size: 20px;
     line-height: normal;
+    cursor: pointer;
 }
 
 .chatbot .list-menu {
@@ -148,7 +149,7 @@
 
 .chatbot .text-wrapper-6 {
     width: 180px;
-    top: 718px;
+    top: 723px;
     left: 90px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;

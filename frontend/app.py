@@ -4,6 +4,7 @@ from bot import bot
 from flask import Flask, jsonify, render_template, request, session
 from quiz import get_quiz
 from summary import get_summary
+from summary_gpt import get_summary_gpt
 
 from flask_session import Session  # You may need to install this package
 
@@ -16,7 +17,7 @@ Session(app)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/chatbot', methods=['GET', 'POST'])
 def chat():
@@ -48,7 +49,8 @@ def dropdown_summary():
     data = request.json
     selected_lecture = data['lecture']
     session['file_path'] = f"content/final_f/{selected_lecture}.txt"
-    output = get_summary(session['file_path'])
+    #output = get_summary(session['file_path'])
+    output = get_summary_gpt(session['file_path'])
     return output
 
     

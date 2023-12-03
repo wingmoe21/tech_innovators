@@ -138,7 +138,7 @@
 .quiz .text-wrapper-5 {
   position: absolute;
   width: 180px;
-  top: 718px;
+  top: 720px;
   left: 90px;
   font-family: "Poppins", Helvetica;
   font-weight: 500;
@@ -446,6 +446,8 @@
   font-weight: bold;
   color: #7f8291;
   margin-bottom: 20px;
+  max-width: calc(100% - 370px); /* Add max-width to prevent overflow, adjust 370px if necessary */
+  word-wrap: break-word; /* Ensure long words do not cause overflow */
 }
 
 .option {

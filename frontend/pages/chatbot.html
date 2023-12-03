@@ -10,8 +10,9 @@
                 <div class="overlap">
                     <div class="text-wrapper">Welcome</div>
                     <img class="group" src="{{ url_for('static', filename='img1/group.png') }}" />
+                    <a href="{{ url_for('home') }}" class="button-link">
                     <img class="vector" src="{{ url_for('static', filename='img1/vector-4.svg') }}" />
-                    <div class="text-wrapper-2">Exit</div>
+                    </a>
                     <div class="list-menu">
                         <a href="{{ url_for('summary') }}" class="button-link">
                             <div class="overlap-group"><div class="text-wrapper-3">Summary</div></div>
@@ -23,7 +24,9 @@
                             <div class="overlap-group-2"><div class="text-wrapper-5">Chatbot</div></div>
                         </a>
                     </div>
+                    <a href="{{ url_for('home') }}" class="button-link">
                     <div class="text-wrapper-6">Exit</div>
+                    </a>
                 </div>
                 <div class="overlap-2">
                     <a href="#" class="image-button" onclick="triggerFileInput()">
@@ -232,3 +235,49 @@
     });
     </script>
     </html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    @keyframes moveImage {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px); /* انتقال بمقدار 20 بكسل */
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .group {
+      animation: moveImage 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbot">
+    <!-- باقي العناصر الأخرى في صفحتك -->
+
+    <!-- الصورة المتحركة -->
+
+    <!-- السكريبت لتحريك الصورة -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var groupImage = document.querySelector(".group");
+
+        if (groupImage) {
+          groupImage.style.animationName = "moveImage";
+          groupImage.style.animationDuration = "2s";
+          groupImage.style.animationIterationCount = "infinite";
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>
