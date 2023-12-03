@@ -14,13 +14,13 @@
                     <img class="vector" src="{{ url_for('static', filename='img1/vector-4.svg') }}" />
                     </a>
                     <div class="list-menu">
-                        <a href="{{ url_for('summary') }}" class="button-link">
+                        <a href="{{ url_for('summary_uploaded') }}" class="button-link">
                             <div class="overlap-group"><div class="text-wrapper-3">Summary</div></div>
                         </a>
-                        <a href="{{ url_for('quiz') }}" class="button-link">
+                        <a href="{{ url_for('quiz_uploaded') }}" class="button-link">
                             <div class="div-wrapper"><div class="text-wrapper-4">Quiz</div></div>
                         </a>
-                        <a href="{{ url_for('chat') }}" class="button-link">
+                        <a href="{{ url_for('chat_uploaded') }}" class="button-link">
                             <div class="overlap-group-2"><div class="text-wrapper-5">Chatbot</div></div>
                         </a>
                     </div>
@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="overlap-2">
-                    <form action="/upload" method="POST" enctype="multipart/form-data" id="uploadForm">
+                    <form action="/upload_chat" method="POST" enctype="multipart/form-data" id="uploadForm">
                         <input type="file" name="file" id="fileInput" style="display: none;" onchange="submitForm()"/>
                         <label for="fileInput">
                             <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" alt="Upload Button" style="cursor: pointer;"/>
@@ -37,7 +37,7 @@
                     </form>
                     <div class="frame">
                         <div class="text-wrapper-12">
-                            <span id="lecturesLabel">Chooaase a Lecture...</span>
+                            <span id="lecturesLabel">Uploaded Video</span>
                         </div>
                     </div>
                     <div class="text-wrapper-8">Chatbot</div>

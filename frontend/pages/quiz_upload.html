@@ -13,13 +13,13 @@
           <a href="{{ url_for('home') }}" class="button-link">
           <img class="vector" src="{{ url_for('static', filename='img1/vector-4.svg') }}" /></a>
           <div class="list-menu">
-            <a href="{{ url_for('summary') }}" class="button-link">
+            <a href="{{ url_for('summary_uploaded') }}" class="button-link">
                 <div class="overlap-group"><div class="text-wrapper-2">Summary</div></div>
             </a>
-          <a href="{{ url_for('quiz') }}" class="button-link">
+          <a href="{{ url_for('quiz_uploaded') }}" class="button-link">
             <div class="div-wrapper"><div class="text-wrapper-3">Quiz</div></div>
           </a>
-          <a href="{{ url_for('chat') }}" class="button-link">
+          <a href="{{ url_for('chat_uploaded') }}" class="button-link">
             <div class="overlap-2"><div class="text-wrapper-4">Chatbot</div></div>
           </a>
           </div>
@@ -30,46 +30,18 @@
         <div class="overlap-3">
           <div class="overlap-4">
             <div class="frame">
-              <select class="lectures-dropdown" id="lecturesDropdown" onchange="updateSelectedLecture()">
-                <option value="" disabled selected>Select your option</option>
-                <!-- <option value="Decimal to Binary Conversion _ GeeksforGeeks">Decimal to Binary Conversion</option> -->
-                <!-- <option value="Binary to Decimal Conversion _ GeeksforGeeks">Binary to Decimal Conversion</option> -->
-                <option value="Decimal to Octal Conversion _ GeeksforGeeks">Decimal to Octal Conversion</option>
-                <option value="Octal to Decimal Conversion _ GeeksforGeeks">Octal to Decimal Conversion</option>
-                <option value="Decimal to Hexadecimal Conversion _ GeeksforGeeks">Decimal to Hexadecimal Conversion</option>
-                <!-- <option value="Hexadecimal to Decimal Conversion _ GeeksforGeeks">Hexadecimal to Decimal Conversion</option> -->
-                <option value="Pointers in C Basic _ GeeksforGeeks">Pointers in C Basic</option>
-                <option value="Double Pointer (Pointer to Pointer) in C _ GeeksforGeeks">Double Pointer (Pointer to Pointer) in C</option>
-                <!-- <option value="Dereference, Reference _ GeeksforGeeks">Dereference, Reference</option> -->
-                <!-- <option value="Why C treats array parameters as pointers">Why C treats array parameters as pointers</option> -->
-                <!-- <option value="Dangling, Void , Null and Wild Pointers _ GeeksforGeeks">Dangling, Void , Null and Wild Pointers</option> -->
-                <option value="How to declare a pointer to a function">How to declare a pointer to a function</option>
-                <!-- <option value="An Uncommon representation of array elements">An Uncommon representation of array elements</option> -->
-                <!-- <option value="Functions that are executed before and after main() in C _ GeeksforGeeks">Functions that are executed before and after main() in C</option> -->
-                <option value="Functions in C _ C   _ GeeksforGeeks">Functions in C </option>
-                <!-- <option value="restrict keyword in C (C Programming) _ GeeksforGeeks">restrict keyword in C (C Programming)</option> -->
-                <option value="Void Pointer in C _ GeeksforGeeks">Void Pointer in C</option>
-                <option value="How does free() know the size of memory to be deallocated">How does free() know the size of memory to be deallocated</option>
-                <!-- <option value="Understanding “register” keyword in C _ GeeksforGeeks">Understanding “register” keyword in C</option> -->
-                <!-- <option value="What is evaluation order of function parameters in C">What is evaluation order of function parameters in C</option> -->
-                <!-- <option value="Use of realloc _ GeeksforGeeks">Use of realloc</option> -->
-                <!-- <option value="Structure Member Alighnment and Padding (Part 3) _ GeeksforGeeks">Structure Member Alighnment and Padding (Part 2)</option> -->
-                <option value="Structure Member Alighnment and Padding (Part 1) _ GeeksforGeeks">Structure Member Alighnment and Padding (Part 1)</option>
-                <option value="Structures in C _ GeeksforGeeks">Structures in C</option>
-                <option value="Calloc vs malloc _ GeeksforGeeks">Calloc vs malloc</option>
-                <option value="Pointer vs Array (C Programming) _ GeeksforGeeks">Pointer vs Array (C Programming)</option>
-                <option value="How to deallocate memory without using free() in C">How to deallocate memory without using free() in C</option>
-                <!-- <option value="Minimum Cost Path Problem _ GeeksforGeeks">Minimum Cost Path Problem</option>
-                <option value="Variables (Core Java) _ GeeksforGeeks">Variables (Core Java)</option> -->
-            </select>
             <div class="text-wrapper-12">
-                <span id="lecturesLabel">Choose a Lecture...</span>
-                <span id="selectedLecture" style="display: none;"></span> <!-- Initially hidden -->
+                <span id="lecturesLabel">Uploaded Video</span>
             </div>
-    <img class="img" src="{{ url_for('static', filename='img1/vector-5.svg') }}" />
       </div>
-          </div>
-          <div class="text-wrapper-7">Quiz</div>
+      <form action="/upload_quiz" method="POST" enctype="multipart/form-data" id="uploadForm">
+        <input type="file" name="file" id="fileInput" style="display: none;" onchange="submitForm()"/>
+        <label for="fileInput">
+          <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" alt="Upload Button" style="cursor: pointer;" />
+        </label>
+      </form>
+        </div>
+        <div class="text-wrapper-7">Quiz</div>
         </div>
         <div class="rectangle"></div>
         <div class="overlap-5">
@@ -153,111 +125,90 @@
       </div>
     </div>
     <script>
-      function updateSelectedLecture() {
-      displayLoading(true); // Show loader
-      var dropdown = document.getElementById("lecturesDropdown");
-      var selectedOption = dropdown.value;
-      document.getElementById("selectedLecture").innerText = selectedOption;
-      var selectedText = dropdown.options[dropdown.selectedIndex].text;
-      var label = document.getElementById("lecturesLabel");
-      var selectedLectureSpan = document.getElementById("selectedLecture");
-      // If the selected option is not the placeholder
-      if(dropdown.selectedIndex > 0) {
-        label.style.display = "none"; // Hide the "LECTURES" text
-        selectedLectureSpan.textContent = selectedText; // Set the selected text
-        selectedLectureSpan.style.display = "block"; // Show the selected text
-        fetch('/lecture_quiz', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ lecture: selectedOption })
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-          updateQuizSection(data)
-          data1= data
-          displayLoading(false); // Hide loader
-        })
-        .catch((error) => {
-          displayLoading(false); // Hide loader
-          console.error('Error:', error);
-        });
-      } else {
-        label.style.display = "block"; // Show the "LECTURES" text
-        selectedLectureSpan.style.display = "none"; // Hide the selected text
-      }
+function submitForm() {
+  displayLoading(true); // Show loader
+
+  var form = document.getElementById('uploadForm');
+  var formData = new FormData(form);
+
+  fetch('/upload_quiz', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if(response.ok) {
+      return response.json();
     }
+    throw new Error('Form submission failed');
+  })
+  .then(data => {
+    console.log('Form submitted successfully', data);
+    // Now start the next fetch request
+    return fetch('/uploaded_quiz', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ "lecture": data })
+    });
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+    updateQuizSection(data);
+    data1 = data;
+    displayLoading(false); // Hide loader
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    displayLoading(false); // Hide loader
+  });
+}
     function updateQuizSection(quizData) {
       document.getElementById('text-wrapper-8').innerText = 'Question 1'
-      // Update question title
       document.getElementById('questionTitle').innerText = quizData['Question 1'];
-      // Update options
-
       document.getElementById('option1').value = quizData['q1c1'];
       document.getElementById('labelOption1').innerText = quizData['q1c1'];
-      
       document.getElementById('option2').value = quizData['q1c2'];
       document.getElementById('labelOption2').innerText = quizData['q1c2'];
-      
       document.getElementById('option3').value = quizData['q1c3'];
       document.getElementById('option1').style.visibility = "visible";
       document.getElementById('option2').style.visibility = "visible";
       document.getElementById('option3').style.visibility = "visible";
-
       document.getElementById('labelOption3').innerText = quizData['q1c3'];
-
       document.getElementById('submitBtn1').style.cursor = "pointer";
       document.getElementById('submitBtn1').style.background = "#268971";
       document.getElementById('submitBtn1').disabled = false;
 
       document.getElementById('text-wrapper-10').innerText = 'Question 2'
-      // Update question title
       document.getElementById('questionTitle1').innerText = quizData['Question 2'];
-      // Update options
-
       document.getElementById('option4').value = quizData['q2c1'];
       document.getElementById('labelOption4').innerText = quizData['q2c1'];
-      
       document.getElementById('option5').value = quizData['q2c2'];
       document.getElementById('labelOption5').innerText = quizData['q2c2'];
-      
       document.getElementById('option6').value = quizData['q2c3'];
       document.getElementById('labelOption6').innerText = quizData['q2c3'];
-
       document.getElementById('option4').style.visibility = "visible";
       document.getElementById('option5').style.visibility = "visible";
       document.getElementById('option6').style.visibility = "visible";
-
-
       document.getElementById('submitBtn2').style.cursor = "pointer";
       document.getElementById('submitBtn2').style.background = "#268971";
       document.getElementById('submitBtn2').disabled = false;
 
       document.getElementById('text-wrapper-14').innerText = 'Question 3'
-      // Update question title
       document.getElementById('questionTitle2').innerText = quizData['Question 3'];
-      // Update options
-
       document.getElementById('option7').value = quizData['q3c1'];
       document.getElementById('labelOption7').innerText = quizData['q3c1'];
-      
       document.getElementById('option8').value = quizData['q3c2'];
       document.getElementById('labelOption8').innerText = quizData['q3c2'];
-      
       document.getElementById('option9').value = quizData['q3c3'];
       document.getElementById('labelOption9').innerText = quizData['q3c3'];
-
       document.getElementById('option7').style.visibility = "visible";
       document.getElementById('option8').style.visibility = "visible";
       document.getElementById('option9').style.visibility = "visible";
-
-
       document.getElementById('submitBtn3').style.cursor = "pointer";
       document.getElementById('submitBtn3').style.background = "#268971";
       document.getElementById('submitBtn3').disabled = false;
-
     }
     document.getElementById('submitBtn1').addEventListener('click', function(event) {
       event.preventDefault(); // Prevent the form from submitting normally

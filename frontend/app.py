@@ -72,14 +72,21 @@ def dropdown_quiz():
     print(output)
     return output
 
-@app.route('/upload', methods=['POST'])
-def upload():
+@app.route('/upload_chat', methods=['POST'])
+def upload_chat():
     if request.method == 'POST':
         f = request.files['file']
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
         des = process_pdf(file_path)
+        # Path to the file you want to delete
+        output_file_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\output.txt"
+
+        # Check if file exists and delete it
+        if os.path.exists(output_file_path):
+            os.remove(output_file_path)
+
         for i in des:
-            with open("C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\a.txt", 'a', encoding='utf-8') as f:
+            with open(output_file_path, 'a', encoding='utf-8') as f:
                 f.write(i)
     return redirect(url_for('chat_uploaded'))
 
@@ -92,9 +99,64 @@ def chat_uploaded():
         data = request.get_json()
         user_input = data['message']
         # The 'bot' function is called with the user input and expected to return a response
-        file_path = "content/uploads/a.txt"
+        file_path = "content/uploads/output.txt"
         bot_response = bot(file_path, user_input)
         return jsonify({'reply': bot_response})
+
+@app.route('/uploaded_quiz', methods=['GET','POST'])
+def quiz_uploaded():
+    if request.method == 'GET':
+        return render_template('quiz_upload.html')
+    else:
+        file_path = "content/uploads/output.txt"
+        output = get_quiz(file_path)
+        return jsonify(output)
+
+    
+@app.route('/upload_quiz', methods=['POST'])
+def upload_quiz():
+    if request.method == 'POST':
+        f = request.files['file']
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
+        des = process_pdf(file_path)
+        # Path to the file you want to delete
+        output_file_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\output.txt"
+
+        # Check if file exists and delete it
+        if os.path.exists(output_file_path):
+            os.remove(output_file_path)
+
+        for i in des:
+            with open(output_file_path, 'a', encoding='utf-8') as f:
+                f.write(i)
+    return jsonify({'message': 'File uploaded successfully'})
+
+@app.route('/uploaded_summary', methods=['GET','POST'])
+def summary_uploaded():
+    if request.method == 'GET':
+        return render_template('summary_upload.html')
+    else:
+        file_path = "content/uploads/output.txt"
+        output = get_summary_gpt(file_path)
+        return jsonify(output)
+
+@app.route('/upload_summary', methods=['GET','POST'])
+def upload_summary():
+    if request.method == 'POST':
+        f = request.files['file']
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
+        des = process_pdf(file_path)
+        # Path to the file you want to delete
+        output_file_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\output.txt"
+
+        # Check if file exists and delete it
+        if os.path.exists(output_file_path):
+            os.remove(output_file_path)
+
+        for i in des:
+            with open(output_file_path, 'a', encoding='utf-8') as f:
+                f.write(i)
+    return jsonify({'message': 'File uploaded successfully'})
 
 
 if __name__ == '__main__':

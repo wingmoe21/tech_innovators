@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='globals1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+  <body>
+    <div class="sammary">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="overlap-group">
+            <div class="rectangle"></div>
+            <div class="text-wrapper">Welcome</div>
+            <img class="group" src="{{ url_for('static', filename='img1/group.png') }}" />
+            <a href="{{ url_for('home') }}" class="button-link">
+            <img class="vector" src="{{ url_for('static', filename='img1/vector-4.svg') }}" /></a>
+            <div class="list-menu">
+              <a href="{{ url_for('summary_uploaded') }}" class="button-link">
+                <div class="div">
+                  <div class="rectangle-2"></div>
+                  <div class="text-wrapper-2">Summary</div>
+                </div>
+              </a>
+            <a href="{{ url_for('quiz_uploaded') }}" class="button-link">
+              <div class="div-wrapper"><div class="text-wrapper-3">Quiz</div></div>
+            </a>
+            <a href="{{ url_for('chat_uploaded') }}" class="button-link">
+              <div class="overlap-2"><div class="text-wrapper-4">Chatbot</div></div>
+            </a>
+            </div>
+            <a href="{{ url_for('home') }}" class="button-link">
+            <div class="text-wrapper-5">Exit</div></a>
+          </div>
+          <div class="overlap-3">
+            <div class="overlap-4">
+                <div class="frame">
+                  <div class="text-wrapper-12">
+                      <span id="lecturesLabel">Uploaded Video</span>
+                  </div>
+              </div>
+              <form action="/upload_summary" method="POST" enctype="multipart/form-data" id="uploadForm">
+                <input type="file" name="file" id="fileInput" style="display: none;" onchange="submitForm()"/>
+                <label for="fileInput">
+                  <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" alt="Upload Button" style="cursor: pointer;" />
+                </label>
+              </form>
+            </div>
+            <div class="text-wrapper-7">Summary</div>
+          </div>
+          <div class="rectangle-3"></div>
+          <div class="rectangle-4">
+            <span id="rectangle-4-content">Please choose a lecture</span> <!-- This element will display the output -->
+            <div class="loader-container">
+              <div class="loader" style="display: none;"></div> <!-- Loader initially hidden -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script>
+function submitForm() {
+  displayLoading(true); // Show loader
+
+  var form = document.getElementById('uploadForm');
+  var formData = new FormData(form);
+
+  fetch('/upload_summary', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if(response.ok) {
+      return response.json();
+    }
+    throw new Error('Form submission failed');
+  })
+  .then(data => {
+    console.log('Form submitted successfully', data);
+    // Now start the next fetch request
+    return fetch('/uploaded_summary', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ "lecture": data })
+    });
+  })
+  .then(response => response.text())
+  .then(data => {
+    console.log('Success:', data);
+    displayLoading(false); // Hide loader
+    document.getElementById('rectangle-4-content').innerText = data; // Update the rectangle-3 content
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    displayLoading(false); // Hide loader
+  });
+}
+      function displayLoading(show) {
+        console.log('Displaying loader:', show);
+        var loader = document.querySelector('.loader');
+        if (loader) {
+          loader.style.display = show ? 'block' : 'none';
+        }
+      }
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='globals.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    @keyframes moveImage {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px); /* انتقال بمقدار 20 بكسل */
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .group {
+      animation: moveImage 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbot">
+    <!-- باقي العناصر الأخرى في صفحتك -->
+
+    <!-- الصورة المتحركة -->
+
+    <!-- السكريبت لتحريك الصورة -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var groupImage = document.querySelector(".group");
+
+        if (groupImage) {
+          groupImage.style.animationName = "moveImage";
+          groupImage.style.animationDuration = "2s";
+          groupImage.style.animationIterationCount = "infinite";
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>
+
