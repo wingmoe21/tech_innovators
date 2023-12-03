@@ -1,10 +1,12 @@
 import os
 
 from bot import bot
-from flask import Flask, jsonify, render_template, request, session
+from flask import (Flask, jsonify, redirect, render_template, request, session,
+                   url_for)
 from quiz import get_quiz
 from summary import get_summary
 from summary_gpt import get_summary_gpt
+from uploadpdf import process_pdf
 
 from flask_session import Session  # You may need to install this package
 
@@ -13,7 +15,9 @@ secret_key = os.urandom(16)  # Generates a 16-byte (128-bit) random string
 app.secret_key = secret_key  # Replace with a real secret key
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
-
+# مجلد لتخزين الملفات المؤقتة
+UPLOAD_FOLDER = 'C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\pdf_f'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
@@ -68,66 +72,30 @@ def dropdown_quiz():
     print(output)
     return output
 
+@app.route('/upload', methods=['POST'])
+def upload():
+    if request.method == 'POST':
+        f = request.files['file']
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
+        des = process_pdf(file_path)
+        for i in des:
+            with open("C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\a.txt", 'a', encoding='utf-8') as f:
+                f.write(i)
+    return redirect(url_for('chat_uploaded'))
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-from flask import Flask, render_template, request, send_file
-from PyPDF2 import PdfReader
-
-
-        
-# كود رفع pdf
-
-import os
-
-app = Flask(__name__)
-
-# مجلد لتخزين الملفات النهائية
-FINAL_FOLDER = 'final_f'
-app.config['FINAL_FOLDER'] = FINAL_FOLDER
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/final_f', methods=['POST'])
-def final_f():
-    uploaded_file = request.files['file']
-    if uploaded_file.filename != '':
-        # تأكد من وجود مجلد final_f
-        if not os.path.exists(FINAL_FOLDER):
-            os.makedirs(FINAL_FOLDER)
-
-        processed_text = process_pdf(uploaded_file)
-        
-        # احفظ النص في ملف نصي داخل المجلد final_f
-        text_file_path = os.path.join(FINAL_FOLDER, f"{os.path.splitext(uploaded_file.filename)[0]}_output.txt")
-        with open(text_file_path, 'w', encoding='utf-8') as text_file:
-            text_file.write(processed_text)
-
-        # استخدم الطريق الكامل لملف النص عند إرساله
-        return send_file(os.path.abspath(text_file_path), as_attachment=True)
+@app.route('/uploaded_chatbot', methods=['GET', 'POST'])
+def chat_uploaded():
+    if request.method == 'GET':
+        return render_template('chatbot_upload.html')
     else:
-        return render_template('index.html', error='Select PDF.')
+        # When a message is sent from the interface, handle the POST request
+        data = request.get_json()
+        user_input = data['message']
+        # The 'bot' function is called with the user input and expected to return a response
+        file_path = "content/uploads/a.txt"
+        bot_response = bot(file_path, user_input)
+        return jsonify({'reply': bot_response})
 
-def process_pdf(uploaded_file):
-    with uploaded_file.stream as file:
-        pdf_reader = PdfReader(file)
-        text = ''
-        for page_num in range(len(pdf_reader.pages)):
-            page = pdf_reader.pages[page_num]
-            text += page.extract_text()
-
-    print("Extracted text:")
-    print(text)
-
-    # اطبع المسار الكامل لملف النص بعد الحفظ
-    text_file_path = os.path.join(FINAL_FOLDER, f"{os.path.splitext(os.path.basename(uploaded_file.filename))[0]}_output.txt")
-    print(f"File saved at: {os.path.abspath(text_file_path)}")
-
-    return text
 
 if __name__ == '__main__':
     app.run(debug=True)
