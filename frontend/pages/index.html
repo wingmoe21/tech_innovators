@@ -68,34 +68,44 @@
 
       <img class="slider-dec-1-icon" alt="" src="{{ url_for('static', filename='img/sliderdec-1@2x.png') }}" />
     </div>
-
-    <script>
-      var frameContainer = document.getElementById("frameContainer");
-      if (frameContainer) {
-        frameContainer.addEventListener("click", function () {
-          var anchor = document.querySelector("[data-scroll-to='ellipse']");
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap">
+    
+      <style>
+        @keyframes slideImage {
+          0% {
+            transform: translateX(0);
           }
-        });
-      }
-      
-      var featuresText = document.getElementById("featuresText");
-      if (featuresText) {
-        featuresText.addEventListener("click", function () {
-          var anchor = document.querySelector("[data-scroll-to='getStartedText']");
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          50% {
+            transform: translateX(25px); /* انتقال بمقدار 25 بكسل */
           }
-        });
-      }
-      
-      var getStartedText1 = document.getElementById("getStartedText1");
-      if (getStartedText1) {
-        getStartedText1.addEventListener("click", function (e) {
-          // Please sync "SAMMARY 1" to the project
-        });
-      }
-      </script>
-  </body>
-</html>
+          100% {
+            transform: translateX(0);
+          }
+        }
+    
+        .slider-dec-1-icon {
+          animation: slideImage 2s infinite;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="desktop-4">
+    
+        <!-- السكريبت لتحريك الصورة -->
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // تحريك الصورة
+            var sliderImage = document.querySelector(".slider-dec-1-icon");
+            if (sliderImage) {
+              sliderImage.style.animationName = "slideImage";
+              sliderImage.style.animationDuration = "2s";
+              sliderImage.style.animationIterationCount = "infinite";
+            }
+          });
+        </script>
+      </div>
+    </body>
+    </html>
