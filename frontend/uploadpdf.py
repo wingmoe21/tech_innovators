@@ -12,6 +12,7 @@ from moviepy.editor import VideoFileClip
 from numba import jit
 from pdf2image import convert_from_path
 from PIL import Image
+from PyPDF2 import PdfFileReader, PdfFileWriter
 
 
 def process_pdf(uploaded_file):
@@ -62,26 +63,39 @@ def are_frames_similar(frame1, frame2, similarity_threshold=0.95):
     ssim_index = (2 * mean_x * mean_y + c1) * (2 * covariance + c2) / ((mean_x ** 2 + mean_y ** 2 + c1) * (var_x + var_y + c2))
     return ssim_index > similarity_threshold
 
-def save_slides_to_pdf(unique_slides):
-    pdf_path='output.pdf'
 
-    pdf_doc = fitz.open()
+def save_slides_to_pdf(unique_slides):
+    pdf_path = 'output.pdf'
+    pdf_writer = PdfFileWriter()
 
     for slide in unique_slides:
+        # Resize the slide
         small_slide = slide.resize((int(slide.width * 0.5), int(slide.height * 0.5)))
+
+        # Save the resized slide to a bytes buffer
         img_byte_arr = io.BytesIO()
         small_slide.save(img_byte_arr, format='PNG')
-        img_byte_arr = img_byte_arr.getvalue()
-        img = fitz.open("png", img_byte_arr)
-        rect = img[0].rect
-        pdfbytes = img.convert_to_pdf()
-        img.close()
-        imgPDF = fitz.open("pdf", pdfbytes)
-        page = pdf_doc.new_page(width=rect.width, height=rect.height)
-        page.show_pdf_page(rect, imgPDF, 0)
-    pdf_doc.save(pdf_path)
-    pdf_doc.close()
-    
+        img_byte_arr.seek(0)
+
+        # Create a PIL image from the bytes buffer
+        image = Image.open(img_byte_arr)
+
+        # Convert PIL image to PDF
+        if image.mode == 'RGBA':
+            image = image.convert('RGB')
+        pdf_bytes = io.BytesIO()
+        image.save(pdf_bytes, format='PDF')
+        pdf_bytes.seek(0)
+
+        # Add the PDF page to the writer
+        pdf_reader = PdfFileReader(pdf_bytes)
+        for page_num in range(pdf_reader.numPages):
+            pdf_writer.addPage(pdf_reader.getPage(page_num))
+
+    # Save the PDF file
+    with open(pdf_path, 'wb') as f_out:
+        pdf_writer.write(f_out)
+
     return pdf_path
 
 def read_frames(video_path, frame_interval=5):

@@ -16,7 +16,7 @@ app.secret_key = secret_key  # Replace with a real secret key
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 # مجلد لتخزين الملفات المؤقتة
-UPLOAD_FOLDER = 'C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\pdf_f'
+UPLOAD_FOLDER = 'C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\VID'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
