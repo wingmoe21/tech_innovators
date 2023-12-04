@@ -34,12 +34,7 @@
                 <span id="lecturesLabel">Uploaded Video</span>
             </div>
       </div>
-      <form action="/upload_quiz" method="POST" enctype="multipart/form-data" id="uploadForm">
-        <input type="file" name="file" id="fileInput" style="display: none;" onchange="submitForm()"/>
-        <label for="fileInput">
-          <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" alt="Upload Button" style="cursor: pointer;" />
-        </label>
-      </form>
+          <img class="image" src="{{ url_for('static', filename='img/play.png') }}" alt="Upload Button" style="cursor: pointer;" onclick="submitForm()"/>
         </div>
         <div class="text-wrapper-7">Quiz</div>
         </div>
@@ -125,34 +120,16 @@
       </div>
     </div>
     <script>
-function submitForm() {
+      function submitForm() {
   displayLoading(true); // Show loader
-
-  var form = document.getElementById('uploadForm');
-  var formData = new FormData(form);
-
-  fetch('/upload_quiz', {
+  return fetch('/uploaded_summary', {
     method: 'POST',
-    body: formData
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ "lecture": "ss" })
   })
-  .then(response => {
-    if(response.ok) {
-      return response.json();
-    }
-    throw new Error('Form submission failed');
-  })
-  .then(data => {
-    console.log('Form submitted successfully', data);
-    // Now start the next fetch request
-    return fetch('/uploaded_quiz', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ "lecture": data })
-    });
-  })
-  .then(response => response.json())
+  .then(response => response.text())
   .then(data => {
     console.log('Success:', data);
     updateQuizSection(data);

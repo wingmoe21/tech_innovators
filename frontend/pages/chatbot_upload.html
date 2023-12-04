@@ -29,12 +29,6 @@
                     </a>
                 </div>
                 <div class="overlap-2">
-                    <form action="/upload_chat" method="POST" enctype="multipart/form-data" id="uploadForm">
-                        <input type="file" name="file" id="fileInput" style="display: none;" onchange="submitForm()"/>
-                        <label for="fileInput">
-                            <img class="image" src="{{ url_for('static', filename='img1/image-5.png') }}" alt="Upload Button" style="cursor: pointer;"/>
-                        </label>
-                    </form>
                     <div class="frame">
                         <div class="text-wrapper-12">
                             <span id="lecturesLabel">Uploaded Video</span>
@@ -66,9 +60,6 @@
             </div>
         </body>
         <script>
-            function submitForm() {
-                document.getElementById("uploadForm").submit();
-            }
             function displayMessage(message, sender) {
                 var chatMessagesContainer = document.getElementById('chat-messages-container');
                 var messageContainer = document.createElement('div');

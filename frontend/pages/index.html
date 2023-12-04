@@ -48,12 +48,16 @@
                 <b class="get-started" id="getStartedText1">Get Started</b>
             </div>
         </a>
-        <a href="{{ url_for('summary_uploaded') }}" class="start-link">
-          <div class="button1">
-              <div class="bg"></div>
-              <b class="get-started" id="getStartedText1">Upload</b>
-          </div>
-      </a>
+        <form action="/uploading" method="POST" enctype="multipart/form-data" id="uploadForm">
+            <input type="file" name="file" id="fileInput" style="display: none;" onchange="submitForm()"/>
+            <label for="fileInput">
+                    <div class="button1">
+                        <div class="bg"></div>
+                        <b class="get-started" id="getStartedText1">Upload</b>
+                    </div>
+            </label>
+          </form>
+    
         <b class="get-started1" data-scroll-to="getStartedText">About us</b>
         <div class="we-are-here-container">
             <p class="learn">
@@ -68,6 +72,23 @@
     </div>
 
     <script>
+function submitForm() {
+    var form = document.getElementById('uploadForm');
+    var formData = new FormData(form);
+    
+    return fetch('/uploading', {
+        method: 'post',
+        body: formData // Send the formData directly
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        window.location.href = '/uploaded_summary'; // Redirect on success
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
         var frameContainer = document.getElementById("frameContainer");
         frameContainer.addEventListener("click", function () {
             var anchor = document.querySelector("[data-scroll-to='ellipse']");

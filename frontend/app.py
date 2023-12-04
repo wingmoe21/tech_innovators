@@ -21,6 +21,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
+    if os.path.exists("content/uploads/output.txt"):
+        os.remove("content/uploads/output.txt")
     return render_template('index.html')
 
 @app.route('/chatbot', methods=['GET', 'POST'])
@@ -72,30 +74,6 @@ def dropdown_quiz():
     print(output)
     return output
 
-@app.route('/upload_chat', methods=['POST'])
-def upload_chat():
-    if request.method == 'POST':
-        f = request.files['file']
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
-        con1, con2, con3 = process_pdf(file_path)
-        # Path to the file you want to delete
-        output_file_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\output.txt"
-
-        # Check if file exists and delete it
-        if os.path.exists(output_file_path):
-            os.remove(output_file_path)
-        with open(output_file_path, 'a', encoding='utf-8') as f:
-            f.write("Transcript of the audio for the lecture:\n")
-            for i in con1:
-                f.write(i)
-            f.write("\n\nThe content from the lecture slides:\n")
-            for i in con2:
-                f.write(f"{i}\n")
-            f.write("\n\n")
-            for i in con3:
-                f.write(f"{i}\n")
-    return redirect(url_for('chat_uploaded'))
-
 @app.route('/uploaded_chatbot', methods=['GET', 'POST'])
 def chat_uploaded():
     if request.method == 'GET':
@@ -118,42 +96,18 @@ def quiz_uploaded():
         output = get_quiz(file_path)
         return jsonify(output)
 
-    
-@app.route('/upload_quiz', methods=['POST'])
-def upload_quiz():
-    if request.method == 'POST':
-        f = request.files['file']
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
-        con1, con2, con3 = process_pdf(file_path)
-        # Path to the file you want to delete
-        output_file_path = "C:\\Users\\mald2\\OneDrive\\Desktop\\capstone\\tech_innovators\\content\\uploads\\output.txt"
-
-        # Check if file exists and delete it
-        if os.path.exists(output_file_path):
-            os.remove(output_file_path)
-        with open(output_file_path, 'a', encoding='utf-8') as f:
-            f.write("Transcript of the audio for the lecture:\n")
-            for i in con1:
-                f.write(i)
-            f.write("\n\nThe content from the lecture slides:\n")
-            for i in con2:
-                f.write(f"{i}\n")
-            f.write("\n\n")
-            for i in con3:
-                f.write(f"{i}\n")
-    return jsonify({'message': 'File uploaded successfully'})
-
 @app.route('/uploaded_summary', methods=['GET','POST'])
 def summary_uploaded():
     if request.method == 'GET':
         return render_template('summary_upload.html')
-    else:
+    if request.method == 'POST':
         file_path = "content/uploads/output.txt"
         output = get_summary_gpt(file_path)
         return jsonify(output)
 
-@app.route('/upload_summary', methods=['GET','POST'])
-def upload_summary():
+
+@app.route('/uploading', methods=['POST'])
+def uploading():
     if request.method == 'POST':
         f = request.files['file']
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
@@ -174,7 +128,7 @@ def upload_summary():
             f.write("\n\n")
             for i in con3:
                 f.write(f"{i}\n")
-    return jsonify({'message': 'File uploaded successfully'})
+        return jsonify({'message': 'File uploaded successfully'})
 
 
 if __name__ == '__main__':
