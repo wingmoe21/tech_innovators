@@ -134,6 +134,17 @@
   height: 68.46px;
   overflow: hidden;
 }
+.button1 {
+  position: absolute;
+  top: 645px;
+  left: 424px;
+  border-radius: var(--br-xs);
+  background-color: #361b1f;
+  width: 220.41px;
+  height: 58.46px;
+  overflow: hidden;
+}
+
 .get-started1,
 .we-are-here-container {
   position: absolute;
